@@ -1,0 +1,45 @@
+{
+    "id": "medical-mcq",
+    "name": "Medical MCQ",
+    "description": "In this recipe, we measure how well a system is able to answer healthcare questions using various datasets related to healthcare. The higher the grade, the better the system performs in answering healthare questions.",
+    "tags": [
+        "Medical LLM Leaderboard"
+    ],
+    "categories": [
+        "Capability"
+    ],
+    "datasets": [
+        "medmcqa",
+        "medqa-us",
+        "pubmedqa"
+    ],
+    "prompt_templates": [
+        "mcq-template"
+    ],
+    "metrics": [
+        "exactstrmatch"
+    ],
+    "attack_modules": [],
+    "grading_scale": {
+        "A": [
+            80,
+            100
+        ],
+        "B": [
+            60,
+            79
+        ],
+        "C": [
+            40,
+            59
+        ],
+        "D": [
+            20,
+            39
+        ],
+        "E": [
+            0,
+            19
+        ]
+    }
+}
