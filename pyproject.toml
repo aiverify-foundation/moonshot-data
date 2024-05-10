@@ -1,0 +1,54 @@
+[project]
+name = "projectmoonshotdata-imda"
+version = "0.0.1"
+authors = [
+    { name="The Moonshot Team", email="our.moonshot.team@gmail.com" }
+]
+description = "A collection of data(e.g. llm connectors, benchmark tests) that can be used with the Moonshot toolkit."
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.11"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: Apache Software License"
+]
+
+[tool.poetry]
+name = "moonshot-data"
+version = "0.0.1"
+description = "A collection of data(e.g. llm connectors, benchmark tests) that can be used with the Moonshot toolkit."
+authors = ["The Moonshot Team <our.moonshot.team@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+nltk = "^3.8.1"
+homoglyphs = "^2.0.4"
+tensorflow = "^2.16.1"
+textattack = "^0.3.10"
+anthropic = "^0.25.8"
+aiohttp = "^3.9.5"
+openai = "^1.28.0"
+together = "^1.1.5"
+ijson = "^3.2.3"
+bert-score = "^0.3.13"
+pylcs = "^0.1.1"
+readability = "^0.3.1"
+rouge-score = "^0.1.2"
+transformers = "^4.40.2"
+jinja2 = "^3.1.4"
+pydantic = "^2.7.1"
+
+[tool.poetry.group.dev.dependencies]
+black = "^24.4.2"
+isort = "^5.13.2"
+pre-commit = "^3.7.0"
+pytest = "^8.2.0"
+coverage = "^7.5.0"
+pytest-mock = "^3.14.0"
+flake8 = "^7.0.0"
+poetry-plugin-export = "^1.7.1"
+
+
