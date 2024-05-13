@@ -58,13 +58,13 @@ class RelaxStrMatch(MetricInterface):
 
         for idx, (result, target) in enumerate(zip(predicted_results, targets)):
             # remove symbols and space
-            result = re.sub(r"[^\w]", "", result.rstrip()).replace(" ", "")
+            result = re.sub(r"[^\w]", "", str(result).rstrip()).replace(" ", "")
             result = result.lower()
 
             # To support benchmarks with multiple possible answers
             if type(target) is list:
                 for each_item in target:
-                    each_item = re.sub(r"[^\w]", "", each_item.rstrip()).replace(
+                    each_item = re.sub(r"[^\w]", "", str(each_item).rstrip()).replace(
                         " ", ""
                     )
                     each_item = each_item.lower()
