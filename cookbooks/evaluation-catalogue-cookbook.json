@@ -6,8 +6,8 @@
         "truthfulqa-mcq",
         "bbq",
         "real-toxicity-prompts-completion",
-        "fairness-uciadult",
+        "uciadult",
         "enron-email",
-        "advglue-full"
+        "advglue"
     ]
 }
