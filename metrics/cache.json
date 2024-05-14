@@ -1,0 +1,80 @@
+{
+  "bertscore": {
+    "id": "bertscore",
+    "name": "BertScore",
+    "description": "BertScore uses Bert to check for the similarity in embedding between two sentences.",
+    "hash": "02e3cbd907ddcb46"
+  },
+  "spelling": {
+    "id": "spelling",
+    "name": "SpellingScore",
+    "description": "SpellingScore uses Levenshetein Distance to find permutations within an edit distance of 2 form the original word before comparing to known words in a word frequency list.",
+    "hash": "66b985a65fa37865"
+  },
+  "bleuscore": {
+    "id": "bleuscore",
+    "name": "BleuScore",
+    "description": "Bleuscore uses Bleu to return the various rouge scores.",
+    "hash": "d1724537a6ce059f"
+  },
+  "readabilityscore": {
+    "id": "readabilityscore",
+    "name": "ReadabilityScore",
+    "description": "ReadabilityScore uses Flesch Reading Ease to compute the complexity of the output",
+    "hash": "4156a5ee77d23735"
+  },
+  "toxicity-classifier": {
+    "id": "toxicityclassifier",
+    "name": "ToxicityClassifier",
+    "description": "This classifier measures how toxic a given input isand calculate the number of toxic sentence detected.",
+    "hash": "31bf4431cdbd9c02"
+  },
+  "rougescorer": {
+    "id": "rougescorer",
+    "name": "RougeScorer",
+    "description": "RougeScorer returns the various rouge scores.",
+    "hash": "7bf733b1dac16041"
+  },
+  "advglue": {
+    "id": "advglue",
+    "name": "Attack Success Rate",
+    "description": "Attack success rate measures how successful a changed prompt performs. A high score shows that the system under test is highly sensitive towards a prompt with minimal changes.",
+    "hash": "06b6df63a8b42346"
+  },
+  "leakagerate": {
+    "id": "leakagerate",
+    "name": "LeakageRate",
+    "description": "Leakage Rate will compare the LCS between two string - Output and Target.",
+    "hash": "3afe700b9cfdff06"
+  },
+  "reverseexactstrmatch": {
+    "id": "reverseexactstrmatch",
+    "name": "ReverseExactStrMatch",
+    "description": "ReverseExactStrMatch will compare the output from language model with the expected target.",
+    "hash": "64e3438f45802203"
+  },
+  "exactstrmatch": {
+    "id": "exactstrmatch",
+    "name": "ExactStrMatch",
+    "description": "ExactStrMatch will compare the output from language model with a single target or multiple expected target.",
+    "hash": "c7183938ecde97cb"
+  },
+  "relaxstrmatch": {
+    "id": "relaxstrmatch",
+    "name": "RelaxStrMatch",
+    "description": "RelaxStrMatch will remove symbols and spaces before comparing the output from language model with the expected target.",
+    "hash": "5bf24e4c136a71e6"
+  },
+  "llamaguardannotator": {
+    "id": "llamaguardannotator",
+    "name": "LlamaGuard Annotator",
+    "description": "Calculates the number of safe, unsafe and unknown response by using LlamaGuard.",
+    "hash": "7e0a2588d5b65f69"
+  },
+  "samplemetric": {
+    "id": "samplemetric",
+    "name": "SampleMetric",
+    "description": "Sample Metric will provide examples on connecting to LLMs.",
+    "hash": "0237624707180624"
+  }
+}
