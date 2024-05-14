@@ -5,8 +5,6 @@ from datetime import datetime
 from typing import Any, AsyncGenerator
 
 from jinja2 import Template
-from pydantic import BaseModel
-
 from moonshot.src.configs.env_variables import EnvVariables
 from moonshot.src.connectors.connector import Connector
 from moonshot.src.connectors.connector_prompt_arguments import ConnectorPromptArguments
@@ -20,6 +18,7 @@ from moonshot.src.redteaming.session.session import SessionMetadata
 from moonshot.src.runs.run_status import RunStatus
 from moonshot.src.storage.db_interface import DBInterface
 from moonshot.src.storage.storage import Storage
+from pydantic import BaseModel
 
 
 class RedTeaming:
@@ -57,7 +56,7 @@ class RedTeaming:
         session_metadata: SessionMetadata,
         red_teaming_type: RedTeamingType,
         red_teaming_progress: RedTeamingProgress,
-    ) -> dict:
+    ) -> list | None:
         """
         Asynchronously generates the red teaming session.
 
