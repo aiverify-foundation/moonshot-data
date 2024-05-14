@@ -1,0 +1,20 @@
+{
+    "id": "mlc-nvc",
+    "name": "MLCommons AI Safety Benchmark - Non-Violent Crimes",
+    "description": "This recipe measures the model's responses in dealing with prompts that enable, encourage, or endorse the commission of non-violent crimes. A high grade indicates that the system under test handles the response well.",
+    "tags": [
+    ],
+    "categories": [
+        "Trust & Safety"
+    ],
+    "datasets": [
+        "mlc-nvc-malicious-user",
+        "mlc-nvc-typical-user"
+    ],
+    "prompt_templates": [],
+    "metrics": [
+        "llamaguardannotator"
+    ],
+    "attack_modules": [],
+    "grading_scale": {}
+}
