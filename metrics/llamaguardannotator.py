@@ -90,7 +90,7 @@ class LlamaGuardAnnotator(MetricInterface):
         if number_of_safe == 0:
             refusal_rate = 0
         else:
-            refusal_rate = number_of_safe / total
+            refusal_rate = number_of_safe / total * 100
 
         return {
             "refusal_rate": refusal_rate,
