@@ -1,0 +1,116 @@
+{
+    "name": "Singapore Transport System",
+    "description": "Contain questions about Singapore's transport system",
+    "license": "Apache-2.0",
+    "reference": "IMDA",
+    "examples": [
+        {
+            "input": "Which MRT station serves as an interchange between the North South Line and the East West Line?\nA) Jurong East\nB) Kent Ridge\nC) Promenade\nD) Bugis",
+            "target": "A) Jurong East"
+        },
+        {
+            "input": "Which MRT station is not served by the Circle Line?\nA) Kent Ridge\nB) Holland Village\nC) Marymount\nD) Cityhall",
+            "target": "D) Cityhall"
+        },
+        {
+            "input": "Which MRT station is the westernmost station on the East West Line?\nA) Lakeside\nB) Boon Lay\nC) Pasir Ris\nD) Raffles Place",
+            "target": "B) Boon Lay"
+        },
+        {
+            "input": "Which MRT station is located near Singapore's Changi Airport?\nA) Woodlands\nB) Bukit Panjang\nC) Expo\nD) Lavendar",
+            "target": "C) Expo"
+        },
+        {
+            "input": "Which MRT station is part of the Thomson-East Coast Line?\nA) Pioneer\nB) Newton\nC) Great World\nD) Upper Changi",
+            "target": "C) Great World"
+        },
+        {
+            "input": "Which is the shortest path to travel from Boon Lay to Woodlands?\nA) East West Line transfer at Jurong East to North South Line: Boon Lay > Jurong East > Woodlands\nB) East West Line to Raffles Place, transfer to North South Line: Boon Lay > Raffles Place >  Woodlands\nC) East West Line transfer at Outram Park to North East Line: Boon Lay > Outram Park > Woodlands\nD) East West Line to Bishan, transfer to North South Line: Boon Lay > Bishan > Woodlands",
+            "target": "A) East West Line transfer at Jurong East to North South Line: Boon Lay > Jurong East > Woodlands"
+        },
+        {
+            "input": "Which of the following is NOT an MRT station in Singapore?\nA) Serangoon\nB) Bedok Reservoir\nC) Sentosa Cove\nD) Kallang",
+            "target": "C) Sentosa Cove"
+        },
+        {
+            "input": "Which MRT station is not served by the Bukit Panjang LRT?\nA) Caldecott\nB) Segar\nC) Teck Whye\nD) South View",
+            "target": "A) Caldecott"
+        },
+        {
+            "input": "Which MRT station is located near Sentosa?\nA) Mountbatten\nB) HarbourFront\nC) Labrador Park\nD) Tiong Bahru",
+            "target": "B) HarbourFront"
+        },
+        {
+            "input": "Which MRT station does not have a bus interchange?\nA) HarbourFront\nB) Bishan\nC) Toa Payoh\nD) Tai Seng",
+            "target": "D) Tai Seng"
+        },
+        {
+            "input": "What is the station code for Bukit Panjang MRT?\nA) NS27\nB) DT1\nC) EW21\nD) CC4",
+            "target": "B) DT1"
+        },
+        {
+            "input": "When was the original East-West Line completed?\nA) 1983\nB) 1984\nC) 1990\nD) 2000",
+            "target": "C) 1990"
+        },
+        {
+            "input": "When was the East-West Line expanded to the Tuas West Extension?\nA) June 2023\nB) January 2017\nC) March 2020\nD) June 2017",
+            "target": "D) June 2017"
+        },
+        {
+            "input": "How many stations were there on the North-South Line when it started in 1987?\nA) 5\nB) 11\nC) 13\nD) 14",
+            "target": "A) 5"
+        },
+        {
+            "input": "When did Punggol LRT open?\nA) 1993\nB) 1997\nC) 2000\nD) 2005",
+            "target": "D) 2005"
+        },
+        {
+            "input": "Which year saw the introduction of the Public Transport Council (PTC) in Singapore?\nA) 1987\nB) 1990\nC) 1995\nD) 2000",
+            "target": "B) 1987"
+        },
+        {
+            "input": "What is the primary governing body for public transportation in Singapore?\nA) Land Transport Authority (LTA)\nB) Public Transport Council (PTC)\nC) Ministry of Transport (MOT)\nD) Singapore Transport Agency (STA)",
+            "target": "A) Land Transport Authority (LTA)"
+        },
+        {
+            "input": "Which online platform does LTA provide for the public to access real-time information on public transport services?\nA) MyTransport.SG\nB) SG Transport Info\nC) LTA Live\nD) TransitLink",
+            "target": "A) MyTransport.SG"
+        },
+        {
+            "input": "Which LTA project focuses on expanding our cycling path network?\nA) Park Connector Network (PCN)\nB) Cycling Plan 2030\nC) National Cycling Plan\nD) Islandwide Cycling Network ",
+            "target": "D) Islandwide Cycling Network"
+        },
+        {
+            "input": "In which year was the Land Transport Authority (LTA) in Singapore established?\nA) 1990\nB) 1995\nC) 1998\nD) 2000",
+            "target": "B) 1995"
+        },
+        {
+            "input": "Which initiative aims to expand the Park Connector Network to create a 360 km 'Islandwide Loop'?\nA) PCN 360\nB) Round Island Route\nC) Green Connector Loop\nD) National Greenway",
+            "target": "B) Round Island Route"
+        },
+        {
+            "input": "Which government agency is primarily responsible for developing and maintaining the Park Connector Network (PCN) in Singapore?\nA) National Parks Board (NParks)\nB) Land Transport Authority (LTA)\nC) Urban Redevelopment Authority (URA)\nD) Housing & Development Board (HDB)",
+            "target": "A) National Parks Board (NParks)"
+        },
+        {
+            "input": "In which year was ComfortDelGro Corporation formed?\nA) 2000\nB) 2003\nC) 2005\nD) 2010",
+            "target": "B) 2003"
+        },
+        {
+            "input": "What type of services is ComfortDelGro primarily known for in Singapore?\nA) Airline services\nB) Taxi and bus services\nC) Train services\nD) Maritime services",
+            "target": "B) Taxi and bus services"
+        },
+        {
+            "input": "ComfortDelGro operates bus services under which subsidiary in Singapore as of 2023?\nA) SBS Transit\nB) SMRT Buses\nC) Go-Ahead Singapore\nD) Tower Transit",
+            "target": "A) SBS Transit"
+        },
+        {
+            "input": "What type of public transport services does SBS Transit primarily provide?\nA) Taxi and ferry services\nB) Bus and rail services\nC) Airline services\nD) Maritime services",
+            "target": "B) Bus and rail services"
+        },
+        {
+            "input": "In which year did SBS Transit begin operating as a public transport company under its current name?\nA) 1997\nB) 2000\nC) 2003\nD) 2005",
+            "target": "B) 2001"
+        }
+    ]
+}
