@@ -10,8 +10,6 @@ from operator import attrgetter
 from typing import Any, AsyncGenerator
 
 from jinja2 import Template
-from pydantic import BaseModel
-
 from moonshot.src.configs.env_variables import EnvVariables
 from moonshot.src.connectors.connector import Connector
 from moonshot.src.connectors.connector_prompt_arguments import ConnectorPromptArguments
@@ -22,11 +20,14 @@ from moonshot.src.metrics.metric import Metric
 from moonshot.src.recipes.recipe import Recipe
 from moonshot.src.redteaming.attack.attack_module import AttackModule
 from moonshot.src.redteaming.attack.attack_module_arguments import AttackModuleArguments
+from moonshot.src.redteaming.session.session import Session
 from moonshot.src.results.result_arguments import ResultArguments
+from moonshot.src.runners.runner_type import RunnerType
 from moonshot.src.runs.run_progress import RunProgress
 from moonshot.src.runs.run_status import RunStatus
 from moonshot.src.storage.db_interface import DBInterface
 from moonshot.src.storage.storage import Storage
+from pydantic import BaseModel
 
 
 class Benchmarking:
@@ -635,6 +636,23 @@ class Benchmarking:
         """
         # Iterate over all attack modules and apply them sequentially
         modified_prompts = []
+
+        # Check if there's session in runner. If not, create session
+        if not Session.load(self.database_instance):
+            Session(
+                self.run_progress.run_arguments.runner_id,
+                RunnerType.REDTEAM,
+                {},  # runner arguments not required
+                self.database_instance,
+                self.endpoints,
+                Storage.get_filepath(
+                    EnvVariables.RESULTS.name,
+                    self.run_progress.run_arguments.runner_id,
+                    "json",
+                    True,
+                ),
+            )
+
         for attack_module_name in self.recipe_instance.attack_modules:
             loaded_attack_module = AttackModule.load(
                 attack_module_name,
@@ -642,6 +660,7 @@ class Benchmarking:
                     connector_ids=self.endpoints,
                     prompt=prompt,
                     db_instance=self.database_instance,
+                    cancel_event=self.cancel_event,
                 ),
             )
 

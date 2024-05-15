@@ -1,12 +1,11 @@
 from __future__ import annotations
 
+import asyncio
 import time
 from datetime import datetime
 from typing import Any, AsyncGenerator
 
 from jinja2 import Template
-from pydantic import BaseModel
-
 from moonshot.src.configs.env_variables import EnvVariables
 from moonshot.src.connectors.connector import Connector
 from moonshot.src.connectors.connector_prompt_arguments import ConnectorPromptArguments
@@ -20,6 +19,7 @@ from moonshot.src.redteaming.session.session import SessionMetadata
 from moonshot.src.runs.run_status import RunStatus
 from moonshot.src.storage.db_interface import DBInterface
 from moonshot.src.storage.storage import Storage
+from pydantic import BaseModel
 
 
 class RedTeaming:
@@ -57,7 +57,8 @@ class RedTeaming:
         session_metadata: SessionMetadata,
         red_teaming_type: RedTeamingType,
         red_teaming_progress: RedTeamingProgress,
-    ) -> dict:
+        cancel_event: asyncio.Event,
+    ) -> list | None:
         """
         Asynchronously generates the red teaming session.
 
@@ -70,6 +71,7 @@ class RedTeaming:
             runner_args (dict): A dictionary containing arguments for the red teaming session.
             database_instance (DBAccessor | None): The database instance to connect to, or None if not available.
             session_metadata (SessionMetadata): Metadata associated with the red teaming session.
+            cancel_event (asyncio.Event): An event to signal cancellation of the process.
 
         Returns:
             dict: A dictionary containing the results of the red teaming session, including any errors encountered.
@@ -80,6 +82,7 @@ class RedTeaming:
         self.session_metadata = session_metadata
         self.red_teaming_type = red_teaming_type
         self.red_teaming_progress = red_teaming_progress
+        self.cancel_event = cancel_event
 
         if self.red_teaming_type == RedTeamingType.AUTOMATED:
             print("[Red Teaming] Starting automated red teaming...")
@@ -130,6 +133,7 @@ class RedTeaming:
                         "chat_batch_size", RedTeamingProgress.DEFAULT_CHAT_BATCH_SIZE
                     ),
                     red_teaming_progress=self.red_teaming_progress,
+                    cancel_event=self.cancel_event,
                 )
                 loaded_attack_module = AttackModule.load(
                     am_id=attack_strategy_args.get("attack_module_id"),

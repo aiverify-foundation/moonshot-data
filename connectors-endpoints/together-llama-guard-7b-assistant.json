@@ -1,6 +1,6 @@
 {
-  "id": "together-llama-guard-7b",
-  "name": "Together Llama Guard 7B",
+  "id": "together-llama-guard-7b-assistant",
+  "name": "Together Llama Guard 7B Assistant",
   "connector_type": "together-connector",
   "uri": "",
   "token": "",
