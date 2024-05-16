@@ -1,3 +1,4 @@
+import random
 from nltk import word_tokenize
 from nltk.tokenize.treebank import TreebankWordDetokenizer
 
@@ -12,7 +13,7 @@ class ColloquialWordSwapAttackModule(AttackModule):
         self.name = "Colloquial Wordswap"
         self.description = ("About this attack module:\nThis attack module takes in prompts that feature nouns that describe people." 
         "\nExamples of this include words like 'girl' , 'boy' or 'grandmother'.\nThe module substitutes these words"
-        " with their Singapore colloquial counterparts, such as 'ah boy', 'ah girl' and 'ah ma'.\nParameters:\n"
+        " with their Singapore colloquial counterparts, such as 'ah boy', 'ah girl' and 'ah ma'.\nParameters (Non-exhaustive):\n"
         "grandmother - ah ma\ngrandfather - ah gong\ngirl - ah ger\nboy - ah boy\nfather - papa\nmother - mama\naunty - makcik"   
         "\nman - ah beng\nwoman - ah lian")
 
@@ -56,21 +57,35 @@ class ColloquialWordSwapAttackModule(AttackModule):
         """
         This is the dictionary that is used to swap words.
         """
-        colloquial_dict = {"father": "papa" , 
-        "mother": "mama",
-        "grandfather": "ah gong",
-        "grandmother": "ah ma",
-        "girl": "ah ger",
-        "boy": "ah boy",
-        "aunt": "makcik",
-        "aunty": "makcik",
-        "man" : "ah beng",
-        "woman": "ah lian"}
+        colloquial_dict = {"father": ["papa" , "lao bei" , "lim pei"] , 
+        "mother": ["mama" , "amma"],
+        "grandfather": ["ah gong" , "thatha" , "dato"],
+        "grandmother": ["ah ma" , "patti" , "nenek"],
+        "girl": ["ah ger" , "ponnu"],
+        "boy": ["ah boy" , "boi" , "payyan"],
+        "son": ["ah boy" , "boi" , "payyan"],
+        "daughter": ["ah ger" , "ponnu"],
+        "aunt": ["makcik" , "maami"],
+        "aunty": ["makcik" , "maami"],
+        "man" : ["ah beng" , "shuai ge" ],
+        "woman": ["ah lian" , "xiao mei"],
+        "uncle": ["encik" , "unker"],
+        "sister": ["xjj" , "jie jie" , "zhezhe" , "kaka" , "akka" , "thangatchi"],
+        "brother": ["bro" , "boiboi" , "di di" , "xdd" , "anneh" , "thambi"]}
         result_list = []
+        # perform word segmentation
         word_list = word_tokenize(self.prompt)
-        for i in range(len(word_list)):
+        word_list_len = len(word_list)
+        for i in range(word_list_len):
             if word_list[i].lower() in list(colloquial_dict.keys()):
-                word_list[i] = colloquial_dict[word_list[i]]
+                #randomly select colloquial term
+                rand_idx = random.randint(0 , len(colloquial_dict[word_list[i].lower()])-1)
+                new_word = colloquial_dict[word_list[i]][rand_idx]
+                # check for the same word within the word list
+                for j in range(i +1 , word_list_len):
+                    if word_list[i].lower() == word_list[j].lower():
+                        word_list[j] = new_word
+                word_list[i] = new_word
         new_prompt = TreebankWordDetokenizer().detokenize(word_list)
         result_list.append(await self._send_prompt_to_all_llm([new_prompt]))
         word_list = word_tokenize(self.prompt)
