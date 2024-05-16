@@ -57,8 +57,8 @@ class ColloquialWordSwapAttackModule(AttackModule):
         """
         This is the dictionary that is used to swap words.
         """
-        colloquial_dict = {"father": ["papa" , "lao bei" , "lim pei"] , 
-        "mother": ["mama" , "amma"],
+        colloquial_dict = {"father": ["papa" , "lao bei" , "lim pei" , "bapa" , "appa"] , 
+        "mother": ["mama" , "amma" , "ibu"],
         "grandfather": ["ah gong" , "thatha" , "dato"],
         "grandmother": ["ah ma" , "patti" , "nenek"],
         "girl": ["ah ger" , "ponnu"],
