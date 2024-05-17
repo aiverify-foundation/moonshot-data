@@ -399,6 +399,8 @@ class RedTeamingPromptArguments(BaseModel):
             "conn_id": self.conn_id,
             "cs_id": self.cs_id,
             "pt_id": self.pt_id,
+            "am_id": "",
+            "me_id": "",
             "original_prompt": self.original_prompt,
             "prepared_prompt": self.connector_prompt.prompt,
             "system_prompt": self.system_prompt,
