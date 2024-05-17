@@ -1,0 +1,92 @@
+{
+  "name": "Singapore Polical History",
+  "description": "Contain questions about Singapore's key historical events in political.",
+  "license": "Apache-2.0",
+  "reference": "IMDA",
+  "examples": [
+    {
+      "input": "Who was the first Prime Minister of Singapore?\nA) Lee Kuan Yew\nB) Goh Chok Tong\nC) S. Rajaratnam\nD) Tony Tan",
+      "target": "A) Lee Kuan Yew"
+    },
+    {
+      "input": "In what year did Singapore gain independence from Malaysia?\nA) 1963\nB) 1964\nC) 1965\nD) 1966",
+      "target": "C) 1965"
+    },
+    {
+      "input": "Who succeeded Lee Kuan Yew as Prime Minister in 1990?\nA) Lee Hsien Loong\nB) Tony Tan\nC) Goh Chok Tong\nD) S. Rajaratnam",
+      "target": "C) Goh Chok Tong"
+    },
+    {
+      "input": "What was the name of the merger between Singapore and Malaysia from 1963 to 1965?\nA) The Malaysian Federation\nB) The Federation of Malaysia\nC) The Malaysian Union\nD) The United Federation of Malaya",
+      "target": "B) The Federation of Malaysia"
+    },
+    {
+      "input": "Who is the Prime Minister of Singapore as of 2023?\nA) Tharman Shanmugaratnam\nB) Goh Chok Tong\nC) Lee Hsien Loong\nD) Halimah Yacob",
+      "target": "C) Lee Hsien Loong"
+    },
+    {
+      "input": "What is the name of Singapore's first President?\nA) S.R. Nathan\nB) Yusof Ishak\nC) Benjamin Sheares\nD) Devan Nair",
+      "target": "B) Yusof Ishak"
+    },
+    {
+      "input": "Which Singaporean Prime Minister is known for initiating the 'Singapore 21' and 'Renaissance City' plans?\nA) Lee Kuan Yew\nB) Goh Chok Tong\nC) Lee Hsien Loong\nD) S. Rajaratnam",
+      "target": "B) Goh Chok Tong"
+    },
+    {
+      "input": "When did Singapore become a founding member of the Association of Southeast Asian Nations (ASEAN)?\nA) 1965\nB) 1966\nC) 1967\nD) 1968",
+      "target": "C) 1967"
+    },
+    {
+      "input": "Which document serves as the supreme law of Singapore?\nA) The Singapore Act\nB) The Constitution of Singapore\nC) The Basic Law of Singapore\nD) The Singapore Charter",
+      "target": "B) The Constitution of Singapore"
+    },
+    {
+      "input": "Who was the first Chief Minister of Singapore?\nA) Lim Yew Hock\nB) David Marshall\nC) Lee Kuan Yew\nD) Goh Keng Swee",
+      "target": "B) David Marshall"
+    },
+    {
+      "input": "Which year saw the introduction of the Group Representation Constituency (GRC) system in Singapore?\nA) 1986\nB) 1987\nC) 1988\nD) 1989",
+      "target": "C) 1988"
+    },
+    {
+      "input": "What is the primary legislative body in Singapore?\nA) Senate of Singapore\nB) Parliament of Singapore\nC) House of Representatives\nD) National Assembly",
+      "target": "B) Parliament of Singapore"
+    },
+    {
+      "input": "Who was the President of Singapore before Halimah Yacob?\nA) S.R. Nathan\nB) Tony Tan\nC) Ong Teng Cheong\nD) Sellapan Ramanathan",
+      "target": "B) Tony Tan"
+    },
+    {
+      "input": "In which year did Lee Kuan Yew step down as Prime Minister?\nA) 1989\nB) 1990\nC) 1991\nD) 1992",
+      "target": "B) 1990"
+    },
+    {
+      "input": "Which year marked the introduction of the Non-Constituency Member of Parliament (NCMP) scheme in Singapore?\nA) 1984\nB) 1986\nC) 1990\nD) 1994",
+      "target": "A) 1984"
+    },
+    {
+      "input": "Which constituency did Workers' Party win in the 2011 General Elections, marking a historic victory?\nA) Aljunied GRC\nB) Hougang SMC\nC) Marine Parade GRC\nD) Punggol East SMC",
+      "target": "A) Aljunied GRC"
+    },
+    {
+      "input": "When was the Workers' Party of Singapore founded?\nA) 1950\nB) 1957\nC) 1965\nD) 1972",
+      "target": "B) 1957"
+    },
+    {
+      "input": "When was the People's Action Party of Singapore founded?\nA) 1950\nB) 1954\nC) 1957\nD) 1972",
+      "target": "B) 1954"
+    },
+    {
+      "input": "In which year did Singapore host its first General Election after gaining independence?\nA) 1965\nB) 1968\nC) 1970\nD) 1972",
+      "target": "B) 1968"
+    },
+    {
+      "input": "What significant political event occurred in Singapore in 1963?\nA) Separation from Malaysia\nB) Singapore's merger with Malaysia\nC) Introduction of the Elected President scheme\nD) Formation of the PAP",
+      "target": "B) Singapore's merger with Malaysia"
+    },
+    {
+      "input": "When was the first National Day Parade held in Singapore?\nA) 1963\nB) 1965\nC) 1966\nD) 1967",
+      "target": "C) 1966"
+    }
+  ]
+}

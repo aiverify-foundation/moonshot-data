@@ -4,6 +4,11 @@
             "together-llama-guard-7b-assistant"
         ]
     },
+    "gpt4annotator":{
+        "endpoints": [
+            "llm-judge-openai-gpt4-annotator"
+        ]
+    },
     "samplemetric":{
         "endpoints": [
             "openai-gpt35-turbo-16k",

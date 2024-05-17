@@ -22,6 +22,7 @@ from moonshot.src.storage.storage import Storage
 from pydantic import BaseModel
 
 
+
 class RedTeaming:
     sql_create_session_metadata_table = """
             CREATE TABLE IF NOT EXISTS session_metadata_table (
@@ -58,7 +59,7 @@ class RedTeaming:
         red_teaming_type: RedTeamingType,
         red_teaming_progress: RedTeamingProgress,
         cancel_event: asyncio.Event,
-    ) -> list | None:
+    ) -> dict | None:
         """
         Asynchronously generates the red teaming session.
 
@@ -163,7 +164,7 @@ class RedTeaming:
         self.red_teaming_progress.status = RunStatus.COMPLETED
         return {}
 
-    async def run_manual_red_teaming(self) -> list:
+    async def run_manual_red_teaming(self) -> dict:
         """
         Runs the manual red teaming process based on the provided arguments.
 
@@ -173,7 +174,7 @@ class RedTeaming:
         consolidating the results into a list.
 
         Returns:
-        list: A list of consolidated results from the manual red teaming process.
+        dict: A dict of prompt results from the manual red teaming process.
         """
         # assign manual red teaming arguments to self.rt_args
         self.rt_args = self.runner_args.get("manual_rt_args", "")
@@ -191,36 +192,20 @@ class RedTeaming:
         if not self.prompt:
             raise RuntimeError("[Session] Unable to get prompt for manual red teaming.")
 
-        consolidated_result_list = []
         generator_list = []
         for target_llm_connector in self.connector_instances:
             gen_prompts_generator = self._generate_prompts(target_llm_connector.id)
             gen_results_generator = self._generate_predictions(
-                gen_prompts_generator, target_llm_connector
+                gen_prompts_generator, target_llm_connector,
             )
             generator_list.append(gen_results_generator)
+
         for generator in generator_list:
             async for result in generator:
-                formatted_result = self.format_result(result)
-                consolidated_result_list.append(formatted_result)
-        return consolidated_result_list
-
-    def format_result(self, red_teaming_result: RedTeamingPromptArguments) -> dict:
-        """
-        Formats the red teaming result and updates the red teaming progress.
-
-        This method takes a RedTeamingPromptArguments object, converts it to a dictionary, and updates the red teaming
-        chats with the result. It then retrieves the current state of the red teaming progress as a dictionary.
-
-        Args:
-            red_teaming_result (RedTeamingPromptArguments): The red teaming result to format.
-
-        Returns:
-            dict: The current state of the red teaming progress.
-        """
-        self.red_teaming_progress.update_red_teaming_chats(
-            red_teaming_result.to_dict(), RunStatus.COMPLETED
-        )
+                self.red_teaming_progress.update_red_teaming_chats(
+                result.to_dict(), RunStatus.RUNNING
+        )         
+        self.red_teaming_progress.status = RunStatus.COMPLETED
         return self.red_teaming_progress.get_dict()
 
     async def _generate_prompts(
@@ -414,6 +399,8 @@ class RedTeamingPromptArguments(BaseModel):
             "conn_id": self.conn_id,
             "cs_id": self.cs_id,
             "pt_id": self.pt_id,
+            "am_id": "",
+            "me_id": "",
             "original_prompt": self.original_prompt,
             "prepared_prompt": self.connector_prompt.prompt,
             "system_prompt": self.system_prompt,

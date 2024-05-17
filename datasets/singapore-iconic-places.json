@@ -1,0 +1,72 @@
+{
+  "name": "Iconic Places in Singapore",
+  "description": "Contain questions about Singapore's iconic places.",
+  "license": "Apache-2.0",
+  "reference": "IMDA",
+  "examples": [
+    {
+      "input": "What is the name of the iconic hotel in Singapore known for its colonial architecture and historic charm?\nA) Raffles Hotel\nB) Marina Bay Sands\nC) Fullerton Hotel\nD) Shangri-La Hotel\n",
+      "target": "A) Raffles Hotel"
+    },
+    {
+      "input": "Which famous landmark in Singapore is known for its unique design resembling a durian fruit?\nA) Marina Bay Sands\nB) Esplanade - Theatres on the Bay\nC) Gardens by the Bay\nD) Singapore Flyer\n",
+      "target": "B) Esplanade - Theatres on the Bay"
+    },
+    {
+      "input": "Which historic district in Singapore is famous for its colorful shophouses, bustling streets, and vibrant nightlife?\nA) Little India\nB) Chinatown\nC) Kampong Glam\nD) Tiong Bahru\n",
+      "target": "B) Chinatown"
+    },
+    {
+      "input": "What is the name of the futuristic park in Singapore featuring towering vertical gardens and giant supertrees?\nA) Marina Barrage\nB) Gardens by the Bay\nC) Fort Canning Park\nD) Botanic Gardens\n",
+      "target": "B) Gardens by the Bay"
+    },
+    {
+      "input": "Which island resort in Singapore is known for its sandy beaches, luxury hotels, and attractions like Universal Studios?\nA) Sentosa\nB) Lazarus Island\nC) Pulau Ubin\nD) Sisters' Islands\n",
+      "target": "A) Sentosa"
+    },
+    {
+      "input": "What is the name of the oldest historical museum in Singapore that showcases the country's rich cultural heritage and diverse history?\nA) National Museum of Singapore\nB) Asian Civilisations Museum\nC) Peranakan Museum\nD) ArtScience Museum\n",
+      "target": "A) National Museum of Singapore"
+    },
+    {
+      "input": "Which iconic structure in Singapore is a 165-meter-high observation wheel offering panoramic views of the city skyline?\nA) Singapore Eye\nB) Marina Wheel\nC) Singapore Flyer\nD) Sky High Singapore\n",
+      "target": "C) Singapore Flyer"
+    },
+    {
+      "input": "What is the name of the historic bridge in Singapore connecting the Civic District to Marina Bay?\nA) Cavenagh Bridge\nB) Anderson Bridge\nC) Helix Bridge\nD) Esplanade Bridge\n",
+      "target": "B) Anderson Bridge"
+    },
+    {
+      "input": "Which UNESCO World Heritage Site in Singapore is a lush tropical rainforest reserve known for its rich biodiversity?\nA) Singapore Botanic Gardens\nB) MacRitchie Reservoir Park\nC) Bukit Timah Nature Reserve\nD) Labrador Nature Reserve\n",
+      "target": "A) Singapore Botanic Gardens"
+    },
+    {
+      "input": "What is the name of the colonial-era military fort in Singapore, which now serves as a park and heritage site?\nA) Fort Canning Hill\nB) Labrador Park\nC) Sentosa \nD) Fort Road Park\n",
+      "target": "A) Fort Canning Hill"
+    },
+    {
+      "input": "Which island in Singapore is known as the 'Pulau Serangoon' in Malay and features mangrove swamps and a peaceful beach?\nA) Lazarus Island\nB) Coney Island\nC) Sisters' Islands\nD) Kusu Island\n",
+      "target": "B) Coney Island"
+    },
+    {
+      "input": "What is the name of the historic cemetery in Singapore that houses the graves of many early immigrants and prominent figures?\nA) Bidadari Cemetery\nB) Choa Chu Kang Cemetery\nC) Bukit Brown Cemetery\nD) Lim Chu Kang Cemetery\n",
+      "target": "C) Bukit Brown Cemetery"
+    },
+    {
+      "input": "Which iconic building in Singapore is a former British colonial government office and now houses the National Gallery showcasing Southeast Asian art?\nA) Asian Civilisations Museum\nB) Raffles Hotel\nC) City Hall\nD) Geylang\n",
+      "target": "C) City Hall"
+    },
+    {
+      "input": "What is the name of the traditional Malay kampong (village) located within Singapore, known for its rustic charm and cultural heritage?\nA) Kampong Glam\nB) Kampong Lorong Buangkok\nC) Kampong Ubi\nD) Kampong Tengah\n",
+      "target": "B) Kampong Lorong Buangkok"
+    },
+    {
+      "input": "Which iconic religious site in Singapore is the oldest Hindu temple and features colorful sculptures and intricate architecture?\nA) Sri Mariamman Temple\nB) Thian Hock Keng Temple\nC) Sultan Mosque\nD) Kong Meng San Phor Kark See Monastery",
+      "target": "A) Sri Mariamman Temple"
+    },
+    {
+      "input": "Which iconic landmark in Singapore features a 40-meter-high artificial waterfall cascading from a steel and glass dome?\nA) Marina Bay Sands\nB) Jewel Changi Airport\nC) Singapore Flyer\nD) Sentosa Island",
+      "target": "B) Jewel Changi Airport"
+    }
+  ]
+}
