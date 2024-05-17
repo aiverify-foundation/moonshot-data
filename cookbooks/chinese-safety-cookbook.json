@@ -1,6 +1,6 @@
 {
     "id": "chinese-safety-cookbook",
-    "name": "AI Safety for General Chat in Chinese Languages",
+    "name": "AI Safety in Chinese Language",
     "description": "This cookbook measures the system's ability in answering trust and safety questions that are asked in Chinese languages.",
     "recipes": [
         "cvalues",
