@@ -1,0 +1,56 @@
+{
+    "name": "Singapore Transport System",
+    "description": "Contain questions about Singapore's public housing system",
+    "license": "Apache-2.0",
+    "reference": "IMDA",
+    "examples": [
+        {
+            "input": "What is the name of the government agency responsible for public housing in Singapore?\nA) Housing and Development Board (HDB)\nB) Urban Redevelopment Authority (URA)\nC) Ministry of National Development (MND)\nD) Building and Construction Authority (BCA)",
+            "target": "A) Housing and Development Board (HDB)"
+        },
+        {
+            "input": "What is the name of the government agency responsible for public housing in Singapore?\nA) Housing and Development Board (HDB)\nB) Urban Redevelopment Authority (URA)\nC) Ministry of National Development (MND)\nD) Building and Construction Authority (BCA)",
+            "target": "A) Housing and Development Board (HDB)"
+        },
+        {
+            "input": "What is the minimum occupancy period for HDB flat owners before they are eligible to sell their flats in the open market as of 2023?\nA) 5 years\nB) 7 years\nC) 10 years\nD) 15 years",
+            "target": "B) 5 years"
+        },
+        {
+            "input": "Which initiative introduced by HDB aims to create more inclusive and vibrant neighborhoods by providing facilities such as playgrounds, fitness corners, and sheltered walkways?\nA) Home Improvement Programme (HIP)\nB) Selective En bloc Redevelopment Scheme (SERS)\nC) Main Upgrading Programme (MUP)\nD) Neighbourhood Renewal Programme (NRP)",
+            "target": "D) Neighbourhood Renewal Programme (NRP)"
+        },
+        {
+            "input": "What is the Parenthood Provisional Housing Scheme (PPHS) aimed at assisting as of 2023?\nA) Newlyweds\nB) Elderly\nC) Single parents\nD) Couples waiting for the completion of their new HDB flats",
+            "target": "D) Couples waiting for the completion of their new HDB flats"
+        },
+        {
+            "input": "What is the maximum rental period for flats under the Parenthood Provisional Housing Scheme (PPHS as of 2023?\nA) 1 year\nB) 2 years\nC) 3 years\nD) 4 years",
+            "target": "C) 3 years"
+        },
+        {
+            "input": "What is the age requirement for singles to be eligible for the Single Housing Scheme as of 2023?\nA) 30 and above\nB) 35 and above\nC) 40 and above\nD) 45 and above",
+            "target": "B) 35 and above"
+        },
+        {
+            "input": "To be eligible for the subsidies under Single Housing Scheme, singles must not own or have owned any local or overseas residential property within the last how many months as of 2023?\nA) 2 months\nB) 3 months\nC) 30 months\nD) 70 months",
+            "target": "C) 30 months"
+        },
+        {
+            "input": "What is the maximum income ceiling for singles to qualify for the Single Housing Scheme as of 2023?\nA) $6,000\nB) $7,000\nC) $8,000\nD) $9,000",
+            "target": "B) $7,000"
+        },
+        {
+            "input": "What major initiative was introduced in 2001 to encourage home ownership?\nA) Parenthood Provisional Housing Scheme (PPHS)\nB) Lease Buyback Scheme (LBS)\nC) Enhancement for Active Seniors (EASE)\nD) Build-To-Order (BTO) flats",
+            "target": "D) Build-To-Order (BTO) flats"
+        },
+        {
+            "input": "What major initiative was introduced in 2001 to encourage home ownership?\nA) Parenthood Provisional Housing Scheme (PPHS)\nB) Lease Buyback Scheme (LBS)\nC) Enhancement for Active Seniors (EASE)\nD) Build-To-Order (BTO) flats",
+            "target": "D) Build-To-Order (BTO) flats"
+        },
+        {
+            "input": "Which year marked the launch of the Ethnic Integration Policy (EIP) by HDB to promote racial harmony in public housing estates?\nA) 1989\nB) 1991\nC) 1995\nD) 1999",
+            "target": "A) 1989"
+        }
+    ]
+}
