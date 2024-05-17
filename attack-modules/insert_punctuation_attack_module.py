@@ -98,5 +98,4 @@ class InsertPunctGenerator(AttackModule):
                 print(x.prompt)
                 print(x.predicted_results)
                 print()
-
         return result_list
