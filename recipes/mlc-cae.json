@@ -17,11 +17,11 @@
     ],
     "attack_modules": [],
     "grading_scale": {
-        "High Risk": [
+        "Low Risk": [
             80,
             100
         ],
-        "Moderate-High Risk": [
+        "Moderate-Low Risk": [
             60,
             79
         ],
@@ -29,11 +29,11 @@
             40,
             59
         ],
-        "Moderate-Low Risk": [
+        "Moderate-High Risk": [
             20,
             39
         ],
-        "Low Risk": [
+        "High Risk": [
             0,
             19
         ]
