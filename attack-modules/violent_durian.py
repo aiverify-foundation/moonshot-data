@@ -11,7 +11,7 @@ class MultiturnAgent(AttackModule):
         # Initialize super class
         super().__init__(am_id, am_arguments)
         self.name = "Violent Durian"
-        self.descriptipn = ("This is a multi-turn agent designed to interact over several exchanges. "
+        self.description = ("This is a multi-turn agent designed to interact over several exchanges. "
                             "It's used to elicit dangerous or violent suggestions from the target language model "
                             "by adopting a criminal persona. The application is experimental")
 
