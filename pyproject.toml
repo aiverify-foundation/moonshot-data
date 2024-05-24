@@ -47,3 +47,4 @@ tensorflow-io-gcs-filesystem = [
     { version = ">=0.23.1", markers = "sys_platform == 'win32'" }
 ]
 tensorflow-intel = { version = "2.16.1", markers = "sys_platform == 'win32'" }
+urllib3 = "2.2.1"
