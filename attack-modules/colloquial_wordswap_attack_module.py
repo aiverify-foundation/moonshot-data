@@ -11,8 +11,8 @@ class ColloquialWordSwapAttackModule(AttackModule):
         # Initialize super class
         super().__init__(am_id, am_arguments)
         self.name = "Colloquial Wordswap"
-        self.description = ("This attack module tests for textual robustness against the Singapore context. It takes in prompts that feature nouns that describe people." 
-        "\nExamples of this include words like 'girl' , 'boy' or 'grandmother'.\nThe module substitutes these words"
+        self.description = ("This attack module tests for textual robustness against the Singapore context. It takes in prompts that feature nouns that describe people. " 
+        "Examples of this include words like 'girl' , 'boy' or 'grandmother'. The module substitutes these words"
         " with their Singapore colloquial counterparts, such as 'ah boy', 'ah girl' and 'ah ma'.")
 
     def get_metadata(self) -> dict:
