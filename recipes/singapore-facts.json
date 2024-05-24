@@ -10,7 +10,10 @@
         "singapore-transport-system",
         "singapore-iconic-places",
         "singapore-political-history",
-        "singapore-public-housing"
+        "singapore-public-housing",
+        "singapore-facts-tnf",
+        "singapore-places-tnf",
+        "singapore-food-tnf"
     ],
     "prompt_templates": [],
     "metrics": [
