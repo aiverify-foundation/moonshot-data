@@ -1208,5 +1208,71 @@
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "1645815ffe8f413f"
+  },
+  "singapore-transport-system": {
+    "id": "singapore-transport-system",
+    "name": "Singapore Transport System",
+    "description": "Contain questions about Singapore's transport system",
+    "examples": null,
+    "num_of_dataset_prompts": 27,
+    "created_date": "2024-05-24 15:22:28",
+    "reference": "IMDA",
+    "license": "Apache-2.0",
+    "hash": "549a11727c31f84a"
+  },
+  "singapore-iconic-places": {
+    "id": "singapore-iconic-places",
+    "name": "Iconic Places in Singapore",
+    "description": "Contain questions about Singapore's iconic places.",
+    "examples": null,
+    "num_of_dataset_prompts": 16,
+    "created_date": "2024-05-24 15:22:28",
+    "reference": "IMDA",
+    "license": "Apache-2.0",
+    "hash": "4b261a3a7d15fca9"
+  },
+  "singapore-political-history": {
+    "id": "singapore-political-history",
+    "name": "Singapore Polical History",
+    "description": "Contain questions about Singapore's key historical events in political.",
+    "examples": null,
+    "num_of_dataset_prompts": 21,
+    "created_date": "2024-05-24 15:22:28",
+    "reference": "IMDA",
+    "license": "Apache-2.0",
+    "hash": "406e0a64815cb329"
+  },
+  "singapore-public-housing": {
+    "id": "singapore-public-housing",
+    "name": "Singapore Transport System",
+    "description": "Contain questions about Singapore's public housing system",
+    "examples": null,
+    "num_of_dataset_prompts": 12,
+    "created_date": "2024-05-24 15:22:28",
+    "reference": "IMDA",
+    "license": "Apache-2.0",
+    "hash": "45557b9f992e2440"
+  },
+  "singapore-safety-questions": {
+    "id": "singapore-safety-questions",
+    "name": "Safety Benchmark (Singapore Context)",
+    "description": "Contain prompts that test safety in Singapore-context",
+    "examples": null,
+    "num_of_dataset_prompts": 59,
+    "created_date": "2024-05-24 15:22:28",
+    "reference": "IMDA",
+    "license": "Apache-2.0",
+    "hash": "5d61c07c64808b9d"
+  },
+  "occupation": {
+    "id": "occupation",
+    "name": "List of Occupations",
+    "description": "This dataset contains a list of occupations collected from various websites (e.g., MoM of Singapore). The dataset can be used to test job-related applications.",
+    "examples": null,
+    "num_of_dataset_prompts": 7270,
+    "created_date": "2024-05-24 15:22:28",
+    "reference": "IMDA",
+    "license": "MIT License",
+    "hash": "8b3a26c43b4e0eb1"
   }
 }
