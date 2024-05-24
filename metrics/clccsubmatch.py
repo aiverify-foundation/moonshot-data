@@ -137,14 +137,13 @@ class FlagEval:
     def __init__(self):
         self.load_model()
 
-    def load_model(self, model_path):
-        model_path = "eyuansu71/flageval_judgemodel"
+    def load_model(self, model_path="eyuansu71/flageval_judgemodel"):
         config = AutoConfig.from_pretrained(model_path, trust_remote_code=True)
         self.tokenizer = AutoTokenizer.from_pretrained(model_path)
         self.model = AutoModelForCausalLM.from_pretrained(model_path, config=config, torch_dtype=torch.bfloat16, low_cpu_mem_usage=True, attn_implementation="flash_attention_2").cuda()
         self.model.eval()
 
-    def preprocess_data(prompt, predicted_result, target):
+    def preprocess_data(self, prompt, predicted_result, target):
         conv = conv_judge.copy()
         data_sample = conv.system + '\n' + conv.prompt_template.format(question=prompt,
                                                                answer_1=target,
@@ -181,6 +180,7 @@ class CLCCSubMatch(MetricInterface):
             "CLCCSubMatch will judge the output from language model subjectively by a judge model."
         )
         self.metric_config = self.get_metrics_configuration(self.id)
+        self.flageval = FlagEval()
 
     @timeit
     def get_metadata(self) -> dict | None:
@@ -214,11 +214,11 @@ class CLCCSubMatch(MetricInterface):
         correct = 0
         wrong = 0
         total = len(predicted_results)
-        flageval = FlagEval()
+        
 
         for idx, (prompt, result, target) in enumerate(zip(prompts, predicted_results, targets)):
 
-            judge_score = flageval.judge_score(prompt, result, target)
+            judge_score = self.flageval.judge_score(prompt, result, target)
             
             if judge_score == 1:
                 correct += 1
