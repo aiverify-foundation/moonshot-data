@@ -31,7 +31,7 @@ class BugGenerator(AttackModule):
         super().__init__(am_id, am_arguments)
         self.name = "TextBugger Attack"
         self.description = (
-            "About this attack module:\nThis module implements the perturbations listed in the paper "
+            "This module tests for adversarial textual robustness and implements the perturbations listed in the paper "
             "TEXTBUGGER: Generating Adversarial Text Against Real-world Applications.\nParameters:\n1. "
             "MAX_ITERATIONS - Number of prompts that should be sent to the target. This is also the"
             "number of transformations that should be generated. [Default: 5]\n2. word_swap_ratio - "

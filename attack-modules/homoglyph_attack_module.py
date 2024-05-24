@@ -12,7 +12,7 @@ class HomoglyphGenerator(AttackModule):
         super().__init__(am_id, am_arguments)
         self.name = "Homoglyph Attack"
         self.description = (
-            "About this attack module:\nHomoglyphs are alternative words for words comprising of ASCII "
+            "This module tests for adversarial textual robustness. Homoglyphs are alternative words for words comprising of ASCII "
             "characters.\nExample of a homoglyph fool -> fooI\nThis module purturbs the prompt with all "
             "available homoglyphs for each word present.\nParameters:\n1. MAX_ITERATIONS - Maximum "
             "number of prompts that should be sent to the target. [Default: 20]"

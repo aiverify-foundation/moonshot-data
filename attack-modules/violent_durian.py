@@ -13,7 +13,8 @@ class MultiturnAgent(AttackModule):
         self.name = "Violent Durian"
         self.description = ("This is a multi-turn agent designed to interact over several exchanges. "
                             "It's used to elicit dangerous or violent suggestions from the target language model "
-                            "by adopting a criminal persona. The application is experimental")
+                            "by adopting a criminal persona. The application is experimental and uses OpenAI GPT-4. "
+                            "Configure the endpoint openai-gpt4 to use this attack module.")
 
     def get_metadata(self) -> dict:
         """
