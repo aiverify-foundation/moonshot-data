@@ -103,7 +103,7 @@ class MultiturnAgent(AttackModule):
         question_generator = Connector.create(
             ConnectorEndpoint.read(endpoint_id))
 
-        MAX_ITERATION = 20
+        MAX_ITERATION = 10
         i = 0
 
         for target_llm_connector in self.connector_instances:
