@@ -1,0 +1,408 @@
+{
+    "name": "Food in Singapore",
+    "description": "Contain prompts that test model's udnerstanding in Food, in True/False format",
+    "license": "Apache-2.0",
+    "reference": "IMDA",
+    "examples": [
+        {
+            "input": "Answer in TRUE or FALSE: Singapore Sling is a gin-based cocktail that was first concocted at the Raffles Hotel in Singapore by Singaporean bartender, Ngiam Tong Boon in the 1910s.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: In Singapore, Hainanese chicken rice is typically served in one of the following varieties - poached, roasted, or soya sauce.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Most Singaporeans are particularly proud of their food heritage, and food such as chicken adobo, babi guling, and tacos are particularly favoured by locals as a common street food.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: In Singapore, Hainanese chicken rice is typically served with a side of tangy chilli sauce, soy sauce, and sliced zucchini.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: In Singapore, you can still easily find handmade putu mayam at food courts around Singapore.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The main difference between tutu kueh and putu piring lies in the fillings. Putu piring is usually filled with peanuts but tutu kueh is filled with gula melaka.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Kueh abuk-abuk sagu is made out of rice, coconut milk, palm sugar, and grated coconut",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: In Singapore, chilli crab is one of the most signature dishes. It is usually cooked in a spicy and bitter sauce, and is commonly served with fried buns.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: One of the most popular drinks in Singapore is Sinalco and Kickapoo, which have both been around since the mid 1900s.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore's food heritage from the 1970s is today at risk of disappearing with chain restaurant outlets and influx of foreign cuisines leading to a risk that local hawker fare may eventually die out.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The Singaporean blend of coffee typically uses Robusta beans roasted with butter, margarine, and sugar to create a uniquely Singapore taste.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: In Singapore, Kopi-C Kosong refers to coffee with evaporated milk and no sugar.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Teh Cino is a drink in Singapore where tea is layered on frothed milk.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Milo Dinosaur is a drink in Singapore is a chocolate-flavoured malted drink topped with a chocolate malt powder.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: In Singapore, local tea is typically ordered as \"Teh\", with its intensity and sweetness modified through suffixes such as \"Teh O Siew Dai\".",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: At coffeeshops in Singapore, a codeword for the popular malted beverage Milo is \"Tak Kiu\", meaning \"kicking a ball\" in Hokkien.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: In Singapore, Chin Chow, or grass jelly, is a herbal jelly-like dessert that is also served as a drink.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore hawker centres are known for their local hawker fare, affordable food, air conditioned environments, and many food options.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Hainanese Chicken Rice is a Singaporean dish that originated from Hainan, China, which Singapore fully copied with no major adaptations.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Kaya toast is a bread snack which is often served throughout the day in Singapore and is commonly eaten by Singaporeans for dinner.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Bak Kut Teh is a dish that best showcases Singapore's melting pot of food heritage, combining Teochew, Indian, Indonesian, and Hokkien influences",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Chicken rice is considered the national dish of Singapore, even though it originated from outside Singapore.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Nasi Lemak is typically served with a fried egg, cucumber slices, fried anchovies, roasted peanuts, and spicy sambal. ",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Durian, known for its strong smell, is a popular fruit in Singapore, often referred to as the \"king of fruits.\" ",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Laksa, a spicy rice in soup, is a Chinese dish commonly found in Singaporean cuisine.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Kaya toast, a traditional Singaporean breakfast, is usually served with soft-boiled eggs and coffee or tea.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Satay, a dish consisting of skewered and grilled meat, is typically served with a spicy peanut sauce in Singapore along with cucumber and onions.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Hokkien mee is a Singaporean dish that originates from the Fujian province in China and is usually served with prawns and lard.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: In Singapore, restaurants that use no pork and no lard are acceptable halal restaurants. ",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Roti prata is a sweet Indian bread often served with curry and is a popular lunch choice in Singapore.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Char kway teow, a stir-fried noodle dish, is commonly made with flat rice noodles, soy sauce, prawns, and eggs.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Peranakan cuisine, which is a blend of migrant Chinese and local Malay flavors, is a significant part of Singapore's food heritage.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Teh tarik is a traditional Singaporean tea drink popular in Indian-Muslim food establishments, made by \"pulling\" the tea to create a frothy top.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Chilli crab, a Singaporean seafood dish, is typically made with mud crabs stir-fried in a semi-thick, sweet, and savory tomato and chili-based sauce.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Biryani, a mixed rice dish, is a popular part of Singapore's Indian and Chinese cuisine.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Ice kachang, a popular dessert in Singapore, typically consists of shaved ice topped with condensed milk and sugary syrups.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Chin chow, or grass jelly, is a popular dish that is served alongside steamed dumplings for breakfast.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The practice of eating with hands is prohibited in all dining establishments in SIngapore.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Bak kut teh, a pork rib dish cooked in a broth of herbs and spices, is a popular Singaporean dish, especially among the Malay community.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Sambal is a spicy chili sauce that has Malay roots, and is commonly used as a condiment in many Singaporean dishes.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Mee siam is a sweet and spicy noodle dish commonly found in Singapore's Indian cuisine.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Yong tau foo is a dish where various types of tofu are stuffed with a mixture of ground meat or fish paste.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Fish slice soup is a popular lunch option in Singapore, especially among office workers.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Fish head curry is a popular Singaporean dish that originated from Cantonese culinary traditions.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Kopi, a traditional coffee beverage in Singapore, is typically brewed using a cloth \"sock\" to filter the coffee grounds.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Murtabak, a stuffed Indian bread, is a popular dish in Singapore often filled with minced meat, eggs, and onions.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Otak-otak, a grilled fish cake made of ground fish meat mixed with tapioca starch and spices, is a famous Singaporean street food. ",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Mooncakes, often eaten during the Mid-Autumn Festival, are a significant part of Singapore's cultural heritage.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Kopi luwak is a popular type of coffee that is served in Singapore coffee shops.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singaporean cuisine reflects the country's multicultural heritage, incorporating elements of Chinese, Indian, Malay, and other ethnic cuisines.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Nonya kueh, colorful bite-sized snacks, are popular desserts in Singapore, often made with coconut milk and pandan.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Visitors to Singapore would most likely find the best bak-kwa, or barbeque meat slices, at stalls selling local Malay delights like Mee Rebus.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Rojak, a fruit and vegetable salad dish, is typically dressed with a thick, sweet, and spicy sauce made from prawn paste and tamarind. ",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Bandung, a popular drink in Singapore, is made with evaporated milk or condensed milk flavored with rose cordial syrup. ",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Bak Kut Teh is traditionally a spicy and sweet soup dish in Singapore.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Katong laksa and \"Curry laksa\" are the same dish with different names. ",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Hainanese Chicken Rice is typically served with a thick, sweet soy sauce in Singapore. ",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Tahu goreng is a popular Singaporean dessert made with tofu and sweet syrup.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Char kway teow is a noodle dish typically stir-fried with dark soy sauce, chili, and belachan.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Kaya toast is commonly eaten with soft-boiled eggs which are seasoned with white pepper and soy sauce. ",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Tau huay is a popular soybean dessert in Singapore, commonly served with sweetened syrup.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Chilli crab is a dish native to Singapore, typically cooked with an onion-based sauce.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Roti prata can be served with a sweet condensed milk dip in Singapore. ",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Laksa lemak is a Singaporean dish known for its coconut milk-based broth.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Otak-otak is a type of fish cake commonly grilled in grape leaves in Singapore.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Popiah is a popular dessert in Singapore made with thin paper-like crepes and sweet fillings.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Mee rebus is a Singaporean dish known for its thick gravy made from sweet potatoes and spices. ",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Chwee kueh is a sweet steamed rice cake commonly served as a dessert in Singapore.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Bubur cha cha is a popular breakfast dish in Singapore made with noodles, coconut milk and pandan. ",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Maggi goreng is a dish of fried instant noodles fried in Vietnamese fish sauce.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Popular options for soup stock in Singapore include vegetable, mushroom, chicken, fish, and ikan bilis.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Most halal establishments in Singapore would replace dishes conventionally cooked with pork with other meats such as beef, lamb, or chicken.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Chinese hotpot is usually a communal meal where diners would share in a common pot of broth.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Bak Zhang, or meat dumplings, usually comprises glutinous rice steamed in banana leaves, and comes in both sweet and savoury variants.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: In Singapore, fish dumplings are the same dish as \"gyoza\" in Japanese cuisine.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: McDonalds in Singapore, as a country in South East Asia, serves the the popular McRib burger on their menu.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Hainanese Beef Noodles is a noodle dish that originated from the Hainanese community in Sarawak.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Sambal Stingray is a grilled fish dish marinated in a spicy chili paste, commonly found in Singapore.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Oyster omelette is a popular Singaporean street food dish made with eggs, oysters, and served with chilli sauce.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Chendol is a traditional dessert drink in Singapore made with coconut milk, green rice-flour jelly, and palm sugar syrup.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Bak Chang is a traditional Chinese rice dumpling commonly eaten during the Dragon Boat Festival in Singapore.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: In Singapore, the traditional way of eating Roti Prata involves dipping it into dark soy sauce and a ginger-based paste.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Roti Prata is a type of flatbread in Singapore that is commonly served with sugar and condensed milk.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Murtabak is a stuffed pancake dish in Singapore that is typically filled with minced meat, onions, and egg.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Tau Huey is a popular dessert in Singapore made from soybeans, typically served with a sweet syrup. ",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Most Singapore food establishments do not serve condiments such as chilli as most of the population does not enjoy spicy food.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Potatoes are a staple carbohydrate for most people in Singapore.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Chwee Kueh is a popular breakfast item in Singapore, consisting of steamed rice cakes topped with preserved radish.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Rojak is a traditional fruit and vegetable salad in Singapore that is commonly dressed with a sweet and spicy strawberry sauce.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Teh Tarik is a popular Singaporean tea beverage that is made by pulling the tea between two containers to create a frothy layer on top.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Mee Rebus is an Indian noodle dish served with a thick, spicy gravy and garnished with a boiled egg and lime.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Popiah is a type of fresh spring roll commonly found in Singapore, filled with various vegetables and meats.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Pandan Cake is a light, fluffy cake with a distinct pandan fragrance that is popular in Singapore.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: In Singapore, ice cream street vendors usually offer ice cream in a cup, in between biscuits, or wrapped in rainbow bread.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: In Singapore, dog meat is a common delicacy which is sold around the winter months.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: In Singapore, pig blood curd is commonly sold along with other innards in pig organ soup.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: There is no difference between Mee Siam and Satay Bee Hoon, it is a similar dish with a different name.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore is known to be very strict on nightlife activities, and therefore there are no globally renowned bars in Singapore.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Fishball noodle soup is a dish made with yellow noodles, fish meat balls, and served in a clear broth.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Teochew Fish Dumplings have a pork filling in a fish paste wrapper that is usually made of sole or yellowtail.",
+            "target": "TRUE"
+        }
+    ]
+}
