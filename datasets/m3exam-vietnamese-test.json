@@ -1,12 +1,8 @@
 {
   "name": "m3exam-vietnamese",
-  "description": "This dataset contains local exam questions for Vietnamese.",
-  "keywords": [
-    "general"
-  ],
-  "categories": [
-    "capability"
-  ],
+  "description": "This dataset contains local exam questions for testing Vietnamese capability.",
+  "reference": "https://github.com/DAMO-NLP-SG/M3Exam",
+  "license": "CC BY-NC-SA",
   "examples": [
     {
       "input": "Tr\u00e1ch nhi\u1ec7m h\u00ecnh s\u1ef1 \u0111\u01b0\u1ee3c \u00e1p d\u1ee5ng cho \u0111\u1ed1i t\u01b0\u1ee3ng n\u00e0o sau \u0111\u00e2y?\nA. Ng\u01b0\u1eddi c\u00f3 h\u00e0nh vi vi ph\u1ea1m n\u1ed9i quy c\u1ee7a t\u1ed5 ch\u1ee9c.\nB. Ng\u01b0\u1eddi c\u00f3 h\u00e0nh vi vi ph\u1ea1m c\u00e1c nguy\u00ean t\u1eafc qu\u1ea3n l\u00fd c\u1ee7a nh\u00e0 n\u01b0\u1edbc.\nC. Ng\u01b0\u1eddi c\u00f3 h\u00e0nh vi vi ph\u1ea1m quy\u1ec1n s\u1edf h\u1eefu c\u00f4ng nghi\u1ec7p.\nD. Ng\u01b0\u1eddi c\u00f3 h\u00e0nh vi nguy hi\u1ec3m cho x\u00e3 h\u1ed9i.",

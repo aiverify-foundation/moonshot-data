@@ -1,12 +1,8 @@
 {
   "name": "m3exam-indonesian",
-  "description": "This dataset contains local exam questions for indonesian.",
-  "keywords": [
-    "general"
-  ],
-  "categories": [
-    "capability"
-  ],
+  "description": "This dataset contains local exam questions for testing Indonesian capability.",
+  "reference": "https://github.com/DAMO-NLP-SG/M3Exam",
+  "license": "CC BY-NC-SA",
   "examples": [
     {
       "input": "Bacaan untuk soal nomor 9 \u2013 11\n\nIbu          :  \"Iwan, biar diperiksa dokter dulu, ya!\"\nIwan       :  \"Ya, Bu\"\nDokter   :  (memegang kepala, leher, dan memeriksa dada dengan stetoskop) \n                   \"Ah parah. Kamu harus disuntik\" (mengambil tasnya lalu mengambil jarum)\nIwan       :  (ketakutan dan ngeri melihat jarum) \n                  \"Ah, kalau begini, Iwan tidak jadi sakit deh, Bu!\" (meloncat dari tempat tidur dan lari ke kamar mandi)\nIbu           :  \"Jadi, kamu mau berangkat sekolah?\"\nIwan       :  \"Ya, Bu.\"\nIbu          :  \"Mengapa kamu pura-pura sakit?\"\nIwan      :  \"PR Iwan belum selesai, Bu.\"\nIbu          :  \"Bagaimana kamu ini, Iwan!\"\nLatar tempat drama di atas adalah ...\nA. Rumah Sakit\nB. Rumah\nC. Sekolah\nD. Apotik",
