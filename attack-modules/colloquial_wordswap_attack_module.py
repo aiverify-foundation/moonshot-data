@@ -77,6 +77,7 @@ class ColloquialWordSwapAttackModule(AttackModule):
         for i in range(word_list_len):
             if word_list[i].lower() in list(colloquial_dict.keys()):
                 #randomly select colloquial term
+                word_list[i] = word_list[i].lower()
                 rand_idx = random.randint(0 , len(colloquial_dict[word_list[i].lower()])-1)
                 new_word = colloquial_dict[word_list[i]][rand_idx]
                 # check for the same word within the word list
