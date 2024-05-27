@@ -5,7 +5,7 @@
     "description": "Zero-shot reading comprehension on paragraphs and questions from squadshifts",
     "examples": null,
     "num_of_dataset_prompts": 48201,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/squad_shifts",
     "license": "",
     "hash": "37b3413b520f1426"
@@ -16,7 +16,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on religion, containing only the ambiguous questions.",
     "examples": null,
     "num_of_dataset_prompts": 600,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "d2a0f4023c20d4fd"
@@ -27,10 +27,21 @@
     "description": "Adversarial GLUE Benchmark (AdvGLUE) is a comprehensive robustness evaluation benchmark that focuses on the adversarial robustness evaluation of language models. ",
     "examples": null,
     "num_of_dataset_prompts": 721,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/AI-secure/adversarial-glue",
     "license": "",
     "hash": "93cd563eac992f8a"
+  },
+  "singapore-food-tnf": {
+    "id": "singapore-food-tnf",
+    "name": "Food in Singapore",
+    "description": "Contain prompts that test model's udnerstanding in Food, in True/False format",
+    "examples": null,
+    "num_of_dataset_prompts": 100,
+    "created_date": "2024-05-27 16:48:35",
+    "reference": "IMDA",
+    "license": "Apache-2.0",
+    "hash": "675fc75234a5932a"
   },
   "medmcqa": {
     "id": "medmcqa",
@@ -38,7 +49,7 @@
     "description": "MedMCQ is a large-scale, multiple-choice question answering dataset designed to address realworld medical entrance exam questions. It contains more than 194k high-quality AIIMS & NEET PG entrnace exam MCQs covering 2.4k healthcare topics and 21 medical subjects.",
     "examples": null,
     "num_of_dataset_prompts": 182822,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/MedMCQA/MedMCQA",
     "license": "MIT License",
     "hash": "53b7f1fd01b3c166"
@@ -49,7 +60,7 @@
     "description": "This dataset is used to test the comprehension abilities for the Thirukkural. Thirukkural is a classic Tamil literature composed by the ancient Tamil poet Thiruvalluvar. It consists of 1330 couplets (kurals) that are grouped into 133 chapters, each containing 10 couplets.",
     "examples": null,
     "num_of_dataset_prompts": 266,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/vijayanandrp/Thirukkural-Tamil-Dataset",
     "license": "Creative Commons Attribution 4.0 International",
     "hash": "52589869fc432c79"
@@ -60,7 +71,7 @@
     "description": "RealTime QA is a dynamic question answering (QA) platform that inquires about the present. ",
     "examples": null,
     "num_of_dataset_prompts": 50,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/realtimeqa/realtimeqa_public",
     "license": "",
     "hash": "d4295a228fdf9a15"
@@ -71,7 +82,7 @@
     "description": "Contain tutorial questions ans answers from Singapore's Universities to test model's ability in understanding legal context in Singapore",
     "examples": null,
     "num_of_dataset_prompts": 32,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "",
     "hash": "06c2951c6bd3c505"
@@ -82,7 +93,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 586,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "1589b595c2a82395"
@@ -93,7 +104,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on gender, containing only the disambiguated questions.",
     "examples": null,
     "num_of_dataset_prompts": 2836,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "a0202b8a72ed15d1"
@@ -104,7 +115,7 @@
     "description": "A dataset of genuine grade-school level, multiple-choice science questions in advanced Q&A. This is the challenge set.",
     "examples": null,
     "num_of_dataset_prompts": 2590,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://allenai.org/data/arc",
     "license": "CC BY-SA",
     "hash": "f9e244daec327295"
@@ -115,7 +126,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on nationality, containing only the ambiguous questions.",
     "examples": null,
     "num_of_dataset_prompts": 1540,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "c4f51ff728a92d6f"
@@ -126,7 +137,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on physical-appearance, containing only the disambiguated questions.",
     "examples": null,
     "num_of_dataset_prompts": 788,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "c9598647ba16b5b0"
@@ -137,7 +148,7 @@
     "description": "Code-mixed Tamil and English tweets curated for the sentiment analysis task.",
     "examples": null,
     "num_of_dataset_prompts": 1163,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "CC0: Public Domain",
     "hash": "9b270b9615cad317"
@@ -148,7 +159,7 @@
     "description": "This dataset contains prompts that embedded the body of moral standards and principles that most people intuitively accept.",
     "examples": null,
     "num_of_dataset_prompts": 1000,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/hendrycks/ethics/",
     "license": "MIT License",
     "hash": "c0ebcdfa06917e0b"
@@ -159,7 +170,7 @@
     "description": "The UCI Adult dataset has been used widely used to assess fairness.",
     "examples": null,
     "num_of_dataset_prompts": 32561,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://archive.ics.uci.edu/dataset/2/adult",
     "license": "Creative Commons Attribution 4.0 International",
     "hash": "9066896dc1f5eeb8"
@@ -170,7 +181,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on age, containing only the disambiguated questions.",
     "examples": null,
     "num_of_dataset_prompts": 1840,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "a98d5b0508b95eb1"
@@ -181,7 +192,7 @@
     "description": "Responses that enable, encourage, or endorse acts of intentional self-harm.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "",
     "hash": "56d2106c6ac2289d"
@@ -192,7 +203,7 @@
     "description": "A list of singapore legal terms extracted from SICC and Judiciary websites.",
     "examples": null,
     "num_of_dataset_prompts": 425,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://www.sicc.gov.sg/glossary-of-legal-terms",
     "license": "",
     "hash": "b871a0126dcb0ef1"
@@ -203,7 +214,7 @@
     "description": "Responses that demean or dehumanize people on the basis of their sensitive, personal characteristics.",
     "examples": null,
     "num_of_dataset_prompts": 26530,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "",
     "hash": "eb1ddc5b2b3de47c"
@@ -214,7 +225,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on age, containing only the ambiguous questions.",
     "examples": null,
     "num_of_dataset_prompts": 1840,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "2c3dc041fa7fc465"
@@ -225,7 +236,7 @@
     "description": "This recipe measures if the model is able to distinguish and understand cause and effect. The higher the grade, the better the system can perform this capability.",
     "examples": null,
     "num_of_dataset_prompts": 102,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/cause_and_effect",
     "license": "",
     "hash": "9f64cbe05b98e6a3"
@@ -236,7 +247,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on race-x-gender, containing only the ambiguous questions.",
     "examples": null,
     "num_of_dataset_prompts": 7980,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "650beb60bfe9499d"
@@ -247,7 +258,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 1534,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "b03744e84f4edfd6"
@@ -258,7 +269,7 @@
     "description": "TruthfulQA aims to measure the the truthfulness of a model. This dataset uses a multiple choice format.",
     "examples": null,
     "num_of_dataset_prompts": 483,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/sylinrl/TruthfulQA",
     "license": "Apache-2.0",
     "hash": "91e51c0467028c0c"
@@ -269,7 +280,7 @@
     "description": "This dataset contains prompts that embedded the body of moral standards and principles that most people intuitively accept.",
     "examples": null,
     "num_of_dataset_prompts": 1000,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/hendrycks/ethics/",
     "license": "MIT License",
     "hash": "4ab07a65d58af4be"
@@ -280,10 +291,21 @@
     "description": "PubMedQA is a large-scale, multiple-choice question answering dataset designed to address realworld medical entrance exam questions. It contains more than 194k high-quality AIIMS & NEET PG entrnace exam MCQs covering 2.4k healthcare topics and 21 medical subjects.",
     "examples": null,
     "num_of_dataset_prompts": 1000,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/MedMCQA/MedMCQA",
     "license": "MIT License",
     "hash": "1f6c0e8047dfaa2e"
+  },
+  "singapore-facts-tnf": {
+    "id": "singapore-facts-tnf",
+    "name": "Facts about Singapore in True and False",
+    "description": "Contain prompts that contains facts about Singapore, in True/False format",
+    "examples": null,
+    "num_of_dataset_prompts": 50,
+    "created_date": "2024-05-27 16:48:35",
+    "reference": "IMDA",
+    "license": "Apache-2.0",
+    "hash": "ce5cbbf1556b2227"
   },
   "cbbq-lite-household-registration-ambiguous": {
     "id": "cbbq-lite-household-registration-ambiguous",
@@ -291,7 +313,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 8700,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "e0c450ffb19bd216"
@@ -302,7 +324,7 @@
     "description": "RealToxicityPrompts aims to measure the model's ability in identify toxic sentences.",
     "examples": null,
     "num_of_dataset_prompts": 198884,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/allenai/real-toxicity-prompts/",
     "license": "Apache-2.0",
     "hash": "79626be4ef13e622"
@@ -313,7 +335,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 13528,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "68cacc35e85d2aaa"
@@ -324,7 +346,7 @@
     "description": "To measure the model/'s ability to summarize text, infer and deduce knowledge from context, and match the context.",
     "examples": null,
     "num_of_dataset_prompts": 32,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/gre_reading_comprehension",
     "license": "",
     "hash": "831291c1345a105e"
@@ -335,7 +357,7 @@
     "description": "MMLU measure knowledge acquired during pretraining by evaluating models exclusively in zero-shot and few-shot settings. This particular dataset contains questions on MMLU College Medicine",
     "examples": null,
     "num_of_dataset_prompts": 173,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/hendrycks/test",
     "license": "MIT License",
     "hash": "30d1ad68cdb94209"
@@ -346,7 +368,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on race-x-ses, containing only the disambiguated questions.",
     "examples": null,
     "num_of_dataset_prompts": 5580,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "8c85114fb0b3a15f"
@@ -357,10 +379,21 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 1392,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "487a9084704e4cb6"
+  },
+  "singapore-political-history": {
+    "id": "singapore-political-history",
+    "name": "Singapore Polical History",
+    "description": "Contain questions about Singapore's key historical events in political.",
+    "examples": null,
+    "num_of_dataset_prompts": 21,
+    "created_date": "2024-05-27 16:48:35",
+    "reference": "IMDA",
+    "license": "Apache-2.0",
+    "hash": "406e0a64815cb329"
   },
   "challenging-toxicity-prompts-variation2": {
     "id": "challenging-toxicity-prompts-variation2",
@@ -368,7 +401,7 @@
     "description": "ChallengingToxicityPrompts was created by the authors of DecodingTrust, with the aim to measure the model's ability in identify toxic sentences.",
     "examples": null,
     "num_of_dataset_prompts": 1000,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/AI-secure/DecodingTrust",
     "license": "CC BY-SA 4.0",
     "hash": "d3fe1d18b0bfd24d"
@@ -379,7 +412,7 @@
     "description": "Responses that enable, encourage, or endorse the commission of violent crimes.",
     "examples": null,
     "num_of_dataset_prompts": 4390,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "",
     "hash": "48ad7d0acb441a19"
@@ -390,7 +423,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 3960,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "b237a262cc9a45ae"
@@ -401,7 +434,7 @@
     "description": "MMLU measure knowledge acquired during pretraining by evaluating models exclusively in zero-shot and few-shot settings. This particular dataset contains questions on MMLU Clinical Knowledge",
     "examples": null,
     "num_of_dataset_prompts": 265,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/hendrycks/test",
     "license": "MIT License",
     "hash": "eefc8a5f1324e9e7"
@@ -412,7 +445,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 13528,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "6923a5911f8ed0d9"
@@ -423,10 +456,21 @@
     "description": "To measure the ability of machines to understand a text passage and answer a series of interconnected questions",
     "examples": null,
     "num_of_dataset_prompts": 10930,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "",
     "hash": "1ca2d06b060c066f"
+  },
+  "singapore-public-housing": {
+    "id": "singapore-public-housing",
+    "name": "Singapore Transport System",
+    "description": "Contain questions about Singapore's public housing system",
+    "examples": null,
+    "num_of_dataset_prompts": 12,
+    "created_date": "2024-05-27 16:48:35",
+    "reference": "IMDA",
+    "license": "Apache-2.0",
+    "hash": "45557b9f992e2440"
   },
   "challenging-toxicity-prompts": {
     "id": "challenging-toxicity-prompts",
@@ -434,7 +478,7 @@
     "description": "ChallengingToxicityPrompts was created by the authors of DecodingTrust, with the aim to measure the model's ability in identify toxic sentences.",
     "examples": null,
     "num_of_dataset_prompts": 2392,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/AI-secure/DecodingTrust",
     "license": "CC BY-SA 4.0",
     "hash": "e678c26593f89c20"
@@ -445,7 +489,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on race-x-ses, containing only the ambiguous questions.",
     "examples": null,
     "num_of_dataset_prompts": 5580,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "b2f1b70a2df153b1"
@@ -456,7 +500,7 @@
     "description": "Responses that enable, encourage, or endorse the creation of weapons of mass destruction.",
     "examples": null,
     "num_of_dataset_prompts": 1570,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "",
     "hash": "03105a3ceda2ab88"
@@ -467,7 +511,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on gender, containing only the ambiguous questions.",
     "examples": null,
     "num_of_dataset_prompts": 2836,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "7aa2dc66e11ac610"
@@ -478,7 +522,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on sexual-orientation, containing only the ambiguous questions.",
     "examples": null,
     "num_of_dataset_prompts": 432,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "cf874fd902d294db"
@@ -489,7 +533,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 7400,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "5fac978b50690b3e"
@@ -500,7 +544,7 @@
     "description": "Responses that enable, encourage, or endorse the creation of weapons of mass destruction.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "",
     "hash": "337fdaba15c15815"
@@ -511,7 +555,7 @@
     "description": "Responses that demean or dehumanize people on the basis of their sensitive, personal characteristics.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "",
     "hash": "9dad9e3a7bad1633"
@@ -522,7 +566,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 11988,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "da0a7ff2d88e2fdb"
@@ -533,7 +577,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 1856,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "d0eeb2277353777b"
@@ -544,7 +588,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 2176,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "f8f824875bf0328b"
@@ -555,7 +599,7 @@
     "description": "This dataset is used for commonsense reasoning, expert-crafted pronoun resolution problems designed to be unsolvable for statistical models.",
     "examples": null,
     "num_of_dataset_prompts": 41665,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/allenai/winogrande",
     "license": "Apache-2.0",
     "hash": "21ad250f9c027033"
@@ -566,7 +610,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 13528,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "6923a5911f8ed0d9"
@@ -577,7 +621,7 @@
     "description": "To measure the model/\u2019s ability in making informed predictions",
     "examples": null,
     "num_of_dataset_prompts": 17528,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/contextual_parametric_knowledge_conflicts",
     "license": "",
     "hash": "038a756c651b42bb"
@@ -588,10 +632,21 @@
     "description": "MMLU measure knowledge acquired during pretraining by evaluating models exclusively in zero-shot and few-shot settings. This particular dataset contains questions on MMLU Anatomy",
     "examples": null,
     "num_of_dataset_prompts": 135,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/hendrycks/test",
     "license": "MIT License",
     "hash": "247b383ea1bf391a"
+  },
+  "singapore-transport-system": {
+    "id": "singapore-transport-system",
+    "name": "Singapore Transport System",
+    "description": "Contain questions about Singapore's transport system",
+    "examples": null,
+    "num_of_dataset_prompts": 27,
+    "created_date": "2024-05-27 16:48:35",
+    "reference": "IMDA",
+    "license": "Apache-2.0",
+    "hash": "549a11727c31f84a"
   },
   "truthfulqa-multiple-open-ended": {
     "id": "truthfulqa-multiple-open-ended",
@@ -599,7 +654,7 @@
     "description": "TruthfulQA aims to measure the the truthfulness of a model.",
     "examples": null,
     "num_of_dataset_prompts": 817,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/sylinrl/TruthfulQA",
     "license": "Apache-2.0",
     "hash": "0d848befa72de159"
@@ -610,7 +665,7 @@
     "description": "A dataset of genuine grade-school level, multiple-choice science questions in advanced Q&A. This is the easy set.",
     "examples": null,
     "num_of_dataset_prompts": 5197,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://allenai.org/data/arc",
     "license": "CC BY-SA",
     "hash": "9d3b5d92bde69a2d"
@@ -621,10 +676,21 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 980,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "c9da1299b3c01a46"
+  },
+  "singapore-iconic-places": {
+    "id": "singapore-iconic-places",
+    "name": "Iconic Places in Singapore",
+    "description": "Contain questions about Singapore's iconic places.",
+    "examples": null,
+    "num_of_dataset_prompts": 16,
+    "created_date": "2024-05-27 16:48:35",
+    "reference": "IMDA",
+    "license": "Apache-2.0",
+    "hash": "4b261a3a7d15fca9"
   },
   "cbbq-lite-disability-ambiguous": {
     "id": "cbbq-lite-disability-ambiguous",
@@ -632,7 +698,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 1588,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "f0835d87a13d8f14"
@@ -643,7 +709,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 3960,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "b237a262cc9a45ae"
@@ -654,7 +720,7 @@
     "description": "Responses that enable, encourage, or endorse the commission of sex-related crimes.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "",
     "hash": "14792361d596acc0"
@@ -665,7 +731,7 @@
     "description": "To measure the model\u2019s ability in discriminating between different degrees of analogical similarity in two given episodes",
     "examples": null,
     "num_of_dataset_prompts": 323,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/analogical_similarity",
     "license": "",
     "hash": "836ecdf3b4895d42"
@@ -676,7 +742,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 7400,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "1debbbe8b43da7bb"
@@ -687,7 +753,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on race-ethnicity, containing only the disambiguated questions.",
     "examples": null,
     "num_of_dataset_prompts": 3440,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "6b56199f5a3cf947"
@@ -698,7 +764,7 @@
     "description": "This dataset consists of high quality grade school math problems created by human. These problems take between 2 and 8 steps to solve, and usually requires a sequence of elementary calculations.",
     "examples": null,
     "num_of_dataset_prompts": 8792,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/openai/grade-school-math",
     "license": "MIT License",
     "hash": "11ed0535647e924e"
@@ -709,7 +775,7 @@
     "description": "Responses that contain, describe, enable, encourage, or endorse the sexual abuse of children.",
     "examples": null,
     "num_of_dataset_prompts": 1330,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "",
     "hash": "bbdde370c1b8b94e"
@@ -720,7 +786,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on race-x-gender, containing only the disambiguated questions.",
     "examples": null,
     "num_of_dataset_prompts": 7980,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "c9ef01468e5fc7a5"
@@ -731,7 +797,7 @@
     "description": "Responses that enable, encourage, or endorse the commission of sex-related crimes.",
     "examples": null,
     "num_of_dataset_prompts": 1330,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "",
     "hash": "42c6178caaf4a2f1"
@@ -742,7 +808,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on disability-status, containing only the ambiguous questions.",
     "examples": null,
     "num_of_dataset_prompts": 778,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "6883fd4375aafc6b"
@@ -753,7 +819,7 @@
     "description": "MMLU measure knowledge acquired during pretraining by evaluating models exclusively in zero-shot and few-shot settings. This particular dataset contains questions on MMLU College Biology",
     "examples": null,
     "num_of_dataset_prompts": 144,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/hendrycks/test",
     "license": "MIT License",
     "hash": "e0ac3237ce72f9ce"
@@ -764,7 +830,7 @@
     "description": "ChallengingToxicityPrompts was created by the authors of DecodingTrust, with the aim to measure the model's ability in identify toxic sentences.",
     "examples": null,
     "num_of_dataset_prompts": 1000,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/AI-secure/DecodingTrust",
     "license": "CC BY-SA 4.0",
     "hash": "0ebc16658eda18be"
@@ -775,7 +841,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on religion, containing only the disambiguated questions.",
     "examples": null,
     "num_of_dataset_prompts": 600,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "e9bf212e60bf1875"
@@ -786,7 +852,7 @@
     "description": "Responses that contain, describe, enable, encourage, or endorse the sexual abuse of children.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "",
     "hash": "5099723752460031"
@@ -797,7 +863,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 11988,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "da0a7ff2d88e2fdb"
@@ -808,7 +874,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 2176,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "f8f824875bf0328b"
@@ -819,7 +885,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 8700,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "e0c450ffb19bd216"
@@ -830,7 +896,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 1856,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "d0eeb2277353777b"
@@ -841,7 +907,7 @@
     "description": "Responses that enable, encourage, or endorse the commission of non-violent crimes.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "",
     "hash": "31587aba88162a27"
@@ -852,10 +918,21 @@
     "description": "Responses that enable, encourage, or endorse the commission of non-violent crimes.",
     "examples": null,
     "num_of_dataset_prompts": 1810,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "",
     "hash": "82c6fc81c063987d"
+  },
+  "occupation": {
+    "id": "occupation",
+    "name": "List of Occupations",
+    "description": "This dataset contains a list of occupations collected from various websites (e.g., MoM of Singapore). The dataset can be used to test job-related applications.",
+    "examples": null,
+    "num_of_dataset_prompts": 7270,
+    "created_date": "2024-05-27 16:48:35",
+    "reference": "IMDA",
+    "license": "MIT License",
+    "hash": "8b3a26c43b4e0eb1"
   },
   "jailbreak-dan": {
     "id": "jailbreak-dan",
@@ -863,7 +940,7 @@
     "description": "This dataset contains jailbreak prompts that were collected from various places (e.g., Discord).",
     "examples": null,
     "num_of_dataset_prompts": 22,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/verazuo/jailbreak_llms",
     "license": "MIT license",
     "hash": "285e30a83660d6f8"
@@ -874,7 +951,7 @@
     "description": "Responses that enable, encourage, or endorse acts of intentional self-harm.",
     "examples": null,
     "num_of_dataset_prompts": 1090,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "",
     "hash": "7685d3e0ca4016a3"
@@ -885,7 +962,7 @@
     "description": "Responses that enable, encourage, or endorse the commission of violent crimes.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "",
     "hash": "e550adcdd0aa40dd"
@@ -896,7 +973,7 @@
     "description": "This dataset contains prompts that embedded the body of moral standards and principles that most people intuitively accept.",
     "examples": null,
     "num_of_dataset_prompts": 1000,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/hendrycks/ethics/",
     "license": "MIT License",
     "hash": "3e6db1a3ed29a606"
@@ -907,7 +984,7 @@
     "description": "To measure the model's ability in categorising elements into groups.",
     "examples": null,
     "num_of_dataset_prompts": 328,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/auto_categorization",
     "license": "",
     "hash": "e4afb4d8914c0f54"
@@ -918,7 +995,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on sexual-orientation, containing only the disambiguated questions.",
     "examples": null,
     "num_of_dataset_prompts": 432,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "11de760afd6ac745"
@@ -929,7 +1006,7 @@
     "description": "This dataset is used to classify a static set of Tamil News. The task is to classify news to its respective category. The dataset has 6 news categories - \"tamilnadu\", \"india\", \"cinema\", \"sports\", \"politics\", \"world\".",
     "examples": null,
     "num_of_dataset_prompts": 3631,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "GNU General Public License v3.0",
     "hash": "59d5a9edef6b76c3"
@@ -940,7 +1017,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 560,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "4839b30a81be9854"
@@ -951,7 +1028,7 @@
     "description": "This dataset contains prompts that can measure the alignment ability of LLMs in both safety and responsibility in Chinese Language.",
     "examples": null,
     "num_of_dataset_prompts": 1712,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "",
     "license": "Apache-2.0 license",
     "hash": "cfc5957b8d649224"
@@ -962,7 +1039,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on physical-appearance, containing only the ambiguous questions.",
     "examples": null,
     "num_of_dataset_prompts": 788,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "9438943944ee4535"
@@ -973,7 +1050,7 @@
     "description": "The Enron email dataset is aimed at evaluating if there is leakage of private information. The dataset was used in DecodingTrust as part of its privacy evaluation.",
     "examples": null,
     "num_of_dataset_prompts": 166418,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/ParakweetLabs/EmailIntentDataSet",
     "license": "Apache-2.0",
     "hash": "afc1dd31ee16a005"
@@ -984,7 +1061,7 @@
     "description": "MMLU measure knowledge acquired during pretraining by evaluating models exclusively in zero-shot and few-shot settings. This particular dataset contains questions on MMLU Medical Genetics",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/hendrycks/test",
     "license": "MIT License",
     "hash": "fda8c8823e758ec7"
@@ -995,7 +1072,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 1534,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "b03744e84f4edfd6"
@@ -1006,7 +1083,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on ses, containing only the ambiguous questions.",
     "examples": null,
     "num_of_dataset_prompts": 3432,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "c17e07c454222faf"
@@ -1017,7 +1094,7 @@
     "description": "TruthfulQA aims to measure the the truthfulness of a model.",
     "examples": null,
     "num_of_dataset_prompts": 817,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/sylinrl/TruthfulQA",
     "license": "Apache-2.0",
     "hash": "852847eafe14fd57"
@@ -1028,10 +1105,21 @@
     "description": "This dataset contains prompts that embedded the body of moral standards and principles that most people intuitively accept.",
     "examples": null,
     "num_of_dataset_prompts": 1000,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/hendrycks/ethics/",
     "license": "MIT License",
     "hash": "a8585d955f3d7855"
+  },
+  "singapore-places-tnf": {
+    "id": "singapore-places-tnf",
+    "name": "Places in Singapore",
+    "description": "Contain prompts that test model's udnerstanding places in Singapore, in True/False format",
+    "examples": null,
+    "num_of_dataset_prompts": 50,
+    "created_date": "2024-05-27 16:48:35",
+    "reference": "IMDA",
+    "license": "Apache-2.0",
+    "hash": "525bac1813e88f2d"
   },
   "bbq-lite-nationality-disamb": {
     "id": "bbq-lite-nationality-disamb",
@@ -1039,7 +1127,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on nationality, containing only the disambiguated questions.",
     "examples": null,
     "num_of_dataset_prompts": 1540,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "fccf218fba4ae20f"
@@ -1050,7 +1138,7 @@
     "description": "MMLU measure knowledge acquired during pretraining by evaluating models exclusively in zero-shot and few-shot settings. This particular dataset contains questions on MMLU Professional Medicine.json",
     "examples": null,
     "num_of_dataset_prompts": 272,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/hendrycks/test",
     "license": "MIT License",
     "hash": "94f3e264a8908a67"
@@ -1061,7 +1149,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 586,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "1589b595c2a82395"
@@ -1072,7 +1160,7 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on race-ethnicity, containing only the ambiguous questions.",
     "examples": null,
     "num_of_dataset_prompts": 3440,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "86420a8db0b2e672"
@@ -1083,7 +1171,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 1588,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "f0835d87a13d8f14"
@@ -1094,7 +1182,7 @@
     "description": "This dataset contains gender-bias based on the professions from the Labor Force Statistics (https://www.bls.gov/cps/cpsaat11.htm), which contain some gender-bias.",
     "examples": null,
     "num_of_dataset_prompts": 396,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/uclanlp/corefBias/tree/master/WinoBias/wino",
     "license": "MIT License",
     "hash": "c7c7603cd4db3a8d"
@@ -1105,7 +1193,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 1392,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "487a9084704e4cb6"
@@ -1116,7 +1204,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 13528,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "6923a5911f8ed0d9"
@@ -1127,7 +1215,7 @@
     "description": "This dataset is used to evaluate commonsense with questions that are trivial for humans but difficult for state-of-the-art models.",
     "examples": null,
     "num_of_dataset_prompts": 49947,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/rowanz/hellaswag",
     "license": "MIT License",
     "hash": "eed60f3a88abe77b"
@@ -1138,10 +1226,21 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on ses, containing only the disambiguated questions.",
     "examples": null,
     "num_of_dataset_prompts": 3432,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "390179387b6961b0"
+  },
+  "singapore-safety-questions": {
+    "id": "singapore-safety-questions",
+    "name": "Safety Benchmark (Singapore Context)",
+    "description": "Contain prompts that test safety in Singapore-context",
+    "examples": null,
+    "num_of_dataset_prompts": 59,
+    "created_date": "2024-05-27 16:48:35",
+    "reference": "IMDA",
+    "license": "Apache-2.0",
+    "hash": "5d61c07c64808b9d"
   },
   "medqa-us": {
     "id": "medqa-us",
@@ -1149,7 +1248,7 @@
     "description": "MedQA is a free-form multiple-choice OpenQA dataset for solving medical problems. These are collected from the professional medical board exams. We extracted the list of MCQ questions from the US in this dataset.",
     "examples": null,
     "num_of_dataset_prompts": 10178,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/jind11/MedQA",
     "license": "MIT License",
     "hash": "4610841dac98f56d"
@@ -1160,7 +1259,7 @@
     "description": "The UCI adult dataset, created in 1996, is used to train models to predict whether a person's income will exceed $50K/yr based on census data. Also known as \"Census Income\" dataset. ",
     "examples": null,
     "num_of_dataset_prompts": 32561,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://archive.ics.uci.edu/dataset/2/adult",
     "license": "Creative Commons Attribution 4.0 International",
     "hash": "bc4b1b4d64166777"
@@ -1171,7 +1270,7 @@
     "description": "This dataset covers 57 tasks including elementary mathemathics, US history, computer science, law, and more.",
     "examples": null,
     "num_of_dataset_prompts": 17487,
-    "created_date": "2024-05-14 21:36:21",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/hendrycks/test",
     "license": "MIT license",
     "hash": "67315ab3ec7e236e"
@@ -1182,7 +1281,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 560,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "4839b30a81be9854"
@@ -1193,7 +1292,7 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 980,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
     "hash": "c9da1299b3c01a46"
@@ -1204,75 +1303,9 @@
     "description": "This dataset is an excerpt from Bias Benchmark from QA on disability-status, containing only the disambiguated questions.",
     "examples": null,
     "num_of_dataset_prompts": 778,
-    "created_date": "2024-05-14 21:36:20",
+    "created_date": "2024-05-27 16:48:35",
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "1645815ffe8f413f"
-  },
-  "singapore-transport-system": {
-    "id": "singapore-transport-system",
-    "name": "Singapore Transport System",
-    "description": "Contain questions about Singapore's transport system",
-    "examples": null,
-    "num_of_dataset_prompts": 27,
-    "created_date": "2024-05-24 15:22:28",
-    "reference": "IMDA",
-    "license": "Apache-2.0",
-    "hash": "549a11727c31f84a"
-  },
-  "singapore-iconic-places": {
-    "id": "singapore-iconic-places",
-    "name": "Iconic Places in Singapore",
-    "description": "Contain questions about Singapore's iconic places.",
-    "examples": null,
-    "num_of_dataset_prompts": 16,
-    "created_date": "2024-05-24 15:22:28",
-    "reference": "IMDA",
-    "license": "Apache-2.0",
-    "hash": "4b261a3a7d15fca9"
-  },
-  "singapore-political-history": {
-    "id": "singapore-political-history",
-    "name": "Singapore Polical History",
-    "description": "Contain questions about Singapore's key historical events in political.",
-    "examples": null,
-    "num_of_dataset_prompts": 21,
-    "created_date": "2024-05-24 15:22:28",
-    "reference": "IMDA",
-    "license": "Apache-2.0",
-    "hash": "406e0a64815cb329"
-  },
-  "singapore-public-housing": {
-    "id": "singapore-public-housing",
-    "name": "Singapore Transport System",
-    "description": "Contain questions about Singapore's public housing system",
-    "examples": null,
-    "num_of_dataset_prompts": 12,
-    "created_date": "2024-05-24 15:22:28",
-    "reference": "IMDA",
-    "license": "Apache-2.0",
-    "hash": "45557b9f992e2440"
-  },
-  "singapore-safety-questions": {
-    "id": "singapore-safety-questions",
-    "name": "Safety Benchmark (Singapore Context)",
-    "description": "Contain prompts that test safety in Singapore-context",
-    "examples": null,
-    "num_of_dataset_prompts": 59,
-    "created_date": "2024-05-24 15:22:28",
-    "reference": "IMDA",
-    "license": "Apache-2.0",
-    "hash": "5d61c07c64808b9d"
-  },
-  "occupation": {
-    "id": "occupation",
-    "name": "List of Occupations",
-    "description": "This dataset contains a list of occupations collected from various websites (e.g., MoM of Singapore). The dataset can be used to test job-related applications.",
-    "examples": null,
-    "num_of_dataset_prompts": 7270,
-    "created_date": "2024-05-24 15:22:28",
-    "reference": "IMDA",
-    "license": "MIT License",
-    "hash": "8b3a26c43b4e0eb1"
   }
 }
