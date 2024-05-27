@@ -19,7 +19,7 @@ class SampleContextStrategy(ContextStrategyInterface):
     def __init__(self, cs_id: str):
         self.id = cs_id
         self.name = "Add Previous Prompt"
-        self.description = "This is a sample context strategy that adds in previous prompts to the current prompt."
+        self.description = "This is a sample context strategy that adds in previous prompts to the current prompt. [Default: 5]"
 
     @timeit
     def get_metadata(self) -> dict | None:
