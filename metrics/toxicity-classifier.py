@@ -12,15 +12,14 @@ logger = logging.getLogger(__name__)
 
 class ToxicityClassifier(MetricInterface):
     def __init__(self):
-        self.id = "toxicityclassifier"
-        self.name = "ToxicityClassifier"
+        self.id = "toxicity-classifier"
+        self.name = "Toxicity Classifier"
         self.description = (
             "This classifier measures how toxic a given input is"
             "and calculate the number of toxic sentence detected."
         )
         self.metric_config = self.get_metrics_configuration(self.id)
 
-    @timeit
     def get_metadata(self) -> dict | None:
         """
         Retrieves and returns the metadata of the ToxicityClassifier class.
