@@ -1,6 +1,6 @@
 <div align="center">
 
-![Moonshot Logo](./misc/aiverify-moonshot-logo.png)
+![Moonshot Logo](https://github.com/moonshot-admin/moonshot/raw/main/misc/aiverify-moonshot-logo.png)
 
 This repository contains the test assets needed for [Project Moonshot](https://github.com/aiverify-foundation/moonshot)
 
