@@ -23,7 +23,6 @@ class BertScore(MetricInterface):
         self.description = "BertScore uses Bert to check for the similarity in embedding between two sentences."
         self.metric_config = self.get_metrics_configuration(self.id)
 
-    @timeit
     def get_metadata(self) -> dict | None:
         """
         Retrieves and returns the metadata of the BertScore class.
