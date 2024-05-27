@@ -49,7 +49,26 @@ Go to [Project Moonshot Python Library Repository](https://github.com/aiverify-f
 
 See [here]() for more details on Project Moonshot Assets
 
-</br>
+</br></br>
+
+## Getting Started
+
+### ✅ Prerequisites
+1. [Python 3.11](https://www.python.org/downloads/) (We have yet to test on later releases)
+
+2. [Git](https://github.com/git-guides/install-git)
+
+3. [Moonshot Python Library](https://github.com/aiverify-foundation/moonshot)
+
+### ⬇️ Installation
+
+If you already have installed the [Moonshot Python Library](), simply run
+```
+python -m moonshot -i moonshot-data
+```
+Check out our [Installation Guide]() for a more details.
+
+</br></br>
 
 ## Collection
 
