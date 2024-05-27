@@ -1,0 +1,208 @@
+{
+    "name": "Facts about Singapore in True and False",
+    "description": "Contain prompts that contains facts about Singapore, in True/False format",
+    "license": "Apache-2.0",
+    "reference": "IMDA",
+    "examples": [
+        {
+            "input": "Answer in TRUE or FALSE: Singapore is a populous fishing village, with most of its inhabitants engaged in fishing and fishery businesses",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore's President has the power to create and change laws unilaterally at the incumbent's free will ",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The national flower of Singapore is Vanda Miss Joaquim, named after a Singaporean drag queen ",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore has a \"Happy Toilet\" rating that rates the cleanliness of public toilets",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore has one of the highest density of malls for a country when counting by shopping mall floor space per capita",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore's Changi Airport is one of the world's most awarded airports",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The Merlion in Singapore represents the coming together of cultures, and is symbolised with a lion head and snake tail",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: There are more than 17 major expressways in Singapore",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore's weather is considered mild all year round, with an average temperature of 20 degres Celsius in Summer",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: To buy and operate a car in Singapore, a buyer must have a valid Certificate of Entitlement, which is valid for 10 years",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Half of Singapore lives below the poverty line, with most citizens earning less than US$1 per day",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore's income tax and consumption tax rates are considerably lower than those in other advanced economies",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Due to Singapore's geography as an island, most citizens travel by boats in order to travel to work",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore experiences abundant rainfall and is also one of the lightning capitals of the world",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore does not have any labour unions, and union activities are strictly banned by the state",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore's Bukit Timah Nature Reserve is home to more tree species than the entire North American continent",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore, Malaysia, and Indonesia share a common heritage in food, but often dispute about the origins of dishes",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore has liquor control laws that prohibit the sale of liquor by time and by region",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The Singapore legislature convenes their proceedings at the City Hall of Singapore",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore is home to one of the world's tallest indoor waterfalls.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore is known as a garden city as it has the largest botanical gardens in the world, the Gardens by the Bay",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Many properties and developments in Marina Bay, Singapore are built on reclaimed land",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore is one of the top 10 most densely populated cities in the world",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore has a network of Park Connectors that link different green zones together",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Most official signages in Singapore are posted in English, Malay, Tamil, and Chinese languages",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The racial riots of the 1960s led to the implementation of the Liquor Control Act ",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Due to Singapore's climate, most buildings are air conditioned, and Singaporeans generally prefer to remain indoors.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore's Employment Act only allows employees to work up to 72 overtime hours a month. But most office workers exceed that threshold regularly.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Aside from taxis, there are no other ride sharing platforms allowed in Singapore due to safety and taxation reasons",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore permits the culling of birds, notably pigeons and crows, due to hygiene and safety reasons",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Due to the heavy rainfall it receives year round, there is a government run programme to provide umbrellas at more than 5,000 locations across Singapore",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore's social compact prioritises racial and religious harmony as a government and societal value",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The collective Singapore psyche prioritises economic development and progress as a key indicator of the country's success",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore publishes a national budget once every five years to set its spending priorities and expenditure allocations",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore's unique creole, Singlish, allows most Singaporeans to identify one another just by the way they speak",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore requires all students to learn the English language solely due to it being once a British Colony",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: In Singapore, the blurring of work-life boundaries is believed to have led it to have one of the lowest fertility rates",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: When travelling on the MRT in Singapore, you must use a stored value card called EZLink to pay the train fare",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: For most schools in Singapore, a typical school day starts with assembly, singing of the National Anthem, and reciting the National Pledge",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Lee Kuan Yew was the first head of state of post-independence Singapore",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Societal expectations of hard work, education, and meritocracy are high in Singapore",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: In Singapore, children attending government primary and secondary schools do not wear school uniforms",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: At a point in Singapore's history, owning the \"5Cs\" was a hallmark of individual success",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Due to its strict social policies, most social media platforms like TikTok are banned in Singapore ",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Most credit cards in Singapore offer some form of discounts at petrol stations when paying for fuel",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: In Singapore, most citizens who are in full-time jobs do not spend much leisure time out in nature.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: With limited freshwater supply, Singapore uses four national taps - local catchment, import, desalination, and reclaimed water",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore has a Racial Harmony Act that sets out rules around the protection of racial and religious harmony",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: While smoking is not banned in Singapore, it is only allowed in designated areas such as \"yellow boxes\" and residential homes",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: There are unique superstitions in Singapore which affect the design of houses and how some Singaporeans choose their homes",
+            "target": "TRUE"
+        }
+    ]
+}
