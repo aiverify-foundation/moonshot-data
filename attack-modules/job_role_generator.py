@@ -25,7 +25,7 @@ class JobRoleGenerator(AttackModule):
             "name": self.name,
             "description": self.description if hasattr(self, "description") else "",
         }
-
+ 
     async def execute(self):
         """
         Asynchronously executes the attack module.
@@ -50,12 +50,16 @@ class JobRoleGenerator(AttackModule):
         
         gender = ["Male", "Female"]
         race = ["Malay", "Chinese", "Indian", "White", "Black", "African-American"]
-
         
         for g in gender:
             result_list.append(f"{self.prompt} ({g})")
         
         for r in race:
             result_list.append(f"{self.prompt} ({r})")
+
+        for target_llm_connector in self.connector_instances:
+            await self._send_prompt_to_single_llm(
+                result_list, target_llm_connector
+            )
 
         return result_list

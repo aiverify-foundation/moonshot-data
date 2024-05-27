@@ -1,0 +1,208 @@
+{
+    "name": "Places in Singapore",
+    "description": "Contain prompts that test model's udnerstanding places in Singapore, in True/False format",
+    "license": "Apache-2.0",
+    "reference": "IMDA",
+    "examples": [
+        {
+            "input": "Answer in TRUE or FALSE: The station code for the Joo Koon station on the East West MRT Line is EW29",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Woodlands is a place in the South of Singapore",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore has a Chestnut Nature Park that is a local nature preserve",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Serayana Island is part of the Southern Islands of Singapore",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Brani Island is used by the Singapore Coast Guard and sits between Malaysia and Singapore",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Ang Mo Kio is a heartland town in Singapore north of the town of Toa Payoh",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore Changi Airport has 5 terminals that are operational as at December 2023",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Raffles Lighthouse is part of Singapore, and is based on the mainland in the West of Singapore",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Pulau Saigon still exists as part of Singapore today and is located along the Singapore River",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Sultan Shoal lighthouse is located on a small island off Singapore's western coast",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Jurong Island is not connected to mainland Singapore by a land bridge, and can only be reached by ferry service",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The Sungei Buloh Wetland Reserve is located in Johor, Malaysia",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The Marina Reservoir was formed in 2008 when a dam was constructed across the mouth of Marina Bay",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Katong is one of the oldest villages in Singapore. Located at the southwest of the island, it boasts one of the best collection of local restaurants.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Pickering Street is named after the first Protector of Chinese of Singapore",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Fort Canning Service Reservoir is an open air service reservoir at the top of Fort Canning Hill",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Stamford Canal is a covered canal that cuts across Raffles City and Citylink Mall in Singapore",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The Downtown MRT Line in Singapore connects Bukit Panjang in the northwest to Expo in the east of Singapore",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The Circle Line in Singapore is named after the trains, which have a circular design",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The former City Hall of Singapore, completed in 1929, is now part of the National Gallery of Singapore",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Fort Serapong was built in the early 1880s by the British in Singapore",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: In Singapore, the distance between Ang Mo Kio and Hougang is farther than the distance between Ang Mo Kio and Changi",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The Ramakrishna Mission Singapore is located near to Bartley Road in Singapore",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Lazarus Island is the southern-most island in Singapore",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Sentosa Island used to be known as Pulau Blakang Mati until 1969 when it was renamed",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The most direct route of travel under normal circumstances between Orchard MRT and City Hall MRT would see you pass by Somerset MRT",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore's Windsor Nature Park sits between Lower Pierce Reservoir and MacRitchie Reservoir",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: As the crow flies, the distance from Thomson Nature Park to Seletar Island is more than 10 kilometers",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Pulau Ubin is connected to Singapore via a land bridge that crosses the channel between the island and mainland Singapore",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The most expedient route by car between Jurong and Changi is typically via the Pan Island Expressway",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The names of Paya Lebar and Toa Payoh towns in Singapore both stem from the name \"Big Swamp\"",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Changi Airport is located in the north of Singapore, close to Malaysia, and is the subject of frequent disputes between two countries about noise",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Singapore expressways are commonly abbreviated, with CTE, KPE, PIE, GGE, and BKE among them.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Dempsey Hill in Singapore is located close to the Singapore Botanical Gardens",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Roundabouts are a rare feature on Singapore's roadways. There are fewer than 10 roundabouts in Singapore.",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The Fullerton Bay Hotel is a hotel located at Marina Bay in Singapore",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The Victoria Concert Hall is located in Singapore's Civic District",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The original gates of the \"New World Amusement Park\" in Singapore is retained at the site of City Square Mall",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The closest MRT station to the Buddha Tooth Relic Temple in Singapore's Chinatown is Chinatown MRT Station",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Orchard Road is known as Singapore's main shopping belt district",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The highest peak in Singapore is Bukit Timah, which stands at more than 200 metres above sea level",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Tan Tock Seng Hospital is one of the major hospitals and trauma centres in Singapore",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The site of the former Hotel New World, which collapsed in 1986, is located near Farrer Park MRT Station",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Hougang, Tampines, Sengkang and Jurong West are among the largest towns in Singapore by land surface area.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Clemenceau Avenue in Singapore is named after Georges Clemenceau, who was a former Premier of France ",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Rochor River, Whampoa River, and Kallang River are tributaries to the Singapore River",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: There are more than 20 hospitals in Singapore, including all private, public and community hospitals.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Bukit Batok, Ang Mo Kio, and Bedok are examples of heartland towns in Singapore that comprise mainly of residential developments.",
+            "target": "TRUE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: Disneyland Singapore is located on Sentosa Island and is slated to open in 2026",
+            "target": "FALSE"
+        },
+        {
+            "input": "Answer in TRUE or FALSE: The Amoy Street Food Centre is located around the Chinatown District in Singapore",
+            "target": "TRUE"
+        }
+    ]
+}

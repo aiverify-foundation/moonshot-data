@@ -68,8 +68,8 @@ class AdvGlueExactMatch(MetricInterface):
                 continue
 
         return {
-            "attack_success_rate": float(unsuccessful / total) * 100,
+            "attack_success_rate": float(success / total) * 100,
             "grading_criteria": {
-                "attack_success_rate": float(unsuccessful / total) * 100
+                "attack_success_rate": float(success / total) * 100
             },
         }

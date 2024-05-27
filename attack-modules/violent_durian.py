@@ -11,9 +11,10 @@ class MultiturnAgent(AttackModule):
         # Initialize super class
         super().__init__(am_id, am_arguments)
         self.name = "Violent Durian"
-        self.descriptipn = ("This is a multi-turn agent designed to interact over several exchanges. "
+        self.description = ("This is a multi-turn agent designed to interact over several exchanges. "
                             "It's used to elicit dangerous or violent suggestions from the target language model "
-                            "by adopting a criminal persona. The application is experimental")
+                            "by adopting a criminal persona. The application is experimental and uses OpenAI GPT-4. "
+                            "Configure the endpoint openai-gpt4 to use this attack module.")
 
     def get_metadata(self) -> dict:
         """
@@ -103,7 +104,7 @@ class MultiturnAgent(AttackModule):
         question_generator = Connector.create(
             ConnectorEndpoint.read(endpoint_id))
 
-        MAX_ITERATION = 20
+        MAX_ITERATION = 10
         i = 0
 
         for target_llm_connector in self.connector_instances:

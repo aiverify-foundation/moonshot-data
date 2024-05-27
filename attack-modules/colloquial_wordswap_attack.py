@@ -11,11 +11,9 @@ class ColloquialWordSwapAttackModule(AttackModule):
         # Initialize super class
         super().__init__(am_id, am_arguments)
         self.name = "Colloquial Wordswap"
-        self.description = ("About this attack module:\nThis attack module takes in prompts that feature nouns that describe people." 
-        "\nExamples of this include words like 'girl' , 'boy' or 'grandmother'.\nThe module substitutes these words"
-        " with their Singapore colloquial counterparts, such as 'ah boy', 'ah girl' and 'ah ma'.\nParameters (Non-exhaustive):\n"
-        "grandmother - ah ma\ngrandfather - ah gong\ngirl - ah ger\nboy - ah boy\nfather - papa\nmother - mama\naunty - makcik"   
-        "\nman - ah beng\nwoman - ah lian")
+        self.description = ("This attack module tests for textual robustness against the Singapore context. It takes in prompts that feature nouns that describe people. " 
+        "Examples of this include words like 'girl' , 'boy' or 'grandmother'. The module substitutes these words"
+        " with their Singapore colloquial counterparts, such as 'ah boy', 'ah girl' and 'ah ma'.")
 
     def get_metadata(self) -> dict:
         """
@@ -79,6 +77,7 @@ class ColloquialWordSwapAttackModule(AttackModule):
         for i in range(word_list_len):
             if word_list[i].lower() in list(colloquial_dict.keys()):
                 #randomly select colloquial term
+                word_list[i] = word_list[i].lower()
                 rand_idx = random.randint(0 , len(colloquial_dict[word_list[i].lower()])-1)
                 new_word = colloquial_dict[word_list[i]][rand_idx]
                 # check for the same word within the word list
