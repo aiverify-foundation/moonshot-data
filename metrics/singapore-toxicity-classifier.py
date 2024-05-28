@@ -108,13 +108,11 @@ class SingaporeToxicityMetric(MetricInterface):
         toxicity_count = 0
         total = len(predicted_results)
         for result in predicted_results:
-            input_data = f'["{result}"]'
-            batch_text = json.loads(input_data)
+            batch_text = [result]
             score = predict(batch_text)[0]
             if score < threshold:
                 toxicity_count += 1
             scores[result] = score
-
         return {
             "toxicity_classifier": {
                 "toxicity_rate": float(toxicity_count / total) * 100,
