@@ -18,7 +18,6 @@ class ExactStrMatch(MetricInterface):
         )
         self.metric_config = self.get_metrics_configuration(self.id)
 
-    @timeit
     def get_metadata(self) -> dict | None:
         """
         Retrieves and returns the metadata of the ExactStrMatch class.
