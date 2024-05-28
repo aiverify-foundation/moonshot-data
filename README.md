@@ -11,10 +11,10 @@ This repository contains the test assets needed for [Project Moonshot](https://g
 
 <b>Motivation </b>
 
-Developed by the [AI Verify Foundation](https://aiverifyfoundation.sg/), Project Moonshot is one of the first tools to bring [Benchmarking](#benchmarking-with-moonshot) and [Red-Teaming](#red-teaming-with-moonshot) together to help AI developers, compliance teams and AI system owners <b>evaluate LLMs and LLM applications</b>.
-This repository contains the test assests intended to work with the main Moonshot Python Library. You can add on additional assets to this folder to extend Project Moonshot's testing capabilities.
+Developed by the [AI Verify Foundation](https://aiverifyfoundation.sg/), Project Moonshot is one of the first tools to bring [benchmarking](#benchmarking-with-moonshot) and [red teaming](#red-teaming-with-moonshot) together to help AI developers, compliance teams and AI system owners <b>evaluate LLMs and LLM applications</b>.
+This repository contains the test assests intended to work with the Moonshot Library. You can add on additional assets to this folder to extend Project Moonshot's testing capabilities.
 
-Go to [Project Moonshot Python Library Repository](https://github.com/aiverify-foundation/moonshot).
+Go to [Project Moonshot Repository](https://github.com/aiverify-foundation/moonshot).
 
 </br>
 
@@ -31,9 +31,9 @@ Go to [Project Moonshot Python Library Repository](https://github.com/aiverify-f
 - [Recipes](#recipes) are a benchmarks that are ready to be administered onto an AI system, consisting minimally of a dataset and a metric.
 - [Cookbooks](#cookbooks) are thematic sets of recipes that are ready to be administered onto an AI system.
 
-#### ☠️ For Red-Teaming:
-- [Attack Modules](#attack-modules) are techniques that will enable the automatic generation of adversarial prompts for automated Red-Teaming.
-- <b>Context Strategies</b> are predefined approaches to append the Red-Teaming session's context to each prompt.
+#### ☠️ For Red Teaming:
+- [Attack Modules](#attack-modules) are techniques that will enable the automatic generation of adversarial prompts for automated red teaming.
+- <b>Context Strategies</b> are predefined approaches to append the red teaming session's context to each prompt.
 - <b>Prompt Templates</b> are predefined text structures that guide the formatting and contextualisation of the prompt sent to the AI system being tested. User-input prompts are fit into these templates before being sent to the AI system being tested.
 
 #### 💯 Results:
@@ -49,8 +49,6 @@ Go to [Project Moonshot Python Library Repository](https://github.com/aiverify-f
 
 See [here]() for more details on Project Moonshot Assets
 
-</br></br>
-
 ## Getting Started
 
 ### ✅ Prerequisites
@@ -58,21 +56,19 @@ See [here]() for more details on Project Moonshot Assets
 
 2. [Git](https://github.com/git-guides/install-git)
 
-3. [Moonshot Python Library](https://github.com/aiverify-foundation/moonshot)
+3. [Moonshot](https://github.com/aiverify-foundation/moonshot)
 
 ### ⬇️ Installation
 
-If you already have installed the [Moonshot Python Library](), simply run
+If you already have installed the [Moonshot](), simply run
 ```
 python -m moonshot -i moonshot-data
 ```
 Check out our [Installation Guide]() for a more details.
 
-</br></br>
+## Current Collection
 
-## Collection
-
-</br>
+*Last Updated 28 May*
 
 ### Attack Modules  
 
