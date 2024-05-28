@@ -47,8 +47,6 @@ Go to [Project Moonshot Repository](https://github.com/aiverify-foundation/moons
 
 </br>
 
-See [here]() for more details on Project Moonshot Assets
-
 ## Getting Started
 
 ### ✅ Prerequisites
@@ -60,11 +58,11 @@ See [here]() for more details on Project Moonshot Assets
 
 ### ⬇️ Installation
 
-If you already have installed the [Moonshot](), simply run
+Run the following command
+
 ```
 python -m moonshot -i moonshot-data
 ```
-Check out our [Installation Guide]() for a more details.
 
 ## Current Collection
 
