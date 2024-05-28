@@ -12,7 +12,7 @@ This repository contains the test assets needed for [Project Moonshot](https://g
 <b>Motivation </b>
 
 Developed by the [AI Verify Foundation](https://aiverifyfoundation.sg/), Project Moonshot is one of the first tools to bring [benchmarking](#benchmarking-with-moonshot) and [red teaming](#red-teaming-with-moonshot) together to help AI developers, compliance teams and AI system owners <b>evaluate LLMs and LLM applications</b>.
-This repository contains the test assests intended to work with the Moonshot Library. You can add on additional assets to this folder to extend Project Moonshot's testing capabilities.
+This repository contains the test assests intended to work with the Moonshot Library. You can also [contribute](#contributing) to Project Moonshot's testing capabilities.
 
 Go to [Project Moonshot Repository](https://github.com/aiverify-foundation/moonshot).
 
@@ -63,6 +63,18 @@ Run the following command
 ```
 python -m moonshot -i moonshot-data
 ```
+
+## Contributing
+
+Any contributions are greatly appreciated.
+
+Please fork the repo and create a pull request. You can also open an issue with the tag "enhancement". Do give the project a star too!
+
+1. Fork the `moonshot-data` Project
+2. Install `moonshot` (to run your test assets)
+3. Create your branch (`git checkout -b metric/X` or `git checkout -b cookbook/X` or `git checkout -b recipe/X` or )
+4. Push to the branch (`git push origin metric/X`)
+5. Open a Pull Request
 
 ## Current Collection
 
