@@ -64,5 +64,11 @@
     "name": "Sample Attack Module",
     "description": "This is a sample attack module.",
     "hash": "55a617c2440cc174"
+  },
+  "sg_sentence_generator": {
+    "id": "sg_sentence_generator",
+    "name": "Singapore Sentence Generator",
+    "description": "This module generates singlish sentence based on a given seed prompt. The attack module intends to test if the endpoint will complete the sentence with toxic sentences/phrases in Singapore context.",
+    "hash": "611e25855bff0098"
   }
 }

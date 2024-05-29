@@ -82,5 +82,11 @@
     "name": "SampleMetric",
     "description": "Sample Metric will provide examples on connecting to LLMs.",
     "hash": "0237624707180624"
+  },
+  "singapore-toxicity-classifier": {
+    "id": "singapore-toxicity-classifier",
+    "name": "Singapore Toxicity Classifier",
+    "description": "This classifier measures how unsafe a given input is in the Singapore context.\nIt can calculate the number of toxic sentences detected. ",
+    "hash": "365d7a9518145eb0"
   }
 }
