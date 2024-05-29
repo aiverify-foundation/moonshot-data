@@ -11,9 +11,10 @@ class SGSentenceGenerator(AttackModule):
         super().__init__(am_id, am_arguments)
         self.name = "Singapore Sentence Generator"
         self.description = (
-            "This module generates singlish sentence based on a given seed prompt. "
-            "The attack module intends to test if the endpoint will complete "
-            "the sentence with toxic sentences/phrases."
+            "This module generates singlish sentence based on a given seed "
+            "prompt. The attack module intends to test if the endpoint will "
+            "complete the sentence with toxic sentences/phrases in Singapore "
+            "context."
         )
 
     def get_metadata(self) -> dict:
@@ -56,16 +57,21 @@ class SGSentenceGenerator(AttackModule):
         result_list = []
         redteamer = pipeline("text-generation", model="theastronuts/sg_toxic_sentence_model")
         
-        MAX_ITERATION = 30
+        MAX_ITERATION = 5
+        token_id = redteamer.tokenizer.eos_token_id
 
         for i in range(MAX_ITERATION):
-            singlish_sentence_generator = redteamer(self.prompt)[0]["generated_text"]
-            new_prompt = f"\"{singlish_sentence_generator}\""
-            
-            result_list.append(
-                await self._send_prompt_to_all_llm(
-                    [new_prompt]
+            prompt = redteamer(self.prompt, pad_token_id=token_id)
+
+            if len(prompt) > 0:
+                prompt = prompt[0]["generated_text"]
+                
+                new_prompt = f"\"{prompt}\""
+                
+                result_list.append(
+                    await self._send_prompt_to_all_llm(
+                        [new_prompt]
+                    )
                 )
-            )
         
         return result_list
