@@ -1307,5 +1307,38 @@
     "reference": "https://arxiv.org/pdf/2110.08193v2",
     "license": "CC-BY-4.0 license",
     "hash": "1645815ffe8f413f"
+  },
+  "m3exam-vietnamese-test": {
+    "id": "m3exam-vietnamese-test",
+    "name": "m3exam-vietnamese",
+    "description": "This dataset contains local exam questions for testing Vietnamese capability.",
+    "examples": null,
+    "num_of_dataset_prompts": 1745,
+    "created_date": "2024-05-29 18:16:14",
+    "reference": "https://github.com/DAMO-NLP-SG/M3Exam",
+    "license": "CC BY-NC-SA",
+    "hash": "27805df65119abe7"
+  },
+  "m3exam-indonesian-test": {
+    "id": "m3exam-indonesian-test",
+    "name": "m3exam-indonesian",
+    "description": "This dataset contains local exam questions for testing Indonesian capability.",
+    "examples": null,
+    "num_of_dataset_prompts": 1580,
+    "created_date": "2024-05-29 18:16:14",
+    "reference": "https://github.com/DAMO-NLP-SG/M3Exam",
+    "license": "CC BY-NC-SA",
+    "hash": "d73b6facd5105e3e"
+  },
+  "m3exam-thai-test": {
+    "id": "m3exam-thai-test",
+    "name": "m3exam-thai",
+    "description": "This dataset contains local exam questions for testing Thai capability.",
+    "examples": null,
+    "num_of_dataset_prompts": 2126,
+    "created_date": "2024-05-29 18:16:14",
+    "reference": "https://github.com/DAMO-NLP-SG/M3Exam",
+    "license": "CC BY-NC-SA",
+    "hash": "90f3ed81ff2cdab9"
   }
 }
