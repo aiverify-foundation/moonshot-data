@@ -157,12 +157,12 @@ srsly==2.4.8 ; python_version >= "3.11" and python_version < "3.12"
 sympy==1.12 ; python_version >= "3.11" and python_version < "3.12"
 tabulate==0.9.0 ; python_version >= "3.11" and python_version < "3.12"
 tbb==2021.12.0 ; python_version >= "3.11" and python_version < "3.12" and platform_system == "Windows"
-tensorboard-data-server==0.7.2 ; python_version >= "3.11" and python_version < "3.12"
-tensorboard==2.16.2 ; python_version >= "3.11" and python_version < "3.12"
+tensorboard-data-server==0.7.2 ; python_version >= "3.11" and python_version < "3.12" and (sys_platform == "darwin" or sys_platform == "linux" or sys_platform == "win32")
+tensorboard==2.16.2 ; python_version >= "3.11" and python_version < "3.12" and (sys_platform == "darwin" or sys_platform == "linux" or sys_platform == "win32")
 tensorflow-hub==0.16.1 ; python_version >= "3.11" and python_version < "3.12"
-tensorflow-io-gcs-filesystem==0.37.0 ; python_version >= "3.11" and python_version < "3.12"
-tensorflow==2.16.1 ; python_version >= "3.11" and python_version < "3.12"
-termcolor==2.4.0 ; python_version >= "3.11" and python_version < "3.12"
+tensorflow-io-gcs-filesystem==0.37.0 ; python_version >= "3.11" and python_version < "3.12" and (sys_platform == "darwin" or sys_platform == "linux")
+tensorflow==2.16.1 ; python_version >= "3.11" and python_version < "3.12" and (sys_platform == "darwin" or sys_platform == "linux")
+termcolor==2.4.0 ; python_version >= "3.11" and python_version < "3.12" and (sys_platform == "darwin" or sys_platform == "linux" or sys_platform == "win32")
 terminaltables==3.1.10 ; python_version >= "3.11" and python_version < "3.12"
 textattack==0.3.10 ; python_version >= "3.11" and python_version < "3.12"
 tf-keras==2.16.0 ; python_version >= "3.11" and python_version < "3.12"
