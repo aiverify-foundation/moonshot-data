@@ -41,11 +41,6 @@ scipy = "1.12.0"
 textattack = "0.3.10"
 tensorflow-hub = "0.16.1"
 homoglyphs = "2.0.4"
-tensorflow = { version = "2.16.1", markers = "sys_platform == 'darwin' or sys_platform == 'linux'" }
-tensorflow-io-gcs-filesystem = [
-    { version = "0.37.0", markers = "sys_platform == 'darwin' or sys_platform == 'linux'" },
-    { version = ">=0.23.1", markers = "sys_platform == 'win32'" }
-]
-tensorflow-intel = { version = "2.16.1", markers = "sys_platform == 'win32'" }
+tensorflow = "2.16.1"
 urllib3 = "2.2.1"
 xgboost = "2.0.3"
