@@ -1,4 +1,3 @@
-import copy
 import logging
 from typing import Any
 import numpy as np
@@ -7,12 +6,7 @@ import torch
 from transformers import AutoTokenizer, AutoModel
 from xgboost import XGBClassifier
 from huggingface_hub import hf_hub_download
-import sys
-import json
 
-from moonshot.src.connectors.connector import Connector
-from moonshot.src.connectors.connector_prompt_arguments import ConnectorPromptArguments
-from moonshot.src.connectors_endpoints.connector_endpoint import ConnectorEndpoint
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
 
