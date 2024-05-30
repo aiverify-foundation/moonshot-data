@@ -11,7 +11,7 @@ This repository contains the test assets needed for [Project Moonshot](https://g
 
 <b>Motivation </b>
 
-Developed by the [AI Verify Foundation](https://aiverifyfoundation.sg/), Project Moonshot is one of the first tools to bring [benchmarking](#benchmarking-with-moonshot) and [red teaming](#red-teaming-with-moonshot) together to help AI developers, compliance teams and AI system owners <b>evaluate LLMs and LLM applications</b>.
+Developed by the [AI Verify Foundation](https://aiverifyfoundation.sg/?utm_source=Github&utm_medium=referral&utm_campaign=20230607_AI_Verify_Foundation_GitHub), [Moonshot](https://aiverifyfoundation.sg/project-moonshot/?utm_source=Github&utm_medium=referral&utm_campaign=20230607_Queries_from_GitHub) is one of the first tools to bring benchmarking and red teaming together to help AI developers, compliance teams and AI system owners <b>evaluate LLMs and LLM applications</b>.
 This repository contains the test assests intended to work with the Moonshot Library. You can also [contribute](#contributing) to Project Moonshot's testing capabilities.
 
 Go to [Project Moonshot Repository](https://github.com/aiverify-foundation/moonshot).
