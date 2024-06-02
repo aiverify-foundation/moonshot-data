@@ -37,13 +37,19 @@ Go to [Project Moonshot Repository](https://github.com/aiverify-foundation/moons
 - <b>Prompt Templates</b> are predefined text structures that guide the formatting and contextualisation of the prompt sent to the AI system being tested. User-input prompts are fit into these templates before being sent to the AI system being tested.
 
 #### 💯 Results:
-- Generated Outputs
-- Results Modules
+- <b>Generated Outputs</b> directory contains files that are automatically produced when tests are run. There are mainly three types of files:
+    - <b>Databases</b> directory contains DB files that are generated when a runner is created. It contains information related to benchmark runs and red teaming sessions. This include details such as the prompts used, the predictions made by the LLMs, and the time taken for these predictions. 
+    - <b>Results</b> directory contains JSON files that hold the results of the benchmark runs, which have been formatted and processed by the selected Results Modules
+    - <b>Runners</b> directory contains JSON files that store metadata information, such as the location of the database file, which holds the records of the results. 
+
+- <b>Results Modules</b> directory contains modules that format the raw results that are generated from the benchmark tests. 
+
 
 #### 🤝 Enablers:
-- Database Modules
-- I/O Modules
-- Runner Modules
+- <b>Database Modules</b> directory contains modules that allow us to connect to various databases, such as SQLite. 
+- <b>I/O Modules</b> directory contains modules that allow us to read and writing operations for data handling, such as JSON.
+- <b>Runner Modules</b> directory contains modules that help us run benchmarking tests and red teaming sessions.
+
 
 </br>
 
