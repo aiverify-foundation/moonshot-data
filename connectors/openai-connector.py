@@ -18,7 +18,10 @@ class OpenAIConnector(Connector):
         super().__init__(ep_arguments)
 
         # Set OpenAI Key
-        self._client = AsyncOpenAI(api_key=self.token)
+        self._client = AsyncOpenAI(
+            api_key=self.token,
+            base_url=self.endpoint if self.endpoint and self.endpoint != '' else None,
+        )
 
         # Set the model to use and remove it from optional_params if it exists
         self.model = self.optional_params.get("model", "")
