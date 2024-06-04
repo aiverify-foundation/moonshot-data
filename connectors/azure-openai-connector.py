@@ -74,7 +74,7 @@ class AzureOpenAIConnector(Connector):
                 if "code" in ex.body["innererror"]:
                     if (
                         "ResponsibleAIPolicyViolation" in ex.body["innererror"]["code"]
-                        and 'message' in ex.body
+                        and "message" in ex.body
                     ):
                         # For this specific case, we want to continue processing the response as a model
                         # rejection, so we ignore the exception and return a valid looking response
