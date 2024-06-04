@@ -1,12 +1,11 @@
 import logging
 from typing import Any
 
-from openai import AsyncAzureOpenAI, BadRequestError
-
 from moonshot.src.connectors.connector import Connector, perform_retry
 from moonshot.src.connectors_endpoints.connector_endpoint_arguments import (
     ConnectorEndpointArguments,
 )
+from openai import AsyncAzureOpenAI, BadRequestError
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -71,12 +70,15 @@ class AzureOpenAIConnector(Connector):
             return await self._process_response(response)
         except BadRequestError as ex:
             # Azure OpenAI's Content Filter causes HTTP 400 errors when it detects inappropriate content
-            if 'innererror' in ex.body:
-                if 'code' in ex.body['innererror']:
-                    if 'ResponsibleAIPolicyViolation' in ex.body['innererror']['code'] and 'message' in ex.body:
+            if isinstance(ex.body, dict) and "innererror" in ex.body:
+                if "code" in ex.body["innererror"]:
+                    if (
+                        "ResponsibleAIPolicyViolation" in ex.body["innererror"]["code"]
+                        and 'message' in ex.body
+                    ):
                         # For this specific case, we want to continue processing the response as a model
                         # rejection, so we ignore the exception and return a valid looking response
-                        return ex.body['message']
+                        return ex.body["message"]
             # Otherwise raise the exception
             raise
 

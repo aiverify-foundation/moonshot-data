@@ -1,6 +1,6 @@
 {
-  "id": "ollama",
-  "name": "Ollama",
+  "id": "ollama-llama3",
+  "name": "Ollama Llama3",
   "connector_type": "openai-connector",
   "uri": "http://localhost:11434/v1/",
   "token": "ollama",
