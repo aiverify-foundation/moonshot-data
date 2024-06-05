@@ -1,0 +1,16 @@
+{
+  "id": "ollama-llama3",
+  "name": "Ollama Llama3",
+  "connector_type": "openai-connector",
+  "uri": "http://localhost:11434/v1/",
+  "token": "ollama",
+  "max_calls_per_second": 10,
+  "max_concurrency": 1,
+  "params": {
+    "timeout": 300,
+    "allow_retries": true,
+    "num_of_retries": 3,
+    "temperature": 0.5,
+    "model": "llama3"
+  }
+}
