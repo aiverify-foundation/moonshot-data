@@ -22,7 +22,6 @@ from moonshot.src.storage.storage import Storage
 from pydantic import BaseModel
 
 
-
 class RedTeaming:
     sql_create_session_metadata_table = """
             CREATE TABLE IF NOT EXISTS session_metadata_table (
@@ -135,6 +134,7 @@ class RedTeaming:
                     ),
                     red_teaming_progress=self.red_teaming_progress,
                     cancel_event=self.cancel_event,
+                    optional_params=attack_strategy_args.get("optional_params", {}),
                 )
                 loaded_attack_module = AttackModule.load(
                     am_id=attack_strategy_args.get("attack_module_id"),
@@ -196,15 +196,16 @@ class RedTeaming:
         for target_llm_connector in self.connector_instances:
             gen_prompts_generator = self._generate_prompts(target_llm_connector.id)
             gen_results_generator = self._generate_predictions(
-                gen_prompts_generator, target_llm_connector,
+                gen_prompts_generator,
+                target_llm_connector,
             )
             generator_list.append(gen_results_generator)
 
         for generator in generator_list:
             async for result in generator:
                 self.red_teaming_progress.update_red_teaming_chats(
-                result.to_dict(), RunStatus.RUNNING
-        )         
+                    result.to_dict(), RunStatus.RUNNING
+                )
         self.red_teaming_progress.status = RunStatus.COMPLETED
         return self.red_teaming_progress.get_dict()
 
@@ -331,7 +332,7 @@ class RedTeaming:
             ]
         else:
             raise RuntimeError(
-                "[Red Teaming] No endpoint connectors specified for red teaming."
+                "[Red Teaming] No connector endpoints specified for red teaming."
             )
 
         if self.context_strategy_info:
