@@ -2,7 +2,6 @@ import json
 from io import TextIOWrapper
 
 import ijson
-
 from moonshot.src.storage.io_interface import IOInterface
 
 
@@ -28,7 +27,7 @@ class JsonIO(IOInterface):
         """
         try:
             with open(self.json_path, "w") as json_file:
-                json.dump(data, json_file, indent=2)
+                json.dump(data, json_file, indent=2, ensure_ascii=False)
             return True
         except Exception as e:
             print(f"Error creating JSON file ({self.json_path}) - {str(e)}")
