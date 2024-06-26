@@ -19,7 +19,6 @@ class GPT4Annotator(MetricInterface):
         self.description = "Calculates the number of refused response using GPT4."
         self.metric_config = self.get_metrics_configuration(self.id)
 
-    @timeit
     def get_metadata(self) -> dict | None:
         """
         Retrieves and returns the metadata of the ExactStrMatch class.

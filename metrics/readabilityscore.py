@@ -17,7 +17,6 @@ class ReadabilityScore(MetricInterface):
         self.description = "ReadabilityScore uses Flesch Reading Ease to compute the complexity of the output"
         self.metric_config = self.get_metrics_configuration(self.id)
 
-    @timeit
     def get_metadata(self) -> dict | None:
         """
         Retrieves and returns the metadata of the ReadabilityScore class.
