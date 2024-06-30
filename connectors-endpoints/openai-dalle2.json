@@ -1,0 +1,12 @@
+{
+  "id": "openai-dalle2",
+  "name": "OpenAI Dall-E-2",
+  "connector_type": "openai-t2i-connector",
+  "uri": "",
+  "token": "",
+  "max_calls_per_second": 1,
+  "max_concurrency": 1,
+  "params": {
+    "model": "dall-e-2"
+  }
+}
