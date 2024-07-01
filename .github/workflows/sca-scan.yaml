@@ -3,9 +3,6 @@ name: Software Composition Analysis
 on:
  # Runs when a pull request review is being submitted
   pull_request_review:
-   types: [submitted]
-   branches:
-     - 'main'
 
   # Run this workflow manually from Actions tab
   workflow_dispatch:
@@ -30,7 +27,7 @@ jobs:
     steps:
 
     - name: Checkout Code (Pull_Request_Review)
-      if: github.event_name == 'pull_request_review'
+      # if: github.event_name == 'pull_request_review'
       uses: actions/checkout@v3
       with:
           ref: ${{ github.event.pull_request.head.ref }}
@@ -44,7 +41,7 @@ jobs:
           ref: ${{ inputs.branch_to_test }}
 
     - name: Set Branch Variable (Pull_Request_Review)
-      if: github.event_name == 'pull_request_review'
+      # if: github.event_name == 'pull_request_review'
       run: |
           echo "BRANCH=branch" >> "$GITHUB_ENV"
 
@@ -53,10 +50,15 @@ jobs:
       run: |
           echo "BRANCH=${{ inputs.branch_to_test }}" >> "$GITHUB_ENV"
 
-    - name: Install & Scan MOONSHOT
+    - name: Setup Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: "3.11"
+
+    - name: Install & Scan MOONSHOT DATA
       run: |
-          echo $BRANCH
-          cd moonshot-data
-          npm install
+          python -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
           bash <(curl -s -L https://detect.synopsys.com/detect9.sh) --blackduck.url=https://blackduck.aipo-imda.net/ --blackduck.api.token=${{ secrets.BLACKDUCK_TOKEN }} --detect.detector.search.depth=10 --detect.project.name=aiverify-moonshot-data --detect.project.version.name=$BRANCH --detect.source.path=. --detect.code.location.name="aiverify-moonshot-data_$BRANCH" --detect.excluded.directories=/tests --blackduck.trust.cert=true
           cd ../
