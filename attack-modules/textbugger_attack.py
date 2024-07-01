@@ -79,14 +79,6 @@ class BugGenerator(AttackModule):
         and sends them to the respective LLMs.
         """
         result_list = []
-        # Configurble PARAMS - Percentage of words in a prompt that should be changed
-        word_swap_ratio = 0.2
-        # Configurble PARAMS - To select top 5 semantic words our of GloVe emedding
-        top_k = 5
-        # Configurble PARAMS -Threshold for Universal Sentence Encoder
-        threshold = 0.8
-        # Configurble PARAMS - Number of prompts to be sent to target
-        MAX_ITERATION = 5
         transformation = CompositeTransformation(
             [
                 # (1) Insert: Insert a space into the word.
@@ -118,7 +110,7 @@ class BugGenerator(AttackModule):
                 # context-aware word vector space. Specifically, we use the pre-trained
                 # GloVe model [30] provided by Stanford for word embedding and set
                 # topk = 5 in the experiment.
-                WordSwapEmbedding(max_candidates=top_k),
+                WordSwapEmbedding(max_candidates=self.optional_params['top_k']),
             ]
         )
         constraints = [RepeatModification(), StopwordModification()]
@@ -133,12 +125,12 @@ class BugGenerator(AttackModule):
         as 0.8 to guarantee a good trade-off between quality and
         strength of the generated adversarial text.'
         """
-        constraints.append(UniversalSentenceEncoder(threshold=threshold))
+        constraints.append(UniversalSentenceEncoder(threshold=self.optional_params['threshold']))
         augmenter = Augmenter(
             transformation=transformation,
             constraints=constraints,
-            pct_words_to_swap=word_swap_ratio,
-            transformations_per_example=MAX_ITERATION,
+            pct_words_to_swap=self.optional_params['word_swap_ratio'],
+            transformations_per_example=self.optional_params['MAX_ITERATION'],
         )
         print(f'{"*"*10} Augmentation in Progress {"*"*10}')
         start = time.process_time()

@@ -73,15 +73,10 @@ class CharSwapGenerator(AttackModule):
         """
         result_list = []
 
-        # Configurble PARAMS - Number of prompts to be sent to target
-        MAX_ITERATION = 10
-        # Configurble PARAMS - Percentage of words in a prompt that should be changed
-        word_swap_ratio = 0.2
-
         word_list = word_tokenize(self.prompt)
         word_list_len = len(word_list)
-        num_perturb_words = math.ceil(word_list_len * word_swap_ratio)
-        for attempt in range(MAX_ITERATION):
+        num_perturb_words = math.ceil(word_list_len * self.optional_params['word_swap_ratio'])
+        for attempt in range(self.optional_params['MAX_ITERATION']):
             # get random indices of words to undergo swapping algo
             random_words_idx = get_n_random(0, word_list_len, num_perturb_words)
             for idx in random_words_idx:

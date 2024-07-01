@@ -70,23 +70,11 @@ class FoolerGenerator(AttackModule):
         This method prepares prompts for each target Language Learning Model (LLM) using the provided prompt
         and sends them to the respective LLMs.
         """
-        # Configurble PARAMS - Percentage of words in a prompt that should be changed
-        word_swap_ratio = 0.2
-        # Configurble PARAMS - Number of prompts to be sent to target
-        MAX_ITERATION = 5
-        # Configurble PARAMS - Minimum word embedding cosine similarity of 0.5.
-        cosine_sim = 0.5
-        # Configurble PARAMS - window size for USE
-        window_size = 15
-        # Configurble PARAMS - threshold for USE
-        threshold = 0.840845057
-        # Configurble PARAMS - Swap words with their 50 closest embedding nearest-neighbors.
-        max_candidates = 50
         """
         Swap words with their 50 closest embedding nearest-neighbors.
         Embedding: Counter-fitted PARAGRAM-SL999 vectors.
         """
-        transformation = WordSwapEmbedding(max_candidates=max_candidates)
+        transformation = WordSwapEmbedding(max_candidates=self.optional_params['max_candidates'])
         """
         Don't modify the same word twice or the stopwords defined
         in the TextFooler public implementation.
@@ -377,7 +365,7 @@ class FoolerGenerator(AttackModule):
             # (The paper claims 0.7, but analysis of the released code and some empirical
             # results show that it's 0.5.)
         """
-        constraints.append(WordEmbeddingDistance(min_cos_sim=cosine_sim))
+        constraints.append(WordEmbeddingDistance(min_cos_sim=self.optional_params['cosine_sim']))
         """Only replace words with the same part of speech (or nouns with verbs)"""
         constraints.append(PartOfSpeech(allow_verb_noun_swap=True))
         """
@@ -387,10 +375,10 @@ class FoolerGenerator(AttackModule):
             new threshold is 1 - (0.5) / pi = 0.840845057
         """
         use_constraint = UniversalSentenceEncoder(
-            threshold=threshold,
+            threshold=self.optional_params['threshold'],
             metric="angular",
             compare_against_original=False,
-            window_size=window_size,
+            window_size=self.optional_params['window_size'],
             skip_text_shorter_than_window=True,
         )
         constraints.append(use_constraint)
@@ -398,8 +386,8 @@ class FoolerGenerator(AttackModule):
         augmenter = Augmenter(
             transformation=transformation,
             constraints=constraints,
-            pct_words_to_swap=word_swap_ratio,
-            transformations_per_example=MAX_ITERATION,
+            pct_words_to_swap=self.optional_params['word_swap_ratio'],
+            transformations_per_example=self.optional_params['MAX_ITERATION'],
         )
         result_list = []
         print(f'{"*"*10} Augmentation in Progress {"*"*10}')

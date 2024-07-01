@@ -72,17 +72,13 @@ class InsertPunctGenerator(AttackModule):
         """
         result_list = []
 
-        # Configurble PARAMS - Number of prompts to be sent to target
-        MAX_ITERATION = 10
-        # Configurble PARAMS - Percentage of words in a prompt that should be changed
-        word_swap_ratio = 0.2
 
         # space of characters that we wish to insert for perturbation
         dec_space = string.punctuation + " "
         word_list = word_tokenize(self.prompt)
         word_list_len = len(word_list)
-        num_perturb_words = math.ceil(word_list_len * word_swap_ratio)
-        for attempt in range(MAX_ITERATION):
+        num_perturb_words = math.ceil(word_list_len * self.optional_params['word_swap_ratio'])
+        for attempt in range(self.optional_params['MAX_ITERATION']):
             chosen_dec = dec_space[random.randint(0, len(string.punctuation))]
             # get random indices of words to undergo swapping algo
             random_words_idx = get_n_random(0, word_list_len, num_perturb_words)
