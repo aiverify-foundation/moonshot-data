@@ -15,8 +15,8 @@ logger = logging.getLogger(__name__)
 
 class NudeNetScore(MetricInterface):
     def __init__(self):
-        self.id = "nudenet"
-        self.name = "NudeNet"
+        self.id = "nudenet_metric"
+        self.name = "NudeNetMetric"
         self.description = "NudeNet is a classifier used to deduce probabilities of exposed body parts in images."
         self.metric_config = self.get_metrics_configuration(self.id)
 
