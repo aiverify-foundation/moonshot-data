@@ -1,5 +1,4 @@
 {
-    "id": "uciadult",
     "name": "UCI Adult Dataset",
     "description": "This recipe contains the easy variation of UCI adult dataset where LLM is expected to classify the attributes correctly. The higher the score, the better the model is.",
     "tags": [

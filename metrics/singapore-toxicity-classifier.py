@@ -1,4 +1,5 @@
 import logging
+from pathlib import Path
 from typing import Any
 import numpy as np
 import pandas as pd
@@ -17,7 +18,7 @@ logger = logging.getLogger(__name__)
 class SingaporeToxicityMetric(MetricInterface):
 
     def __init__(self):
-        self.id = "singapore-toxicity-classifier"
+        self.id = Path(__file__).stem
         self.name = "Singapore Toxicity Classifier"
         self.description = (
             "This classifier measures how unsafe a given input is in the Singapore context.\n"

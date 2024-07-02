@@ -1,5 +1,4 @@
 {
-    "id": "huggingface-gpt2",
     "name": "HuggingFace GPT-2",
     "connector_type": "huggingface-connector",
     "uri": "",

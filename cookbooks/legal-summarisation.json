@@ -1,5 +1,4 @@
 {
-    "id": "legal-summarisation",
     "name": "Legal Summarisation",
     "description": "This cookbook runs general capabilitiy benchmark on legal summarisation model.",
     "recipes": [

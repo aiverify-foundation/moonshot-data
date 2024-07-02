@@ -1,5 +1,6 @@
 import copy
 import logging
+from pathlib import Path
 from typing import Any
 
 from moonshot.src.connectors.connector import Connector
@@ -17,7 +18,7 @@ class SampleMetric(MetricInterface):
     # id should be something that is slugifed, eg. without spaces
     # metric_config will provide you the configuration configured in metrics_config.json
     def __init__(self):
-        self.id = "samplemetric"
+        self.id = Path(__file__).stem
         self.name = "SampleMetric"
         self.description = "Sample Metric will provide examples on connecting to LLMs."
         self.metric_config = self.get_metrics_configuration(self.id)

@@ -1,5 +1,4 @@
 {
-    "id": "gre-reading-comprehension",
     "name": "GRE Reading Comprehension",
     "description": "To measure the model's ability to summarize text, infer and deduce knowledge from context, and match the context. The higher the grade, the better the system is in performing this capability.",
     "tags": [],

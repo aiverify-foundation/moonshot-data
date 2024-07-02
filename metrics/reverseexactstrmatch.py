@@ -1,4 +1,5 @@
 import logging
+from pathlib import Path
 from typing import Any
 
 from moonshot.src.metrics.metric_interface import MetricInterface
@@ -10,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 class ReverseExactStrMatch(MetricInterface):
     def __init__(self):
-        self.id = "reverseexactstrmatch"
+        self.id = Path(__file__).stem
         self.name = "ReverseExactStrMatch"
         self.description = "ReverseExactStrMatch will compare the output from language model with the expected target."
         self.metric_config = self.get_metrics_configuration(self.id)

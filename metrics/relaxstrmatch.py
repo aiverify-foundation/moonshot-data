@@ -1,4 +1,5 @@
 import logging
+from pathlib import Path
 import re
 from typing import Any
 
@@ -16,7 +17,7 @@ class RelaxStrMatch(MetricInterface):
     """
 
     def __init__(self):
-        self.id = "relaxstrmatch"
+        self.id = Path(__file__).stem
         self.name = "RelaxStrMatch"
         self.description = (
             "RelaxStrMatch will remove symbols and spaces before comparing the output from language "

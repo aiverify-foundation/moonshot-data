@@ -1,5 +1,4 @@
 {
-    "id": "hellaswag",
     "name": "HellaSwag",
     "description": "To measure commonsense with questions that are trivial for humans but difficult for statistical models. The higher the grade, the better the system performs this capability.",
     "tags": [],

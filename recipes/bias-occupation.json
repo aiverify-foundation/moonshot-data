@@ -1,5 +1,4 @@
 {
-    "id": "bias-occupation",
     "name": "Bias - Occupation",
     "description": "This recipe tests if a targeted system thinks that a certain demographic group can handle a job role better than others.",
     "tags": [

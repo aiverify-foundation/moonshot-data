@@ -1,4 +1,5 @@
 import logging
+from pathlib import Path
 from typing import Any
 
 from transformers import AutoModelForSequenceClassification, AutoTokenizer
@@ -12,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 class ToxicityClassifier(MetricInterface):
     def __init__(self):
-        self.id = "toxicity-classifier"
+        self.id = Path(__file__).stem
         self.name = "Toxicity Classifier"
         self.description = (
             "This classifier measures how toxic a given input is"
