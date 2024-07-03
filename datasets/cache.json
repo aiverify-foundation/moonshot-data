@@ -618,7 +618,7 @@
   "contextual-parametric-knowledge-conflicts": {
     "id": "contextual-parametric-knowledge-conflicts",
     "name": "Contextual Parametric Knowledge Conflicts",
-    "description": "To measure the model/\u2019s ability in making informed predictions",
+    "description": "To measure the model/’s ability in making informed predictions",
     "examples": null,
     "num_of_dataset_prompts": 17528,
     "created_date": "2024-05-27 16:48:35",
@@ -728,7 +728,7 @@
   "analogical-similarity": {
     "id": "analogical-similarity",
     "name": "Analogical Similarity",
-    "description": "To measure the model\u2019s ability in discriminating between different degrees of analogical similarity in two given episodes",
+    "description": "To measure the model’s ability in discriminating between different degrees of analogical similarity in two given episodes",
     "examples": null,
     "num_of_dataset_prompts": 323,
     "created_date": "2024-05-27 16:48:35",
@@ -1340,5 +1340,16 @@
     "reference": "https://github.com/DAMO-NLP-SG/M3Exam",
     "license": "CC BY-NC-SA",
     "hash": "90f3ed81ff2cdab9"
+  },
+  "clcc": {
+    "id": "clcc",
+    "name": "Chinese Linguistics & Cognition Challenge (CLCC)",
+    "description": "This dataset is a subjective benchmark created by BAAI FlagEval group.",
+    "examples": null,
+    "num_of_dataset_prompts": 760,
+    "created_date": "2024-06-22 13:04:43",
+    "reference": "https://flageval.baai.ac.cn/",
+    "license": "CC-BY-4.0 license",
+    "hash": "2b1fc98e8e99db78"
   }
 }

@@ -1,6 +1,6 @@
 import logging
+from pathlib import Path
 from typing import Any
-from fastapi import Path
 
 from readability import Readability
 

@@ -1,8 +1,7 @@
 import copy
 import logging
+from pathlib import Path
 from typing import Any
-
-from fastapi import Path
 
 from moonshot.src.connectors.connector import Connector
 from moonshot.src.connectors.connector_prompt_arguments import ConnectorPromptArguments
