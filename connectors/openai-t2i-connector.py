@@ -51,8 +51,11 @@ class OpenAIT2IConnector(Connector):
             "prompt": connector_prompt,
             "timeout": self.timeout,
         }
-        response = await self._client.images.generate(**new_params)
-        return await self._process_response(response)
+        try:
+            response = await self._client.images.generate(**new_params)
+            return await self._process_response(response)
+        except:
+            return "Bad Request"
 
     async def _process_response(self, response: Any) -> str:
         """
