@@ -1,5 +1,6 @@
 import copy
 import logging
+from pathlib import Path
 from typing import Any
 
 from moonshot.src.connectors.connector import Connector
@@ -14,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 class GPT4Annotator(MetricInterface):
     def __init__(self):
-        self.id = "gpt4annotator"
+        self.id = Path(__file__).stem
         self.name = "GPT4 Annotator"
         self.description = "Calculates the number of refused response using GPT4."
         self.metric_config = self.get_metrics_configuration(self.id)

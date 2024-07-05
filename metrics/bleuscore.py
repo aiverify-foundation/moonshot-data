@@ -1,4 +1,5 @@
 import logging
+from pathlib import Path
 import statistics
 from typing import Any
 
@@ -13,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 class BleuScore(MetricInterface):
     def __init__(self):
-        self.id = "bleuscore"
+        self.id = Path(__file__).stem
         self.name = "BleuScore"
         self.description = "Bleuscore uses Bleu to return the various rouge scores."
         self.metric_config = self.get_metrics_configuration(self.id)

@@ -1,5 +1,4 @@
 {
-    "id": "mmlu-medical",
     "name": "MMLU - Medical related questions.",
     "description": "MMLU benchmark measures model's ability in answering accurately across 57 tasks including elementary mathemathics, US history, computer science, law, and more. In this recipe, we extracted all the tasks related to healthare. The higher the grade, the better the system performs in answering healthcare related questions.",
     "tags": [

@@ -1,4 +1,5 @@
 import logging
+from pathlib import Path
 from typing import Any
 
 import bert_score
@@ -18,7 +19,7 @@ class BertScore(MetricInterface):
     """
 
     def __init__(self):
-        self.id = "bertscore"
+        self.id = Path(__file__).stem
         self.name = "BertScore"
         self.description = "BertScore uses Bert to check for the similarity in embedding between two sentences."
         self.metric_config = self.get_metrics_configuration(self.id)

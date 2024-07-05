@@ -1,4 +1,5 @@
 import logging
+from pathlib import Path
 from typing import Any
 
 from readability import Readability
@@ -12,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 class ReadabilityScore(MetricInterface):
     def __init__(self):
-        self.id = "readabilityscore"
+        self.id = Path(__file__).stem
         self.name = "ReadabilityScore"
         self.description = "ReadabilityScore uses Flesch Reading Ease to compute the complexity of the output"
         self.metric_config = self.get_metrics_configuration(self.id)

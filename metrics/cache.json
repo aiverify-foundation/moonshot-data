@@ -3,90 +3,90 @@
     "id": "bertscore",
     "name": "BertScore",
     "description": "BertScore uses Bert to check for the similarity in embedding between two sentences.",
-    "hash": "3ced5b1ef55cef28"
+    "hash": "8350224a888a9bbe"
   },
   "spelling": {
     "id": "spelling",
     "name": "SpellingScore",
     "description": "SpellingScore uses Levenshetein Distance to find permutations within an edit distance of 2 form the original word before comparing to known words in a word frequency list.",
-    "hash": "acafbefb9499ee15"
+    "hash": "34687ca8b3a8f2c2"
   },
   "gpt4annotator": {
     "id": "gpt4annotator",
     "name": "GPT4 Annotator",
     "description": "Calculates the number of refused response using GPT4.",
-    "hash": "3f5b5c8e1963849d"
+    "hash": "174591029ca4e595"
   },
   "bleuscore": {
     "id": "bleuscore",
     "name": "BleuScore",
     "description": "Bleuscore uses Bleu to return the various rouge scores.",
-    "hash": "ed34f3dbf1587a24"
+    "hash": "5c95e8663438b7cd"
   },
   "readabilityscore": {
     "id": "readabilityscore",
     "name": "ReadabilityScore",
     "description": "ReadabilityScore uses Flesch Reading Ease to compute the complexity of the output",
-    "hash": "87b3e2affcd45583"
+    "hash": "9ae84879d9ace290"
   },
   "toxicity-classifier": {
     "id": "toxicity-classifier",
     "name": "Toxicity Classifier",
     "description": "This classifier measures how toxic a given input isand calculate the number of toxic sentence detected.",
-    "hash": "7adf182079795d60"
+    "hash": "294ce171042310ab"
   },
   "rougescorer": {
     "id": "rougescorer",
     "name": "RougeScorer",
     "description": "RougeScorer returns the various rouge scores.",
-    "hash": "bd71b2c4b8e3df96"
+    "hash": "a67bc3be91f1bf37"
   },
   "advglue": {
     "id": "advglue",
     "name": "Attack Success Rate",
     "description": "Attack success rate measures how successful a changed prompt performs. A high score shows that the system under test is highly sensitive towards a prompt with minimal changes.",
-    "hash": "dfeb3f880b9938f9"
+    "hash": "6bf0888c2da81cfd"
   },
   "leakagerate": {
     "id": "leakagerate",
     "name": "LeakageRate",
     "description": "Leakage Rate will compare the LCS between two string - Output and Target.",
-    "hash": "2a569916968f2be9"
+    "hash": "12507117658cd619"
   },
   "reverseexactstrmatch": {
     "id": "reverseexactstrmatch",
     "name": "ReverseExactStrMatch",
     "description": "ReverseExactStrMatch will compare the output from language model with the expected target.",
-    "hash": "dbd64ea27fd7b752"
+    "hash": "ebfd4d3e1f74c1c0"
   },
   "exactstrmatch": {
     "id": "exactstrmatch",
     "name": "ExactStrMatch",
     "description": "ExactStrMatch will compare the output from language model with a single target or multiple expected target.",
-    "hash": "e41a861ad89ffc5e"
+    "hash": "91f16ef6faaebe32"
   },
   "relaxstrmatch": {
     "id": "relaxstrmatch",
     "name": "RelaxStrMatch",
     "description": "RelaxStrMatch will remove symbols and spaces before comparing the output from language model with the expected target.",
-    "hash": "893b6eae6e3e1d1c"
+    "hash": "4e843d5c1e9e343d"
   },
   "llamaguardannotator": {
     "id": "llamaguardannotator",
     "name": "LlamaGuard Annotator",
     "description": "Calculates the number of safe, unsafe and unknown response by using LlamaGuard.",
-    "hash": "5fec92fe5a5e1f4e"
+    "hash": "d6fccac8bbaebabd"
   },
   "samplemetric": {
     "id": "samplemetric",
     "name": "SampleMetric",
     "description": "Sample Metric will provide examples on connecting to LLMs.",
-    "hash": "0237624707180624"
+    "hash": "16e10e2ae5de2f86"
   },
   "singapore-toxicity-classifier": {
     "id": "singapore-toxicity-classifier",
     "name": "Singapore Toxicity Classifier",
     "description": "This classifier measures how unsafe a given input is in the Singapore context.\nIt can calculate the number of toxic sentences detected. ",
-    "hash": "365d7a9518145eb0"
+    "hash": "156c9a221ea9115b"
   }
 }

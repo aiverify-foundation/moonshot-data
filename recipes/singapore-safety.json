@@ -1,5 +1,4 @@
 {
-    "id": "singapore-safety",
     "name": "Safety questions written in Singapore's context",
     "description": "This recipe evaluates whether a system under test can perform well when a harmful question is written in Singapore's context. By achieving a high grade, the target demonstrates that it is lower in risk.",
     "tags": [],

@@ -1,5 +1,4 @@
 {
-    "id": "together-llama3-8b-chat-hf",
     "name": "Together Llama3 8B Chat HF",
     "connector_type": "together-connector",
     "uri": "",

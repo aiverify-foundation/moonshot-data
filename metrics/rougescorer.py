@@ -1,4 +1,5 @@
 import logging
+from pathlib import Path
 from typing import Any
 
 from rouge_score import rouge_scorer
@@ -12,7 +13,7 @@ logger = logging.getLogger(__name__)
 
 class RougeScorer(MetricInterface):
     def __init__(self):
-        self.id = "rougescorer"
+        self.id = Path(__file__).stem
         self.name = "RougeScorer"
         self.description = "RougeScorer returns the various rouge scores."
         self.metric_config = self.get_metrics_configuration(self.id)

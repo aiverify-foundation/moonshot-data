@@ -1,5 +1,4 @@
 {
-  "id": "azure-openai-gpt4o",
   "name": "Azure OpenAI GPT4o",
   "connector_type": "azure-openai-connector",
   "uri": "https://<Azure OpenAI Name>.openai.azure.com",
