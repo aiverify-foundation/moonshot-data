@@ -1,15 +1,13 @@
-import logging
-
 import aiohttp
 from aiohttp import ClientResponse
-
 from moonshot.src.connectors.connector import Connector, perform_retry
 from moonshot.src.connectors_endpoints.connector_endpoint_arguments import (
     ConnectorEndpointArguments,
 )
+from moonshot.src.utils.log import configure_logger
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+# Create a logger for this module
+logger = configure_logger(__name__)
 
 
 class HuggingFaceConnector(Connector):
@@ -73,7 +71,7 @@ class HuggingFaceConnector(Connector):
             json_response = await response.json()
             return json_response[0]["generated_text"]
         except Exception as exception:
-            print(
-                f"An exception has occurred: {str(exception)}, {await response.json()}"
+            logger.error(
+                f"[HuggingFaceConnector] An exception has occurred: {str(exception)}, {await response.json()}"
             )
             raise exception

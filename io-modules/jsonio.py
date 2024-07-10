@@ -3,6 +3,10 @@ from io import TextIOWrapper
 
 import ijson
 from moonshot.src.storage.io_interface import IOInterface
+from moonshot.src.utils.log import configure_logger
+
+# Create a logger for this module
+logger = configure_logger(__name__)
 
 
 class JsonIO(IOInterface):
@@ -30,7 +34,9 @@ class JsonIO(IOInterface):
                 json.dump(data, json_file, indent=2, ensure_ascii=False)
             return True
         except Exception as e:
-            print(f"Error creating JSON file ({self.json_path}) - {str(e)}")
+            logger.error(
+                f"[JsonIO] Error creating JSON file ({self.json_path}) - {str(e)}"
+            )
             return False
 
     def read_file(self) -> dict | None:
@@ -46,7 +52,7 @@ class JsonIO(IOInterface):
             return obj_info
 
         except FileNotFoundError:
-            print(f"No file found at {self.json_path}")
+            logger.error(f"[JsonIO] No file found at {self.json_path}")
             return None
 
     def read_file_iterator(
@@ -87,7 +93,7 @@ class JsonIO(IOInterface):
             return obj_info
 
         except FileNotFoundError:
-            print(f"No file found at {self.json_path}")
+            logger.error(f"[JsonIO] No file found at {self.json_path}")
             return None
 
     def read_file_raw(self) -> TextIOWrapper | None:
@@ -101,7 +107,7 @@ class JsonIO(IOInterface):
             return open(self.json_path, "r", encoding="utf-8")
 
         except FileNotFoundError:
-            print(f"No file found at {self.json_path}")
+            logger.error(f"[JsonIO] No file found at {self.json_path}")
             return None
 
     class GeneratorIO:

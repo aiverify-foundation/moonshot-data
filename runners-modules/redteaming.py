@@ -19,7 +19,11 @@ from moonshot.src.redteaming.session.session import SessionMetadata
 from moonshot.src.runs.run_status import RunStatus
 from moonshot.src.storage.db_interface import DBInterface
 from moonshot.src.storage.storage import Storage
+from moonshot.src.utils.log import configure_logger
 from pydantic import BaseModel
+
+# Create a logger for this module
+logger = configure_logger(__name__)
 
 
 class RedTeaming:
@@ -85,10 +89,10 @@ class RedTeaming:
         self.cancel_event = cancel_event
 
         if self.red_teaming_type == RedTeamingType.AUTOMATED:
-            print("[Red Teaming] Starting automated red teaming...")
+            logger.info("[Red teaming] Starting automated red teaming...")
             await self.run_automated_red_teaming()
         elif self.red_teaming_type == RedTeamingType.MANUAL:
-            print("[Red Teaming] Starting manual red teaming...")
+            logger.info("[Red teaming] Starting manual red teaming...")
             return await self.run_manual_red_teaming()
         else:
             raise RuntimeError("[Session] Unable to determine red teaming type.")
@@ -107,7 +111,7 @@ class RedTeaming:
         # ------------------------------------------------------------------------------
         # Part 1: Load attack module
         # ------------------------------------------------------------------------------
-        print("[Red teaming] Part 1: Loading All Attack Module(s)...")
+        logger.debug("[Red teaming] Part 1: Loading All Attack Module(s)...")
         loaded_attack_modules = []
         try:
             # load red teaming modules
@@ -143,20 +147,24 @@ class RedTeaming:
                 loaded_attack_modules.append(loaded_attack_module)
 
         except Exception as e:
-            print(f"Unable to load attack modules in attack strategy: {str(e)}")
+            logger.error(
+                f"[Red teaming] Unable to load attack modules in attack strategy: {str(e)}"
+            )
 
         # ------------------------------------------------------------------------------
         # Part 2: Run attack module(s)
         # ------------------------------------------------------------------------------
-        print("[Red teaming] Part 2: Running Attack Module(s)...")
+        logger.debug("[Red teaming] Part 2: Running Attack Module(s)...")
 
         responses_from_attack_module = []
         for attack_module in loaded_attack_modules:
-            print(f"[Red teaming] Starting to run attack module [{attack_module.name}]")
+            logger.info(
+                f"[Red teaming] Starting to run attack module [{attack_module.name}]"
+            )
             start_time = time.perf_counter()
 
             attack_module_response = await attack_module.execute()
-            print(
+            logger.info(
                 f"[Red teaming] Running attack module [{attack_module.name}] took "
                 f"{(time.perf_counter() - start_time):.4f}s"
             )

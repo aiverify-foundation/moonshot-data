@@ -2,24 +2,14 @@ import math
 import random
 import string
 
+from moonshot.src.redteaming.attack.attack_module import AttackModule
+from moonshot.src.redteaming.attack.attack_module_arguments import AttackModuleArguments
+from moonshot.src.utils.log import configure_logger
 from nltk import word_tokenize
 from nltk.tokenize.treebank import TreebankWordDetokenizer
 
-from moonshot.src.redteaming.attack.attack_module import AttackModule
-from moonshot.src.redteaming.attack.attack_module_arguments import AttackModuleArguments
-
-
-def get_n_random(low: int, high: int, n: int) -> list:
-    """
-    Util function to generate random indices.
-    Words of these indices after word tokenization will be subjected to perturbation.
-    """
-    result = []
-    try:
-        result = random.sample(range(low, high), n)
-    except ValueError:
-        print(f"Sample size of {n} exceeds population size of {high - low}")
-    return result
+# Create a logger for this module
+logger = configure_logger(__name__)
 
 
 class InsertPunctGenerator(AttackModule):
@@ -28,8 +18,8 @@ class InsertPunctGenerator(AttackModule):
         super().__init__(am_id, am_arguments)
         self.name = "Insert Punctuation Attack"
         self.description = (
-            "This module tests for adversarial textual robustness and creates perturbations through adding punctuation to "
-            "the start of words in a prompt.\nParameters:\n1. MAX_ITERATIONS - Number of prompts that "
+            "This module tests for adversarial textual robustness and creates perturbations through adding punctuation "
+            "to the start of words in a prompt.\nParameters:\n1. MAX_ITERATIONS - Number of prompts that "
             "should be sent to the target. [Default: 10]"
         )
 
@@ -49,6 +39,20 @@ class InsertPunctGenerator(AttackModule):
             "name": self.name,
             "description": self.description if hasattr(self, "description") else "",
         }
+
+    def get_n_random(self, low: int, high: int, n: int) -> list:
+        """
+        Util function to generate random indices.
+        Words of these indices after word tokenization will be subjected to perturbation.
+        """
+        result = []
+        try:
+            result = random.sample(range(low, high), n)
+        except ValueError:
+            logger.debug(
+                f"[InsertPunctGenerator] Sample size of {n} exceeds population size of {high - low}"
+            )
+        return result
 
     async def execute(self):
         """
@@ -85,7 +89,7 @@ class InsertPunctGenerator(AttackModule):
         for attempt in range(MAX_ITERATION):
             chosen_dec = dec_space[random.randint(0, len(string.punctuation))]
             # get random indices of words to undergo swapping algo
-            random_words_idx = get_n_random(0, word_list_len, num_perturb_words)
+            random_words_idx = self.get_n_random(0, word_list_len, num_perturb_words)
             for idx in random_words_idx:
                 if word_list[idx] not in dec_space:
                     word_list[idx] = chosen_dec + word_list[idx]
@@ -94,7 +98,8 @@ class InsertPunctGenerator(AttackModule):
             word_list = word_tokenize(self.prompt)
         for res in result_list:
             for x in res:
-                print(x.prompt)
-                print(x.predicted_results)
-                print()
+                logger.debug(f"[InsertPunctGenerator] Prompt: {x.prompt}")
+                logger.debug(
+                    f"[InsertPunctGenerator] Predicted Results: {x.predicted_results}\n"
+                )
         return result_list

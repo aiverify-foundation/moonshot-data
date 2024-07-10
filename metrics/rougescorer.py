@@ -1,14 +1,13 @@
-import logging
 from pathlib import Path
 from typing import Any
 
+from moonshot.src.metrics.metric_interface import MetricInterface
+from moonshot.src.utils.log import configure_logger
+from moonshot.src.utils.timeit import timeit
 from rouge_score import rouge_scorer
 
-from moonshot.src.metrics.metric_interface import MetricInterface
-from moonshot.src.utils.timeit import timeit
-
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
+# Create a logger for this module
+logger = configure_logger(__name__)
 
 
 class RougeScorer(MetricInterface):
@@ -63,7 +62,7 @@ class RougeScorer(MetricInterface):
             individual_scores = []
 
             # Calculate rouge scores for each target-output pair
-            print("Attempting to calculate rouge score")
+            logger.info("[RougeScorer] Attempting to calculate rouge score")
             scorer = rouge_scorer.RougeScorer(test_metrics)
             for target, result in zip(targets, predicted_results):
                 scores = scorer.score(target, result)
