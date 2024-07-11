@@ -272,6 +272,7 @@ class Benchmarking:
         # ------------------------------------------------------------------------------
         logger.debug("[Benchmarking] Load required instances...")
         start_time = time.perf_counter()
+        self.cookbook_instance = None
         try:
             # Load cookbook
             start_time = time.perf_counter()
@@ -353,6 +354,7 @@ class Benchmarking:
         # ------------------------------------------------------------------------------
         logger.debug("[Benchmarking] Load required instances...")
         start_time = time.perf_counter()
+        self.recipe_instance = None
         try:
             # Load recipe
             self.recipe_instance = Recipe.load(recipe_name)
