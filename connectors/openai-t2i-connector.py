@@ -1,4 +1,5 @@
 import logging
+import base64
 from typing import Any
 
 from moonshot.src.connectors.connector import Connector, perform_retry
@@ -51,13 +52,28 @@ class OpenAIT2IConnector(Connector):
             "prompt": connector_prompt,
             "timeout": self.timeout,
         }
+        blackout = ("iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAIAAAB7GkOtAAADEUlEQVR4nO3BgQAAAADDoPl"
+        "TX+EAVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+        "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMBvArQAAVkUTe8AAAAASUVORK5CYII=")
         try:
             response = await self._client.images.generate(**new_params)
-            return await self._process_response(response)
+            print(f'{"*"*5} No Blackout {"*"*5}')
+            return await self._process_response(response , prompt)
         except:
-            return "Bad Request"
+            print(f'{"*"*5} Blackout {"*"*5}')
+            return blackout
 
-    async def _process_response(self, response: Any) -> str:
+    async def _process_response(self, response: Any, prompt: str) -> str:
         """
         Process the response from OpenAI's API and return the message content as a string.
 
@@ -73,4 +89,13 @@ class OpenAIT2IConnector(Connector):
             str: A string containing the message content from the first choice in the response. This
             content represents the AI-generated text based on the input prompt.
         """
-        return response.data[0].url
+        img_url = response.data[0].url
+        urllib.request.urlretrieve( 
+            result, 
+            f"{prompt[:20]}.png")
+        encoded_string = None
+        with open(f"{prompt[:20]}.png" , "rb") as f:
+            encoded_string = base64.b64encode(image_file.read())
+        f.close()
+        os.remove(f"{prompt[:20]}.png")
+        return encoded_string
