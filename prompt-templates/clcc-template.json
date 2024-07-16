@@ -1,0 +1,5 @@
+{
+    "name": "clcc-template",
+    "description": "This template is used with clcc dataset.",
+    "template": "请回答下面问题。\"{{ prompt }}\""
+}

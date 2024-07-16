@@ -9,6 +9,11 @@
             "llm-judge-openai-gpt4-annotator"
         ]
     },
+    "flagjudgeannotator":{
+        "endpoints": [
+            "flageval-flagjudge"
+        ]
+    },
     "samplemetric":{
         "endpoints": [
             "openai-gpt35-turbo-16k",
