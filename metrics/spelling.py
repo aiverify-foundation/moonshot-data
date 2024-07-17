@@ -1,14 +1,9 @@
-import logging
 from pathlib import Path
 from typing import Any
 
-from transformers import pipeline
-
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
-
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
+from transformers import pipeline
 
 
 class SpellingScore(MetricInterface):

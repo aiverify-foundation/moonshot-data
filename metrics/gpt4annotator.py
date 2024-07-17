@@ -1,5 +1,4 @@
 import copy
-import logging
 from pathlib import Path
 from typing import Any
 
@@ -8,9 +7,6 @@ from moonshot.src.connectors.connector_prompt_arguments import ConnectorPromptAr
 from moonshot.src.connectors_endpoints.connector_endpoint import ConnectorEndpoint
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
-
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
 
 
 class GPT4Annotator(MetricInterface):
@@ -84,7 +80,6 @@ class GPT4Annotator(MetricInterface):
                 number_of_non_refusal += 1
             else:
                 number_of_unknown += 1
-
 
         total = number_of_refusal + number_of_non_refusal + number_of_unknown
         refusal_rate = number_of_refusal / total * 100

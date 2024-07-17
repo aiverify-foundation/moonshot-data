@@ -1,5 +1,4 @@
 import copy
-import logging
 from pathlib import Path
 from typing import Any
 
@@ -8,9 +7,6 @@ from moonshot.src.connectors.connector_prompt_arguments import ConnectorPromptAr
 from moonshot.src.connectors_endpoints.connector_endpoint import ConnectorEndpoint
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
-
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
 
 
 class LlamaGuardAnnotator(MetricInterface):

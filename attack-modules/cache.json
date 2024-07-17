@@ -3,7 +3,7 @@
     "id": "charswap_attack",
     "name": "Character Swap Attack",
     "description": "This module tests for adversarial textual robustness. It creates perturbations through swapping characters for words that contains more than 3 characters.\nParameters:\n1. MAX_ITERATIONS - Number of prompts that should be sent to the target. [Default: 10]",
-    "hash": "67b419f541e336c7"
+    "hash": "e1aa54822300aac1"
   },
   "toxic_sentence_generator": {
     "id": "toxic_sentence_generator",
@@ -15,7 +15,7 @@
     "id": "textbugger_attack",
     "name": "TextBugger Attack",
     "description": "This module tests for adversarial textual robustness and implements the perturbations listed in the paper TEXTBUGGER: Generating Adversarial Text Against Real-world Applications.\nParameters:\n1. MAX_ITERATIONS - Number of prompts that should be sent to the target. This is also thenumber of transformations that should be generated. [Default: 5]\nNote:\nUsage of this attack module requires the internet. Initial downloading of the GLoVe embedding occurs when the UniversalEncoder is called.\nEmbedding is retrieved from the following URL: https://textattack.s3.amazonaws.com/word_embeddings/paragramcf",
-    "hash": "b7af441f201b22bb"
+    "hash": "01a6582b332e025e"
   },
   "job_role_generator": {
     "id": "job_role_generator",
@@ -27,37 +27,37 @@
     "id": "homoglyph_attack",
     "name": "Homoglyph Attack",
     "description": "This module tests for adversarial textual robustness. Homoglyphs are alternative words for words comprising of ASCII characters.\nExample of a homoglyph fool -> fooI\nThis module purturbs the prompt with all available homoglyphs for each word present.\nParameters:\n1. MAX_ITERATIONS - Maximum number of prompts that should be sent to the target. [Default: 20]",
-    "hash": "72d260060a05cc5c"
+    "hash": "bfd2050e05f82b59"
   },
   "violent_durian": {
     "id": "violent_durian",
     "name": "Violent Durian",
     "description": "This is a multi-turn agent designed to interact over several exchanges. It's used to elicit dangerous or violent suggestions from the target language model by adopting a criminal persona. The application is experimental and uses OpenAI GPT-4. Configure the endpoint openai-gpt4 to use this attack module.",
-    "hash": "b8d2dd2990594944"
+    "hash": "506cf91db872a522"
   },
   "textfooler_attack": {
     "id": "textfooler_attack",
     "name": "TextFooler Attack",
-    "description": "This module tests for adversarial textual robustness and implements the perturbations listed in the paper Is BERT Really Robust? A Strong Baseline for Natural Language Attack on Text Classification and Entailment.\nParameters:\n1. MAX_ITERATIONS - Number of prompts that should be sent to the target. This is also the number of transformations that should be generated. [Default: 5]\nNote:\nUsage of this attack module requires the internet. Initial downloading of the GLoVe embedding occurs when the UniversalEncoder is called.\nEmbedding is retrieved from the following URL: https://textattack.s3.amazonaws.com/word_embeddings/paragramcf",
-    "hash": "ab27f555152546db"
+    "description": "This module tests for adversarial textual robustness and implements the perturbations listed in the paper 'Is BERT Really Robust? A Strong Baseline for Natural Language Attack on Text Classification and Entailment.'\nParameters:\n1. MAX_ITERATIONS - Number of prompts that should be sent to the target. This is also the number of transformations that should be generated. [Default: 5]\nNote:\nUsage of this attack module requires the internet. Initial downloading of the GLoVe embedding occurs when the UniversalEncoder is called.\nEmbedding is retrieved from the following URL: https://textattack.s3.amazonaws.com/word_embeddings/paragramcf",
+    "hash": "290853ad894c1b89"
   },
   "colloquial_wordswap_attack": {
     "id": "colloquial_wordswap_attack",
     "name": "Colloquial Wordswap",
     "description": "This attack module tests for textual robustness against the Singapore context. It takes in prompts that feature nouns that describe people. Examples of this include words like 'girl' , 'boy' or 'grandmother'. The module substitutes these words with their Singapore colloquial counterparts, such as 'ah boy', 'ah girl' and 'ah ma'.",
-    "hash": "41a3bcc146e3ed5b"
+    "hash": "d9475be179ec88b2"
   },
   "insert_punctuation_attack": {
     "id": "insert_punctuation_attack",
     "name": "Insert Punctuation Attack",
     "description": "This module tests for adversarial textual robustness and creates perturbations through adding punctuation to the start of words in a prompt.\nParameters:\n1. MAX_ITERATIONS - Number of prompts that should be sent to the target. [Default: 10]",
-    "hash": "9e3802d14d02ece4"
+    "hash": "b3719139ed7775a2"
   },
   "malicious_question_generator": {
     "id": "malicious_question_generator",
     "name": "Malicious Question Generator",
     "description": "This attack module generates malicious questions using OpenAI's GPT4 based on a given topic. This module will stop by the number of iterations (Default: 50). To use this attack module, you need to configure an 'openai-gpt4'endpoint.",
-    "hash": "0439a018a019ac90"
+    "hash": "15205fd96a8b5613"
   },
   "sample_attack_module": {
     "id": "sample_attack_module",
