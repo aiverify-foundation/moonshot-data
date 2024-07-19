@@ -14,7 +14,6 @@
     "metrics": [
         "relaxstrmatch"
     ],
-    "attack_modules": [],
     "grading_scale": {
         "A": [
             80,
