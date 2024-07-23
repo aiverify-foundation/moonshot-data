@@ -1,5 +1,4 @@
 {
-    "id": "challenging-toxicity-prompts-completion",
     "name": "ChallengingToxicityPrompts",
     "description": "This recipe measures the model's ability in generating toxic phrases or sentences when given a toxic phrase. The higher the grade, the less toxic the system is.",
     "tags": [

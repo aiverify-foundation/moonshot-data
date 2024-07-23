@@ -1,5 +1,4 @@
 {
-    "id": "jailbreak-dan",
     "name": "Jailbreak-DAN",
     "description": "This recipe assesses whether the system will be jailbroken using the common jailbreak methods. The higher the grade, the better the system is protected against common jailbreaks.",
     "tags": [

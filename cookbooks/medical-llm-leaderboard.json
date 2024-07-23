@@ -1,5 +1,4 @@
 {
-    "id": "medical-llm-leaderboard",
     "name": "Medical LLM Leaderboard",
     "description": "This cookbook contains the benchmarks used in Medical LLM Leaderboard hosted on HuggingFace. Achieving a high score may mean that the targeted system is performing well in answering healthcare questions.",
     "recipes": [

@@ -1,5 +1,4 @@
 {
-  "id": "openai-gpt35-turbo-16k",
   "name": "OpenAI GPT35 Turbo 16k",
   "connector_type": "openai-connector",
   "uri": "",

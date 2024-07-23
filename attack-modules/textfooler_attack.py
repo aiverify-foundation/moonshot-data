@@ -1,7 +1,11 @@
-import time
-import os
-import tensorflow as tf
 import logging
+import os
+import time
+
+import tensorflow as tf
+from moonshot.src.redteaming.attack.attack_module import AttackModule
+from moonshot.src.redteaming.attack.attack_module_arguments import AttackModuleArguments
+from moonshot.src.utils.log import configure_logger
 from textattack.augmentation import Augmenter
 from textattack.constraints.grammaticality import PartOfSpeech
 from textattack.constraints.pre_transformation import (
@@ -13,25 +17,28 @@ from textattack.constraints.semantics import WordEmbeddingDistance
 from textattack.constraints.semantics.sentence_encoders import UniversalSentenceEncoder
 from textattack.transformations import WordSwapEmbedding
 
-from moonshot.src.redteaming.attack.attack_module import AttackModule
-from moonshot.src.redteaming.attack.attack_module_arguments import AttackModuleArguments
+# Create a logger for this module
+logger = configure_logger(__name__)
 
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 tf.get_logger().setLevel(logging.ERROR)
+
 
 class FoolerGenerator(AttackModule):
     def __init__(self, am_id: str, am_arguments: AttackModuleArguments | None = None):
         # Initialize super class
         super().__init__(am_id, am_arguments)
         self.name = "TextFooler Attack"
-        self.description = ("This module tests for adversarial textual robustness and implements the perturbations listed in the paper Is "
-        "BERT Really Robust? A Strong Baseline for Natural Language Attack on Text Classification and Entailment."
-        "\nParameters:\n1. MAX_ITERATIONS - Number of prompts that should be sent to the target. This is also the "
-        "number of transformations that should be generated. [Default: 5]"
-        "\nNote:\nUsage of this attack module requires the "
-        "internet. Initial downloading of the GLoVe embedding occurs when the UniversalEncoder is called.\nEmbedding "
-        "is retrieved from the following URL: https://textattack.s3.amazonaws.com/word_embeddings/paragramcf")
+        self.description = (
+            "This module tests for adversarial textual robustness and implements the perturbations "
+            "listed in the paper 'Is BERT Really Robust? A Strong Baseline for Natural Language Attack "
+            "on Text Classification and Entailment.'\nParameters:\n1. MAX_ITERATIONS - Number of prompts "
+            "that should be sent to the target. This is also the number of transformations that should be "
+            "generated. [Default: 5]\nNote:\nUsage of this attack module requires the internet. Initial "
+            "downloading of the GLoVe embedding occurs when the UniversalEncoder is called.\nEmbedding is "
+            "retrieved from the following URL: https://textattack.s3.amazonaws.com/word_embeddings/paragramcf"
+        )
 
     def get_metadata(self) -> dict:
         """
@@ -402,17 +409,20 @@ class FoolerGenerator(AttackModule):
             transformations_per_example=MAX_ITERATION,
         )
         result_list = []
-        print(f'{"*"*10} Augmentation in Progress {"*"*10}')
+        logger.debug(f"{'*'*10} [FoolerGenerator] Augmentation in Progress {'*'*10}")
         start = time.process_time()
         results = augmenter.augment(self.prompt)
-        print(f'{"*"*10} Time Taken: {time.process_time() - start}s {"*"*10}')
+        logger.debug(
+            f"{'*'*10} [FoolerGenerator] Time Taken: {time.process_time() - start}s {'*'*10}"
+        )
         for i in results:
-            print(i)
+            logger.debug(f"[FoolerGenerator] Index {i}")
             result_list.append(await self._send_prompt_to_all_llm([i]))
         for res in result_list:
             for x in res:
-                print(x.prompt)
-                print(x.predicted_results)
-                print()
+                logger.debug(f"[FoolerGenerator] Prompt: {x.prompt}")
+                logger.debug(
+                    f"[FoolerGenerator] Predicted Results: {x.predicted_results}\n"
+                )
 
         return result_list

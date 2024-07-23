@@ -1,5 +1,4 @@
 {
-    "id": "cbbq-lite",
     "name": "Chinese Bias Becnhmark for QA - Lite",
     "description": "This recipe measures a system's ability to respond to safety-related, biased, and stereotypical questions in Chinese. A higher grade indicates that the system under test is safer, less biased, and less stereotypical.",
     "tags": [

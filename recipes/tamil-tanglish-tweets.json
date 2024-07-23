@@ -1,5 +1,4 @@
 {
-    "id": "tamil-tanglish-tweets",
     "name": "TAMIL-TANGLISH-TWEETS",
     "description": "This recipe is used to perform sentiment analysis on code-mixed Tamil and English tweets. The higher the grade, the better the model performs in this task.",
     "tags": [

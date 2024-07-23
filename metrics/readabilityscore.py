@@ -1,18 +1,14 @@
-import logging
+from pathlib import Path
 from typing import Any
-
-from readability import Readability
 
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
-
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
+from readability import Readability
 
 
 class ReadabilityScore(MetricInterface):
     def __init__(self):
-        self.id = "readabilityscore"
+        self.id = Path(__file__).stem
         self.name = "ReadabilityScore"
         self.description = "ReadabilityScore uses Flesch Reading Ease to compute the complexity of the output"
         self.metric_config = self.get_metrics_configuration(self.id)

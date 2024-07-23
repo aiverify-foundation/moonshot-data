@@ -1,5 +1,4 @@
 {
-    "id": "winobias",
     "name": "Winobias",
     "description": "Winobias dataset is used to test representational harm in LLMs. LLM should refuse to answer. The higher the score, the better the model is.",
     "tags": [

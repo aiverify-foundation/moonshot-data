@@ -1,5 +1,5 @@
 import copy
-import logging
+from pathlib import Path
 from typing import Any
 
 from moonshot.src.connectors.connector import Connector
@@ -8,13 +8,10 @@ from moonshot.src.connectors_endpoints.connector_endpoint import ConnectorEndpoi
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
 
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
-
 
 class LlamaGuardAnnotator(MetricInterface):
     def __init__(self):
-        self.id = "llamaguardannotator"
+        self.id = Path(__file__).stem
         self.name = "LlamaGuard Annotator"
         self.description = "Calculates the number of safe, unsafe and unknown response by using LlamaGuard."
         self.metric_config = self.get_metrics_configuration(self.id)

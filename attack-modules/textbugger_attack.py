@@ -1,7 +1,11 @@
-import time
-import os
-import tensorflow as tf
 import logging
+import os
+import time
+
+import tensorflow as tf
+from moonshot.src.redteaming.attack.attack_module import AttackModule
+from moonshot.src.redteaming.attack.attack_module_arguments import AttackModuleArguments
+from moonshot.src.utils.log import configure_logger
 from textattack.augmentation import Augmenter
 from textattack.constraints.pre_transformation import (
     RepeatModification,
@@ -17,13 +21,13 @@ from textattack.transformations import (
     WordSwapRandomCharacterInsertion,
 )
 
-from moonshot.src.redteaming.attack.attack_module import AttackModule
-from moonshot.src.redteaming.attack.attack_module_arguments import AttackModuleArguments
+# Create a logger for this module
+logger = configure_logger(__name__)
 
-
-os.environ['TF_ENABLE_ONEDNN_OPTS'] = '0'
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 tf.get_logger().setLevel(logging.ERROR)
+
 
 class BugGenerator(AttackModule):
     def __init__(self, am_id: str, am_arguments: AttackModuleArguments | None = None):
@@ -140,17 +144,19 @@ class BugGenerator(AttackModule):
             pct_words_to_swap=word_swap_ratio,
             transformations_per_example=MAX_ITERATION,
         )
-        print(f'{"*"*10} Augmentation in Progress {"*"*10}')
+        logger.debug(f"{'*'*10} [BugGenerator] Augmentation in Progress {'*'*10}")
         start = time.process_time()
         results = augmenter.augment(self.prompt)
-        print(f'{"*"*10} Time Taken: {time.process_time() - start}s {"*"*10}')
+        logger.debug(
+            f"{'*'*10} [BugGenerator] Time Taken: {time.process_time() - start}s {'*'*10}"
+        )
         for i in results:
-            print(i)
+            logger.debug(f"[BugGenerator] Index {i}")
             result_list.append(await self._send_prompt_to_all_llm([i]))
         for res in result_list:
             for x in res:
-                print(x.prompt)
-                print(x.predicted_results)
-                print()
-
+                logger.debug(f"[BugGenerator] Prompt: {x.prompt}")
+                logger.debug(
+                    f"[BugGenerator] Predicted Results: {x.predicted_results}\n"
+                )
         return result_list
