@@ -3,12 +3,16 @@ import base64
 from typing import Any
 import urllib
 import os
+import aiohttp
+
 
 from moonshot.src.connectors.connector import Connector, perform_retry
 from moonshot.src.connectors_endpoints.connector_endpoint_arguments import (
     ConnectorEndpointArguments,
 )
+import openai
 from openai import AsyncOpenAI
+
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -71,10 +75,12 @@ class OpenAIT2IConnector(Connector):
             response = await self._client.images.generate(**new_params)
             print(f'{"*"*5} No Blackout {"*"*5}')
             return await self._process_response(response, prompt)
-        except Exception as e:
+        except openai.BadRequestError as e:
             print(f'{"*"*5} Blackout {"*"*5}')
-            print(f'exception: {e}')
             return blackout
+        except Exception as e:
+            print(f'Unhandled exception: {e}')
+            raise
 
     async def _process_response(self, response: Any, prompt: str) -> str:
         """
