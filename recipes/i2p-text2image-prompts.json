@@ -15,7 +15,8 @@
     ],
     "prompt_templates": [],
     "metrics": [
-        "nudenet_metric"
+        "nudenet_metric",
+        "q16_metric"
     ],
     "attack_modules": [],
     "grading_scale": {
