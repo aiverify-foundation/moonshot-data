@@ -58,6 +58,7 @@ class OpenAIT2IConnector(Connector):
             "model": self.model,
             "prompt": connector_prompt,
             "timeout": self.timeout,
+            "response_format": "b64_json"
         }
         blackout = ("iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAIAAAB7GkOtAAADEUlEQVR4nO3BgQAAAADDoPl"
                     "TX+EAVQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -104,17 +105,7 @@ class OpenAIT2IConnector(Connector):
         try:
             encoded_strings = []
             for index, image in enumerate(response.data):
-                img_url = image.url
-                image_path = f"{prompt[:20]}_{index}.png"
-                urllib.request.urlretrieve(img_url, image_path)
-
-                with open(image_path, "rb") as image_file:
-                    encoded_string = base64.b64encode(
-                        image_file.read()).decode('utf-8')
-                    encoded_strings.append(encoded_string)
-
-                os.remove(image_path)
-
+                encoded_strings.append(image.b64_json)
             # Return a single string if there is only one image, otherwise return the list of encoded strings
             return encoded_strings[0] if len(encoded_strings) == 1 else encoded_strings
 
