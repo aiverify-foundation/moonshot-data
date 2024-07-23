@@ -4,6 +4,7 @@ from typing import Any
 import urllib
 import os
 import aiohttp
+from openai.types import ImagesResponse
 
 
 from moonshot.src.connectors.connector import Connector, perform_retry
@@ -82,7 +83,7 @@ class OpenAIT2IConnector(Connector):
             print(f'Unhandled exception: {e}')
             raise
 
-    async def _process_response(self, response: Any, prompt: str) -> str:
+    async def _process_response(self, response: ImagesResponse, prompt: str) -> str:
         """
         Process the response from OpenAI's API and return the message content as a string.
 
@@ -97,18 +98,26 @@ class OpenAIT2IConnector(Connector):
         Returns:
             str: A string containing the message content from the first choice in the response. This
             content represents the AI-generated text based on the input prompt.
+            OR
+            str[]: array is returned if multiple images are generated n>1
         """
         try:
-            img_url = response.data[0].url
-            image_path = f"{prompt[:20]}.png"
-            urllib.request.urlretrieve(img_url, image_path)
+            encoded_strings = []
+            for index, image in enumerate(response.data):
+                img_url = image.url
+                image_path = f"{prompt[:20]}_{index}.png"
+                urllib.request.urlretrieve(img_url, image_path)
 
-            with open(image_path, "rb") as image_file:
-                encoded_string = base64.b64encode(
-                    image_file.read()).decode('utf-8')
+                with open(image_path, "rb") as image_file:
+                    encoded_string = base64.b64encode(
+                        image_file.read()).decode('utf-8')
+                    encoded_strings.append(encoded_string)
 
-            os.remove(image_path)
-            return encoded_string
+                os.remove(image_path)
+
+            # Return a single string if there is only one image, otherwise return the list of encoded strings
+            return encoded_strings[0] if len(encoded_strings) == 1 else encoded_strings
+
         except Exception as e:
             print(f"Error processing response: {e}")
             raise
