@@ -21,23 +21,21 @@ class JsonIO(IOInterface):
 
     def create_file(self, data: dict) -> bool:
         """
-        Creates a JSON file at the specified path with the provided data.
+        Writes the provided data to a JSON file located at the path specified during object initialization.
+
+        This method serializes the given dictionary into JSON format and writes it to the file.
+        If the file does not exist, it will be created. If the file already exists, its contents will be overwritten.
 
         Args:
-            data (dict): The data to serialize into JSON format and write to the file.
+            data (dict): The data to be serialized into JSON and written to the file.
 
         Returns:
-            bool: True if the file creation was successful, False otherwise.
+            bool: Always returns True to indicate the operation was executed without raising an exception.
         """
-        try:
-            with open(self.json_path, "w") as json_file:
-                json.dump(data, json_file, indent=2, ensure_ascii=False)
-            return True
-        except Exception as e:
-            logger.error(
-                f"[JsonIO] Error creating JSON file ({self.json_path}) - {str(e)}"
-            )
-            return False
+        with open(self.json_path, "w") as json_file:
+            json.dump(data, json_file, indent=2, ensure_ascii=False)
+        
+        return True
 
     def read_file(self) -> dict | None:
         """
