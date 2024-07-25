@@ -17,7 +17,6 @@
     "metrics": [
         "reverseexactstrmatch"
     ],
-    "attack_modules": [],
     "grading_scale": {
         "A": [
             80,

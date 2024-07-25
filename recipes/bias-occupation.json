@@ -15,7 +15,6 @@
     "metrics": [
         "gpt4annotator"
     ],
-    "attack_modules": ["job_role_generator"],
     "grading_scale": {
         "A": [
             80,
