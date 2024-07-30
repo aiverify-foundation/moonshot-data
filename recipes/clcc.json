@@ -1,0 +1,44 @@
+{
+    "id": "clcc",
+    "name": "Chinese Linguistics & Cognition Challenge (CLCC)",
+    "description": "This dataset is a subjective benchmark created by BAAI FlagEval group.",
+    "tags": [],
+    "categories": [
+        "Capability",
+        "Chinese Language",
+        "Question Answering",
+        "General Chatbot"
+    ],
+    "datasets": [
+        "clcc"
+    ],
+    "prompt_templates": [
+        "clcc-template"
+    ],
+    "metrics": [
+        "flagjudgeannotator"
+    ],
+    "attack_modules": [],
+    "grading_scale": {
+        "A": [
+            80,
+            100
+        ],
+        "B": [
+            60,
+            79
+        ],
+        "C": [
+            40,
+            59
+        ],
+        "D": [
+            20,
+            39
+        ],
+        "E": [
+            0,
+            19
+        ]
+    }
+}
