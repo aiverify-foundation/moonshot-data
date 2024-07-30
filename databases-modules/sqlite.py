@@ -20,7 +20,7 @@ class SQLite(DBInterface):
         object's initialization.
 
         If the connection is successfully established, it returns True.
-        If an error occurs during the connection process, it prints an error message with the details of the
+        If an error occurs during the connection process, it logs an error message with the details of the
         SQLite error and returns False.
 
         Returns:
@@ -44,7 +44,7 @@ class SQLite(DBInterface):
         Closes the connection to the SQLite database.
 
         If the connection is already established, it attempts to close it and sets the connection attribute to None.
-        If an error occurs during the closing process, it prints an error message with the details of the SQLite error.
+        If an error occurs during the closing process, it logs an error message with the details of the SQLite error.
 
         Returns:
             None
@@ -68,7 +68,7 @@ class SQLite(DBInterface):
 
         This method attempts to create a table in the SQLite database using the provided SQL query.
         If the connection to the SQLite database is established, it executes the SQL query.
-        If an error occurs during the table creation process, it prints an error message with the details of the
+        If an error occurs during the table creation process, it logs an error message with the details of the
         SQLite error.
 
         Args:
@@ -99,7 +99,7 @@ class SQLite(DBInterface):
         If the operation is successful, it commits the transaction and returns the ID of the inserted record along
         with the record data.
 
-        If an error occurs during the record insertion process, it prints an error message with the details of the
+        If an error occurs during the record insertion process, it logs an error message with the details of the
         SQLite error and returns None.
 
         Args:
@@ -135,7 +135,7 @@ class SQLite(DBInterface):
 
         If the connection to the SQLite database is established, it executes the SQL query with the record and returns
         the fetched record.
-        If an error occurs during the record reading process, it prints an error message with the details of the SQLite
+        If an error occurs during the record reading process, it logs an error message with the details of the SQLite
         error and returns None.
 
         Args:
@@ -164,7 +164,7 @@ class SQLite(DBInterface):
 
         This method attempts to execute a provided SQL query to read data from a table within the SQLite database.
         If the connection to the database is established, it executes the query and returns all fetched rows as a list.
-        In case of an error during the execution of the query, it prints an error message detailing the issue.
+        In case of an error during the execution of the query, it logs an error message detailing the issue.
 
         Args:
             read_records_sql (str): The SQL query string used to read data from a table.
@@ -191,7 +191,7 @@ class SQLite(DBInterface):
 
         This method attempts to update a record in the SQLite database using the provided SQL query and record.
         If the connection to the SQLite database is established, it executes the SQL query with the record.
-        If an error occurs during the record updating process, it prints an error message with the details of the
+        If an error occurs during the record updating process, it logs an error message with the details of the
         SQLite error.
 
         Args:
@@ -217,7 +217,7 @@ class SQLite(DBInterface):
 
         This method attempts to delete a record from the SQLite database using the provided SQL query and record ID.
         If the connection to the SQLite database is established, it executes the SQL query with the record ID.
-        If an error occurs during the record deletion process, it prints an error message with the details of the
+        If an error occurs during the record deletion process, it logs an error message with the details of the
         SQLite error.
 
         Args:
@@ -234,15 +234,19 @@ class SQLite(DBInterface):
                     cursor.execute(delete_record_sql, (record_id,))
                     self.sqlite_conn.commit()
             except sqlite3.Error as sqlite3_error:
-                print(f"Error deleting record from database - {str(sqlite3_error)}")
+                logger.error(
+                    f"Error deleting record from database - {str(sqlite3_error)}"
+                )
 
     def delete_records_in_table(self, delete_record_sql: str) -> None:
         """
         Deletes all records from a table in the SQLite database using the provided SQL query.
 
-        This method attempts to delete all records from a specific table in the SQLite database using the provided SQL query.
+        This method attempts to delete all records from a specific table in the SQLite database using the provided SQL
+        query.
+
         If the connection to the SQLite database is established, it executes the SQL query to delete the records.
-        If an error occurs during the deletion process, it prints an error message with the details of the SQLite error.
+        If an error occurs during the deletion process, it logs an error message with the details of the SQLite error.
 
         Args:
             delete_record_sql (str): The SQL query to delete all records from a table.
@@ -257,8 +261,9 @@ class SQLite(DBInterface):
                     cursor.execute(delete_record_sql)
                     self.sqlite_conn.commit()
             except sqlite3.Error as sqlite3_error:
-                print(f"Error deleting records from database - {str(sqlite3_error)}")
-
+                logger.error(
+                    f"Error deleting records from database - {str(sqlite3_error)}"
+                )
 
     def check_database_table_exists(self, table_name: str) -> bool | None:
         """
@@ -298,7 +303,7 @@ class SQLite(DBInterface):
 
         This method attempts to delete a table from the SQLite database using the provided SQL query.
         If the connection to the SQLite database is established, it executes the SQL query to delete the table.
-        If an error occurs during the table deletion process, it prints an error message with the details of the
+        If an error occurs during the table deletion process, it logs an error message with the details of the
         SQLite error.
 
         Args:
