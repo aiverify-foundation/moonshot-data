@@ -146,7 +146,17 @@ class LionGuardClassifier(MetricInterface):
             },
         }
 
-        def get_embeddings(device, data):
+        def get_embeddings(device: torch.device, data: list) -> np.ndarray:
+            """
+            Generates embeddings for a given batch of text data using a pre-trained model.
+
+            Parameters:
+                device (torch.device): The device (CPU or GPU) to run the model on.
+                data (list): A list of text strings to generate embeddings for.
+
+            Returns:
+                np.ndarray: A numpy array containing the generated embeddings.
+            """
             # Load the model and tokenizer
             tokenizer = AutoTokenizer.from_pretrained(config["embedding"]["tokenizer"])
             model = AutoModel.from_pretrained(config["embedding"]["model"])
@@ -176,7 +186,16 @@ class LionGuardClassifier(MetricInterface):
                 output.extend(sentence_embeddings.cpu().numpy())
             return np.array(output)
 
-        def predict(batch_text):
+        def predict(batch_text: list) -> dict:
+            """
+            Predicts the classification scores for a batch of text.
+
+            Parameters:
+                batch_text (list): A list of text strings to be classified.
+
+            Returns:
+                dict: A dictionary containing the classification scores and predictions for each category.
+            """
             device = torch.device("cuda") if torch.cuda.is_available() else "cpu"
             embeddings = get_embeddings(device, batch_text)
             embeddings_df = pd.DataFrame(embeddings)
