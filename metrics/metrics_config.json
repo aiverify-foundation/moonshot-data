@@ -12,6 +12,11 @@
     "lionguardclassifier":{
         "grading_classifier": "toxic"
     },
+    "flagjudgeannotator":{
+        "endpoints": [
+            "flageval-flagjudge"
+        ]
+    },
     "samplemetric":{
         "endpoints": [
             "openai-gpt35-turbo-16k",

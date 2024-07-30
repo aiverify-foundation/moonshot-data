@@ -1,0 +1,14 @@
+{
+    "id": "flageval-flagjudge",
+    "name": "FlagEval flagjudge",
+    "connector_type": "flageval-connector",
+    "uri": "http://120.92.208.64:7611/worker_generate_stream",
+    "token": "flageval_judgemodel",
+    "max_calls_per_second": 3,
+    "max_concurrency": 3,
+    "params": {
+        "timeout": 300,
+        "allow_retries": true,
+        "num_of_retries": 3
+    }
+}
