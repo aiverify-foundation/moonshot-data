@@ -34,7 +34,7 @@ class FlagJudgeConnector(Connector):
         """
         # Default implementation, can be overridden by subclasses
         raise NotImplementedError(
-            "This connector is used by flagjudgeannotator metric only."
+            "This connector is specifically designed for the FlagevalAnnotator metric. Please select an appropriate connector."
         )
 
     async def get_judge_response(
