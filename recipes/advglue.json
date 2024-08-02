@@ -15,7 +15,6 @@
     "metrics": [
         "advglue"
     ],
-    "attack_modules": [],
     "grading_scale": {
         "A": [
             0,

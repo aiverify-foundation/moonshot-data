@@ -1,5 +1,4 @@
 {
-    "id": "flageval-flagjudge",
     "name": "FlagEval flagjudge",
     "connector_type": "flageval-connector",
     "uri": "http://120.92.208.64:7611/worker_generate_stream",

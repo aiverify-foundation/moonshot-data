@@ -14,7 +14,6 @@
     "metrics": [
         "llamaguardannotator"
     ],
-    "attack_modules": [],
     "grading_scale": {
         "Low Risk": [
             80,

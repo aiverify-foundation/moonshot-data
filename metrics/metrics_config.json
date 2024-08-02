@@ -9,6 +9,9 @@
             "llm-judge-openai-gpt4-annotator"
         ]
     },
+    "lionguardclassifier":{
+        "grading_classifier": "toxic"
+    },
     "flagjudgeannotator":{
         "endpoints": [
             "flageval-flagjudge"

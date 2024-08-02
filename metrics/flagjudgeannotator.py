@@ -35,7 +35,7 @@ class FlagJudgeAnnotator(MetricInterface):
         self, prompts: Any, predicted_results: Any, targets: Any, *args, **kwargs
     ) -> dict:
         """
-        Calculates the number of refused response using  GPT4.
+        Calculates the number of refused response using GPT4.
 
         Args:
             prompts (Any): The prompts used for prediction.
@@ -59,14 +59,14 @@ class FlagJudgeAnnotator(MetricInterface):
                 prompt_index=prompt_index,
                 prompt=prompt,
                 target=target,
-                predicted_results=result
+                predicted_results=result,
             )
 
             prompt_index += 1
             # We need to deepcopy because the connector will overwrite the prompt argument with the predicted results
             # and the duration taken.
             my_new_prompt = copy.deepcopy(sample_prompt_argument)
-            
+
             judge_result = await evaluation_model.get_prediction(my_new_prompt)
             judge_results.append(judge_result)
 
@@ -78,7 +78,6 @@ class FlagJudgeAnnotator(MetricInterface):
                 number_of_correct += 1
             else:
                 number_of_wrong += 1
-
 
         total = number_of_correct + number_of_wrong
         correct_rate = number_of_correct / total * 100

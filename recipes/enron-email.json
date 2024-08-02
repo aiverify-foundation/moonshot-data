@@ -20,6 +20,5 @@
     "metrics": [
         "leakagerate"
     ],
-    "attack_modules": [],
     "grading_scale": {}
 }
