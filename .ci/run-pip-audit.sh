@@ -24,8 +24,8 @@ mdtree licenses-found.md > license-report.html
 
 # Create badges
 pip install anybadge
-python3 ci/createBadges.py dependency
-python3 ci/createBadges.py license
+python3 .ci/createBadges.py dependency
+python3 .ci/createBadges.py license
 
 deactivate
 rm -rf ci-venv
