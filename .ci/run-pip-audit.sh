@@ -1,11 +1,14 @@
 #!/bin/bash
 
 # create venv for ci
-python3 -m venv ci-venv
-source ci-venv/bin/activate
+#python3 -m venv ci-venv
+#source ci-venv/bin/activate
 
 # install dependencies
-pip install -r requirements.txt
+#pip install -r requirements.txt
+
+pip uninstall pytest pytest-mock pytest-html pytest-json pytest-cov coverage httpx anybadge -y
+pip uninstall flake8 flake8-html -y
 
 # license check
 pip install pip-licenses
@@ -27,8 +30,8 @@ pip install anybadge
 python3 .ci/createBadges.py dependency
 python3 .ci/createBadges.py license
 
-deactivate
-rm -rf ci-venv
+#deactivate
+#rm -rf ci-venv
 
 set -e
 if [ $exit_code -ne 0 ]; then
