@@ -59,8 +59,6 @@ class HomoglyphGenerator(AttackModule):
         and sends them to the respective LLMs.
         """
         result_list = []
-        # Configurble PARAMS - Number of prompts to be sent to target
-        MAX_ITERATION = 20
         # converting glyphs to ASCII characters
         homoglyphs = hg.Homoglyphs(
             strategy=hg.STRATEGY_LOAD, ascii_strategy=hg.STRATEGY_REMOVE
@@ -69,7 +67,7 @@ class HomoglyphGenerator(AttackModule):
         word_list = word_tokenize(self.prompt)
         word_list_len = len(word_list)
         for idx in range(word_list_len):
-            if count == MAX_ITERATION:
+            if count == self.optional_params['MAX_ITERATION']:
                 break
             hglyphs = []
             try:
@@ -85,7 +83,7 @@ class HomoglyphGenerator(AttackModule):
                     count += 1
                     result_list.append(await self._send_prompt_to_all_llm([new_prompt]))
                     word_list = word_tokenize(self.prompt)
-                    if count == MAX_ITERATION:
+                    if count == self.optional_params['MAX_ITERATION']:
                         break
         for res in result_list:
             for x in res:
