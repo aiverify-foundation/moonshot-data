@@ -1,5 +1,5 @@
 #!/bin/bash
-source_dir=moonshot
+source_dir=moonshot-data
 
 if [ "$1" == "-m" ]; then
   test_cmd="python3 -m pytest"

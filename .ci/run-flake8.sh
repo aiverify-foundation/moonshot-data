@@ -1,5 +1,5 @@
 #!/bin/bash
-source_dir=moonshot
+source_dir=moonshot-data
 
 set +e
 flake8 --format=html --htmldir=flake8-report --count  $source_dir > flake8-report.txt
