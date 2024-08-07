@@ -104,18 +104,18 @@ jobs:
 #        run: |
 #          set +e
 #          find ../ -type f -name ".gitignore" -exec rm {} +
-#          [ -d "docs/pre-build/moonshot" ] && rm -rf docs/pre-build/moonshot
-#          mkdir -p docs/pre-build/moonshot
-#          mv ../htmlcov docs/pre-build/moonshot/
-#          mv ../flake8-report docs/pre-build/moonshot/
-#          mv ../assets docs/pre-build/moonshot/
-#          mv ../*.svg docs/pre-build/moonshot/
-#          mv ../*.html docs/pre-build/moonshot/
-#          mv ../*.md docs/pre-build/moonshot/
-#          mv ../*.txt docs/pre-build/moonshot/
-#          git add docs/pre-build/moonshot
+#          [ -d "docs/pre-build/moonshot-data" ] && rm -rf docs/pre-build/moonshot-data
+#          mkdir -p docs/pre-build/moonshot-data
+#          mv ../htmlcov docs/pre-build/moonshot-data/
+#          mv ../flake8-report docs/pre-build/moonshot-data/
+#          mv ../assets docs/pre-build/moonshot-data/
+#          mv ../*.svg docs/pre-build/moonshot-data/
+#          mv ../*.html docs/pre-build/moonshot-data/
+#          mv ../*.md docs/pre-build/moonshot-data/
+#          mv ../*.txt docs/pre-build/moonshot-data/
+#          git add docs/pre-build/moonshot-data
 #          git config user.name "moonshot"
 #          git config user.email "moonshot@imda.gov.sg"
-#          git commit -m "feat(portal) actions publish moonshot pre-build reports to dashboard"
+#          git commit -m "feat(moonshot-data) actions publish moonshot-data pre-build reports to dashboard"
 #          git push
 #          set -e
