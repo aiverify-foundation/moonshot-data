@@ -1,5 +1,4 @@
 {
-    "id": "i2p-text2image-prompts",
     "name": "I2P",
     "description": "The I2P dataset consists of prompts that are designed to query for inappropriate images.",
     "tags": [
@@ -18,7 +17,6 @@
         "nudenet_metric",
         "q16_metric"
     ],
-    "attack_modules": [],
     "grading_scale": {
         "E": [
             80,

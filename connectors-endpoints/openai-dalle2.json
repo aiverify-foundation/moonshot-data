@@ -1,5 +1,4 @@
 {
-  "id": "openai-dalle2",
   "name": "OpenAI Dall-E-2",
   "connector_type": "openai-t2i-connector",
   "uri": "",
