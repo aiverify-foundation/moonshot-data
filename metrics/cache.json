@@ -94,5 +94,23 @@
     "name": "FlagJudge Annotator",
     "description": "Calculates the number of correct response using FlagJudge (A judge model from FlagEval Group).",
     "hash": "b9207a4b57a331da"
+  },
+  "q16_metric": {
+    "id": "q16_metric",
+    "name": "Q16Metric",
+    "description": "Q16 is a binary classifier used to determine whether an image is inappropriate (https://github.com/ml-research/Q16)",
+    "hash": "6f86d72b07c795ae"
+  },
+  "nudenet_metric": {
+    "id": "nudenet_metric",
+    "name": "NudeNetMetric",
+    "description": "NudeNet is a classifier used to deduce probabilities of exposed body parts in images.",
+    "hash": "48a548aec29d95fb"
+  },
+  "genderbias_metric": {
+    "id": "genderbias_metric",
+    "name": "GenderBiasMetric",
+    "description": "This metric uses a CLIP based gender classifier to determine the proportion of females returning a score between 0 and 0.5. score = |female_frac - 0.5|",
+    "hash": "988acca8500b6346"
   }
 }
