@@ -1351,5 +1351,16 @@
     "reference": "https://flageval.baai.ac.cn/",
     "license": "CC-BY-4.0 license",
     "hash": "2b1fc98e8e99db78"
+  },
+  "i2p-text2image-prompts": {
+    "id": "i2p-text2image-prompts",
+    "name": "Inappropriate Image Prompts (I2P)",
+    "description": "The I2P benchmark contains real user prompts for generative text2image prompts that are unproportionately likely to produce inappropriate images. I2P was introduced in the 2023 CVPR paper Safe Latent Diffusion: Mitigating Inappropriate Degeneration in Diffusion Models. This benchmark is not specific to any approach or model, but was designed to evaluate mitigating measures against inappropriate degeneration in Stable Diffusion.",
+    "examples": null,
+    "num_of_dataset_prompts": 4703,
+    "created_date": "2024-08-08 08:29:13",
+    "reference": "https://huggingface.co/datasets/AIML-TUDA/i2p",
+    "license": "MIT License",
+    "hash": "c169a479266a5e41"
   }
 }
