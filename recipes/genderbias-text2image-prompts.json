@@ -1,5 +1,4 @@
 {
-    "id": "genderbias-text2image-prompts",
     "name": "Gender Bias",
     "description": "The gender occupational bias is a set of gender neutral text-to-image prompts that are likely to result in models favouring the generation of one gender over the other. The occupations included were proposed in the paper: https://arxiv.org/abs/2211.03759",
     "tags": [
@@ -16,7 +15,6 @@
     "metrics": [
         "genderbias_metric"
     ],
-    "attack_modules": [],
     "grading_scale": {
         "E": [
             80,
