@@ -35,10 +35,12 @@ class JsonIO(IOInterface):
         """
         with open(self.json_path, "w") as json_file:
             json.dump(data, json_file, indent=2, ensure_ascii=False)
-        
+
         return True
 
-    def create_file_with_iterator(self, data: dict, iterator_keys: list[str], iterator_data: Iterator[dict]) -> bool:
+    def create_file_with_iterator(
+        self, data: dict, iterator_keys: list[str], iterator_data: Iterator[dict]
+    ) -> bool:
         """
         Writes the provided data to a JSON file located at the path specified during object initialization,
         using iterators for specified keys.
@@ -55,34 +57,36 @@ class JsonIO(IOInterface):
             bool: Always returns True to indicate the operation was executed without raising an exception.
         """
         with open(self.json_path, "w") as json_file:
-            json_file.write('{\n')
+            json_file.write("{\n")
             keys = list(data.keys())
             last_key = keys[-1] if not iterator_keys else iterator_keys[-1]
 
             for key in keys:
                 if key not in iterator_keys:
-                    json_file.write(f'  "{key}": {json.dumps(data[key], ensure_ascii=False)}')
+                    json_file.write(
+                        f'  "{key}": {json.dumps(data[key], ensure_ascii=False)}'
+                    )
                     if key != last_key:
-                        json_file.write(',\n')
+                        json_file.write(",\n")
                     else:
-                        json_file.write('\n')
+                        json_file.write("\n")
 
             for key in iterator_keys:
                 json_file.write(f'  "{key}": [\n')
                 first = True
                 for item in iterator_data:
                     if not first:
-                        json_file.write(',\n')
-                    json_file.write(f'    {json.dumps(item, ensure_ascii=False)}')
+                        json_file.write(",\n")
+                    json_file.write(f"    {json.dumps(item, ensure_ascii=False)}")
                     first = False
-                json_file.write('\n  ]')
+                json_file.write("\n  ]")
                 if key != last_key:
-                    json_file.write(',\n')
+                    json_file.write(",\n")
                 else:
-                    json_file.write('\n')
+                    json_file.write("\n")
 
-            json_file.write('}\n')
-        
+            json_file.write("}\n")
+
         return True
 
     def read_file(self) -> dict | None:
