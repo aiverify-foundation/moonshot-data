@@ -27,7 +27,7 @@ jobs:
     steps:
 
     - name: Checkout Code (Pull_Request_Review)
-      # if: github.event_name == 'pull_request_review'
+      if: github.event_name == 'pull_request_review'
       uses: actions/checkout@v3
       with:
           ref: ${{ github.event.pull_request.head.ref }}
@@ -41,7 +41,7 @@ jobs:
           ref: ${{ inputs.branch_to_test }}
 
     - name: Set Branch Variable (Pull_Request_Review)
-      # if: github.event_name == 'pull_request_review'
+      if: github.event_name == 'pull_request_review'
       run: |
           echo "BRANCH=branch" >> "$GITHUB_ENV"
 
