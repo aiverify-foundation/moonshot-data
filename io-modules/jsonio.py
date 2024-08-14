@@ -56,10 +56,17 @@ class JsonIO(IOInterface):
         """
         with open(self.json_path, "w") as json_file:
             json_file.write('{\n')
-            for key, value in data.items():
+            keys = list(data.keys())
+            last_key = keys[-1] if not iterator_keys else iterator_keys[-1]
+
+            for key in keys:
                 if key not in iterator_keys:
-                    json_file.write(f'  "{key}": {json.dumps(value, ensure_ascii=False)},\n')
-            
+                    json_file.write(f'  "{key}": {json.dumps(data[key], ensure_ascii=False)}')
+                    if key != last_key:
+                        json_file.write(',\n')
+                    else:
+                        json_file.write('\n')
+
             for key in iterator_keys:
                 json_file.write(f'  "{key}": [\n')
                 first = True
@@ -68,8 +75,12 @@ class JsonIO(IOInterface):
                         json_file.write(',\n')
                     json_file.write(f'    {json.dumps(item, ensure_ascii=False)}')
                     first = False
-                json_file.write('\n  ],\n')
-            
+                json_file.write('\n  ]')
+                if key != last_key:
+                    json_file.write(',\n')
+                else:
+                    json_file.write('\n')
+
             json_file.write('}\n')
         
         return True
