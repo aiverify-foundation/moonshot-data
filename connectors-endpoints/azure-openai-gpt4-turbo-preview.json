@@ -1,5 +1,4 @@
 {
-  "id": "azure-openai-gpt4-turbo-preview",
   "name": "Azure OpenAI GPT4 Turbo Preview",
   "connector_type": "azure-openai-connector",
   "uri": "https://<Azure OpenAI Name>.openai.azure.com",

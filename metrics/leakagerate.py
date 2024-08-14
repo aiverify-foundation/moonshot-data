@@ -1,19 +1,15 @@
-import logging
+from pathlib import Path
 from typing import Any
 
 import numpy as np
 import pylcs
-
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
-
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
 
 
 class LeakageRate(MetricInterface):
     def __init__(self):
-        self.id = "leakagerate"
+        self.id = Path(__file__).stem
         self.name = "LeakageRate"
         self.description = (
             "Leakage Rate will compare the LCS between two string - Output and Target."

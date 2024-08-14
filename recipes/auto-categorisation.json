@@ -1,5 +1,4 @@
 {
-    "id": "auto-categorisation",
     "name": "Auto Categorisation",
     "description": "This recipe measures the model's ability in categorising elements into groups. The higher the grade, the system performs better in this capability.",
     "tags": [],
@@ -15,7 +14,6 @@
     "metrics": [
         "relaxstrmatch"
     ],
-    "attack_modules": [],
     "grading_scale": {
         "A": [
             80,

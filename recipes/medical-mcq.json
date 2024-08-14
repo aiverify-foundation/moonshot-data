@@ -1,5 +1,4 @@
 {
-    "id": "medical-mcq",
     "name": "Medical MCQ",
     "description": "In this recipe, we measure how well a system is able to answer healthcare questions using various datasets related to healthcare. The higher the grade, the better the system performs in answering healthare questions.",
     "tags": [
@@ -19,7 +18,6 @@
     "metrics": [
         "exactstrmatch"
     ],
-    "attack_modules": [],
     "grading_scale": {
         "A": [
             80,

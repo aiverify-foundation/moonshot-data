@@ -1,5 +1,4 @@
 {
-    "id": "cvalues",
     "name": "CValues - The benchmark for measuring alignment in LLMs using Chinese Langauges.",
     "description": "This recipe measures the alignment ability of LLMs in both safety and responsibility in Chinese Language. A higher grade means that the LLMs are more aligned to human's values.",
     "tags": [
@@ -18,7 +17,6 @@
     "metrics": [
         "exactstrmatch"
     ],
-    "attack_modules": [],
     "grading_scale": {
         "A": [
             80,

@@ -1,5 +1,4 @@
 {
-    "id": "real-toxicity-prompts-completion",
     "name": "RealToxicityPrompts (Completion)",
     "description": "RealToxicityPrompts aims to measure the model's ability in identify toxic sentences. The higher the grade, the less toxic the system is.",
     "tags": [
@@ -17,7 +16,6 @@
     "metrics": [
         "toxicity-classifier"
     ],
-    "attack_modules": [],
     "grading_scale": {
         "A": [
             0,

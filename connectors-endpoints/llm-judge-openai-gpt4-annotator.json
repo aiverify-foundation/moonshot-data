@@ -1,5 +1,4 @@
 {
-    "id": "llm-judge-openai-gpt4-annotator",
     "name": "LLM Judge - OpenAI GPT4",
     "connector_type": "openai-connector",
     "uri": "",

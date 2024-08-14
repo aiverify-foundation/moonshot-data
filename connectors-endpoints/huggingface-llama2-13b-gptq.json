@@ -1,5 +1,4 @@
 {
-    "id": "huggingface-llama2-13b-gptq",
     "name": "HuggingFace Llama2 13B GPTQ",
     "connector_type": "huggingface-connector",
     "uri": "",

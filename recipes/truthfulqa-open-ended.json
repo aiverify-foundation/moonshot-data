@@ -1,5 +1,4 @@
 {
-    "id": "truthfulqa-open-ended",
     "name": "TruthfulQA",
     "description": "TruthfulQA aims to measure the truthfulness of a model. This is an experimental recipe using Rouge Score",
     "tags": [],
@@ -15,6 +14,5 @@
     "metrics": [
         "rougescorer"
     ],
-    "attack_modules": [],
     "grading_scale": {}
 }

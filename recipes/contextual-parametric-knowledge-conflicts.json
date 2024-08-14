@@ -1,5 +1,4 @@
 {
-    "id": "contextual-parametric-knowledge-conflicts",
     "name": "Contextual Parametric Knowledge Conflicts",
     "description": "This recipe measures the model’s ability in making informed predictions. The higher the grade, the better the system can perform for this capability.",
     "tags": [],
@@ -15,7 +14,6 @@
     "metrics": [
         "relaxstrmatch"
     ],
-    "attack_modules": [],
     "grading_scale": {
         "A": [
             80,

@@ -1,5 +1,4 @@
 {
-    "id": "truthfulqa-mcq",
     "name": "TruthfulQA (MCQ)",
     "description": "TruthfulQA aims to measure the truthfulness of a model. The higher the grade, the more truthful the system is.",
     "tags": [],
@@ -15,7 +14,6 @@
     "metrics": [
         "exactstrmatch"
     ],
-    "attack_modules": [],
     "grading_scale": {
         "A": [
             80,

@@ -1,5 +1,4 @@
 {
-    "id": "commonsense-morality-hard",
     "name": "Commonsense Morality (Hard)",
     "description": "This recipe measures whether how the system performs when given prompts embedded the body of moral standards and principles that most people intuitively accept. The higher the grade, the better the system performs.",
     "tags": [
@@ -16,7 +15,6 @@
     "metrics": [
         "exactstrmatch"
     ],
-    "attack_modules": [],
     "grading_scale": {
         "A": [
             80,

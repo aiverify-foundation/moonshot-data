@@ -18,16 +18,16 @@ from moonshot.src.cookbooks.cookbook import Cookbook
 from moonshot.src.datasets.dataset import Dataset
 from moonshot.src.metrics.metric import Metric
 from moonshot.src.recipes.recipe import Recipe
-from moonshot.src.redteaming.attack.attack_module import AttackModule
-from moonshot.src.redteaming.attack.attack_module_arguments import AttackModuleArguments
-from moonshot.src.redteaming.session.session import Session
 from moonshot.src.results.result_arguments import ResultArguments
-from moonshot.src.runners.runner_type import RunnerType
 from moonshot.src.runs.run_progress import RunProgress
 from moonshot.src.runs.run_status import RunStatus
 from moonshot.src.storage.db_interface import DBInterface
 from moonshot.src.storage.storage import Storage
+from moonshot.src.utils.log import configure_logger
 from pydantic import BaseModel
+
+# Create a logger for this module
+logger = configure_logger(__name__)
 
 
 class Benchmarking:
@@ -101,7 +101,7 @@ class Benchmarking:
                 Connector.create(ConnectorEndpoint.read(endpoint))
                 for endpoint in self.endpoints
             ]
-            print(
+            logger.debug(
                 f"[Benchmarking] Load recipe connectors took {(time.perf_counter() - start_time):.4f}s"
             )
 
@@ -109,7 +109,7 @@ class Benchmarking:
             start_time = time.perf_counter()
             for connector in self.recipe_connectors:
                 connector.set_system_prompt(self.system_prompt)
-            print(
+            logger.debug(
                 f"[Benchmarking] Set connectors system prompt took {(time.perf_counter() - start_time):.4f}s"
             )
 
@@ -121,13 +121,13 @@ class Benchmarking:
             try:
                 if self.cookbooks:
                     # Process as benchmark cookbooks test
-                    print(
-                        f"[Benchmarking] Part 1: Running cookbooks ({self.cookbooks})..."
+                    logger.info(
+                        f"[Benchmarking] Running cookbooks ({self.cookbooks})..."
                     )
 
                     # Run all cookbooks
                     for cookbook_index, cookbook in enumerate(self.cookbooks, 0):
-                        print(
+                        logger.info(
                             f"[Benchmarking] Running cookbook {cookbook}... ({cookbook_index+1}/{len(self.cookbooks)})"
                         )
 
@@ -151,11 +151,11 @@ class Benchmarking:
 
                 elif self.recipes:
                     # Process as benchmark recipes test
-                    print(f"[Benchmarking] Part 1: Running recipes ({self.recipes})...")
+                    logger.info(f"[Benchmarking] Running recipes ({self.recipes})...")
 
                     # Run all recipes
                     for recipe_index, recipe in enumerate(self.recipes, 0):
-                        print(
+                        logger.info(
                             f"[Benchmarking] Running recipe {recipe}... ({recipe_index+1}/{len(self.recipes)})"
                         )
 
@@ -185,7 +185,7 @@ class Benchmarking:
                 )
 
             finally:
-                print(
+                logger.info(
                     f"[Benchmarking] Run took {(time.perf_counter() - start_time):.4f}s"
                 )
 
@@ -195,7 +195,7 @@ class Benchmarking:
             )
 
         finally:
-            print("[Benchmarking] Updating completion status...")
+            logger.debug("[Benchmarking] Updating completion status...")
             if self.cancel_event.is_set():
                 self.run_progress.notify_progress(
                     status=RunStatus.CANCELLED,
@@ -212,7 +212,7 @@ class Benchmarking:
         # ------------------------------------------------------------------------------
         # Prepare ResultArguments
         # ------------------------------------------------------------------------------
-        print("[Benchmarking] Preparing results...")
+        logger.debug("[Benchmarking] Preparing results...")
         start_time = time.perf_counter()
         result_args = None
         try:
@@ -240,7 +240,7 @@ class Benchmarking:
             )
 
         finally:
-            print(
+            logger.info(
                 f"[Benchmarking] Preparing results took {(time.perf_counter() - start_time):.4f}s"
             )
             return result_args
@@ -266,24 +266,25 @@ class Benchmarking:
         # ------------------------------------------------------------------------------
         # Part 1: Load required instances
         # ------------------------------------------------------------------------------
-        print("[Benchmarking] Load required instances...")
+        logger.debug("[Benchmarking] Load required instances...")
         start_time = time.perf_counter()
+        self.cookbook_instance = None
         try:
             # Load cookbook
             start_time = time.perf_counter()
             self.cookbook_instance = Cookbook.load(cookbook_name)
-            print(
+            logger.debug(
                 f"[Benchmarking] Load cookbook instance took {(time.perf_counter() - start_time):.4f}s"
             )
         except Exception as e:
             self.run_progress.notify_error(
-                f"Failed to load instances in running cookbook due to error: {str(e)}"
+                f"[Benchmarking] Failed to load instances in running cookbook due to error: {str(e)}"
             )
 
         # ------------------------------------------------------------------------------
         # Part 2: Run cookbook recipes
         # ------------------------------------------------------------------------------
-        print("[Benchmarking] Running cookbook recipes...")
+        logger.debug("[Benchmarking] Running cookbook recipes...")
         recipes_results = {}
         start_time = time.perf_counter()
         try:
@@ -292,7 +293,7 @@ class Benchmarking:
                 for recipe_index, recipe_name in enumerate(
                     self.cookbook_instance.recipes, 0
                 ):
-                    print(
+                    logger.debug(
                         f"[Benchmarking] Running recipe {recipe_name}... "
                         f"({recipe_index+1}/{len(self.cookbook_instance.recipes)})"
                     )
@@ -311,7 +312,7 @@ class Benchmarking:
                 self.run_progress.notify_progress(
                     recipe_index=len(self.cookbook_instance.recipes),
                 )
-                print(
+                logger.debug(
                     "[Benchmarking] Running cookbook "
                     f"[{self.cookbook_instance.id}] took {(time.perf_counter() - start_time):.4f}s"
                 )
@@ -321,7 +322,7 @@ class Benchmarking:
 
         except Exception as e:
             self.run_progress.notify_error(
-                f"Failed to load instances in running cookbook due to error: {str(e)}"
+                f"[Benchmarking] Failed to load instances in running cookbook due to error: {str(e)}"
             )
 
         finally:
@@ -347,12 +348,13 @@ class Benchmarking:
         # ------------------------------------------------------------------------------
         # Part 1: Load required instances
         # ------------------------------------------------------------------------------
-        print("[Benchmarking] Load required instances...")
+        logger.debug("[Benchmarking] Load required instances...")
         start_time = time.perf_counter()
+        self.recipe_instance = None
         try:
             # Load recipe
             self.recipe_instance = Recipe.load(recipe_name)
-            print(
+            logger.debug(
                 f"[Benchmarking] Load recipe instance took {(time.perf_counter() - start_time):.4f}s"
             )
 
@@ -361,20 +363,20 @@ class Benchmarking:
             self.recipe_metrics = [
                 Metric.load(metric) for metric in self.recipe_instance.metrics
             ]
-            print(
+            logger.debug(
                 f"[Benchmarking] Load recipe metrics took {(time.perf_counter() - start_time):.4f}s"
             )
 
         except Exception as e:
             self.run_progress.notify_error(
-                f"Failed to load instances in running recipe due to error: {str(e)}"
+                f"[Benchmarking] Failed to load instances in running recipe due to error: {str(e)}"
             )
             raise e
 
         # ------------------------------------------------------------------------------
         # Part 2: Build and execute generator pipeline to get prompts and perform predictions
         # ------------------------------------------------------------------------------
-        print("[Benchmarking] Build and execute generator pipeline...")
+        logger.debug("[Benchmarking] Build and execute generator pipeline...")
         start_time = time.perf_counter()
         recipe_predictions = []
         try:
@@ -384,7 +386,7 @@ class Benchmarking:
                 )
                 await task
                 recipe_predictions = task.result()
-                print(
+                logger.debug(
                     f"[Benchmarking] Predicting prompts for recipe [{self.recipe_instance.id}] took "
                     f"{(time.perf_counter() - start_time):.4f}s"
                 )
@@ -400,7 +402,7 @@ class Benchmarking:
         # Part 3: Sort the recipe predictions into groups for recipe
         # ------------------------------------------------------------------------------
         # Sort PromptArguments instances into groups based on the same conn_id, rec_id, ds_id, and pt_id
-        print("[Benchmarking] Sorting the recipe predictions into groups")
+        logger.debug("[Benchmarking] Sorting the recipe predictions into groups")
         start_time = time.perf_counter()
         grouped_recipe_preds = {}
         try:
@@ -428,7 +430,7 @@ class Benchmarking:
                 for group_list in [list(group)]
             }
 
-            print(
+            logger.debug(
                 (
                     f"[Benchmarking] Sorted the recipe predictions into groups for recipe [{self.recipe_instance.id}] "
                     f"took {(time.perf_counter() - start_time):.4f}s"
@@ -444,12 +446,12 @@ class Benchmarking:
         # ------------------------------------------------------------------------------
         # Part 4: Generate the metrics results
         # ------------------------------------------------------------------------------
-        print("[Benchmarking] Performing metrics calculation")
+        logger.debug("[Benchmarking] Performing metrics calculation")
         start_time = time.perf_counter()
         recipe_results = {}
         try:
             for group_recipe_key, group_recipe_value in grouped_recipe_preds.items():
-                print(
+                logger.debug(
                     (
                         f"[Benchmarking] Running metrics for conn_id ({group_recipe_key[0]}), "
                         f"recipe_id ({group_recipe_key[1]}), dataset_id ({group_recipe_key[2]}), "
@@ -487,7 +489,7 @@ class Benchmarking:
                     "results": metrics_result,
                 }
 
-            print(
+            logger.debug(
                 f"[Benchmarking] Performing metrics calculation for recipe [{self.recipe_instance.id}] "
                 f"took {(time.perf_counter() - start_time):.4f}s"
             )
@@ -536,7 +538,7 @@ class Benchmarking:
                     batch = []
                     async for prompt in gen_prompt:
                         if cancel_event.is_set():
-                            print(
+                            logger.warning(
                                 "[Benchmarking] Cancellation flag is set. Cancelling producer..."
                             )
                             break
@@ -562,7 +564,7 @@ class Benchmarking:
                         queue.task_done()
                         break
                     if cancel_event.is_set():  # Check for cancellation
-                        print(
+                        logger.warning(
                             "[Benchmarking] Cancellation flag is set. Cancelling consumer..."
                         )
                         queue.task_done()
@@ -617,64 +619,6 @@ class Benchmarking:
             )
             return []  # Return an empty list in case of error
 
-    async def _generate_prompts_with_attack_module(self, prompt: str) -> list[str]:
-        """
-        Asynchronously generates prompts using all attack modules specified in the recipe instance.
-
-        This method loads each attack module from the list of attack modules defined in the recipe instance,
-        initializes it with the necessary arguments, and executes it to generate prompts based on the input prompt.
-
-        Args:
-            prompt (str): The original prompt from which to generate new prompts using the attack modules.
-
-        Returns:
-            list[str]: A list of prompts generated by all the attack modules.
-            Returns the original prompt if no attack modules are specified in the recipe instance.
-
-        Raises:
-            Exception: If any issue arises during the loading or execution of the attack modules.
-        """
-        # Iterate over all attack modules and apply them sequentially
-        modified_prompts = []
-
-        # Check if there's session in runner. If not, create session
-        if not Session.load(self.database_instance):
-            Session(
-                self.run_progress.run_arguments.runner_id,
-                RunnerType.REDTEAM,
-                {},  # runner arguments not required
-                self.database_instance,
-                self.endpoints,
-                Storage.get_filepath(
-                    EnvVariables.RESULTS.name,
-                    self.run_progress.run_arguments.runner_id,
-                    "json",
-                    True,
-                ),
-            )
-
-        for attack_module_name in self.recipe_instance.attack_modules:
-            loaded_attack_module = AttackModule.load(
-                attack_module_name,
-                AttackModuleArguments(
-                    connector_ids=self.endpoints,
-                    prompt=prompt,
-                    db_instance=self.database_instance,
-                    cancel_event=self.cancel_event,
-                ),
-            )
-
-            # Log the loaded attack module
-            print(f"[Benchmarking] Loaded attack module: {loaded_attack_module}")
-
-            # Execute the attack module and return the generated prompts
-            new_prompts = await loaded_attack_module.execute()
-            modified_prompts.extend(
-                (attack_module_name, new_prompt) for new_prompt in new_prompts
-            )
-
-        return modified_prompts
-
     async def _generate_prompts(self) -> AsyncGenerator[PromptArguments, None]:
         """
         Asynchronously generates and yields prompts for benchmarking tasks.
@@ -712,14 +656,7 @@ class Benchmarking:
         # applying the attack module.
         for ds_id in self.recipe_instance.datasets:
             async for prompt_index, prompt in self._get_dataset_prompts(ds_id):
-                # Apply the attack module to the prompt input and get the modified prompts
-                if not self.recipe_instance.attack_modules:
-                    # No attack module
-                    modified_prompts = [("", prompt["input"])]
-                else:
-                    modified_prompts = await self._generate_prompts_with_attack_module(
-                        prompt["input"]
-                    )
+                modified_prompts = [("", prompt["input"])]
 
                 # If templates are available, render the modified prompts using the templates
                 if templates:
@@ -792,7 +729,7 @@ class Benchmarking:
             prompt_indices = random.sample(
                 range(1, ds_args.num_of_dataset_prompts + 1), self.num_of_prompts
             )
-        print(
+        logger.debug(
             f"[Benchmarking] Dataset {ds_id}, using {len(prompt_indices)} of {ds_args.num_of_dataset_prompts} prompts."
         )
 
@@ -910,7 +847,9 @@ class Benchmarking:
             operation was cancelled or an exception occurred during prediction generation or caching.
         """
         if cancel_event.is_set():
-            print("[Benchmarking] Cancellation flag is set. Cancelling predictions...")
+            logger.warning(
+                "[Benchmarking] Cancellation flag is set. Cancelling predictions..."
+            )
             return None  # Return None for cancelled operations
 
         # Create a new prompt info with connection id
