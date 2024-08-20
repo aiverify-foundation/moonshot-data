@@ -723,11 +723,11 @@ class Benchmarking:
             self.num_of_prompts == 0
             or self.num_of_prompts > ds_args.num_of_dataset_prompts
         ):
-            prompt_indices = range(1, ds_args.num_of_dataset_prompts + 1)
+            prompt_indices = range(ds_args.num_of_dataset_prompts)
         else:
             random.seed(self.random_seed)
             prompt_indices = random.sample(
-                range(1, ds_args.num_of_dataset_prompts + 1), self.num_of_prompts
+                range(ds_args.num_of_dataset_prompts), self.num_of_prompts
             )
         logger.debug(
             f"[Benchmarking] Dataset {ds_id}, using {len(prompt_indices)} of {ds_args.num_of_dataset_prompts} prompts."
