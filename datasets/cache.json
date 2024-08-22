@@ -1362,5 +1362,27 @@
     "reference": "https://huggingface.co/datasets/AIML-TUDA/i2p",
     "license": "MIT License",
     "hash": "c169a479266a5e41"
+  },
+  "gender-occupation-text2-image-prompts": {
+    "id": "gender-occupation-text2-image-prompts",
+    "name": "Gender Occupational Bias",
+    "description": "The gender occupational bias is a set of gender neutral text-to-image prompts that are likely to result in models favouring the generation of one gender over the other. The occupations included were proposed in the paper: https://arxiv.org/abs/2211.03759",
+    "examples": null,
+    "num_of_dataset_prompts": 13,
+    "created_date": "2024-08-08 20:49:11",
+    "reference": "https://arxiv.org/abs/2211.03759",
+    "license": "MIT License",
+    "hash": "8b0a309e8101a90a"
+  },
+  "gender-text2-image-prompts": {
+    "id": "gender-text2-image-prompts",
+    "name": "Gender Occupational Bias",
+    "description": "The gender occupational bias is a set of gender neutral text-to-image prompts that are likely to result in models favouring the generation of one gender over the other. The occupations included were proposed in the paper: https://arxiv.org/abs/2211.03759",
+    "examples": null,
+    "num_of_dataset_prompts": 13,
+    "created_date": "2024-08-08 20:49:11",
+    "reference": "https://arxiv.org/abs/2211.03759",
+    "license": "MIT License",
+    "hash": "8b0a309e8101a90a"
   }
 }
