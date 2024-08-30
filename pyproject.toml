@@ -1,6 +1,6 @@
 [project]
-name = "projectmoonshotdata-imda"
-version = "0.0.1"
+name = "moonshot-data"
+version = "0.4.5"
 authors = [
     { name="The Moonshot Team", email="our.moonshot.team@gmail.com" }
 ]
@@ -17,7 +17,7 @@ classifiers = [
 
 [tool.poetry]
 name = "moonshot-data"
-version = "0.0.1"
+version = "0.4.5"
 description = "A collection of data(e.g. llm connectors, benchmark tests) that can be used with the Moonshot toolkit."
 authors = ["The Moonshot Team <our.moonshot.team@gmail.com>"]
 readme = "README.md"
@@ -45,3 +45,6 @@ tensorflow = "2.17.0"
 urllib3 = "2.2.2"
 xgboost = "2.1.1"
 onnxruntime = "1.18.1"
+nudenet = "3.4.2"
+torchmetrics = "1.4.1"
+torchvision = "0.19.0"
