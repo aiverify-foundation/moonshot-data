@@ -1,0 +1,15 @@
+{
+  "name": "Amazon Bedrock - AI21 Labs Jamba Instruct",
+  "connector_type": "amazon-bedrock-connector",
+  "uri": "DEFAULT",
+  "token": "Use environment variables!",
+  "max_calls_per_second": 1,
+  "max_concurrency": 1,
+  "params": {
+    "timeout": 300,
+    "allow_retries": true,
+    "num_of_retries": 3,
+    "temperature": 0.5,
+    "model": "ai21.jamba-instruct-v1:0"
+  }
+}

@@ -123,11 +123,13 @@ Please fork the repo and create a pull request. You can also open an issue with 
 ### Connectors  
 
 | Connector | Description |  
-|---|---|  
-| Claude2 | For Claude2 API|  
-| HuggingFace | For HuggingFace Inference Endpoints |  
-| OpenAI | For OpenAI API |  
-| TogetherAI | For TogetherAI Severless API |  
+|---|---|
+| [amazon-bedrock-connector](connectors/amazon-bedrock-connector.py) | For models consumed through [AWS' Bedrock service](https://aws.amazon.com/bedrock/) |
+| [azure-openai-connector](connectors/azure-openai-connector.py) | For models consumed through [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service) |
+| [claude2-connector](connectors/aude2-connector.py) | For Anthropic's [Claude 2 API](https://www.anthropic.com/api) |
+| [huggingface-connector](connectors/huggingface-connector.py) | For [Hugging Face Inference Endpoints](https://huggingface.co/docs/inference-endpoints/index) |  
+| [openai-connector](connectors/openai-connector.py) | For the [OpenAI API](https://openai.com/api/) |  
+| [together-connector](connectors/together-connector.py) | For [TogetherAI Severless API](https://www.together.ai/products#inference) |  
 
 </br>
 
