@@ -1,0 +1,50 @@
+name: Moonshot CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-moonshot:
+    runs-on: ubuntu-latest
+    container:
+      image: python:3.11
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup Moonshot
+        run: |
+          chmod +x .github/scripts/setup_ms_script.sh
+          ./.github/scripts/setup_ms_script.sh
+        env:
+          GITHUB_MOONSHOT_CI_REPO_LOC: ${{ vars.GH_MOONSHOT_CI_REPO_LOC }}
+
+      - name: Run Moonshot
+        run: |
+          chmod +x .github/scripts/run_ms_script.sh
+          ./.github/scripts/run_ms_script.sh
+        env:
+          COOKBOOK_RUN_NAME: testcookbookrun-${{ github.run_id }}
+          MOONSHOT_RUN_COOKBOOKS_LIST: |
+            ${{ vars.COOKBOOK_RUN }}
+          MOONSHOT_UPDATE_ENDPOINTS_LIST: |
+            ${{ secrets.AZURE_OPENAI_4O_UPDATE_ENDPOINT }};${{ secrets.TOGETHER_LLAMA3_8B_CHAT_UPDATE_ENDPOINT }};${{ secrets.TOGETHER_LLAMA_GUARD_7B_UPDATE_ENDPOINT }}
+
+      - name: Display Results
+        run: |
+          chmod +x .github/scripts/display_ms_script.sh
+          ./.github/scripts/display_ms_script.sh
+        env:
+          COOKBOOK_RUN_NAME: testcookbookrun-${{ github.run_id }}
+
+      - name: Commit Results
+        run: |
+          chmod +x .github/scripts/commit_ms_script.sh
+          ./.github/scripts/commit_ms_script.sh
+        env:
+          GITHUB_RUN_ID: ${{ github.run_id }}
