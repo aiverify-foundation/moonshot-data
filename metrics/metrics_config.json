@@ -17,6 +17,14 @@
             "flageval-flagjudge"
         ]
     },
+    "answercorrectness":{
+        "endpoints": [
+            "azure-langchain-openai-chatopenai-gpt4o"
+        ],
+        "embeddings": [
+            "azure-langchain-openai-embedding-ada-2"
+        ]
+    },
     "samplemetric":{
         "endpoints": [
             "openai-gpt35-turbo-16k",
