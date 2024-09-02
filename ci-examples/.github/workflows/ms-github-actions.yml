@@ -14,20 +14,23 @@ jobs:
     container:
       image: python:3.11
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+      - name: Checkout forked moonshot
+        uses: actions/checkout@v3
+        with:
+          repository: ${{ vars.GH_MOONSHOT_CI_REPO_LOC }}
+          ref: 'main'
+          path: moonshot-data
+          token:  ${{ secrets.ACTIONS_GITHUB_TOKEN }}
 
       - name: Setup Moonshot
         run: |
-          chmod +x .github/scripts/setup_ms_script.sh
-          ./.github/scripts/setup_ms_script.sh
-        env:
-          GITHUB_MOONSHOT_CI_REPO_LOC: ${{ vars.GH_MOONSHOT_CI_REPO_LOC }}
+          chmod +x moonshot-data/.github/scripts/setup_ms_script.sh
+          ./moonshot-data/.github/scripts/setup_ms_script.sh
 
       - name: Run Moonshot
         run: |
-          chmod +x .github/scripts/run_ms_script.sh
-          ./.github/scripts/run_ms_script.sh
+          chmod +x moonshot-data/.github/scripts/run_ms_script.sh
+          ./moonshot-data/.github/scripts/run_ms_script.sh
         env:
           COOKBOOK_RUN_NAME: testcookbookrun-${{ github.run_id }}
           MOONSHOT_RUN_COOKBOOKS_LIST: |
@@ -37,14 +40,24 @@ jobs:
 
       - name: Display Results
         run: |
-          chmod +x .github/scripts/display_ms_script.sh
-          ./.github/scripts/display_ms_script.sh
+          chmod +x moonshot-data/.github/scripts/display_ms_script.sh
+          ./moonshot-data/.github/scripts/display_ms_script.sh
         env:
           COOKBOOK_RUN_NAME: testcookbookrun-${{ github.run_id }}
 
       - name: Commit Results
         run: |
-          chmod +x .github/scripts/commit_ms_script.sh
-          ./.github/scripts/commit_ms_script.sh
+          cd moonshot-data/
+          # Configure git user for committing changes
+          git config --global user.email "ci@example.com"
+          git config --global user.name "CI Bot"
+          # Add generated output files to the commit
+          git add -f ./generated-outputs/*
+          # Show git status
+          git status
+          # Commit the changes with a message including the pipeline ID
+          git commit -m "Update generated files [ci skip] - Pipeline ID ($GITHUB_RUN_ID)"
+          # Push the changes to the repository, skipping CI for this push
+          git push -o ci.skip
         env:
           GITHUB_RUN_ID: ${{ github.run_id }}
