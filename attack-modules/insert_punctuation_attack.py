@@ -11,6 +11,11 @@ from nltk.tokenize.treebank import TreebankWordDetokenizer
 # Create a logger for this module
 logger = configure_logger(__name__)
 
+# Configurble PARAMS - Number of prompts to be sent to target
+DEFAULT_MAX_ITERATION = 10
+# Configurble PARAMS - Percentage of words in a prompt that should be changed
+DEFAULT_WORD_SWAP_RATIO = 0.2
+
 
 class InsertPunctGenerator(AttackModule):
     def __init__(self, am_id: str, am_arguments: AttackModuleArguments | None = None):
@@ -19,7 +24,7 @@ class InsertPunctGenerator(AttackModule):
         self.name = "Insert Punctuation Attack"
         self.description = (
             "This module tests for adversarial textual robustness and creates perturbations through adding punctuation "
-            "to the start of words in a prompt.\nParameters:\n1. MAX_ITERATIONS - Number of prompts that "
+            "to the start of words in a prompt.\nParameters:\n1. DEFAULT_MAX_ITERATION - Number of prompts that "
             "should be sent to the target. [Default: 10]"
         )
 
@@ -76,17 +81,17 @@ class InsertPunctGenerator(AttackModule):
         """
         result_list = []
 
-        # Configurble PARAMS - Number of prompts to be sent to target
-        MAX_ITERATION = 10
-        # Configurble PARAMS - Percentage of words in a prompt that should be changed
-        word_swap_ratio = 0.2
+        # get the configurable params from the config JSON file. if they're not specified, use the default values
+        configurations = self.req_and_config.get("configurations", {})
+        max_iteration = configurations.get("max_iteration", DEFAULT_MAX_ITERATION)
+        word_swap_ratio = configurations.get("word_swap_ratio", DEFAULT_WORD_SWAP_RATIO)
 
         # space of characters that we wish to insert for perturbation
         dec_space = string.punctuation + " "
         word_list = word_tokenize(self.prompt)
         word_list_len = len(word_list)
         num_perturb_words = math.ceil(word_list_len * word_swap_ratio)
-        for attempt in range(MAX_ITERATION):
+        for _ in range(max_iteration):
             chosen_dec = dec_space[random.randint(0, len(string.punctuation))]
             # get random indices of words to undergo swapping algo
             random_words_idx = self.get_n_random(0, word_list_len, num_perturb_words)

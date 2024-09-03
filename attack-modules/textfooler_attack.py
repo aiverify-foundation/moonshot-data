@@ -24,6 +24,19 @@ os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 tf.get_logger().setLevel(logging.ERROR)
 
+# Configurble PARAMS - Percentage of words in a prompt that should be changed
+DEFAULT_WORD_SWAP_RATIO = 0.2
+# Configurble PARAMS - Minimum word embedding cosine similarity of 0.5.
+DEFAULT_COSINE_SIM = 0.5
+# Configurble PARAMS - window size for USE
+DEFAULT_WINDOW_SIZE = 15
+# Configurble PARAMS - threshold for USE
+DEFAULT_THRESHOLD = 0.840845057
+# Configurble PARAMS - Number of prompts to be sent to target
+DEFAULT_MAX_ITERATION = 5
+# Configurble PARAMS - Swap words with their 50 closest embedding nearest-neighbors.
+DEFAULT_MAX_CANDIDATES = 50
+
 
 class FoolerGenerator(AttackModule):
     def __init__(self, am_id: str, am_arguments: AttackModuleArguments | None = None):
@@ -33,7 +46,7 @@ class FoolerGenerator(AttackModule):
         self.description = (
             "This module tests for adversarial textual robustness and implements the perturbations "
             "listed in the paper 'Is BERT Really Robust? A Strong Baseline for Natural Language Attack "
-            "on Text Classification and Entailment.'\nParameters:\n1. MAX_ITERATIONS - Number of prompts "
+            "on Text Classification and Entailment.'\nParameters:\n1. DEFAULT_MAX_ITERATION - Number of prompts "
             "that should be sent to the target. This is also the number of transformations that should be "
             "generated. [Default: 5]\nNote:\nUsage of this attack module requires the internet. Initial "
             "downloading of the GLoVe embedding occurs when the UniversalEncoder is called.\nEmbedding is "
@@ -77,18 +90,17 @@ class FoolerGenerator(AttackModule):
         This method prepares prompts for each target Language Learning Model (LLM) using the provided prompt
         and sends them to the respective LLMs.
         """
-        # Configurble PARAMS - Percentage of words in a prompt that should be changed
-        word_swap_ratio = 0.2
-        # Configurble PARAMS - Number of prompts to be sent to target
-        MAX_ITERATION = 5
-        # Configurble PARAMS - Minimum word embedding cosine similarity of 0.5.
-        cosine_sim = 0.5
-        # Configurble PARAMS - window size for USE
-        window_size = 15
-        # Configurble PARAMS - threshold for USE
-        threshold = 0.840845057
-        # Configurble PARAMS - Swap words with their 50 closest embedding nearest-neighbors.
-        max_candidates = 50
+
+        # get the configurable params from the config JSON file. if they're not specified, use the default values
+        configurations = self.req_and_config.get("configurations", {})
+
+        max_iteration = configurations.get("max_iteration", DEFAULT_MAX_ITERATION)
+        word_swap_ratio = configurations.get("word_swap_ratio", DEFAULT_WORD_SWAP_RATIO)
+        cosine_sim = configurations.get("word_swap_ratio", DEFAULT_COSINE_SIM)
+        threshold = configurations.get("threshold", DEFAULT_THRESHOLD)
+        window_size = configurations.get("window_size", DEFAULT_WINDOW_SIZE)
+        max_candidates = configurations.get("max_candidates", DEFAULT_MAX_CANDIDATES)
+
         """
         Swap words with their 50 closest embedding nearest-neighbors.
         Embedding: Counter-fitted PARAGRAM-SL999 vectors.
@@ -406,7 +418,7 @@ class FoolerGenerator(AttackModule):
             transformation=transformation,
             constraints=constraints,
             pct_words_to_swap=word_swap_ratio,
-            transformations_per_example=MAX_ITERATION,
+            transformations_per_example=max_iteration,
         )
         result_list = []
         logger.debug(f"{'*'*10} [FoolerGenerator] Augmentation in Progress {'*'*10}")
