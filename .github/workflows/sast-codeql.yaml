@@ -132,7 +132,7 @@ jobs:
       if: ${{ ! cancelled() }}
       run: |
         set +e
-        source ci/run-codeql-summ.sh
+        source .ci/run-codeql-summ.sh
         exit_code=$?
         set -e        
         echo "CODEQL_SUMMARY=$CODEQL_SUMMARY" >> $GITHUB_ENV
