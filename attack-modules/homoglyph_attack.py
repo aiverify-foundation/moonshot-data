@@ -35,10 +35,14 @@ class HomoglyphGenerator(AttackModule):
             dict | None: A dictionary containing the metadata of the attack module, or None if the metadata is not
             available.
         """
+        endpoints = self.req_and_config.get("endpoints", [])
+        configurations = self.req_and_config.get("configurations", {})
         return {
             "id": self.id,
             "name": self.name,
             "description": self.description if hasattr(self, "description") else "",
+            "endpoints": endpoints,
+            "configurations": configurations,
         }
 
     async def execute(self):
