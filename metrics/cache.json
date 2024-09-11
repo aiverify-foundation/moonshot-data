@@ -115,8 +115,11 @@
       "openai-gpt35-turbo-16k",
       "openai-gpt35-turbo"
     ],
-    "configurations": {},
-    "hash": "3cdb665584ff99c6"
+    "configurations": {
+      "threshold_value": "0.35",
+      "num_of_prompts_to_calculate": 1
+    },
+    "hash": "22438c30060f69d8"
   },
   "lionguardclassifier": {
     "id": "lionguardclassifier",
@@ -130,11 +133,9 @@
     "id": "flagjudgeannotator",
     "name": "FlagJudge Annotator",
     "description": "Calculates the number of correct response using FlagJudge (A judge model from FlagEval Group).",
-    "endpoints": [
-      "flageval-flagjudge"
-    ],
+    "endpoints": [],
     "configurations": {},
-    "hash": "5713fa352225aa06"
+    "hash": "c5a0783e8ee605dc"
   },
   "q16_metric": {
     "id": "q16_metric",
