@@ -9,20 +9,14 @@
             "llm-judge-openai-gpt4-annotator"
         ]
     },
-    "lionguardclassifier":{
-        "grading_classifier": "toxic"
-    },
-    "flagjudgeannotator":{
-        "endpoints": [
-            "flageval-flagjudge"
-        ]
-    },
     "samplemetric":{
         "endpoints": [
             "openai-gpt35-turbo-16k",
             "openai-gpt35-turbo"
         ],
-        "threshold_value": "0.35",
-        "num_of_prompts_to_calculate": 1
+        "configurations":{
+            "threshold_value": "0.35",
+            "num_of_prompts_to_calculate": 1
+        }        
     }
 }
