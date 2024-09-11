@@ -1,6 +1,8 @@
 from moonshot.src.redteaming.attack.attack_module import AttackModule
 from moonshot.src.redteaming.attack.attack_module_arguments import AttackModuleArguments
 
+DEFAULT_SAMPLE_VALUE = "default_value"
+
 
 class SampleAttackModule(AttackModule):
     def __init__(self, am_id: str, am_arguments: AttackModuleArguments | None = None):
@@ -20,10 +22,15 @@ class SampleAttackModule(AttackModule):
             dict | None: A dictionary containing the metadata of the attack module, or None if the metadata is not
             available.
         """
+        endpoints = self.req_and_config.get("endpoints", [])
+        configurations = self.req_and_config.get("configurations", {})
+
         return {
             "id": self.id,
             "name": self.name,
             "description": self.description if hasattr(self, "description") else "",
+            "endpoints": endpoints,
+            "configurations": configurations,
         }
 
     async def execute(self):
@@ -46,6 +53,10 @@ class SampleAttackModule(AttackModule):
         This method prepares prompts for each target Language Learning Model (LLM) using the provided prompt
         and sends them to the respective LLMs.
         """
+        configurations = self.req_and_config.get("configurations", {})
+        example_field = configurations.get("example_field", DEFAULT_SAMPLE_VALUE)
+        print("Example configuration from config JSON file:", example_field)
+
         result_list = []
         for target_llm_connector in self.connector_instances:
             gen_prompts_generator = self._generate_prompts(
