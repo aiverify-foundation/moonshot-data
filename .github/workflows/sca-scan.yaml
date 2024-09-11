@@ -55,12 +55,61 @@ jobs:
       with:
         python-version: "3.11"
 
-    - name: Install & Scan MOONSHOT DATA
+    - name: Install & Scan MOONSHOT DATA (Pull_Request)
+      if: github.event_name == 'pull_request'
       run: |
           python -m venv venv
           source venv/bin/activate
           # pip install -r requirements.txt
           pip install poetry
           poetry install
-          bash <(curl -s -L https://detect.synopsys.com/detect9.sh) --blackduck.url=https://blackduck.aipo-imda.net/ --blackduck.api.token=${{ secrets.BLACKDUCK_TOKEN }} --detect.detector.search.depth=10 --detect.project.name=aiverify-moonshot-data --detect.project.version.name=$BRANCH --detect.source.path=. --detect.code.location.name="aiverify-moonshot-data_$BRANCH" --detect.excluded.directories=/tests,/venv --blackduck.trust.cert=true
+          bash <(curl -s -L https://detect.synopsys.com/detect9.sh) --blackduck.url=https://blackduck.aipo-imda.net/ --blackduck.api.token=${{ secrets.BLACKDUCK_TOKEN }} --detect.detector.search.depth=10 --detect.project.name=aiverify-moonshot-data --detect.project.version.name=$BRANCH --detect.source.path=. --detect.code.location.name="aiverify-moonshot-data_$BRANCH" --detect.excluded.directories=/tests,/venv --blackduck.trust.cert=true --detect.blackduck.scan.mode=RAPID
           cd ../
+          
+    - name: Install & Scan MOONSHOT DATA (Workflow_Dispatch)
+      if: github.event_name == 'workflow_dispatch'
+      run: |
+          python -m venv venv
+          source venv/bin/activate
+          # pip install -r requirements.txt
+          pip install poetry
+          poetry install
+          bash <(curl -s -L https://detect.synopsys.com/detect9.sh) --blackduck.url=https://blackduck.aipo-imda.net/ --blackduck.api.token=${{ secrets.BLACKDUCK_TOKEN }} --detect.detector.search.depth=10 --detect.project.name=aiverify-moonshot-data --detect.project.version.name=$BRANCH --detect.source.path=. --detect.code.location.name="aiverify-moonshot-data_$BRANCH" --detect.excluded.directories=/tests,/venv --blackduck.trust.cert=true --detect.notices.report=true --detect.notices.report.path=.
+
+    - name: Configure GIT (Workflow_Dispatch)
+      if: github.event_name == 'workflow_dispatch'
+      run: |
+          git config --global user.email "${{ github.actor }}"
+          git config --global user.name "${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.com"
+      shell: bash
+
+    - name: Switch to branch (Workflow_Dispatch)
+      if: github.event_name == 'workflow_dispatch'
+      run: |
+          git checkout -B notices
+      shell: bash
+
+    - name: Commit Notice File (Workflow_Dispatch)
+      if: github.event_name == 'workflow_dispatch'
+      run: |
+          git add .
+          git commit -m "Update Notices"
+          git push -f -u origin HEAD
+      shell: bash
+
+    - name: Create PR (Workflow_Dispatch)
+      if: github.event_name == 'workflow_dispatch'
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+          gh pr create --title "Update License for Moonshot" --body "This PR updates adds License File for Moonshot" --base main --head notices
+      shell: bash
+
+    - name: Merge PR (Workflow_Dispatch)
+      if: github.event_name == 'workflow_dispatch'
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+          pr_number=$(gh pr list --state open --limit 1 --json number --jq '.[0].number')
+          gh pr merge $pr_number --merge --admin
+      shell: bash
