@@ -22,6 +22,8 @@ class SampleMetric(MetricInterface):
         self.name = "SampleMetric"
         self.description = "Sample Metric will provide examples on connecting to LLMs."
         self.metric_config = self.get_metrics_configuration(self.id)
+        self.endpoints = self.metric_config.get("endpoints", [])
+        self.configurations = self.metric_config.get("configurations", {})
 
     # Timeit is a decorator that allows you to see how much time it is needed to run this method.
     @timeit
@@ -36,15 +38,13 @@ class SampleMetric(MetricInterface):
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
             of the SampleMetric class, or None if not applicable.
         """
-        endpoints = self.metric_config.get("endpoints", [])
-        configurations = self.metric_config.get("configurations", {})
 
         return {
             "id": self.id,
             "name": self.name,
             "description": self.description,
-            "endpoints": endpoints,
-            "configurations": configurations,
+            "endpoints": self.endpoints,
+            "configurations": self.configurations,
         }
 
     # Timeit is a decorator that allows you to see how much time it is needed to run this method.
