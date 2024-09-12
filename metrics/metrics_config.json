@@ -4,6 +4,11 @@
             "together-llama-guard-7b-assistant"
         ]
     },
+    "flagjudgeannotator":{
+        "endpoints": [
+            "flageval-flagjudge"
+        ]
+    },    
     "gpt4annotator":{
         "endpoints": [
             "llm-judge-openai-gpt4-annotator"
