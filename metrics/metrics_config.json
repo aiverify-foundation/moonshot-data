@@ -4,6 +4,9 @@
             "together-llama-guard-7b-assistant"
         ]
     },
+    "lionguardclassifier":{
+            "grading_classifier": "toxic"
+    },    
     "flagjudgeannotator":{
         "endpoints": [
             "flageval-flagjudge"
