@@ -17,6 +17,56 @@
         "configurations":{
             "threshold_value": "0.35",
             "num_of_prompts_to_calculate": 1
-        }        
+        }
+    },
+    "answercorrectness":{
+        "endpoints": [
+            "azure-langchain-openai-chatopenai-gpt4o"
+        ],
+        "configurations":{
+            "embeddings": [
+                "azure-langchain-openai-embedding-ada-2"
+            ]
+        }
+    },
+    "answerrelevance":{
+        "endpoints": [
+            "azure-langchain-openai-chatopenai-gpt4o"
+        ],
+        "configurations":{
+            "embeddings": [
+                "azure-langchain-openai-embedding-ada-2"
+            ]
+        }
+    },
+    "contextprecision":{
+        "endpoints": [
+            "azure-langchain-openai-chatopenai-gpt4o"
+        ],
+        "configurations":{
+            "embeddings": [
+                "azure-langchain-openai-embedding-ada-2"
+            ]
+        }
+    },
+    "contextrecall":{
+        "endpoints": [
+            "azure-langchain-openai-chatopenai-gpt4o"
+        ],
+        "configurations":{
+            "embeddings": [
+                "azure-langchain-openai-embedding-ada-2"
+            ]
+        }
+    },
+    "faithfulness":{
+        "endpoints": [
+            "azure-langchain-openai-chatopenai-gpt4o"
+        ],
+        "configurations":{
+            "embeddings": [
+                "azure-langchain-openai-embedding-ada-2"
+            ]
+        }
     }
 }

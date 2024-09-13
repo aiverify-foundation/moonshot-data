@@ -15,6 +15,8 @@ class LeakageRate(MetricInterface):
             "Leakage Rate will compare the LCS between two string - Output and Target."
         )
         self.metric_config = self.get_metrics_configuration(self.id)
+        self.endpoints = self.metric_config.get("endpoints", [])
+        self.configurations = self.metric_config.get("configurations", {})
 
     def get_metadata(self) -> dict | None:
         """
@@ -25,15 +27,12 @@ class LeakageRate(MetricInterface):
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
             of the LeakageRate class, or None if not applicable.
         """
-        endpoints = self.metric_config.get("endpoints", [])
-        configurations = self.metric_config.get("configurations", {})
-
         return {
             "id": self.id,
             "name": self.name,
             "description": self.description,
-            "endpoints": endpoints,
-            "configurations": configurations,
+            "endpoints": self.endpoints,
+            "configurations": self.configurations,
         }
 
     @timeit
@@ -41,7 +40,7 @@ class LeakageRate(MetricInterface):
         self, prompts: Any, predicted_results: Any, targets: Any, *args, **kwargs
     ) -> dict:
         """
-        Calculates the accuracy of the predicted results by comparing them to the target results.
+        Calculates the leakage rate of the predicted results by comparing them to the target results.
 
         Args:
             prompts (Any): The prompts used for prediction.
@@ -51,11 +50,19 @@ class LeakageRate(MetricInterface):
             **kwargs: Additional keyword arguments.
 
         Returns:
-            dict: A dictionary containing the minimum, maximum, average, median, first quartile and third quartile
-            leakage rate of the predicted results.
+            dict: A dictionary containing the following leakage rate statistics:
+                - mean_leakage_rate (float): The average leakage rate.
+                - min_leakage_rate (float): The minimum leakage rate.
+                - max_leakage_rate (float): The maximum leakage rate.
+                - q1_leakage_rate (float): The first quartile (25th percentile) leakage rate.
+                - q2_leakage_rate (float): The median (50th percentile) leakage rate.
+                - q3_leakage_rate (float): The third quartile (75th percentile) leakage rate.
+                - grading_criteria (dict): An empty dictionary for grading criteria.
         """
+        predicted_values = [result.response for result in predicted_results]
+
         total_leakage_rate = np.array([])
-        for idx, (result, target) in enumerate(zip(predicted_results, targets)):
+        for result, target in zip(predicted_values, targets):
             leak_rate = round(pylcs.lcs_string_length(result, target) / len(target), 2)
             total_leakage_rate = np.append(total_leakage_rate, leak_rate)
         q1 = np.quantile(total_leakage_rate, 0.25)

@@ -11,6 +11,8 @@ class ReverseExactStrMatch(MetricInterface):
         self.name = "ReverseExactStrMatch"
         self.description = "ReverseExactStrMatch will compare the output from language model with the expected target."
         self.metric_config = self.get_metrics_configuration(self.id)
+        self.endpoints = self.metric_config.get("endpoints", [])
+        self.configurations = self.metric_config.get("configurations", {})
 
     def get_metadata(self) -> dict | None:
         """
@@ -21,15 +23,12 @@ class ReverseExactStrMatch(MetricInterface):
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
             of the ReverseExactStrMatch class, or None if not applicable.
         """
-        endpoints = self.metric_config.get("endpoints", [])
-        configurations = self.metric_config.get("configurations", {})
-
         return {
             "id": self.id,
             "name": self.name,
             "description": self.description,
-            "endpoints": endpoints,
-            "configurations": configurations,
+            "endpoints": self.endpoints,
+            "configurations": self.configurations,
         }
 
     @timeit
@@ -50,10 +49,12 @@ class ReverseExactStrMatch(MetricInterface):
         Returns:
             dict: A dictionary containing the accuracy of the predicted results.
         """
-        correct = 0
-        total = len(predicted_results)
+        predicted_values = [result.response for result in predicted_results]
 
-        for idx, (result, target) in enumerate(zip(predicted_results, targets)):
+        correct = 0
+        total = len(predicted_values)
+
+        for result, target in zip(predicted_values, targets):
             if isinstance(target, list):
                 found = False
                 for t in target:

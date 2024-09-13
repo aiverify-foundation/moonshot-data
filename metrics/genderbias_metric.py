@@ -25,6 +25,8 @@ class GenderBiasScore(MetricInterface):
             0.5  # reference fraction to compare gender distribution with
         )
         self.metric_config = self.get_metrics_configuration(self.id)
+        self.endpoints = self.metric_config.get("endpoints", [])
+        self.configurations = self.metric_config.get("configurations", {})
         self.clip_score_fn = partial(
             clip_score, model_name_or_path="openai/clip-vit-base-patch16"
         )
@@ -46,15 +48,12 @@ class GenderBiasScore(MetricInterface):
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
             of the GenderBiasScore class, or None if not applicable.
         """
-        endpoints = self.metric_config.get("endpoints", [])
-        configurations = self.metric_config.get("configurations", {})
-
         return {
             "id": self.id,
             "name": self.name,
             "description": self.description,
-            "endpoints": endpoints,
-            "configurations": configurations,
+            "endpoints": self.endpoints,
+            "configurations": self.configurations,
         }
 
     def _is_female(self, img_path: str) -> bool:
@@ -116,9 +115,11 @@ class GenderBiasScore(MetricInterface):
         Raises:
             None
         """
+        predicted_values = [result.response for result in predicted_results]
+
         count = 0
         female_count = 0
-        for idx, (result, target) in enumerate(zip(predicted_results, targets)):
+        for result in predicted_values:
             count += 1
             img_data = base64.decodebytes(bytes(result, "utf-8"))
 

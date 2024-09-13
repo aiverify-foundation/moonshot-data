@@ -6,20 +6,18 @@ from moonshot.src.connectors_endpoints.connector_endpoint import ConnectorEndpoi
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
 from ragas import evaluate
-from ragas.metrics import answer_correctness
+from ragas.metrics import faithfulness
 
 from datasets import Dataset
 
 
-class AnswerCorrectness(MetricInterface):
+class Faithfulness(MetricInterface):
     def __init__(self):
         self.id = Path(__file__).stem
-        self.name = "AnswerCorrectness"
+        self.name = "Faithfulness"
         self.description = (
-            "Answer correctness in the context of Ragas involves evaluating the accuracy of a generated answer "
-            "compared to the ground truth. This process assesses both the semantic and factual similarities between "
-            "the answer and the ground truth. Scores range from 0 to 1, where a higher score indicates a closer "
-            "match, thus higher correctness."
+            "This measures the factual consistency of the generated answer against the given context. It is "
+            "calculated from answer and retrieved context. The answer is scaled to (0,1) range. Higher the better."
         )
         self.metric_config = self.get_metrics_configuration(self.id)
         self.endpoints = self.metric_config.get("endpoints", [])
@@ -27,12 +25,12 @@ class AnswerCorrectness(MetricInterface):
 
     def get_metadata(self) -> dict | None:
         """
-        Retrieves and returns the metadata of the AnswerCorrectness class.
+        Retrieves and returns the metadata of the Faithfulness class.
         The metadata includes the unique identifier, the name, and the description of the class.
 
         Returns:
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
-            of the AnswerCorrectness class, or None if not applicable.
+            of the Faithfulness class, or None if not applicable.
         """
         return {
             "id": self.id,
@@ -47,23 +45,24 @@ class AnswerCorrectness(MetricInterface):
         self, prompts: Any, predicted_results: Any, targets: Any, *args, **kwargs
     ) -> dict:
         """
-        Asynchronously retrieves the results of the answer correctness evaluation.
+        Asynchronously retrieves the results of the faithfulness evaluation.
 
-        This method evaluates the accuracy of generated answers compared to the ground truth
+        This method evaluates the factual consistency of the generated answers against the given context
         using the Ragas framework. It leverages both an evaluation model and an embeddings model
-        to compute the answer correctness score.
+        to compute the faithfulness score.
 
         Args:
             prompts (Any): The input prompts/questions.
             predicted_results (Any): The generated answers to be evaluated.
             targets (Any): The ground truth answers for comparison.
             *args: Additional positional arguments.
-            **kwargs: Additional keyword arguments.
+            **kwargs: Additional keyword arguments, including 'contexts' which is required.
 
         Returns:
-            dict: A dictionary containing the answer correctness scores and grading criteria.
+            dict: A dictionary containing the faithfulness scores and grading criteria.
         """
         predicted_values = [result.response for result in predicted_results]
+        predicted_contexts = [result.context for result in predicted_results]
 
         evaluation_model = [
             Connector.create(ConnectorEndpoint.read(ep_id)) for ep_id in self.endpoints
@@ -77,17 +76,17 @@ class AnswerCorrectness(MetricInterface):
         data_samples = {
             "question": prompts,
             "answer": predicted_values,
-            "ground_truth": targets,
+            "contexts": predicted_contexts,
         }
         dataset = Dataset.from_dict(data_samples)
         score = evaluate(
             dataset,
-            metrics=[answer_correctness],
+            metrics=[faithfulness],
             llm=evaluation_model.get_client(),  # type: ignore ; ducktyping
             embeddings=embeddings_model.get_client(),  # type: ignore ; ducktyping
         )
         df = score.to_pandas()
         return {
-            "answer_correctness": df["answer_correctness"].tolist(),
+            "faithfulness": df["faithfulness"].tolist(),
             "grading_criteria": {},
         }

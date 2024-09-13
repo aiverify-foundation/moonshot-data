@@ -6,20 +6,20 @@ from moonshot.src.connectors_endpoints.connector_endpoint import ConnectorEndpoi
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
 from ragas import evaluate
-from ragas.metrics import answer_correctness
+from ragas.metrics import context_precision
 
 from datasets import Dataset
 
 
-class AnswerCorrectness(MetricInterface):
+class ContextPrecision(MetricInterface):
     def __init__(self):
         self.id = Path(__file__).stem
-        self.name = "AnswerCorrectness"
+        self.name = "ContextPrecision"
         self.description = (
-            "Answer correctness in the context of Ragas involves evaluating the accuracy of a generated answer "
-            "compared to the ground truth. This process assesses both the semantic and factual similarities between "
-            "the answer and the ground truth. Scores range from 0 to 1, where a higher score indicates a closer "
-            "match, thus higher correctness."
+            "Context Precision is a metric that evaluates whether all of the ground-truth relevant items present in "
+            "the contexts are ranked higher or not. Ideally, all the relevant chunks must appear at the top ranks. "
+            "This metric is computed using the question, ground_truth, and the contexts, with values ranging between "
+            "0 and 1, where higher scores indicate better precision."
         )
         self.metric_config = self.get_metrics_configuration(self.id)
         self.endpoints = self.metric_config.get("endpoints", [])
@@ -27,12 +27,12 @@ class AnswerCorrectness(MetricInterface):
 
     def get_metadata(self) -> dict | None:
         """
-        Retrieves and returns the metadata of the AnswerCorrectness class.
+        Retrieves and returns the metadata of the ContextPrecision class.
         The metadata includes the unique identifier, the name, and the description of the class.
 
         Returns:
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
-            of the AnswerCorrectness class, or None if not applicable.
+            of the ContextPrecision class, or None if not applicable.
         """
         return {
             "id": self.id,
@@ -47,23 +47,24 @@ class AnswerCorrectness(MetricInterface):
         self, prompts: Any, predicted_results: Any, targets: Any, *args, **kwargs
     ) -> dict:
         """
-        Asynchronously retrieves the results of the answer correctness evaluation.
+        Asynchronously retrieves the results of the context precision evaluation.
 
-        This method evaluates the accuracy of generated answers compared to the ground truth
+        This method evaluates the precision of the retrieved context with the ground truth
         using the Ragas framework. It leverages both an evaluation model and an embeddings model
-        to compute the answer correctness score.
+        to compute the context precision score.
 
         Args:
             prompts (Any): The input prompts/questions.
             predicted_results (Any): The generated answers to be evaluated.
             targets (Any): The ground truth answers for comparison.
             *args: Additional positional arguments.
-            **kwargs: Additional keyword arguments.
+            **kwargs: Additional keyword arguments, including 'contexts' which is required.
 
         Returns:
-            dict: A dictionary containing the answer correctness scores and grading criteria.
+            dict: A dictionary containing the context precision scores and grading criteria.
         """
         predicted_values = [result.response for result in predicted_results]
+        predicted_contexts = [result.context for result in predicted_results]
 
         evaluation_model = [
             Connector.create(ConnectorEndpoint.read(ep_id)) for ep_id in self.endpoints
@@ -77,17 +78,18 @@ class AnswerCorrectness(MetricInterface):
         data_samples = {
             "question": prompts,
             "answer": predicted_values,
+            "contexts": predicted_contexts,
             "ground_truth": targets,
         }
         dataset = Dataset.from_dict(data_samples)
         score = evaluate(
             dataset,
-            metrics=[answer_correctness],
+            metrics=[context_precision],
             llm=evaluation_model.get_client(),  # type: ignore ; ducktyping
             embeddings=embeddings_model.get_client(),  # type: ignore ; ducktyping
         )
         df = score.to_pandas()
         return {
-            "answer_correctness": df["answer_correctness"].tolist(),
+            "context_precision": df["context_precision"].tolist(),
             "grading_criteria": {},
         }

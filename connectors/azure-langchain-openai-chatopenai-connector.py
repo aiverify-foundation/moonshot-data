@@ -3,6 +3,7 @@ from typing import Any
 
 from langchain_openai.chat_models import AzureChatOpenAI
 from moonshot.src.connectors.connector import Connector, perform_retry
+from moonshot.src.connectors.connector_response import ConnectorResponse
 from moonshot.src.connectors_endpoints.connector_endpoint_arguments import (
     ConnectorEndpointArguments,
 )
@@ -45,7 +46,7 @@ class AzureLangchainOpenAIChatOpenAIConnector(Connector):
 
     @Connector.rate_limited
     @perform_retry
-    async def get_response(self, prompt: str) -> str:
+    async def get_response(self, prompt: str) -> ConnectorResponse:
         """
         This method is not implemented and will raise a NotImplementedError.
 
@@ -53,7 +54,7 @@ class AzureLangchainOpenAIChatOpenAIConnector(Connector):
             prompt (str): The input prompt to send to the OpenAI API.
 
         Returns:
-            str: This method does not return a response as it is not implemented.
+            ConnectorResponse: This method does not return a response as it is not implemented.
 
         Raises:
             NotImplementedError: Always raised to indicate this method is not implemented.

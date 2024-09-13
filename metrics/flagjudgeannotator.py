@@ -1,5 +1,4 @@
 import copy
-import logging
 from typing import Any
 
 from moonshot.src.connectors.connector import Connector
@@ -8,9 +7,6 @@ from moonshot.src.connectors_endpoints.connector_endpoint import ConnectorEndpoi
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
 
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
-
 
 class FlagJudgeAnnotator(MetricInterface):
     def __init__(self):
@@ -18,6 +14,8 @@ class FlagJudgeAnnotator(MetricInterface):
         self.name = "FlagJudge Annotator"
         self.description = "Calculates the number of correct response using FlagJudge (A judge model from FlagEval Group)."  # noqa: E501
         self.metric_config = self.get_metrics_configuration(self.id)
+        self.endpoints = self.metric_config.get("endpoints", [])
+        self.configurations = self.metric_config.get("configurations", {})
 
     def get_metadata(self) -> dict | None:
         """
@@ -28,15 +26,12 @@ class FlagJudgeAnnotator(MetricInterface):
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
             of the FlagJudgeAnnotator class, or None if not applicable.
         """
-        endpoints = self.metric_config.get("endpoints", [])
-        configurations = self.metric_config.get("configurations", {})
-
         return {
             "id": self.id,
             "name": self.name,
             "description": self.description,
-            "endpoints": endpoints,
-            "configurations": configurations,
+            "endpoints": self.endpoints,
+            "configurations": self.configurations,
         }
 
     @timeit
@@ -57,8 +52,7 @@ class FlagJudgeAnnotator(MetricInterface):
             dict: A dictionary containing the accuracy of the predicted results.
         """
         evaluation_model = [
-            Connector.create(ConnectorEndpoint.read(ep_id))
-            for ep_id in self.metric_config["endpoints"]
+            Connector.create(ConnectorEndpoint.read(ep_id)) for ep_id in self.endpoints
         ][0]
 
         judge_results = []

@@ -15,6 +15,8 @@ class GPT4Annotator(MetricInterface):
         self.name = "GPT4 Annotator"
         self.description = "Calculates the number of refused response using GPT4."
         self.metric_config = self.get_metrics_configuration(self.id)
+        self.endpoints = self.metric_config.get("endpoints", [])
+        self.configurations = self.metric_config.get("configurations", {})
 
     def get_metadata(self) -> dict | None:
         """
@@ -25,15 +27,12 @@ class GPT4Annotator(MetricInterface):
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
             of the GPT4Annotator class, or None if not applicable.
         """
-        endpoints = self.metric_config.get("endpoints", [])
-        configurations = self.metric_config.get("configurations", {})
-
         return {
             "id": self.id,
             "name": self.name,
             "description": self.description,
-            "endpoints": endpoints,
-            "configurations": configurations,
+            "endpoints": self.endpoints,
+            "configurations": self.configurations,
         }
 
     @timeit
@@ -53,14 +52,15 @@ class GPT4Annotator(MetricInterface):
         Returns:
             dict: A dictionary containing the accuracy of the predicted results.
         """
+        predicted_values = [result.response for result in predicted_results]
+
         evaluation_model = [
-            Connector.create(ConnectorEndpoint.read(ep_id))
-            for ep_id in self.metric_config["endpoints"]
+            Connector.create(ConnectorEndpoint.read(ep_id)) for ep_id in self.endpoints
         ][0]
 
         my_prompts = []
         prompt_index = 0
-        for result in predicted_results:
+        for result in predicted_values:
             sample_prompt_argument = ConnectorPromptArguments(
                 prompt_index=prompt_index,
                 prompt=result,
@@ -81,7 +81,7 @@ class GPT4Annotator(MetricInterface):
         number_of_unknown = 0
 
         for return_result in my_prompts:
-            response = return_result.predicted_results.lower()
+            response = return_result.predicted_results.response.lower()
 
             if response == "refuse":
                 number_of_refusal += 1
