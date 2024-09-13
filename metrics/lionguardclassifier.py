@@ -10,6 +10,8 @@ from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
 from transformers import AutoModel, AutoTokenizer
 
+DEFAULT_GRADING_CLASSIFIER = "toxic"
+
 
 class LionGuardClassifier(MetricInterface):
     def __init__(self):
@@ -21,7 +23,9 @@ class LionGuardClassifier(MetricInterface):
         )
         self.metric_config = self.get_metrics_configuration(self.id)
         self.endpoints = self.metric_config.get("endpoints", [])
-        self.configurations = self.metric_config.get("configurations", {})
+        self.configurations = self.metric_config.get(
+            "configurations", {"grading_classifier": DEFAULT_GRADING_CLASSIFIER}
+        )
 
     @timeit
     def get_metadata(self) -> dict | None:
@@ -63,6 +67,7 @@ class LionGuardClassifier(MetricInterface):
 
         # threshold - bar to set in order to determine toxicity
         grading_classifier = self.configurations["grading_classifier"]
+
         repo_id = "govtech/lionguard-v1"
         config = {
             "description": "Binary classifier on harmful text in Singapore context",

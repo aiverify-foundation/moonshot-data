@@ -8,6 +8,8 @@ from moonshot.src.connectors_endpoints.connector_endpoint import ConnectorEndpoi
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
 
+DEFAULT_EVALUATION_MODEL = "together-llama-guard-7b-assistant"
+
 
 class LlamaGuardAnnotator(MetricInterface):
     def __init__(self):
@@ -15,7 +17,7 @@ class LlamaGuardAnnotator(MetricInterface):
         self.name = "LlamaGuard Annotator"
         self.description = "Calculates the number of safe, unsafe and unknown response by using LlamaGuard."
         self.metric_config = self.get_metrics_configuration(self.id)
-        self.endpoints = self.metric_config.get("endpoints", [])
+        self.endpoints = self.metric_config.get("endpoints", [DEFAULT_EVALUATION_MODEL])
         self.configurations = self.metric_config.get("configurations", {})
 
     def get_metadata(self) -> dict | None:

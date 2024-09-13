@@ -7,6 +7,8 @@ from moonshot.src.connectors_endpoints.connector_endpoint import ConnectorEndpoi
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
 
+DEFAULT_EVALUATION_MODEL = "flageval-flagjudge"
+
 
 class FlagJudgeAnnotator(MetricInterface):
     def __init__(self):
@@ -14,7 +16,7 @@ class FlagJudgeAnnotator(MetricInterface):
         self.name = "FlagJudge Annotator"
         self.description = "Calculates the number of correct response using FlagJudge (A judge model from FlagEval Group)."  # noqa: E501
         self.metric_config = self.get_metrics_configuration(self.id)
-        self.endpoints = self.metric_config.get("endpoints", [])
+        self.endpoints = self.metric_config.get("endpoints", [DEFAULT_EVALUATION_MODEL])
         self.configurations = self.metric_config.get("configurations", {})
 
     def get_metadata(self) -> dict | None:
