@@ -3,114 +3,162 @@
     "id": "bertscore",
     "name": "BertScore",
     "description": "BertScore uses Bert to check for the similarity in embedding between two sentences.",
-    "hash": "0ea41c370f3628f6"
+    "endpoints": [],
+    "configurations": {},
+    "hash": "81a2e96ed6b2f064"
   },
   "spelling": {
     "id": "spelling",
     "name": "SpellingScore",
     "description": "SpellingScore uses Levenshetein Distance to find permutations within an edit distance of 2 form the original word before comparing to known words in a word frequency list.",
-    "hash": "aec08a4d7680cc4e"
+    "endpoints": [],
+    "configurations": {},
+    "hash": "f02d6358b8bcb14b"
   },
   "gpt4annotator": {
     "id": "gpt4annotator",
     "name": "GPT4 Annotator",
     "description": "Calculates the number of refused response using GPT4.",
-    "hash": "c42af994f3751c9d"
+    "endpoints": [
+      "llm-judge-openai-gpt4-annotator"
+    ],
+    "configurations": {},
+    "hash": "e7fbc254f1e5a5c8"
   },
   "bleuscore": {
     "id": "bleuscore",
     "name": "BleuScore",
     "description": "Bleuscore uses Bleu to return the various rouge scores.",
-    "hash": "f403209817f242fb"
+    "endpoints": [],
+    "configurations": {},
+    "hash": "ce3e7884ee162578"
   },
   "readabilityscore": {
     "id": "readabilityscore",
     "name": "ReadabilityScore",
     "description": "ReadabilityScore uses Flesch Reading Ease to compute the complexity of the output",
-    "hash": "3bd6f0f1faeba949"
+    "endpoints": [],
+    "configurations": {},
+    "hash": "786470c5a6143af5"
   },
   "toxicity-classifier": {
     "id": "toxicity-classifier",
     "name": "Toxicity Classifier",
     "description": "This classifier measures how toxic a given input isand calculate the number of toxic sentence detected.",
-    "hash": "6a8edb11ddbf7a3f"
+    "endpoints": [],
+    "configurations": {},
+    "hash": "6623b4c60bab200f"
   },
   "rougescorer": {
     "id": "rougescorer",
     "name": "RougeScorer",
     "description": "RougeScorer returns the various rouge scores.",
-    "hash": "fdb2d50de8496556"
+    "endpoints": [],
+    "configurations": {},
+    "hash": "7439d49cfcc567ee"
   },
   "advglue": {
     "id": "advglue",
     "name": "Attack Success Rate",
     "description": "Attack success rate measures how successful a changed prompt performs. A high score shows that the system under test is highly sensitive towards a prompt with minimal changes.",
-    "hash": "b3d1182c60a88b54"
+    "endpoints": [],
+    "configurations": {},
+    "hash": "30f5bb95d3788e10"
   },
   "leakagerate": {
     "id": "leakagerate",
     "name": "LeakageRate",
     "description": "Leakage Rate will compare the LCS between two string - Output and Target.",
-    "hash": "f93b6e07306308d4"
+    "endpoints": [],
+    "configurations": {},
+    "hash": "98d4f2dfc61ff7aa"
   },
   "reverseexactstrmatch": {
     "id": "reverseexactstrmatch",
     "name": "ReverseExactStrMatch",
     "description": "ReverseExactStrMatch will compare the output from language model with the expected target.",
-    "hash": "b4d8d8338b4ea4d4"
+    "endpoints": [],
+    "configurations": {},
+    "hash": "e8d1edf5e1414d99"
   },
   "exactstrmatch": {
     "id": "exactstrmatch",
     "name": "ExactStrMatch",
     "description": "ExactStrMatch will compare the output from language model with a single target or multiple expected target.",
-    "hash": "990c50c7736d11db"
+    "endpoints": [],
+    "configurations": {},
+    "hash": "6f0aca34dd51ab9e"
   },
   "relaxstrmatch": {
     "id": "relaxstrmatch",
     "name": "RelaxStrMatch",
     "description": "RelaxStrMatch will remove symbols and spaces before comparing the output from language model with the expected target.",
-    "hash": "68fcf1f9dc064ffd"
+    "endpoints": [],
+    "configurations": {},
+    "hash": "8ac72775345b6bb2"
   },
   "llamaguardannotator": {
     "id": "llamaguardannotator",
     "name": "LlamaGuard Annotator",
     "description": "Calculates the number of safe, unsafe and unknown response by using LlamaGuard.",
-    "hash": "3e3e97205b4721d6"
+    "endpoints": [
+      "together-llama-guard-7b-assistant"
+    ],
+    "configurations": {},
+    "hash": "234d2fd54dcc4b7d"
   },
   "samplemetric": {
     "id": "samplemetric",
     "name": "SampleMetric",
     "description": "Sample Metric will provide examples on connecting to LLMs.",
-    "hash": "c8d1e48a91f66eb8"
+    "endpoints": [
+      "openai-gpt35-turbo-16k",
+      "openai-gpt35-turbo"
+    ],
+    "configurations": {
+      "threshold_value": "0.35",
+      "num_of_prompts_to_calculate": 1
+    },
+    "hash": "22438c30060f69d8"
   },
   "lionguardclassifier": {
     "id": "lionguardclassifier",
     "name": "LionGuard Classifier",
     "description": "This classifier measures how unsafe a given input is in the Singapore context.\nIt can calculate the number of toxic sentences detected. ",
-    "hash": "e1e5a08a2651091a"
+    "endpoints": [],
+    "configurations": {},
+    "hash": "f18c14bf15ae45fe"
   },
   "flagjudgeannotator": {
     "id": "flagjudgeannotator",
     "name": "FlagJudge Annotator",
     "description": "Calculates the number of correct response using FlagJudge (A judge model from FlagEval Group).",
-    "hash": "b9207a4b57a331da"
+    "endpoints": [],
+    "configurations": {},
+    "hash": "c5a0783e8ee605dc"
   },
   "q16_metric": {
     "id": "q16_metric",
     "name": "Q16Metric",
     "description": "Q16 is a binary classifier used to determine whether an image is inappropriate (https://github.com/ml-research/Q16)",
-    "hash": "6f86d72b07c795ae"
+    "endpoints": [],
+    "configurations": {},
+    "hash": "a6403d2a6ea7f732"
   },
   "nudenet_metric": {
     "id": "nudenet_metric",
     "name": "NudeNetMetric",
     "description": "NudeNet is a classifier used to deduce probabilities of exposed body parts in images.",
-    "hash": "48a548aec29d95fb"
+    "endpoints": [],
+    "configurations": {},
+    "hash": "eaf9b4a52bf23b58"
   },
   "genderbias_metric": {
     "id": "genderbias_metric",
     "name": "GenderBiasMetric",
     "description": "This metric uses a CLIP based gender classifier to determine the proportion of females returning a score between 0 and 0.5. score = |female_frac - 0.5|",
-    "hash": "988acca8500b6346"
+    "endpoints": [],
+    "configurations": {},
+    "hash": "db4ab533d45ca892"
   }
 }

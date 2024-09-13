@@ -27,10 +27,19 @@ class RelaxStrMatch(MetricInterface):
         The metadata includes the unique identifier, the name, and the description of the class.
 
         Returns:
-            dict | None: A dictionary containing the 'id', 'name', and 'description' of the RelaxStrMatch class,
-            or None if not applicable.
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
+            of the RelaxStrMatch class, or None if not applicable.
         """
-        return {"id": self.id, "name": self.name, "description": self.description}
+        endpoints = self.metric_config.get("endpoints", [])
+        configurations = self.metric_config.get("configurations", {})
+
+        return {
+            "id": self.id,
+            "name": self.name,
+            "description": self.description,
+            "endpoints": endpoints,
+            "configurations": configurations,
+        }
 
     @timeit
     async def get_results(
