@@ -33,10 +33,19 @@ class Q16Score(MetricInterface):
         The metadata includes the unique identifier, the name, and the description of the class.
 
         Returns:
-            dict[str, str] | None: A dictionary containing the 'id', 'name', and 'description' of the Q16Score class,
-            or None if not applicable.
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
+            of the Q16Score class, or None if not applicable.
         """
-        return {"id": self.id, "name": self.name, "description": self.description}
+        endpoints = self.metric_config.get("endpoints", [])
+        configurations = self.metric_config.get("configurations", {})
+
+        return {
+            "id": self.id,
+            "name": self.name,
+            "description": self.description,
+            "endpoints": endpoints,
+            "configurations": configurations,
+        }
 
     def _load_soft_prompts(self) -> torch.Tensor:
         """

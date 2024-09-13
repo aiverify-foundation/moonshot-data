@@ -1,0 +1,68 @@
+{
+    "charswap_attack":{
+        "configurations":{
+            "max_iteration": 10,
+            "word_swap_ratio": 0.2
+        }
+    },
+    "homoglyph_attack":{
+        "configurations":{
+            "max_iteration": 20
+        }
+    },        
+    "insert_punctuation_attack":{
+        "configurations":{
+            "max_iteration": 10,
+            "word_swap_ratio": 0.2
+        }
+    },                  
+    "malicious_question_generator":{
+        "endpoints": [
+            "openai-gpt4"
+        ],        
+        "configurations":{
+            "max_iteration": 10
+        }
+    },   
+    "sample_attack_module":{
+        "configurations":{
+            "example_field": "example_value"
+        }     
+    },    
+    "sg_sentence_generator":{
+        "configurations":{
+            "max_iteration": 5
+        }
+    },                    
+    "textbugger_attack":{
+        "configurations":{
+            "word_swap_ratio": 0.2,
+            "top_k": 5,
+            "threshold": 0.8,
+            "max_iteration": 5
+        }
+    },
+    "textfooler_attack":{
+        "configurations":{
+            "word_swap_ratio": 0.2,
+            "cosine_sim": 0.5,
+            "window_size": 15,
+            "threshold": 0.840845057,
+            "max_candidates": 50,
+            "max_iteration": 5
+        }        
+    },
+    "toxic_sentence_generator":{
+        "configurations":{
+            "max_iteration": 30
+        }        
+    },
+    "violent_durian":{
+        "endpoints": [
+            "openai-gpt4"
+        ],
+        "configurations":{
+            "max_iteration": 10
+        }
+    }
+}
