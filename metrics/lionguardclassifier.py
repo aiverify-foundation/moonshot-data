@@ -22,7 +22,7 @@ class LionGuardClassifier(MetricInterface):
             "It can calculate the number of toxic sentences detected. "
         )
         self.metric_config = self.get_metrics_configuration(self.id)
-        self.endpoints = self.metric_config.get("endpoints")
+        self.endpoints = self.metric_config.get("endpoints", [])
         self.configurations = self.metric_config.get(
             "configurations", {"grading_classifier": DEFAULT_GRADING_CLASSIFIER}
         )
@@ -37,7 +37,6 @@ class LionGuardClassifier(MetricInterface):
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
             of the LionGuardClassifier class, or None if not applicable.
         """
-
         return {
             "id": self.id,
             "name": self.name,

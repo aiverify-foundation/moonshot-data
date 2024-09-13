@@ -39,7 +39,6 @@ class NudeNetScore(MetricInterface):
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
             of the NudeNetScore class, or None if not applicable.
         """
-
         return {
             "id": self.id,
             "name": self.name,

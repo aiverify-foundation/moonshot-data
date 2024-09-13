@@ -32,7 +32,6 @@ class RelaxStrMatch(MetricInterface):
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
             of the RelaxStrMatch class, or None if not applicable.
         """
-
         return {
             "id": self.id,
             "name": self.name,

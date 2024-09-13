@@ -29,7 +29,6 @@ class GPT4Annotator(MetricInterface):
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
             of the GPT4Annotator class, or None if not applicable.
         """
-
         return {
             "id": self.id,
             "name": self.name,

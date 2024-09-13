@@ -23,7 +23,6 @@ class ReverseExactStrMatch(MetricInterface):
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
             of the ReverseExactStrMatch class, or None if not applicable.
         """
-
         return {
             "id": self.id,
             "name": self.name,
