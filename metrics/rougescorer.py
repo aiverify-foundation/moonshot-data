@@ -16,6 +16,8 @@ class RougeScorer(MetricInterface):
         self.name = "RougeScorer"
         self.description = "RougeScorer returns the various rouge scores."
         self.metric_config = self.get_metrics_configuration(self.id)
+        self.endpoints = self.metric_config.get("endpoints", [])
+        self.configurations = self.metric_config.get("configurations", {})
 
     def get_metadata(self) -> dict | None:
         """
@@ -26,15 +28,12 @@ class RougeScorer(MetricInterface):
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
             of the RougeScorer class, or None if not applicable.
         """
-        endpoints = self.metric_config.get("endpoints", [])
-        configurations = self.metric_config.get("configurations", {})
-
         return {
             "id": self.id,
             "name": self.name,
             "description": self.description,
-            "endpoints": endpoints,
-            "configurations": configurations,
+            "endpoints": self.endpoints,
+            "configurations": self.configurations,
         }
 
     @timeit
@@ -57,6 +56,8 @@ class RougeScorer(MetricInterface):
         Raises:
             RuntimeError: If there is an exception during the calculation of the rouge scores.
         """
+        predicted_values = [result.response for result in predicted_results]
+
         try:
             # Define the test metrics to calculate
             test_metrics = ["rouge1", "rouge2", "rougeLsum"]
@@ -73,7 +74,7 @@ class RougeScorer(MetricInterface):
             # Calculate rouge scores for each target-output pair
             logger.info("[RougeScorer] Attempting to calculate rouge score")
             scorer = rouge_scorer.RougeScorer(test_metrics)
-            for target, result in zip(targets, predicted_results):
+            for target, result in zip(targets, predicted_values):
                 scores = scorer.score(target, result)
                 test_metrics_dict = {}
                 for test_metric_index, test_metric in enumerate(test_metrics, 0):

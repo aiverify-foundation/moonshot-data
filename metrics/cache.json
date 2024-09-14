@@ -5,7 +5,7 @@
     "description": "BertScore uses Bert to check for the similarity in embedding between two sentences.",
     "endpoints": [],
     "configurations": {},
-    "hash": "81a2e96ed6b2f064"
+    "hash": "8ddfa17b69af1ceb"
   },
   "spelling": {
     "id": "spelling",
@@ -13,7 +13,7 @@
     "description": "SpellingScore uses Levenshetein Distance to find permutations within an edit distance of 2 form the original word before comparing to known words in a word frequency list.",
     "endpoints": [],
     "configurations": {},
-    "hash": "f02d6358b8bcb14b"
+    "hash": "58fbd5875d3849ff"
   },
   "gpt4annotator": {
     "id": "gpt4annotator",
@@ -23,7 +23,7 @@
       "llm-judge-openai-gpt4-annotator"
     ],
     "configurations": {},
-    "hash": "e7fbc254f1e5a5c8"
+    "hash": "883ed97d6894d59b"
   },
   "bleuscore": {
     "id": "bleuscore",
@@ -31,7 +31,7 @@
     "description": "Bleuscore uses Bleu to return the various rouge scores.",
     "endpoints": [],
     "configurations": {},
-    "hash": "ce3e7884ee162578"
+    "hash": "0f0e5b730fb08993"
   },
   "readabilityscore": {
     "id": "readabilityscore",
@@ -39,7 +39,7 @@
     "description": "ReadabilityScore uses Flesch Reading Ease to compute the complexity of the output",
     "endpoints": [],
     "configurations": {},
-    "hash": "786470c5a6143af5"
+    "hash": "1277c0a1eb1f17fb"
   },
   "toxicity-classifier": {
     "id": "toxicity-classifier",
@@ -47,7 +47,7 @@
     "description": "This classifier measures how toxic a given input isand calculate the number of toxic sentence detected.",
     "endpoints": [],
     "configurations": {},
-    "hash": "6623b4c60bab200f"
+    "hash": "3194556379aeab14"
   },
   "rougescorer": {
     "id": "rougescorer",
@@ -55,7 +55,7 @@
     "description": "RougeScorer returns the various rouge scores.",
     "endpoints": [],
     "configurations": {},
-    "hash": "7439d49cfcc567ee"
+    "hash": "163fd58215704f54"
   },
   "advglue": {
     "id": "advglue",
@@ -63,7 +63,7 @@
     "description": "Attack success rate measures how successful a changed prompt performs. A high score shows that the system under test is highly sensitive towards a prompt with minimal changes.",
     "endpoints": [],
     "configurations": {},
-    "hash": "30f5bb95d3788e10"
+    "hash": "eee801995962a8be"
   },
   "leakagerate": {
     "id": "leakagerate",
@@ -71,7 +71,7 @@
     "description": "Leakage Rate will compare the LCS between two string - Output and Target.",
     "endpoints": [],
     "configurations": {},
-    "hash": "98d4f2dfc61ff7aa"
+    "hash": "bbfcab98f1f64230"
   },
   "reverseexactstrmatch": {
     "id": "reverseexactstrmatch",
@@ -79,7 +79,7 @@
     "description": "ReverseExactStrMatch will compare the output from language model with the expected target.",
     "endpoints": [],
     "configurations": {},
-    "hash": "e8d1edf5e1414d99"
+    "hash": "ea6d80a3563595b7"
   },
   "exactstrmatch": {
     "id": "exactstrmatch",
@@ -87,7 +87,7 @@
     "description": "ExactStrMatch will compare the output from language model with a single target or multiple expected target.",
     "endpoints": [],
     "configurations": {},
-    "hash": "6f0aca34dd51ab9e"
+    "hash": "07315651d4b5ef9b"
   },
   "relaxstrmatch": {
     "id": "relaxstrmatch",
@@ -95,7 +95,7 @@
     "description": "RelaxStrMatch will remove symbols and spaces before comparing the output from language model with the expected target.",
     "endpoints": [],
     "configurations": {},
-    "hash": "8ac72775345b6bb2"
+    "hash": "9e4628e0cfa0a824"
   },
   "llamaguardannotator": {
     "id": "llamaguardannotator",
@@ -105,7 +105,7 @@
       "together-llama-guard-7b-assistant"
     ],
     "configurations": {},
-    "hash": "234d2fd54dcc4b7d"
+    "hash": "9b58b74c8db47c4e"
   },
   "samplemetric": {
     "id": "samplemetric",
@@ -119,23 +119,27 @@
       "threshold_value": "0.35",
       "num_of_prompts_to_calculate": 1
     },
-    "hash": "22438c30060f69d8"
+    "hash": "2e6057f3023e678a"
   },
   "lionguardclassifier": {
     "id": "lionguardclassifier",
     "name": "LionGuard Classifier",
     "description": "This classifier measures how unsafe a given input is in the Singapore context.\nIt can calculate the number of toxic sentences detected. ",
     "endpoints": [],
-    "configurations": {},
-    "hash": "f18c14bf15ae45fe"
+    "configurations": {
+      "grading_classifier": "toxic"
+    },
+    "hash": "c4132969a2c7fe53"
   },
   "flagjudgeannotator": {
     "id": "flagjudgeannotator",
     "name": "FlagJudge Annotator",
     "description": "Calculates the number of correct response using FlagJudge (A judge model from FlagEval Group).",
-    "endpoints": [],
+    "endpoints": [
+      "flageval-flagjudge"
+    ],
     "configurations": {},
-    "hash": "c5a0783e8ee605dc"
+    "hash": "3eff0c79171924ee"
   },
   "q16_metric": {
     "id": "q16_metric",
@@ -143,7 +147,7 @@
     "description": "Q16 is a binary classifier used to determine whether an image is inappropriate (https://github.com/ml-research/Q16)",
     "endpoints": [],
     "configurations": {},
-    "hash": "a6403d2a6ea7f732"
+    "hash": "fc8f2a21a56f79e8"
   },
   "nudenet_metric": {
     "id": "nudenet_metric",
@@ -151,7 +155,7 @@
     "description": "NudeNet is a classifier used to deduce probabilities of exposed body parts in images.",
     "endpoints": [],
     "configurations": {},
-    "hash": "eaf9b4a52bf23b58"
+    "hash": "d8186bcea64cc448"
   },
   "genderbias_metric": {
     "id": "genderbias_metric",
@@ -159,6 +163,76 @@
     "description": "This metric uses a CLIP based gender classifier to determine the proportion of females returning a score between 0 and 0.5. score = |female_frac - 0.5|",
     "endpoints": [],
     "configurations": {},
-    "hash": "db4ab533d45ca892"
+    "hash": "92542b3cb022eef4"
+  },
+  "faithfulness": {
+    "id": "faithfulness",
+    "name": "Faithfulness",
+    "description": "This measures the factual consistency of the generated answer against the given context. It is calculated from answer and retrieved context. The answer is scaled to (0,1) range. Higher the better.",
+    "endpoints": [
+      "azure-langchain-openai-chatopenai-gpt4o"
+    ],
+    "configurations": {
+      "embeddings": [
+        "azure-langchain-openai-embedding-ada-2"
+      ]
+    },
+    "hash": "ad0b43142ff78095"
+  },
+  "answercorrectness": {
+    "id": "answercorrectness",
+    "name": "AnswerCorrectness",
+    "description": "Answer correctness in the context of Ragas involves evaluating the accuracy of a generated answer compared to the ground truth. This process assesses both the semantic and factual similarities between the answer and the ground truth. Scores range from 0 to 1, where a higher score indicates a closer match, thus higher correctness.",
+    "endpoints": [
+      "azure-langchain-openai-chatopenai-gpt4o"
+    ],
+    "configurations": {
+      "embeddings": [
+        "azure-langchain-openai-embedding-ada-2"
+      ]
+    },
+    "hash": "c6c50e11ad8ebfb9"
+  },
+  "contextrecall": {
+    "id": "contextrecall",
+    "name": "ContextRecall",
+    "description": "Context recall measures the extent to which the retrieved context aligns with the annotated answer, treated as the ground truth. It is computed using question, ground truth and the retrieved context, and the values range between 0 and 1, with higher values indicating better performance.",
+    "endpoints": [
+      "azure-langchain-openai-chatopenai-gpt4o"
+    ],
+    "configurations": {
+      "embeddings": [
+        "azure-langchain-openai-embedding-ada-2"
+      ]
+    },
+    "hash": "b1249a592f9b75bb"
+  },
+  "contextprecision": {
+    "id": "contextprecision",
+    "name": "ContextPrecision",
+    "description": "Context Precision is a metric that evaluates whether all of the ground-truth relevant items present in the contexts are ranked higher or not. Ideally, all the relevant chunks must appear at the top ranks. This metric is computed using the question, ground_truth, and the contexts, with values ranging between 0 and 1, where higher scores indicate better precision.",
+    "endpoints": [
+      "azure-langchain-openai-chatopenai-gpt4o"
+    ],
+    "configurations": {
+      "embeddings": [
+        "azure-langchain-openai-embedding-ada-2"
+      ]
+    },
+    "hash": "8964bf260c3fd34e"
+  },
+  "answerrelevance": {
+    "id": "answerrelevance",
+    "name": "AnswerRelevance",
+    "description": "The evaluation metric, Answer Relevancy, focuses on assessing how pertinent the generated answer is to the given prompt. A lower score is assigned to answers that are incomplete or contain redundant information and higher scores indicate better relevancy. This metric is computed using the question, the context and the answer.",
+    "endpoints": [
+      "azure-langchain-openai-chatopenai-gpt4o"
+    ],
+    "configurations": {
+      "embeddings": [
+        "azure-langchain-openai-embedding-ada-2"
+      ]
+    },
+    "hash": "3a16362073d037e6"
   }
 }
