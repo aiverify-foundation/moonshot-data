@@ -1,7 +1,7 @@
 name: Software Composition Analysis
 
-on:
- # Runs when a pull request review is being submitted
+# Runs when a pull request review is being submitted
+on: 
   pull_request:
 
   # Run this workflow manually from Actions tab
@@ -22,13 +22,13 @@ jobs:
   software-composition-analysis:
 
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 10
 
     steps:
 
     - name: Checkout Code (Pull_Request)
       if: github.event_name == 'pull_request'
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
           ref: ${{ github.event.pull_request.head.ref }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
@@ -36,7 +36,7 @@ jobs:
 
     - name: Checkout Code (Workflow_Dispatch)
       if: github.event_name == 'workflow_dispatch'
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
       with:
           ref: ${{ inputs.branch_to_test }}
 
@@ -55,26 +55,23 @@ jobs:
       with:
         python-version: "3.11"
 
-    - name: Install & Scan MOONSHOT DATA (Pull_Request)
+    - name: Install & Scan MOONSHOT (Pull_Request)
       if: github.event_name == 'pull_request'
       run: |
           python -m venv venv
           source venv/bin/activate
-          # pip install -r requirements.txt
-          pip install poetry
-          poetry install
-          bash <(curl -s -L https://detect.synopsys.com/detect9.sh) --blackduck.url=https://blackduck.aipo-imda.net/ --blackduck.api.token=${{ secrets.BLACKDUCK_TOKEN }} --detect.detector.search.depth=10 --detect.project.name=aiverify-moonshot-data --detect.project.version.name=$BRANCH --detect.source.path=. --detect.code.location.name="aiverify-moonshot-data_$BRANCH" --detect.excluded.directories=/tests,/venv --blackduck.trust.cert=true --detect.blackduck.scan.mode=RAPID
+          pip install -r requirements.txt
+          bash <(curl -s -L https://detect.synopsys.com/detect9.sh) --blackduck.url=https://blackduck.aipo-imda.net/ --blackduck.api.token=${{ secrets.BLACKDUCK_TOKEN }} --detect.detector.search.depth=10 --detect.project.name=aiverify-moonshot --detect.project.version.name=$BRANCH --detect.source.path=. --detect.code.location.name="aiverify-moonshot_$BRANCH" --detect.excluded.directories=/tests --blackduck.trust.cert=true --detect.excluded.detector.types=POETRY --detect.blackduck.scan.mode=RAPID
           cd ../
-          
-    - name: Install & Scan MOONSHOT DATA (Workflow_Dispatch)
+
+    - name: Install & Scan MOONSHOT (Workflow_Dispatch)
       if: github.event_name == 'workflow_dispatch'
       run: |
           python -m venv venv
           source venv/bin/activate
-          # pip install -r requirements.txt
-          pip install poetry
-          poetry install
-          bash <(curl -s -L https://detect.synopsys.com/detect9.sh) --blackduck.url=https://blackduck.aipo-imda.net/ --blackduck.api.token=${{ secrets.BLACKDUCK_TOKEN }} --detect.detector.search.depth=10 --detect.project.name=aiverify-moonshot-data --detect.project.version.name=$BRANCH --detect.source.path=. --detect.code.location.name="aiverify-moonshot-data_$BRANCH" --detect.excluded.directories=/tests,/venv --blackduck.trust.cert=true --detect.notices.report=true --detect.notices.report.path=.
+          pip install -r requirements.txt
+          bash <(curl -s -L https://detect.synopsys.com/detect9.sh) --blackduck.url=https://blackduck.aipo-imda.net/ --blackduck.api.token=${{ secrets.BLACKDUCK_TOKEN }} --detect.detector.search.depth=10 --detect.project.name=aiverify-moonshot --detect.project.version.name=$BRANCH --detect.source.path=. --detect.code.location.name="aiverify-moonshot_$BRANCH" --detect.excluded.directories=/tests --blackduck.trust.cert=true --detect.excluded.detector.types=POETRY --detect.notices.report=true --detect.notices.report.path=.
+          mv aiverify_moonshot-data_main_Black_Duck_Notices_Report.txt LICENSE.md
 
     - name: Configure GIT (Workflow_Dispatch)
       if: github.event_name == 'workflow_dispatch'
@@ -93,7 +90,7 @@ jobs:
       if: github.event_name == 'workflow_dispatch'
       run: |
           git add .
-          git commit -m "Update Notices"
+          git commit -m "Update LICENSE.md"
           git push -f -u origin HEAD
       shell: bash
 
@@ -102,7 +99,7 @@ jobs:
       env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
-          gh pr create --title "Update License for Moonshot" --body "This PR updates adds License File for Moonshot" --base main --head notices
+          gh pr create --title "Update LICENSE.md for Moonshot" --body "This PR updates License File for Moonshot" --base main --head notices
       shell: bash
 
     - name: Merge PR (Workflow_Dispatch)
