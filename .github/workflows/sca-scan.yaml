@@ -89,7 +89,7 @@ jobs:
     - name: Commit Notice File (Workflow_Dispatch)
       if: github.event_name == 'workflow_dispatch'
       run: |
-          git add .
+          git add NOTICES.md
           git commit -m "Update NOTICES.md"
           git push -f -u origin HEAD
       shell: bash
