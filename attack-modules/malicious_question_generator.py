@@ -94,10 +94,16 @@ class MaliciousQuestionGenerator(AttackModule):
         )
 
         try:
-            questions = json.loads(results[0].predicted_results)
             prepared_prompts = []
-            for question in questions:
-                prepared_prompts.append(question)
+            # try to use model to generate malicious questions
+            try:
+                questions = json.loads(results[0].predicted_results)
+                for question in questions:
+                    prepared_prompts.append(question)
+
+            # except exception that model cannot generate malicious questions. likely due to guardrails
+            except json.JSONDecodeError:
+                prepared_prompts.append(results[0].predicted_results)
 
             for target_llm_connector in self.connector_instances:
                 result_list.append(
