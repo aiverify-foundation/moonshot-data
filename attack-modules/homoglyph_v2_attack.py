@@ -83,12 +83,13 @@ class RandomHomoglyph(AttackModule):
                 except:
                     logger.error(f"cannot get homoglyph for {letter}")
                     continue
-            homoglyph_prompt = f"[{round(percentage*100)}%]"+"".join(prompt_copy)
+            # homoglyph_prompt = f"[{round(percentage*100)}%]"+"".join(prompt_copy)
+            homoglyph_prompt = "".join(prompt_copy)
             result_list.append(await self._send_prompt_to_all_llm([homoglyph_prompt]))
-            
+        
         for res in result_list:
             for x in res:
-                logger.debug(f"[HomoglyphGenerator] Prompt: {x.prompt}")
+                logger.debug(f"[HomoglyphGenerator] Prompt: [{round(percentage*100)}% changed] {x.prompt}")
                 logger.debug(
                     f"[HomoglyphGenerator] Predicted Results: {x.predicted_results}\n"
                 )
