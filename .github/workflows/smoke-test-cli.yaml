@@ -130,8 +130,7 @@ jobs:
         MOONSHOT_PORT_NUMBER: ${{ secrets.MOONSHOT_PORT_NUMBER }}
       run: |
          cd moonshot-smoke-testing
+         pip install -r requirements.txt
          cd tests
          pwd
-         pip install pytest
-         pip install python-dotenv
          pytest test_cli.py::test_cli_benchmark
