@@ -113,7 +113,6 @@ jobs:
         npm run build
         cd ../
         source venv/bin/activate
-        python -m moonshot web &
         pwd
 
     - name: Checkout Smoke Test 
@@ -134,4 +133,5 @@ jobs:
          cd tests
          pwd
          pip install pytest
+         pip install python-dotenv
          pytest test_cli.py::test_cli_benchmark
