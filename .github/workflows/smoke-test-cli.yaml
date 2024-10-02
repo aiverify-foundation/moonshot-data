@@ -63,6 +63,8 @@ jobs:
     - name: Setup Moonshot
       run: |
         python -m venv venv
+        pwd
+        ls
         source venv/bin/activate
         pip install -r requirements.txt
         touch .env
