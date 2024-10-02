@@ -91,6 +91,8 @@ jobs:
         source venv/bin/activate
         cd moonshot-data
         pip install -r requirements.txt
+        pwd
+        ls
 
     - name: Checkout Moonshot UI (Pull Request Review)
       if: github.event_name == 'pull_request_review'
@@ -134,4 +136,6 @@ jobs:
          cd moonshot-smoke-testing
          cd tests
          pwd
+         pip install python-dotenv
+         pip install pytest
          pytest test_cli.py::test_cli_benchmark
