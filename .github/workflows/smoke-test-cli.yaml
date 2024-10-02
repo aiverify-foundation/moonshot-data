@@ -133,9 +133,11 @@ jobs:
         MOONSHOT_URL: ${{ secrets.MOONSHOT_URL }}
         MOONSHOT_PORT_NUMBER: ${{ secrets.MOONSHOT_PORT_NUMBER }}
       run: |
+         source venv/bin/activate
          cd moonshot-smoke-testing
          cd tests
          pwd
+         ls
          pip install python-dotenv
          pip install pytest
          pytest test_cli.py::test_cli_benchmark
