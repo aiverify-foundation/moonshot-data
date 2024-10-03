@@ -9,6 +9,11 @@
             "llm-judge-openai-gpt4-annotator"
         ]
     },
+    "cybersecevalannotator":{
+        "endpoints": [
+            "llm-judge-azure-gpt4-annotator"
+        ]
+    },
     "lionguardclassifier":{
         "configurations":{
             "grading_classifier": "toxic"
@@ -24,9 +29,7 @@
             "openai-gpt35-turbo-16k",
             "openai-gpt35-turbo"
         ],
-        "configurations":{
-            "threshold_value": "0.35",
-            "num_of_prompts_to_calculate": 1
-        }        
+        "threshold_value": "0.35",
+        "num_of_prompts_to_calculate": 1
     }
 }
