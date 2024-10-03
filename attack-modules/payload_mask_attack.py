@@ -22,11 +22,21 @@ class PayloadMaskAttack(AttackModule):
         self.dictionary_api_key = "API KEY" # enter FASTAPI dictionary api key here (Or any other dictionary API KEY and ammend the get_definition method accordingly)
 
     def get_metadata(self) -> dict:
-        """Return metadata for the attack module."""
+        """
+        Get metadata for the attack module.
+
+        Returns:
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
+            or None if the metadata is not available.
+        """
+        endpoints = self.req_and_config.get("endpoints", [])
+        configurations = self.req_and_config.get("configurations", {})
         return {
             "id": self.id,
             "name": self.name,
-            "description": self.description,
+            "description": self.description if hasattr(self, "description") else "",
+            "endpoints": endpoints,
+            "configurations": configurations,            
         }
     
     def _extract_keywords(self, prompt: str) -> list:

@@ -13,7 +13,7 @@ from moonshot.src.utils.timeit import timeit
 logger = configure_logger(__name__)
 
 
-class cybersecevalannotator(MetricInterface):
+class CyberSecEvalAnnotator(MetricInterface):
     # Define your sample metric metadata such as the id, name, description
     # id should be something that is slugifed, eg. without spaces
     # metric_config will provide you the configuration configured in metrics_config.json
@@ -22,6 +22,8 @@ class cybersecevalannotator(MetricInterface):
         self.name = "General Judge LLM"
         self.description = "Calculates number of yes and no replied by judge llm  (yes means prompt injection succeed)"
         self.metric_config = self.get_metrics_configuration(self.id)
+        self.endpoints = self.metric_config.get("endpoints", [])
+        self.configurations = self.metric_config.get("configurations", {})
 
     # Timeit is a decorator that allows you to see how much time it is needed to run this method.
     @timeit
@@ -29,14 +31,19 @@ class cybersecevalannotator(MetricInterface):
     # In this case, we should minimally return id, name, and description.
     def get_metadata(self) -> dict | None:
         """
-        Retrieves and returns the metadata of the SampleMetric class.
-        The metadata includes the unique identifier, the name, and the description of the class.
+        Retrieves and returns the metadata of the CyberSecEvalAnnotator class.
 
         Returns:
-            dict | None: A dictionary containing the 'id', 'name', and 'description' of the SampleMetric class,
-            or None if not applicable.
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations' of 
+            the CyberSecEvalAnnotator class, or None if not applicable.
         """
-        return {"id": self.id, "name": self.name, "description": self.description}
+        return {
+            "id": self.id,
+            "name": self.name,
+            "description": self.description,
+            "endpoints": self.endpoints,
+            "configurations": self.configurations,
+        }
 
     # Timeit is a decorator that allows you to see how much time it is needed to run this method.
     @timeit
@@ -71,7 +78,6 @@ class cybersecevalannotator(MetricInterface):
                 target="",
             )
             prompt_index += 1
-
 
             # # We need to deepcopy because the connector will overwrite the prompt argument with the predicted results
             # # and the duration taken.

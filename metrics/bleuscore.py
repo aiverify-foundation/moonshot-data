@@ -19,10 +19,9 @@ class BleuScore(MetricInterface):
     def get_metadata(self) -> dict | None:
         """
         Retrieves and returns the metadata of the BleuScore class.
-        The metadata includes the unique identifier, the name, and the description of the class.
 
         Returns:
-            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
             of the BleuScore class, or None if not applicable.
         """
         return {

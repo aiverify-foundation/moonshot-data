@@ -3,8 +3,6 @@ import random
 from moonshot.src.redteaming.attack.attack_module import AttackModule
 from moonshot.src.redteaming.attack.attack_module_arguments import AttackModuleArguments
 from moonshot.src.utils.log import configure_logger
-# from nltk import word_tokenize
-# from nltk.tokenize.treebank import TreebankWordDetokenizer
 
 # Create a logger for this module
 logger = configure_logger(__name__)
@@ -25,17 +23,18 @@ class RandomHomoglyph(AttackModule):
         """
         Get metadata for the attack module.
 
-        Returns a dictionary containing the id, name, and description of the attack module. If the name or description
-        is not available, empty strings are returned.
-
         Returns:
-            dict | None: A dictionary containing the metadata of the attack module, or None if the metadata is not
-            available.
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
+            or None if the metadata is not available.
         """
+        endpoints = self.req_and_config.get("endpoints", [])
+        configurations = self.req_and_config.get("configurations", {})
         return {
             "id": self.id,
             "name": self.name,
             "description": self.description if hasattr(self, "description") else "",
+            "endpoints": endpoints,
+            "configurations": configurations,   
         }
     
     def _get_letter_length(self, word: str) -> int:
