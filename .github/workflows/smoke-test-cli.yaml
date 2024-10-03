@@ -1,4 +1,4 @@
-# Smoke Test
+# Cli Smoke Test
 
 name: Moonshot CLI Smoke Test
 
@@ -63,8 +63,6 @@ jobs:
     - name: Setup Moonshot
       run: |
         python -m venv venv
-        pwd
-        ls
         source venv/bin/activate
         pip install -r requirements.txt
         touch .env
@@ -91,8 +89,6 @@ jobs:
         source venv/bin/activate
         cd moonshot-data
         pip install -r requirements.txt
-        pwd
-        ls
 
     - name: Checkout Moonshot UI (Pull Request Review)
       if: github.event_name == 'pull_request_review'
@@ -116,8 +112,6 @@ jobs:
         npm ci
         npm run build
         cd ../
-        pwd
-        ls
 
     - name: Checkout Smoke Test 
       uses: actions/checkout@v4
@@ -136,8 +130,6 @@ jobs:
          source venv/bin/activate
          cd moonshot-smoke-testing
          cd tests
-         pwd
-         ls
          pip install python-dotenv
          pip install pytest
-         pytest test_cli.py::test_cli_benchmark
+         pytest test_cli.py
