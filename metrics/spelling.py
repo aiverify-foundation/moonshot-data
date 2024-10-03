@@ -21,6 +21,8 @@ class SpellingScore(MetricInterface):
             "form the original word before comparing to known words in a word frequency list."
         )
         self.metric_config = self.get_metrics_configuration(self.id)
+        self.endpoints = self.metric_config.get("endpoints", [])
+        self.configurations = self.metric_config.get("configurations", {})
 
     def get_metadata(self) -> dict | None:
         """
@@ -31,15 +33,12 @@ class SpellingScore(MetricInterface):
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
             of the SpellingScore class, or None if not applicable.
         """
-        endpoints = self.metric_config.get("endpoints", [])
-        configurations = self.metric_config.get("configurations", {})
-
         return {
             "id": self.id,
             "name": self.name,
             "description": self.description,
-            "endpoints": endpoints,
-            "configurations": configurations,
+            "endpoints": self.endpoints,
+            "configurations": self.configurations,
         }
 
     @timeit

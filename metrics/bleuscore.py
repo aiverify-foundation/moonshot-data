@@ -13,6 +13,8 @@ class BleuScore(MetricInterface):
         self.name = "BleuScore"
         self.description = "Bleuscore uses Bleu to return the various rouge scores."
         self.metric_config = self.get_metrics_configuration(self.id)
+        self.endpoints = self.metric_config.get("endpoints", [])
+        self.configurations = self.metric_config.get("configurations", {})
 
     def get_metadata(self) -> dict | None:
         """
@@ -23,15 +25,12 @@ class BleuScore(MetricInterface):
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
             of the BleuScore class, or None if not applicable.
         """
-        endpoints = self.metric_config.get("endpoints", [])
-        configurations = self.metric_config.get("configurations", {})
-
         return {
             "id": self.id,
             "name": self.name,
             "description": self.description,
-            "endpoints": endpoints,
-            "configurations": configurations,
+            "endpoints": self.endpoints,
+            "configurations": self.configurations,
         }
 
     @timeit
