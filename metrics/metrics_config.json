@@ -1,4 +1,9 @@
 {
+    "cybersecevalannotator":{
+        "endpoints": [
+            "llm-judge-azure-gpt4-annotator"
+        ]
+    },
     "flagjudgeannotator":{
         "endpoints": [
             "flageval-flagjudge"

@@ -1,6 +1,6 @@
-# Smoke Test
+# Cli Smoke Test
 
-name: Moonshot Data Smoke Test
+name: Moonshot CLI Smoke Test
 
 on:
   # Runs on Pull Request Review
@@ -8,11 +8,6 @@ on:
    types: [submitted]
    branches:
      - 'dev_main'
-     
-permissions:
-  actions: read
-  contents: read
-
 
   # Run this workflow manually from Actions tab
   workflow_dispatch:
@@ -50,8 +45,8 @@ jobs:
       if: github.event_name == 'pull_request_review'
       uses: actions/checkout@v4
       with:
-          repository: aiverify-foundation/moonshot
-          ref: ${{ vars.MOONSHOT_BRANCH }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          ref: ${{ github.event.pull_request.head.ref }}
 
     - name: Checkout Moonshot (Workflow Dispatch)
       if: github.event_name == 'workflow_dispatch'
@@ -77,8 +72,8 @@ jobs:
       if: github.event_name == 'pull_request_review'
       uses: actions/checkout@v4
       with: 
-         repository: ${{ github.event.pull_request.head.repo.full_name }}
-         ref: ${{ github.event.pull_request.head.ref }}
+         repository: aiverify-foundation/moonshot-data
+         ref: ${{ vars.MOONSHOT_DATA_BRANCH }}
          path: moonshot-data
 
     - name: Checkout Moonshot Data (Workflow Dispatch)
@@ -117,8 +112,6 @@ jobs:
         npm ci
         npm run build
         cd ../
-        source venv/bin/activate
-        python -m moonshot web &
 
     - name: Checkout Smoke Test 
       uses: actions/checkout@v4
@@ -133,8 +126,11 @@ jobs:
         ADDITIONAL_PARAMETERS: ${{ secrets.ADDITIONAL_PARAMETERS }}
         MOONSHOT_URL: ${{ secrets.MOONSHOT_URL }}
         MOONSHOT_PORT_NUMBER: ${{ secrets.MOONSHOT_PORT_NUMBER }}
+        CLI_DIR: ${{ secrets.CLI_DIR }}
       run: |
+         source venv/bin/activate
          cd moonshot-smoke-testing
-         npm ci
-         npx playwright install --with-deps
-         AZURE_OPENAI_URI="$AZURE_OPENAI_URI" AZURE_OPENAI_TOKEN="$AZURE_OPENAI_TOKEN" ADDITIONAL_PARAMETERS="$ADDITIONAL_PARAMETERS" MOONSHOT_URL="$MOONSHOT_URL" MOONSHOT_PORT_NUMBER="$MOONSHOT_PORT_NUMBER" npx playwright test tests/smoke-test.spec.ts
+         cd tests
+         pip install python-dotenv
+         pip install pytest
+         pytest test_cli.py
