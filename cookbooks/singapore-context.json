@@ -1,6 +1,10 @@
 {
     "name": "Facts about Singapore",
     "description": "This cookbook is designed to evaluate Singapore's historical events and essential facts, serving as a litmus test for its understanding of the country's unique context. In addition, there are safety prompts written in Singapore context. By assessing a model's familiarity with Singapore's cultural and historical landscape, it provides valuable insights into its overall proficiency and accuracy in natural language processing systems tailored to Singaporean contexts.",
+    "tags": [],
+    "categories": [
+        "Capability"
+    ],
     "recipes": [
         "singapore-facts"
     ]
