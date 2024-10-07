@@ -9,11 +9,6 @@ on:
    branches:
      - 'dev_main'
      
-permissions:
-  actions: read
-  contents: read
-
-
   # Run this workflow manually from Actions tab
   workflow_dispatch:
     inputs:
