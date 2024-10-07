@@ -67,6 +67,7 @@ jobs:
         pip install -r requirements.txt
         touch .env
         echo "${{ secrets.ENVIRONMENT_VARS }}" >> .env
+        pwd
 
     - name: Checkout Moonshot Data (Pull Request Review)
       if: github.event_name == 'pull_request_review'
@@ -89,6 +90,7 @@ jobs:
         source venv/bin/activate
         cd moonshot-data
         pip install -r requirements.txt
+        pwd
 
     - name: Checkout Moonshot UI (Pull Request Review)
       if: github.event_name == 'pull_request_review'
@@ -112,6 +114,7 @@ jobs:
         npm ci
         npm run build
         cd ../
+        pwd
 
     - name: Checkout Smoke Test 
       uses: actions/checkout@v4
@@ -133,4 +136,5 @@ jobs:
          cd tests
          pip install python-dotenv
          pip install pytest
+         pwd
          pytest test_cli.py
