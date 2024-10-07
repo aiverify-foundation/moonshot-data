@@ -33,7 +33,7 @@ class JsonIO(IOInterface):
         Returns:
             bool: Always returns True to indicate the operation was executed without raising an exception.
         """
-        with open(self.json_path, "w") as json_file:
+        with open(self.json_path, "w", encoding="utf-8") as json_file:
             json.dump(data, json_file, indent=2, ensure_ascii=False)
 
         return True
@@ -56,7 +56,7 @@ class JsonIO(IOInterface):
         Returns:
             bool: Always returns True to indicate the operation was executed without raising an exception.
         """
-        with open(self.json_path, "w") as json_file:
+        with open(self.json_path, "w", encoding="utf-8") as json_file:
             json_file.write("{\n")
             keys = list(data.keys())
             last_key = keys[-1] if not iterator_keys else iterator_keys[-1]
