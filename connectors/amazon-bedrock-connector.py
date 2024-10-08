@@ -1,9 +1,8 @@
+import asyncio
 import logging
 
-import asyncio
 import boto3
 from botocore.config import Config
-
 from moonshot.src.connectors.connector import Connector, perform_retry
 from moonshot.src.connectors_endpoints.connector_endpoint_arguments import (
     ConnectorEndpointArguments,
@@ -48,12 +47,11 @@ class AmazonBedrockConnector(Connector):
     ...     "token": "NONE",
     ...     "max_calls_per_second": 1,
     ...     "max_concurrency": 1,
+    ...     "model": "anthropic.claude-3-sonnet-20240229-v1:0",
     ...     "params": {
     ...         "timeout": 300,
-    ...         "allow_retries": true,
-    ...         "num_of_retries": 3,
+    ...         "max_attempts": 3,
     ...         "temperature": 0.5,
-    ...         "model": "anthropic.claude-3-sonnet-20240229-v1:0",
     ...         "client": {
     ...             "endpoint_url": "https://...",
     ...             "config": {
@@ -116,15 +114,6 @@ class AmazonBedrockConnector(Connector):
             else:
                 client_kwargs["endpoint_url"] = self.endpoint
         self._client = self._session.client("bedrock-runtime", **client_kwargs)
-
-        # Set the model to use and remove it from optional_params if it exists
-        if "model" not in self.optional_params:
-            raise ValueError(
-                "`params.model` must be set to an enabled Model ID to use the Amazon Bedrock "
-                "connector. For more information, see: "
-                "https://docs.aws.amazon.com/bedrock/latest/userguide/model-ids.html"
-            )
-        self.model = self.optional_params["model"]
 
     @Connector.rate_limited
     @perform_retry
