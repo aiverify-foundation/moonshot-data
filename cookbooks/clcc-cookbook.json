@@ -1,0 +1,7 @@
+{
+    "name": "Chinese Linguistics & Cognition Challenge (*Beijing Academy of AI)",
+    "description": "Created by Beijing Academy of AI, This benchmark is designed to test for various aspects of natural language understanding and cognitive processing in the context of the Chinese language. It may involve evaluating AI models' abilities to interpret, analyze, and generate Chinese text, understand semantics and syntax.",
+    "recipes": [
+        "clcc"
+    ]
+}
