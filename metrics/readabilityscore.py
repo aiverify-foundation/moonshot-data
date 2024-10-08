@@ -12,17 +12,24 @@ class ReadabilityScore(MetricInterface):
         self.name = "ReadabilityScore"
         self.description = "ReadabilityScore uses Flesch Reading Ease to compute the complexity of the output"
         self.metric_config = self.get_metrics_configuration(self.id)
+        self.endpoints = self.metric_config.get("endpoints", [])
+        self.configurations = self.metric_config.get("configurations", {})
 
     def get_metadata(self) -> dict | None:
         """
         Retrieves and returns the metadata of the ReadabilityScore class.
-        The metadata includes the unique identifier, the name, and the description of the class.
 
         Returns:
-            dict | None: A dictionary containing the 'id', 'name', and 'description' of the ReadabilityScore class,
-            or None if not applicable.
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
+            of the ReadabilityScore class, or None if not applicable.
         """
-        return {"id": self.id, "name": self.name, "description": self.description}
+        return {
+            "id": self.id,
+            "name": self.name,
+            "description": self.description,
+            "endpoints": self.endpoints,
+            "configurations": self.configurations,
+        }
 
     @timeit
     async def get_results(

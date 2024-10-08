@@ -1,8 +1,8 @@
 {
-  "name": "Ollama Llama3",
-  "connector_type": "openai-connector",
-  "uri": "http://localhost:11434/v1/",
-  "token": "ollama",
+  "name": "google-gemini-flash-15",
+  "connector_type": "google-gemini-connector",
+  "uri": "",
+  "token": "",
   "max_calls_per_second": 1,
   "max_concurrency": 1,
   "params": {
@@ -10,6 +10,6 @@
     "allow_retries": true,
     "num_of_retries": 3,
     "temperature": 0.5,
-    "model": "llama3"
+    "model": "gemini-1.5-flash"
   }
 }

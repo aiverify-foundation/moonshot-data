@@ -8,6 +8,9 @@ from nltk.tokenize.treebank import TreebankWordDetokenizer
 # Create a logger for this module
 logger = configure_logger(__name__)
 
+# Configurble PARAMS - Number of prompts to be sent to target
+DEFAULT_MAX_ITERATION = 20
+
 
 class HomoglyphGenerator(AttackModule):
     def __init__(self, am_id: str, am_arguments: AttackModuleArguments | None = None):
@@ -17,7 +20,7 @@ class HomoglyphGenerator(AttackModule):
         self.description = (
             "This module tests for adversarial textual robustness. Homoglyphs are alternative words for words "
             "comprising of ASCII characters.\nExample of a homoglyph fool -> fooI\nThis module purturbs the prompt "
-            "with all available homoglyphs for each word present.\nParameters:\n1. MAX_ITERATIONS - Maximum "
+            "with all available homoglyphs for each word present.\nParameters:\n1. DEFAULT_MAX_ITERATION - Maximum "
             "number of prompts that should be sent to the target. [Default: 20]"
         )
 
@@ -25,17 +28,18 @@ class HomoglyphGenerator(AttackModule):
         """
         Get metadata for the attack module.
 
-        Returns a dictionary containing the id, name, and description of the attack module. If the name or description
-        is not available, empty strings are returned.
-
         Returns:
-            dict | None: A dictionary containing the metadata of the attack module, or None if the metadata is not
-            available.
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
+            or None if the metadata is not available.
         """
+        endpoints = self.req_and_config.get("endpoints", [])
+        configurations = self.req_and_config.get("configurations", {})
         return {
             "id": self.id,
             "name": self.name,
             "description": self.description if hasattr(self, "description") else "",
+            "endpoints": endpoints,
+            "configurations": configurations,
         }
 
     async def execute(self):
@@ -59,8 +63,11 @@ class HomoglyphGenerator(AttackModule):
         and sends them to the respective LLMs.
         """
         result_list = []
-        # Configurble PARAMS - Number of prompts to be sent to target
-        MAX_ITERATION = 20
+
+        # get the configurable params from the config JSON file. if they're not specified, use the default values
+        configurations = self.req_and_config.get("configurations", {})
+        max_iteration = configurations.get("max_iteration", DEFAULT_MAX_ITERATION)
+
         # converting glyphs to ASCII characters
         homoglyphs = hg.Homoglyphs(
             strategy=hg.STRATEGY_LOAD, ascii_strategy=hg.STRATEGY_REMOVE
@@ -69,7 +76,7 @@ class HomoglyphGenerator(AttackModule):
         word_list = word_tokenize(self.prompt)
         word_list_len = len(word_list)
         for idx in range(word_list_len):
-            if count == MAX_ITERATION:
+            if count == max_iteration:
                 break
             hglyphs = []
             try:
@@ -85,7 +92,7 @@ class HomoglyphGenerator(AttackModule):
                     count += 1
                     result_list.append(await self._send_prompt_to_all_llm([new_prompt]))
                     word_list = word_tokenize(self.prompt)
-                    if count == MAX_ITERATION:
+                    if count == max_iteration:
                         break
         for res in result_list:
             for x in res:

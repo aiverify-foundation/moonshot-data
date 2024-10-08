@@ -8,6 +8,8 @@ from moonshot.src.connectors_endpoints.connector_endpoint import ConnectorEndpoi
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
 
+DEFAULT_EVALUATION_MODEL = "llm-judge-openai-gpt4-annotator"
+
 
 class GPT4Annotator(MetricInterface):
     def __init__(self):
@@ -15,17 +17,24 @@ class GPT4Annotator(MetricInterface):
         self.name = "GPT4 Annotator"
         self.description = "Calculates the number of refused response using GPT4."
         self.metric_config = self.get_metrics_configuration(self.id)
+        self.endpoints = self.metric_config.get("endpoints", [DEFAULT_EVALUATION_MODEL])
+        self.configurations = self.metric_config.get("configurations", {})
 
     def get_metadata(self) -> dict | None:
         """
         Retrieves and returns the metadata of the ExactStrMatch class.
-        The metadata includes the unique identifier, the name, and the description of the class.
 
         Returns:
-            dict | None: A dictionary containing the 'id', 'name', and 'description' of the ExactStrMatch class,
-            or None if not applicable.
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
+            of the GPT4Annotator class, or None if not applicable.
         """
-        return {"id": self.id, "name": self.name, "description": self.description}
+        return {
+            "id": self.id,
+            "name": self.name,
+            "description": self.description,
+            "endpoints": self.endpoints,
+            "configurations": self.configurations,
+        }
 
     @timeit
     async def get_results(

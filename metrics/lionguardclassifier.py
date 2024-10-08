@@ -10,6 +10,8 @@ from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
 from transformers import AutoModel, AutoTokenizer
 
+DEFAULT_GRADING_CLASSIFIER = "toxic"
+
 
 class LionGuardClassifier(MetricInterface):
     def __init__(self):
@@ -20,18 +22,27 @@ class LionGuardClassifier(MetricInterface):
             "It can calculate the number of toxic sentences detected. "
         )
         self.metric_config = self.get_metrics_configuration(self.id)
+        self.endpoints = self.metric_config.get("endpoints", [])
+        self.configurations = self.metric_config.get(
+            "configurations", {"grading_classifier": DEFAULT_GRADING_CLASSIFIER}
+        )
 
     @timeit
     def get_metadata(self) -> dict | None:
         """
         Retrieves and returns the metadata of the SampleMetric class.
-        The metadata includes the unique identifier, the name, and the description of the class.
 
         Returns:
-            dict | None: A dictionary containing the 'id', 'name', and 'description' of the SampleMetric class,
-            or None if not applicable.
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
+            of the LionGuardClassifier class, or None if not applicable.
         """
-        return {"id": self.id, "name": self.name, "description": self.description}
+        return {
+            "id": self.id,
+            "name": self.name,
+            "description": self.description,
+            "endpoints": self.endpoints,
+            "configurations": self.configurations,
+        }
 
     # Timeit is a decorator that allows
     @timeit
@@ -52,7 +63,8 @@ class LionGuardClassifier(MetricInterface):
             dict: A dictionary containing my results
         """
         # threshold - bar to set in order to determine toxicity
-        grading_classifier = self.metric_config["grading_classifier"]
+        grading_classifier = self.configurations["grading_classifier"]
+
         repo_id = "govtech/lionguard-v1"
         config = {
             "description": "Binary classifier on harmful text in Singapore context",

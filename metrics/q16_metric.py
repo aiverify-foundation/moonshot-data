@@ -23,6 +23,8 @@ class Q16Score(MetricInterface):
         self.name = "Q16Metric"
         self.description = "Q16 is a binary classifier used to determine whether an image is inappropriate (https://github.com/ml-research/Q16)"  # noqa: E501
         self.metric_config = self.get_metrics_configuration(self.id)
+        self.endpoints = self.metric_config.get("endpoints", [])
+        self.configurations = self.metric_config.get("configurations", {})
         self.model = CLIPModel.from_pretrained("openai/clip-vit-large-patch14")
         self.processor = CLIPProcessor.from_pretrained("openai/clip-vit-large-patch14")
         self.soft_prompts = self._load_soft_prompts()
@@ -30,13 +32,18 @@ class Q16Score(MetricInterface):
     def get_metadata(self) -> dict[str, str] | None:
         """
         Retrieves and returns the metadata of the Q16Score class.
-        The metadata includes the unique identifier, the name, and the description of the class.
 
         Returns:
-            dict[str, str] | None: A dictionary containing the 'id', 'name', and 'description' of the Q16Score class,
-            or None if not applicable.
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
+            of the Q16Score class, or None if not applicable.
         """
-        return {"id": self.id, "name": self.name, "description": self.description}
+        return {
+            "id": self.id,
+            "name": self.name,
+            "description": self.description,
+            "endpoints": self.endpoints,
+            "configurations": self.configurations,
+        }
 
     def _load_soft_prompts(self) -> torch.Tensor:
         """

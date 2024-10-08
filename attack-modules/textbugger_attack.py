@@ -28,6 +28,15 @@ os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 os.environ["TF_CPP_MIN_LOG_LEVEL"] = "3"
 tf.get_logger().setLevel(logging.ERROR)
 
+# Configurble PARAMS - Percentage of words in a prompt that should be changed
+DEFAULT_WORD_SWAP_RATIO = 0.2
+# Configurble PARAMS - To select top 5 semantic words our of GloVe emedding
+DEFAULT_TOP_K = 5
+# Configurble PARAMS -Threshold for Universal Sentence Encoder
+DEFAULT_THRESHOLD = 0.8
+# Configurble PARAMS - Number of prompts to be sent to target
+DEFAULT_MAX_ITERATION = 5
+
 
 class BugGenerator(AttackModule):
     def __init__(self, am_id: str, am_arguments: AttackModuleArguments | None = None):
@@ -37,7 +46,7 @@ class BugGenerator(AttackModule):
         self.description = (
             "This module tests for adversarial textual robustness and implements the perturbations listed in the paper "
             "TEXTBUGGER: Generating Adversarial Text Against Real-world Applications.\nParameters:\n1. "
-            "MAX_ITERATIONS - Number of prompts that should be sent to the target. This is also the"
+            "DEFAULT_MAX_ITERATION - Number of prompts that should be sent to the target. This is also the"
             "number of transformations that should be generated. [Default: 5]\n"
             "Note:\nUsage of this attack module requires the internet. Initial downloading of the "
             "GLoVe embedding occurs when the UniversalEncoder is called.\nEmbedding is retrieved from "
@@ -48,17 +57,19 @@ class BugGenerator(AttackModule):
         """
         Get metadata for the attack module.
 
-        Returns a dictionary containing the id, name, and description of the attack module. If the name or description
-        is not available, empty strings are returned.
-
         Returns:
-            dict | None: A dictionary containing the metadata of the attack module, or None if the metadata is not
-            available.
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
+            or None if the metadata is not available.
         """
+        endpoints = self.req_and_config.get("endpoints", [])
+        configurations = self.req_and_config.get("configurations", {})
+
         return {
             "id": self.id,
             "name": self.name,
             "description": self.description if hasattr(self, "description") else "",
+            "endpoints": endpoints,
+            "configurations": configurations,
         }
 
     async def execute(self):
@@ -83,14 +94,14 @@ class BugGenerator(AttackModule):
         and sends them to the respective LLMs.
         """
         result_list = []
-        # Configurble PARAMS - Percentage of words in a prompt that should be changed
-        word_swap_ratio = 0.2
-        # Configurble PARAMS - To select top 5 semantic words our of GloVe emedding
-        top_k = 5
-        # Configurble PARAMS -Threshold for Universal Sentence Encoder
-        threshold = 0.8
-        # Configurble PARAMS - Number of prompts to be sent to target
-        MAX_ITERATION = 5
+
+        # get the configurable params from the config JSON file. if they're not specified, use the default values
+        configurations = self.req_and_config.get("configurations", {})
+        max_iteration = configurations.get("max_iteration", DEFAULT_MAX_ITERATION)
+        word_swap_ratio = configurations.get("word_swap_ratio", DEFAULT_WORD_SWAP_RATIO)
+        top_k = configurations.get("top_k", DEFAULT_TOP_K)
+        threshold = configurations.get("threshold", DEFAULT_THRESHOLD)
+
         transformation = CompositeTransformation(
             [
                 # (1) Insert: Insert a space into the word.
@@ -142,7 +153,7 @@ class BugGenerator(AttackModule):
             transformation=transformation,
             constraints=constraints,
             pct_words_to_swap=word_swap_ratio,
-            transformations_per_example=MAX_ITERATION,
+            transformations_per_example=max_iteration,
         )
         logger.debug(f"{'*'*10} [BugGenerator] Augmentation in Progress {'*'*10}")
         start = time.process_time()

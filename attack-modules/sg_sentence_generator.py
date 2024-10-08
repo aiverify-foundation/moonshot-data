@@ -4,6 +4,9 @@ from moonshot.src.redteaming.attack.attack_module_arguments import AttackModuleA
 # How to only download this when user wants to run this attack module?
 from transformers import pipeline
 
+# Configurble PARAMS - Number of prompts to be sent to target
+DEFAULT_MAX_ITERATION = 5
+
 
 class SGSentenceGenerator(AttackModule):
     def __init__(self, am_id: str, am_arguments: AttackModuleArguments | None = None):
@@ -21,17 +24,19 @@ class SGSentenceGenerator(AttackModule):
         """
         Get metadata for the attack module.
 
-        Returns a dictionary containing the id, name, and description of the attack module. If the name or description
-        is not available, empty strings are returned.
-
         Returns:
-            dict | None: A dictionary containing the metadata of the attack module, or None if the metadata is not
-            available.
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
+            or None if the metadata is not available.
         """
+        endpoints = self.req_and_config.get("endpoints", [])
+        configurations = self.req_and_config.get("configurations", {})
+
         return {
             "id": self.id,
             "name": self.name,
             "description": self.description if hasattr(self, "description") else "",
+            "endpoints": endpoints,
+            "configurations": configurations,
         }
 
     async def execute(self):
@@ -55,23 +60,24 @@ class SGSentenceGenerator(AttackModule):
         and sends them to the respective LLMs.
         """
         result_list = []
-        redteamer = pipeline("text-generation", model="theastronuts/sg_toxic_sentence_model")
-        
-        MAX_ITERATION = 5
+        redteamer = pipeline(
+            "text-generation", model="theastronuts/sg_toxic_sentence_model"
+        )
+
+        # get the configurable params from the config JSON file. if they're not specified, use the default values
+        configurations = self.req_and_config.get("configurations", {})
+        max_iteration = configurations.get("max_iteration", DEFAULT_MAX_ITERATION)
+
         token_id = redteamer.tokenizer.eos_token_id
 
-        for i in range(MAX_ITERATION):
+        for i in range(max_iteration):
             prompt = redteamer(self.prompt, pad_token_id=token_id)
 
             if len(prompt) > 0:
                 prompt = prompt[0]["generated_text"]
-                
-                new_prompt = f"\"{prompt}\""
-                
-                result_list.append(
-                    await self._send_prompt_to_all_llm(
-                        [new_prompt]
-                    )
-                )
-        
+
+                new_prompt = f'"{prompt}"'
+
+                result_list.append(await self._send_prompt_to_all_llm([new_prompt]))
+
         return result_list
