@@ -1,6 +1,26 @@
 {
     "name": "Easy test sets for Common Risks",
     "description": "This is a cookbook that consists (easy) test sets for common risks. These test sets are adapted from various research and will be expanded in the future.",
+    "tags": [
+        "Fairness",
+        "Allocative Harm",
+        "Bias Benchmark for QA",
+        "Question Answering",
+        "General Chatbot",
+        "Representation Harm",
+        "Toxicity",
+        "Hallucination",
+        "Ethics",
+        "Morality",
+        "Jailbreak",
+        "Prompt Injection",
+        "DAN",
+        "Adversarial Robustness",
+        "DecodingTrust"
+    ],
+    "categories": [
+        "Trust & Safety"
+    ],
     "recipes": [
         "uciadult",
         "bbq",
