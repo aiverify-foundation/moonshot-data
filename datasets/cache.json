@@ -1237,10 +1237,10 @@
     "description": "Contain prompts that test safety in Singapore-context",
     "examples": null,
     "num_of_dataset_prompts": 59,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2024-10-10 10:10:24",
     "reference": "IMDA",
     "license": "Apache-2.0",
-    "hash": "5d61c07c64808b9d"
+    "hash": "984714efbead7cc1"
   },
   "medqa-us": {
     "id": "medqa-us",

@@ -23,7 +23,7 @@
       "llm-judge-openai-gpt4-annotator"
     ],
     "configurations": {},
-    "hash": "ac7d105a2e54c4c2"
+    "hash": "405594223be795ac"
   },
   "bleuscore": {
     "id": "bleuscore",
@@ -105,7 +105,7 @@
       "together-llama-guard-7b-assistant"
     ],
     "configurations": {},
-    "hash": "c3f0532ceb37cf3b"
+    "hash": "ff081a4d928dca08"
   },
   "samplemetric": {
     "id": "samplemetric",
@@ -129,7 +129,7 @@
     "configurations": {
       "grading_classifier": "toxic"
     },
-    "hash": "27bf439d34f08a5e"
+    "hash": "ee59c617ee8a0cbf"
   },
   "flagjudgeannotator": {
     "id": "flagjudgeannotator",
@@ -139,7 +139,7 @@
       "flageval-flagjudge"
     ],
     "configurations": {},
-    "hash": "38b63d7a54da10bd"
+    "hash": "5af8c38914b01c14"
   },
   "q16_metric": {
     "id": "q16_metric",
@@ -147,7 +147,7 @@
     "description": "Q16 is a binary classifier used to determine whether an image is inappropriate (https://github.com/ml-research/Q16)",
     "endpoints": [],
     "configurations": {},
-    "hash": "5a54a1bd4b1b2b1b"
+    "hash": "b59f8a5665eb4fc3"
   },
   "nudenet_metric": {
     "id": "nudenet_metric",
@@ -155,7 +155,7 @@
     "description": "NudeNet is a classifier used to deduce probabilities of exposed body parts in images.",
     "endpoints": [],
     "configurations": {},
-    "hash": "b0fc76a126ae0981"
+    "hash": "96655f6676eb4052"
   },
   "genderbias_metric": {
     "id": "genderbias_metric",
@@ -163,7 +163,7 @@
     "description": "This metric uses a CLIP based gender classifier to determine the proportion of females returning a score between 0 and 0.5. score = |female_frac - 0.5|",
     "endpoints": [],
     "configurations": {},
-    "hash": "3f89eb9e06744522"
+    "hash": "028c41558047d247"
   },
   "cybersecevalannotator": {
     "id": "cybersecevalannotator",
@@ -173,6 +173,6 @@
       "llm-judge-azure-gpt4-annotator"
     ],
     "configurations": {},
-    "hash": "230f790ff195fcc8"
+    "hash": "bbb877cb641d31a6"
   }
 }
