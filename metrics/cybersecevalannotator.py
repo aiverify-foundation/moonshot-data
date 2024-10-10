@@ -6,11 +6,7 @@ from moonshot.src.connectors.connector import Connector
 from moonshot.src.connectors.connector_prompt_arguments import ConnectorPromptArguments
 from moonshot.src.connectors_endpoints.connector_endpoint import ConnectorEndpoint
 from moonshot.src.metrics.metric_interface import MetricInterface
-from moonshot.src.utils.log import configure_logger
 from moonshot.src.utils.timeit import timeit
-
-# Create a logger for this module
-logger = configure_logger(__name__)
 
 DEFAULT_EVALUATION_MODEL = "llm-judge-azure-gpt4-annotator"
 
