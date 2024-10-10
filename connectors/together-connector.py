@@ -4,11 +4,7 @@ from moonshot.src.connectors.connector import Connector, perform_retry
 from moonshot.src.connectors_endpoints.connector_endpoint_arguments import (
     ConnectorEndpointArguments,
 )
-from moonshot.src.utils.log import configure_logger
 from together import AsyncTogether
-
-# Create a logger for this module
-logger = configure_logger(__name__)
 
 
 class TogetherConnector(Connector):
