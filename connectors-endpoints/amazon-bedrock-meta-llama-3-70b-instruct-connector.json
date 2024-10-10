@@ -1,15 +1,14 @@
 {
-  "name": "Amazon Bedrock - Llama 3 70B Instruct",
-  "connector_type": "amazon-bedrock-connector",
-  "uri": "DEFAULT",
-  "token": "Use environment variables!",
-  "max_calls_per_second": 1,
-  "max_concurrency": 1,
-  "params": {
-    "timeout": 300,
-    "allow_retries": true,
-    "num_of_retries": 3,
-    "temperature": 0.5,
-    "model": "meta.llama3-70b-instruct-v1:0"
-  }
+    "name": "Amazon Bedrock - Llama 3 70B Instruct",
+    "connector_type": "amazon-bedrock-connector",
+    "uri": "DEFAULT",
+    "token": "Use environment variables!",
+    "max_calls_per_second": 1,
+    "max_concurrency": 1,
+    "model": "meta.llama3-70b-instruct-v1:0",
+    "params": {
+        "timeout": 300,
+        "max_attempts": 3,
+        "temperature": 0.5
+    }
 }

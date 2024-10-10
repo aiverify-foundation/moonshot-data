@@ -149,6 +149,6 @@
     "description": "An attack where the payload is masked, and the LLM is prompted to fill in missing information.",
     "endpoints": [],
     "configurations": {},
-    "hash": "174ea3438241ea6d"
+    "hash": "f0d6a994b84f7ec8"
   }
 }
