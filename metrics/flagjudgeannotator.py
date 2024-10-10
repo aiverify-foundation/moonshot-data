@@ -1,15 +1,15 @@
 import copy
-import logging
 from typing import Any
 
 from moonshot.src.connectors.connector import Connector
 from moonshot.src.connectors.connector_prompt_arguments import ConnectorPromptArguments
 from moonshot.src.connectors_endpoints.connector_endpoint import ConnectorEndpoint
 from moonshot.src.metrics.metric_interface import MetricInterface
+from moonshot.src.utils.log import configure_logger
 from moonshot.src.utils.timeit import timeit
 
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
+# Create a logger for this module
+logger = configure_logger(__name__)
 
 DEFAULT_EVALUATION_MODEL = "flageval-flagjudge"
 
@@ -25,7 +25,7 @@ class FlagJudgeAnnotator(MetricInterface):
 
     def get_metadata(self) -> dict | None:
         """
-        Retrieves and returns the metadata of the ExactStrMatch class.
+        Retrieves and returns the metadata of the FlagJudgeAnnotator class.
 
         Returns:
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'

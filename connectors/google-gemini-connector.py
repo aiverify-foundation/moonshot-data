@@ -1,4 +1,3 @@
-import logging
 from typing import Any
 
 import google.generativeai as genai
@@ -6,9 +5,10 @@ from moonshot.src.connectors.connector import Connector, perform_retry
 from moonshot.src.connectors_endpoints.connector_endpoint_arguments import (
     ConnectorEndpointArguments,
 )
+from moonshot.src.utils.log import configure_logger
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+# Create a logger for this module
+logger = configure_logger(__name__)
 
 
 class GoogleGeminiConnector(Connector):

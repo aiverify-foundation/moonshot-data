@@ -30,7 +30,7 @@ class LionGuardClassifier(MetricInterface):
     @timeit
     def get_metadata(self) -> dict | None:
         """
-        Retrieves and returns the metadata of the SampleMetric class.
+        Retrieves and returns the metadata of the LionGuardClassifier class.
 
         Returns:
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'

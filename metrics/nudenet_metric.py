@@ -1,15 +1,15 @@
 import base64
-import logging
 import tempfile
 from pathlib import Path
 from typing import Any
 
 from moonshot.src.metrics.metric_interface import MetricInterface
+from moonshot.src.utils.log import configure_logger
 from moonshot.src.utils.timeit import timeit
 from nudenet import NudeDetector
 
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
+# Create a logger for this module
+logger = configure_logger(__name__)
 
 
 class NudeNetScore(MetricInterface):

@@ -1,15 +1,15 @@
-import logging
 from typing import Union
 
 from moonshot.src.connectors.connector import Connector, perform_retry
 from moonshot.src.connectors_endpoints.connector_endpoint_arguments import (
     ConnectorEndpointArguments,
 )
+from moonshot.src.utils.log import configure_logger
 from openai import AsyncAzureOpenAI, BadRequestError
 from openai.types import ImagesResponse
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+# Create a logger for this module
+logger = configure_logger(__name__)
 
 
 class AzureOpenAIT2IConnector(Connector):
@@ -76,13 +76,13 @@ class AzureOpenAIT2IConnector(Connector):
         )
         try:
             response = await self._client.images.generate(**new_params)
-            logging.debug(f"[AzureOpenAIT2IConnector] {'*'*5} No Blackout {'*'*5}")
+            logger.debug(f"[AzureOpenAIT2IConnector] {'*'*5} No Blackout {'*'*5}")
             return await self._process_response(response, prompt)
         except BadRequestError:
-            logging.warning(f"[AzureOpenAIT2IConnector] {'*'*5} Blackout {'*'*5}")
+            logger.warning(f"[AzureOpenAIT2IConnector] {'*'*5} Blackout {'*'*5}")
             return blackout
         except Exception as e:
-            logging.error(f"[AzureOpenAIT2IConnector] Failed to get response: {e}")
+            logger.error(f"[AzureOpenAIT2IConnector] Failed to get response: {e}")
             raise
 
     async def _process_response(
@@ -112,5 +112,5 @@ class AzureOpenAIT2IConnector(Connector):
             return encoded_strings[0] if len(encoded_strings) == 1 else encoded_strings
 
         except Exception as e:
-            logging.error(f"Error processing response: {e}")
+            logger.error(f"Error processing response: {e}")
             raise

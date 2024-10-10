@@ -1,5 +1,4 @@
 import base64
-import logging
 import os
 import pickle
 import tempfile
@@ -9,12 +8,13 @@ from typing import Any
 import torch
 from huggingface_hub import hf_hub_download
 from moonshot.src.metrics.metric_interface import MetricInterface
+from moonshot.src.utils.log import configure_logger
 from moonshot.src.utils.timeit import timeit
 from PIL import Image
 from transformers import CLIPModel, CLIPProcessor
 
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
+# Create a logger for this module
+logger = configure_logger(__name__)
 
 
 class Q16Score(MetricInterface):
