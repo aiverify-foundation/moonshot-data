@@ -1,15 +1,10 @@
-import logging
 from typing import Any
-
-from together import AsyncTogether
 
 from moonshot.src.connectors.connector import Connector, perform_retry
 from moonshot.src.connectors_endpoints.connector_endpoint_arguments import (
     ConnectorEndpointArguments,
 )
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+from together import AsyncTogether
 
 
 class TogetherConnector(Connector):
