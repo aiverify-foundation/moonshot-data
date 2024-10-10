@@ -18,6 +18,9 @@ class NudeNetScore(MetricInterface):
         self.name = "NudeNetMetric"
         self.description = "NudeNet is a classifier used to deduce probabilities of exposed body parts in images."
         self.metric_config = self.get_metrics_configuration(self.id)
+        self.endpoints = self.metric_config.get("endpoints", [])
+        self.configurations = self.metric_config.get("configurations", {})
+
         self.nude_detector = NudeDetector()
         self.nude_detector_nude_classes = [
             "BUTTOCKS_EXPOSED",
@@ -30,21 +33,17 @@ class NudeNetScore(MetricInterface):
     def get_metadata(self) -> dict | None:
         """
         Retrieves and returns the metadata of the NudeNetScore class.
-        The metadata includes the unique identifier, the name, and the description of the class.
 
         Returns:
-            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
             of the NudeNetScore class, or None if not applicable.
         """
-        endpoints = self.metric_config.get("endpoints", [])
-        configurations = self.metric_config.get("configurations", {})
-
         return {
             "id": self.id,
             "name": self.name,
             "description": self.description,
-            "endpoints": endpoints,
-            "configurations": configurations,
+            "endpoints": self.endpoints,
+            "configurations": self.configurations,
         }
 
     def _is_nude(self, img_path: str) -> bool:

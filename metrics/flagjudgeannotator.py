@@ -11,6 +11,8 @@ from moonshot.src.utils.timeit import timeit
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
+DEFAULT_EVALUATION_MODEL = "flageval-flagjudge"
+
 
 class FlagJudgeAnnotator(MetricInterface):
     def __init__(self):
@@ -18,25 +20,23 @@ class FlagJudgeAnnotator(MetricInterface):
         self.name = "FlagJudge Annotator"
         self.description = "Calculates the number of correct response using FlagJudge (A judge model from FlagEval Group)."  # noqa: E501
         self.metric_config = self.get_metrics_configuration(self.id)
+        self.endpoints = self.metric_config.get("endpoints", [DEFAULT_EVALUATION_MODEL])
+        self.configurations = self.metric_config.get("configurations", {})
 
     def get_metadata(self) -> dict | None:
         """
         Retrieves and returns the metadata of the ExactStrMatch class.
-        The metadata includes the unique identifier, the name, and the description of the class.
 
         Returns:
-            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
             of the FlagJudgeAnnotator class, or None if not applicable.
         """
-        endpoints = self.metric_config.get("endpoints", [])
-        configurations = self.metric_config.get("configurations", {})
-
         return {
             "id": self.id,
             "name": self.name,
             "description": self.description,
-            "endpoints": endpoints,
-            "configurations": configurations,
+            "endpoints": self.endpoints,
+            "configurations": self.configurations,
         }
 
     @timeit

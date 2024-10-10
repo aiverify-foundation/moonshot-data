@@ -8,7 +8,7 @@
       "max_iteration": 10,
       "word_swap_ratio": 0.2
     },
-    "hash": "7c0defe8f2ec9993"
+    "hash": "1e526abcd0872c48"
   },
   "toxic_sentence_generator": {
     "id": "toxic_sentence_generator",
@@ -18,7 +18,7 @@
     "configurations": {
       "max_iteration": 30
     },
-    "hash": "0d747c8ea310d084"
+    "hash": "53712a4e9609c0e6"
   },
   "textbugger_attack": {
     "id": "textbugger_attack",
@@ -31,7 +31,7 @@
       "threshold": 0.8,
       "max_iteration": 5
     },
-    "hash": "93fbf1b9ce1b1552"
+    "hash": "8cc823c2741394a7"
   },
   "job_role_generator": {
     "id": "job_role_generator",
@@ -39,7 +39,7 @@
     "description": "This attack module adds demographic groups to the job role.",
     "endpoints": [],
     "configurations": {},
-    "hash": "4c8f66c526cd8b76"
+    "hash": "11c11fb3623d3cb5"
   },
   "homoglyph_attack": {
     "id": "homoglyph_attack",
@@ -49,7 +49,7 @@
     "configurations": {
       "max_iteration": 20
     },
-    "hash": "4eb38e438d06c3b3"
+    "hash": "6521d46976759fe8"
   },
   "violent_durian": {
     "id": "violent_durian",
@@ -61,7 +61,7 @@
     "configurations": {
       "max_iteration": 10
     },
-    "hash": "2982afded087f9b4"
+    "hash": "e6049ef261c7736b"
   },
   "textfooler_attack": {
     "id": "textfooler_attack",
@@ -76,7 +76,7 @@
       "max_candidates": 50,
       "max_iteration": 5
     },
-    "hash": "9407e661319c4c9d"
+    "hash": "e2fd07e95aeaf744"
   },
   "colloquial_wordswap_attack": {
     "id": "colloquial_wordswap_attack",
@@ -84,7 +84,7 @@
     "description": "This attack module tests for textual robustness against the Singapore context. It takes in prompts that feature nouns that describe people. Examples of this include words like 'girl' , 'boy' or 'grandmother'. The module substitutes these words with their Singapore colloquial counterparts, such as 'ah boy', 'ah girl' and 'ah ma'.",
     "endpoints": [],
     "configurations": {},
-    "hash": "0f7960a47c6c8c41"
+    "hash": "988498d869c0ccf7"
   },
   "insert_punctuation_attack": {
     "id": "insert_punctuation_attack",
@@ -95,7 +95,7 @@
       "max_iteration": 10,
       "word_swap_ratio": 0.2
     },
-    "hash": "278e204f57103ea8"
+    "hash": "45f9bfeba5fd04e2"
   },
   "malicious_question_generator": {
     "id": "malicious_question_generator",
@@ -107,7 +107,7 @@
     "configurations": {
       "max_iteration": 10
     },
-    "hash": "fd6a83ea80a80152"
+    "hash": "9a57fff578723078"
   },
   "sample_attack_module": {
     "id": "sample_attack_module",
@@ -117,7 +117,7 @@
     "configurations": {
       "example_field": "example_value"
     },
-    "hash": "519a6c3dbeeb554b"
+    "hash": "ec6be8f2f27d094d"
   },
   "sg_sentence_generator": {
     "id": "sg_sentence_generator",
@@ -127,12 +127,28 @@
     "configurations": {
       "max_iteration": 5
     },
-    "hash": "d3e61cf49b25b4d5"
+    "hash": "71eefa9192ffac6f"
   },
   "charswap_attack_iterated_bm": {
     "id": "charswap_attack_iterated_bm",
     "name": "Character Swap Attack",
     "description": "This module tests for adversarial textual robustness. It creates perturbations through swapping characters for words that contains more than 3 characters.\nParameters:\n1. MAX_ITERATIONS - Number of prompts that should be sent to the target. [Default: 10]",
     "hash": "c8e7dcfa2f5ae82e"
+  },
+  "homoglyph_v2_attack": {
+    "id": "homoglyph_v2_attack",
+    "name": "Homoglyph V2 Attack",
+    "description": "This module tests for adversarial textual robustness. Homoglyphs are alternative characters that resemble a similar ASCII character.\nExample of a homoglyph fool -> fooI\nThis module slowly increases the percentageof characters replaced to see how the model reacts to the base prompt.",
+    "endpoints": [],
+    "configurations": {},
+    "hash": "f1bad6a19bcb629e"
+  },
+  "payload_mask_attack": {
+    "id": "payload_mask_attack",
+    "name": "Payload Mask Attack",
+    "description": "An attack where the payload is masked, and the LLM is prompted to fill in missing information.",
+    "endpoints": [],
+    "configurations": {},
+    "hash": "174ea3438241ea6d"
   }
 }

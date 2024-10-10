@@ -1,12 +1,27 @@
 {
-    "llamaguardannotator":{
+    "cybersecevalannotator":{
         "endpoints": [
-            "together-llama-guard-7b-assistant"
+            "llm-judge-azure-gpt4-annotator"
         ]
     },
+    "flagjudgeannotator":{
+        "endpoints": [
+            "flageval-flagjudge"
+        ]
+    },    
     "gpt4annotator":{
         "endpoints": [
             "llm-judge-openai-gpt4-annotator"
+        ]
+    },
+    "lionguardclassifier":{
+        "configurations":{
+            "grading_classifier": "toxic"
+        }               
+    },
+    "llamaguardannotator":{
+        "endpoints": [
+            "together-llama-guard-7b-assistant"
         ]
     },
     "samplemetric":{

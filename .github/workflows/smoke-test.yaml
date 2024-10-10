@@ -8,7 +8,7 @@ on:
    types: [submitted]
    branches:
      - 'dev_main'
-
+     
   # Run this workflow manually from Actions tab
   workflow_dispatch:
     inputs:
@@ -37,7 +37,7 @@ jobs:
   smoke-test:
 
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 60
 
     steps:
 

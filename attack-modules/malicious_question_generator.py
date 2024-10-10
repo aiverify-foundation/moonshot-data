@@ -30,12 +30,9 @@ class MaliciousQuestionGenerator(AttackModule):
         """
         Get metadata for the attack module.
 
-        Returns a dictionary containing the id, name, and description of the attack module. If the name or description
-        is not available, empty strings are returned.
-
         Returns:
-            dict | None: A dictionary containing the metadata of the attack module, or None if the metadata is not
-            available.
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
+            or None if the metadata is not available.
         """
         endpoints = self.req_and_config.get("endpoints", [])
         configurations = self.req_and_config.get("configurations", {})
