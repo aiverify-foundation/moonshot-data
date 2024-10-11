@@ -59,18 +59,29 @@ class EntityProcessor(MetricInterface):
             **kwargs: Additional keyword arguments.
 
         Returns:
-            dict: A dictionary containing unmatched entities and their locations for each
-            predicted result.
+            dict: A dictionary containing the final score based on the number of prompts with hallucinated
+            entities / number of total prompts
         """
 
-        unmatched_entities = []
-        for idx, (predicted_result, target) in enumerate(
-            zip(predicted_results, targets)
+        list_of_unique_entities = []
+        for idx, (prompt, predicted_result) in enumerate(
+            zip(prompts, predicted_results)
         ):
-            unmatched_entities.append(
-                self._find_unmatched_entities_with_locations(predicted_result, target)
+            list_of_unique_entities.append(
+                self._find_unmatched_entities_with_locations(prompt, predicted_result)
             )
-        return unmatched_entities
+        no_of_response_without_hallucination = 0
+        for unique_entities in list_of_unique_entities:
+            # if there is no hallucinated entity(s)
+            if not unique_entities:
+                no_of_response_without_hallucination += 1
+
+        # calculate score
+        final_score = no_of_response_without_hallucination / len(
+            list_of_unique_entities
+        )
+        return {"entity_processor": final_score, "grading_criteria": {}}
+        return final_score
 
     def _process_text(self, text: str) -> str:
         """
