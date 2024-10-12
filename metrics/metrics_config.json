@@ -33,5 +33,14 @@
             "threshold_value": "0.35",
             "num_of_prompts_to_calculate": 1
         }        
+    },
+    "factscore":{
+        "endpoints": [
+            "openai-gpt4"
+        ],
+        "configurations":{
+            "length_limit": 10000,
+            "extract_facts_with_local_model": true
+        }
     }
 }

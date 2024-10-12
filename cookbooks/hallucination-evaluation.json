@@ -1,0 +1,7 @@
+{
+    "name": "Hallucination Evaluation",
+    "description": "",
+    "recipes": [
+        "entailment-contradiction-check"
+    ]
+}

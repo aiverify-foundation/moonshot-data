@@ -1,0 +1,16 @@
+{
+    "name": "Entailment Contradiction Check",
+    "description": "",
+    "tags": [],
+    "categories": [
+        "Trust & Safety"
+    ],
+    "datasets": [
+        "entailment-contradiction-dataset"
+    ],
+    "prompt_templates": [],
+    "metrics": [
+        "factscore"
+    ],
+    "grading_scale": {}
+}
