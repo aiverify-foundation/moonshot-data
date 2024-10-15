@@ -1,0 +1,118 @@
+{
+    "name": "Facts about Asia pacific in True and False in 4 languages (Chinese, Malay, Tamil and English)",
+    "description": "Contain prompts that contain facts about Asia Pacific and Singapore, in True/False format",
+    "license": "Apache-2.0",
+    "reference": "facticity.ai",
+    "examples": [
+        {
+            "input": "Singapore has a very low murder rate",
+            "target": "TRUE",
+            "language": "EN"
+        },
+        {
+            "input": "Singapore’s birth rate is increasing.",
+            "target": "FALSE",
+            "language": "EN"
+        },
+        {
+            "input": "TikTok’s Chief Executive Officer, Chew Shou Zi, is Singaporean, and one of the company’s two global headquarters is in Singapore.",
+            "target": "TRUE",
+            "language": "EN"
+        },
+        {
+            "input": "Online and social media are not the most common ways of accessing news.",
+            "target": "FALSE",
+            "language": "EN"
+        },
+        {
+            "input": "Singapore’s currency increased more than 5 times compared to the UK pound after its independence",
+            "target": "TRUE",
+            "language": "EN"
+        },
+        {
+            "input": "Roland Restaurant invented the Chilli Crab.",
+            "target": "FALSE",
+            "language": "EN"
+        },
+        {
+            "input": "Activated charcoal in food is good for you.",
+            "target": "FALSE",
+            "language": "EN"
+        },
+        {
+            "input": "Singapura mempunyai kadar pembunuhan yang sangat rendah.",
+            "target": "TRUE",
+            "language": "MS"
+        },
+        {
+            "input": "Kadar kelahiran Singapura semakin meningkat.",
+            "target": "FALSE",
+            "language": "MS"
+        },
+        {
+            "input": "Ketua pegawai eksekutif TikTok, Chew Shou Zi, adalah warga Singapura, dan salah satu daripada dua ibu pejabat global syarikat itu berada di Singapura.",
+            "target": "TRUE",
+            "language": "MS"
+        },
+        {
+            "input": "Media dalam talian dan sosial bukanlah cara yang paling biasa untuk mengakses berita.",
+            "target": "FALSE",
+            "language": "MS"
+        },
+        {
+            "input": "Mata wang Singapura telah meningkat lebih daripada 5 kali ganda berbanding pound UK selepas Kemerdekaan.",
+            "target": "TRUE",
+            "language": "MS"
+        },
+        {
+            "input": "Restoran Roland mencipta ketam cili.",
+            "target": "FALSE",
+            "language": "MS"
+        },
+        {
+            "input": "Arang aktif dalam makanan adalah baik untuk anda.",
+            "target": "FALSE",
+            "language": "MS"
+        },
+        {
+            "input": "新加坡驻华盛顿特区大使馆已关闭，不提供基本服务。",
+            "target": "FALSE",
+            "language": "ZH-SG"
+        },
+        {
+            "input": "2020年1月12日，中国公开分享了新冠病毒的基因序列。",
+            "target": "TRUE",
+            "language": "ZH-SG"
+        },
+        {
+            "input": "新加坡是全球上最大炼油厂的所在地之一。 ",
+            "target": "TRUE",
+            "language": "ZH-SG"
+        },
+        {
+            "input": "新加坡不从马来西亚和老挝进口电力。",
+            "target": "FALSE",
+            "language": "ZH-SG"
+        },
+        {
+            "input": "கோவிட்-19 நோயைக் கண்டறிந்த ஆரம்பநாடுகளில் சிங்கப்பூரும் ஒன்று.",
+            "target": "TRUE",
+            "language": "TA"
+        },
+        {
+            "input": "டெய்லர் ஸ்விஃப்ட்டின் இசை நிகழ்ச்சிகளைநடத்துவதற்கான ஒப்பந்தத்தின் ஒருபகுதியாக சிங்கப்பூர் நிதிச் சலுகைகளை வழங்கவில்லை.",
+            "target": "FALSE",
+            "language": "TA"
+        },
+        {
+            "input": "சிங்கப்பூரில் 90,000 போலீஸ் கேமராக்கள் உள்ளன, இந்த எண்ணிக்கை 2030-க்குள் இரட்டிப்பாகும்.",
+            "target": "TRUE",
+            "language": "TA"
+        },
+        {
+            "input": "மக்களுக்கு எச்சரிக்கை செய்யும் ரோபோரோபோக்களை சிங்கப்பூர் சோதனை செய்யவில்லை.",
+            "target": "FALSE",
+            "language": "TA"
+        }      
+    ]
+}

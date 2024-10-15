@@ -5,7 +5,7 @@
     "description": "BertScore uses Bert to check for the similarity in embedding between two sentences.",
     "endpoints": [],
     "configurations": {},
-    "hash": "8ddfa17b69af1ceb"
+    "hash": "ee42112af9752856"
   },
   "spelling": {
     "id": "spelling",
@@ -13,7 +13,7 @@
     "description": "SpellingScore uses Levenshetein Distance to find permutations within an edit distance of 2 form the original word before comparing to known words in a word frequency list.",
     "endpoints": [],
     "configurations": {},
-    "hash": "58fbd5875d3849ff"
+    "hash": "3c38e21f9cae07dd"
   },
   "gpt4annotator": {
     "id": "gpt4annotator",
@@ -23,7 +23,7 @@
       "llm-judge-openai-gpt4-annotator"
     ],
     "configurations": {},
-    "hash": "883ed97d6894d59b"
+    "hash": "ac7d105a2e54c4c2"
   },
   "bleuscore": {
     "id": "bleuscore",
@@ -31,7 +31,7 @@
     "description": "Bleuscore uses Bleu to return the various rouge scores.",
     "endpoints": [],
     "configurations": {},
-    "hash": "0f0e5b730fb08993"
+    "hash": "1a5576018c05c74c"
   },
   "readabilityscore": {
     "id": "readabilityscore",
@@ -39,7 +39,7 @@
     "description": "ReadabilityScore uses Flesch Reading Ease to compute the complexity of the output",
     "endpoints": [],
     "configurations": {},
-    "hash": "1277c0a1eb1f17fb"
+    "hash": "a7e42d63c19b8da1"
   },
   "toxicity-classifier": {
     "id": "toxicity-classifier",
@@ -47,7 +47,7 @@
     "description": "This classifier measures how toxic a given input isand calculate the number of toxic sentence detected.",
     "endpoints": [],
     "configurations": {},
-    "hash": "3194556379aeab14"
+    "hash": "34aab8b3bbd51c4a"
   },
   "rougescorer": {
     "id": "rougescorer",
@@ -55,7 +55,7 @@
     "description": "RougeScorer returns the various rouge scores.",
     "endpoints": [],
     "configurations": {},
-    "hash": "163fd58215704f54"
+    "hash": "31d39657bbc8275e"
   },
   "advglue": {
     "id": "advglue",
@@ -63,7 +63,7 @@
     "description": "Attack success rate measures how successful a changed prompt performs. A high score shows that the system under test is highly sensitive towards a prompt with minimal changes.",
     "endpoints": [],
     "configurations": {},
-    "hash": "eee801995962a8be"
+    "hash": "a6ea10487b08b8fe"
   },
   "leakagerate": {
     "id": "leakagerate",
@@ -71,7 +71,7 @@
     "description": "Leakage Rate will compare the LCS between two string - Output and Target.",
     "endpoints": [],
     "configurations": {},
-    "hash": "bbfcab98f1f64230"
+    "hash": "a1a7260849dc3232"
   },
   "reverseexactstrmatch": {
     "id": "reverseexactstrmatch",
@@ -79,7 +79,7 @@
     "description": "ReverseExactStrMatch will compare the output from language model with the expected target.",
     "endpoints": [],
     "configurations": {},
-    "hash": "ea6d80a3563595b7"
+    "hash": "f4c7b9ad9919a7df"
   },
   "exactstrmatch": {
     "id": "exactstrmatch",
@@ -87,7 +87,7 @@
     "description": "ExactStrMatch will compare the output from language model with a single target or multiple expected target.",
     "endpoints": [],
     "configurations": {},
-    "hash": "07315651d4b5ef9b"
+    "hash": "37240281bd8af06b"
   },
   "relaxstrmatch": {
     "id": "relaxstrmatch",
@@ -95,7 +95,7 @@
     "description": "RelaxStrMatch will remove symbols and spaces before comparing the output from language model with the expected target.",
     "endpoints": [],
     "configurations": {},
-    "hash": "9e4628e0cfa0a824"
+    "hash": "4a8fd6f19c2aa58d"
   },
   "llamaguardannotator": {
     "id": "llamaguardannotator",
@@ -105,7 +105,7 @@
       "together-llama-guard-7b-assistant"
     ],
     "configurations": {},
-    "hash": "9b58b74c8db47c4e"
+    "hash": "c3f0532ceb37cf3b"
   },
   "samplemetric": {
     "id": "samplemetric",
@@ -119,7 +119,7 @@
       "threshold_value": "0.35",
       "num_of_prompts_to_calculate": 1
     },
-    "hash": "2e6057f3023e678a"
+    "hash": "0d75c80a1d35bee1"
   },
   "lionguardclassifier": {
     "id": "lionguardclassifier",
@@ -129,7 +129,7 @@
     "configurations": {
       "grading_classifier": "toxic"
     },
-    "hash": "c4132969a2c7fe53"
+    "hash": "27bf439d34f08a5e"
   },
   "flagjudgeannotator": {
     "id": "flagjudgeannotator",
@@ -139,7 +139,7 @@
       "flageval-flagjudge"
     ],
     "configurations": {},
-    "hash": "3eff0c79171924ee"
+    "hash": "38b63d7a54da10bd"
   },
   "q16_metric": {
     "id": "q16_metric",
@@ -147,7 +147,7 @@
     "description": "Q16 is a binary classifier used to determine whether an image is inappropriate (https://github.com/ml-research/Q16)",
     "endpoints": [],
     "configurations": {},
-    "hash": "fc8f2a21a56f79e8"
+    "hash": "5a54a1bd4b1b2b1b"
   },
   "nudenet_metric": {
     "id": "nudenet_metric",
@@ -155,7 +155,7 @@
     "description": "NudeNet is a classifier used to deduce probabilities of exposed body parts in images.",
     "endpoints": [],
     "configurations": {},
-    "hash": "d8186bcea64cc448"
+    "hash": "b0fc76a126ae0981"
   },
   "genderbias_metric": {
     "id": "genderbias_metric",
