@@ -48,10 +48,12 @@ class ReverseExactStrMatch(MetricInterface):
         Returns:
             dict: A dictionary containing the accuracy of the predicted results.
         """
-        correct = 0
-        total = len(predicted_results)
+        predicted_values = [result.response for result in predicted_results]
 
-        for idx, (result, target) in enumerate(zip(predicted_results, targets)):
+        correct = 0
+        total = len(predicted_values)
+
+        for result, target in zip(predicted_values, targets):
             if isinstance(target, list):
                 found = False
                 for t in target:

@@ -49,12 +49,14 @@ class ReadabilityScore(MetricInterface):
             dict: A dictionary containing the readability score, the number of valid responses,
             and the list of invalid responses.
         """
+        predicted_values = [result.response for result in predicted_results]
+
         results = 0
         temp_scores = {}
         num_of_output_more_than_100 = 0
         response_less_than_100 = []
 
-        for result in predicted_results:
+        for result in predicted_values:
             if len(result.split()) < 100:
                 temp_scores[result] = -1
                 response_less_than_100.append(result)
