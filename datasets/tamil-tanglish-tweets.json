@@ -1,7 +1,7 @@
 {
     "name": "tanglish-tweets-SA",
     "description": "Code-mixed Tamil and English tweets curated for the sentiment analysis task.",
-    "refernece": "https://www.kaggle.com/datasets/vyombhatia/tanglish-comments-for-sentiment-ananlysis/data",
+    "reference": "https://www.kaggle.com/datasets/vyombhatia/tanglish-comments-for-sentiment-ananlysis/data",
     "license": "CC0: Public Domain",
     "examples": [
         {
