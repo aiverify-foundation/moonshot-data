@@ -2,7 +2,7 @@
   "name": "Azure OpenAI GPT4o",
   "connector_type": "azure-openai-connector",
   "uri": "https://<Azure OpenAI Name>.openai.azure.com",
-  "token": "abcdef...",
+  "token": "",
   "max_calls_per_second": 1,
   "max_concurrency": 1,
   "params": {
