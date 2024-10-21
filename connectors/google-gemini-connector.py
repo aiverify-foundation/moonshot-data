@@ -21,9 +21,6 @@ class GoogleGeminiConnector(Connector):
         self._client = genai
         self._client.configure(api_key=self.token)
 
-        # Set the model to use and remove it from optional_params if it exists
-        self.model = self.optional_params.get("model", "")
-
     @Connector.rate_limited
     @perform_retry
     async def get_response(self, prompt: str) -> ConnectorResponse:
@@ -47,12 +44,7 @@ class GoogleGeminiConnector(Connector):
             model_name=self.model,
             system_instruction=self.system_prompt if self.system_prompt else None,
         )
-
-        filtered_optional_params = {
-            k: v for k, v in self.optional_params.items() if k != "model"
-        }
-
-        generation_config = genai.GenerationConfig(**filtered_optional_params)
+        generation_config = genai.GenerationConfig(**self.optional_params)
 
         response = model.generate_content(
             connector_prompt, generation_config=generation_config

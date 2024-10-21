@@ -1,15 +1,14 @@
 {
-  "name": "Azure OpenAI GPT4 Turbo Preview",
-  "connector_type": "azure-openai-connector",
-  "uri": "https://<Azure OpenAI Name>.openai.azure.com",
-  "token": "abcdef...",
-  "max_calls_per_second": 1,
-  "max_concurrency": 1,
-  "params": {
-    "timeout": 300,
-    "allow_retries": true,
-    "num_of_retries": 3,
-    "temperature": 0.5,
-    "model": "gpt-4-turbo-preview"
-  }
+    "name": "Azure OpenAI GPT4 Turbo Preview",
+    "connector_type": "azure-openai-connector",
+    "uri": "https://<Azure OpenAI Name>.openai.azure.com",
+    "token": "abcdef...",
+    "max_calls_per_second": 1,
+    "max_concurrency": 1,
+    "model": "gpt-4-turbo-preview",
+    "params": {
+        "timeout": 300,
+        "max_attempts": 3,
+        "temperature": 0.5
+    }
 }

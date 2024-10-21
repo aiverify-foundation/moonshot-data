@@ -20,9 +20,6 @@ class AzureLangchainOpenAIChatOpenAIConnector(Connector):
         # Azure OpenAI has additional parameters
         self.api_version = self.optional_params.get("api_version", "2024-02-01")
 
-        # Set the model to use and remove it from optional_params if it exists
-        self.model = self.optional_params.get("model", "")
-
         # Set OpenAI Key
         self._client = AzureChatOpenAI(
             azure_endpoint=self.endpoint,

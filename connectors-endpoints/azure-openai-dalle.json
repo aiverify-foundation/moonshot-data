@@ -1,11 +1,10 @@
 {
-  "name": "Azure OpenAI Dall-E",
-  "connector_type": "azure-openai-t2i-connector",
-  "uri": "https://<Azure OpenAI Name>.openai.azure.com",
-  "token": "abcdef...",
-  "max_calls_per_second": 1,
-  "max_concurrency": 1,
-  "params": {
-    "model": "dall-e"
-  }
+    "name": "Azure OpenAI Dall-E",
+    "connector_type": "azure-openai-t2i-connector",
+    "uri": "https://<Azure OpenAI Name>.openai.azure.com",
+    "token": "abcdef...",
+    "max_calls_per_second": 1,
+    "max_concurrency": 1,
+    "model": "dall-e",
+    "params": {}
 }

@@ -5,9 +5,9 @@
     "token": "flageval_judgemodel",
     "max_calls_per_second": 3,
     "max_concurrency": 3,
+    "model": "",
     "params": {
         "timeout": 300,
-        "allow_retries": true,
-        "num_of_retries": 3
+        "max_attempts": 3
     }
 }
