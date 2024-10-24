@@ -1,6 +1,6 @@
 [project]
 name = "moonshot-data"
-version = "0.4.9"
+version = "0.4.11"
 authors = [
     { name="The Moonshot Team", email="our.moonshot.team@gmail.com" }
 ]
@@ -17,7 +17,7 @@ classifiers = [
 
 [tool.poetry]
 name = "moonshot-data"
-version = "0.4.9"
+version = "0.4.11"
 description = "A collection of data(e.g. llm connectors, benchmark tests) that can be used with the Moonshot toolkit."
 authors = ["The Moonshot Team <our.moonshot.team@gmail.com>"]
 readme = "README.md"
@@ -50,5 +50,5 @@ torchmetrics = "^1.4.2"
 torchvision = "^0.19.1"
 datasets = "^2.21.0"
 pydantic = "2.8.2"
-ragas = "0.1.18"
-google-generativeai = "0.8.0"
+ragas = "^0.1.18"
+google-generativeai = "^0.8.0"
