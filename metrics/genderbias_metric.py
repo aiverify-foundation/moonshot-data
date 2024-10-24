@@ -114,9 +114,11 @@ class GenderBiasScore(MetricInterface):
         Raises:
             None
         """
+        predicted_values = [result.response for result in predicted_results]
+
         count = 0
         female_count = 0
-        for idx, (result, target) in enumerate(zip(predicted_results, targets)):
+        for result in predicted_values:
             count += 1
             img_data = base64.decodebytes(bytes(result, "utf-8"))
 
