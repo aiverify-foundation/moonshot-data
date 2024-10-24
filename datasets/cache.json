@@ -1406,5 +1406,49 @@
     "reference": "facticity.ai",
     "license": "Apache-2.0",
     "hash": "5a5c4d22e8266c20"
+  },
+  "my-gsm8k": {
+    "id": "my-gsm8k",
+    "name": "GSM8K",
+    "description": "This dataset consists of high quality grade school math problems created by human. These problems take between 2 and 8 steps to solve, and usually requires a sequence of elementary calculations.",
+    "examples": null,
+    "num_of_dataset_prompts": 1319,
+    "created_date": "2024-12-16 18:11:49",
+    "reference": "https://github.com/openai/grade-school-math",
+    "license": "MIT License",
+    "hash": "ef507dbe3c323afc"
+  },
+  "jp-aisi-en": {
+    "id": "jp-aisi-en",
+    "name": "Japan AISI English Dataset",
+    "description": "The dataset is a test dataset of Answercarefully Version 2, provided by Japan AISI, and pre-processed by Singapore AISI. It contains 56 samples in English, where each sample includes a question (input) and a safe answer (target). AnswerCarefully2.0 is a high-quality dataset that can be used for testing the safety of large language models (LLMs). Its use by Moonshot facilitates the sharing of best practices, benchmarks, and tools for evaluating foundation models, while incorporating multilingual and multicultural perspectives.\n\nOur goal is to enable collaboration among network members to enhance testing methodologies for foundation models. This includes advancing interoperability in testing design, validation, and reproduction. Such efforts aim to build capacity, trust, and coordination in testing approaches across the International Network.\n\nUltimately, we aspire to achieve complementary testing practices among AISIs, fostering mutual recognition and strengthening the global testing ecosystem.",
+    "examples": null,
+    "num_of_dataset_prompts": 56,
+    "created_date": "2024-12-26 04:09:19",
+    "reference": "",
+    "license": "",
+    "hash": "b22ee1b62e19a804"
+  },
+  "jp-aisi-ch": {
+    "id": "jp-aisi-ch",
+    "name": "Japan AISI Chinese Dataset",
+    "description": "",
+    "examples": null,
+    "num_of_dataset_prompts": 56,
+    "created_date": "2024-12-16 20:08:43",
+    "reference": "",
+    "license": "",
+    "hash": "0e2fb03914159719"
+  },
+  "mlc-ipv": {
+    "id": "mlc-ipv",
+    "name": "MLC Dataset v1.0 Test Set - Clean IP",
+    "description": "A dataset of security-related questions and answers.",
+    "examples": null,
+    "num_of_dataset_prompts": 100,
+    "created_date": "2024-12-26 07:13:12",
+    "reference": "https://example.com/security-guide",
+    "license": "CC-BY-4.0",
+    "hash": "11e5e6e143baf731"
   }
 }
