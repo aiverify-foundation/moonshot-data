@@ -8,9 +8,7 @@
     "datasets": [
         "truthfulqa-open-ended"
     ],
-    "prompt_templates": [
-        "mcq-template"
-    ],
+    "prompt_templates": [],
     "metrics": [
         "rougescorer"
     ],
