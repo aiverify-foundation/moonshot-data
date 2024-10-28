@@ -1,5 +1,5 @@
 {
-    "name": "Claude2",
+    "name": "Anthropic-Claude2",
     "connector_type": "anthropic-connector",
     "uri": "",
     "token": "",
