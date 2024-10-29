@@ -1,6 +1,6 @@
 {
-    "name": "Claude2",
-    "connector_type": "claude2-connector",
+    "name": "Anthropic-Claude2",
+    "connector_type": "anthropic-connector",
     "uri": "",
     "token": "",
     "max_calls_per_second": 1,
