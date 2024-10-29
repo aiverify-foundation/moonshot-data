@@ -2,7 +2,7 @@
     "name": "Anthropic-Claude2",
     "connector_type": "anthropic-connector",
     "uri": "",
-    "token": "",
+    "token": "AIzaSyDgZYJl3GfiViCfWp6SuWSQA-Hl6T2D1rw",
     "max_calls_per_second": 1,
     "max_concurrency": 1,
     "model": "claude-2",
