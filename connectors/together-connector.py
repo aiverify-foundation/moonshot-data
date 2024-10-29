@@ -20,9 +20,6 @@ class TogetherConnector(Connector):
         # Set Together Key
         self._client = AsyncTogether(api_key=self.token)
 
-        # Set the model to use and remove it from optional_params if it exists
-        self.model = self.optional_params.get("model", "")
-
     @Connector.rate_limited
     @perform_retry
     async def get_response(self, prompt: str) -> ConnectorResponse:
