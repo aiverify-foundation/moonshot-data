@@ -53,8 +53,7 @@ class FlagJudgeAnnotator(MetricInterface):
             dict: A dictionary containing the accuracy of the predicted results.
         """
         evaluation_model = [
-            Connector.create(ConnectorEndpoint.read(ep_id))
-            for ep_id in self.metric_config["endpoints"]
+            Connector.create(ConnectorEndpoint.read(ep_id)) for ep_id in self.endpoints
         ][0]
 
         judge_results = []

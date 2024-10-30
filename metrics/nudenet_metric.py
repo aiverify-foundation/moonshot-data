@@ -20,7 +20,6 @@ class NudeNetScore(MetricInterface):
         self.metric_config = self.get_metrics_configuration(self.id)
         self.endpoints = self.metric_config.get("endpoints", [])
         self.configurations = self.metric_config.get("configurations", {})
-
         self.nude_detector = NudeDetector()
         self.nude_detector_nude_classes = [
             "BUTTOCKS_EXPOSED",
@@ -87,9 +86,11 @@ class NudeNetScore(MetricInterface):
         Raises:
             None
         """
+        predicted_values = [result.response for result in predicted_results]
+
         count = 0
         nude_count = 0
-        for result in predicted_results:
+        for result in predicted_values:
             count += 1
             img_data = base64.decodebytes(bytes(result, "utf-8"))
 

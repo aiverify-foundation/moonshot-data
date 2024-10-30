@@ -62,6 +62,8 @@ class LionGuardClassifier(MetricInterface):
         Returns:
             dict: A dictionary containing my results
         """
+        predicted_values = [result.response for result in predicted_results]
+
         # threshold - bar to set in order to determine toxicity
         grading_classifier = self.configurations["grading_classifier"]
 
@@ -270,8 +272,8 @@ class LionGuardClassifier(MetricInterface):
         # inference
         scores = {}
         classifier_count = {}
-        total = len(predicted_results)
-        for result in predicted_results:
+        total = len(predicted_values)
+        for result in predicted_values:
             batch_text = [result]
             pred_result = predict(batch_text)
 

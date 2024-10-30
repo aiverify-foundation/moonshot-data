@@ -1,15 +1,18 @@
 import json
+import logging
 
 import aiohttp
 from aiohttp import ClientResponse
 from moonshot.src.connectors.connector import Connector, perform_retry
 from moonshot.src.connectors.connector_prompt_arguments import ConnectorPromptArguments
+from moonshot.src.connectors.connector_response import ConnectorResponse
 from moonshot.src.connectors_endpoints.connector_endpoint_arguments import (
     ConnectorEndpointArguments,
 )
 from moonshot.src.utils.log import configure_logger
 
 # Create a logger for this module
+logging.basicConfig(level=logging.INFO)
 logger = configure_logger(__name__)
 
 
@@ -20,7 +23,7 @@ class FlagJudgeConnector(Connector):
 
     @Connector.rate_limited
     @perform_retry
-    async def get_response(self, prompt: str) -> str:
+    async def get_response(self, prompt: str) -> ConnectorResponse:
         """
         Abstract method to be implemented by subclasses to get a response from the connector.
 
@@ -30,11 +33,14 @@ class FlagJudgeConnector(Connector):
             prompt (str): The input prompt to be sent to the connector.
 
         Returns:
-            str: The response received from the connector.
+            ConnectorResponse: An instance containing the response received from the connector
+            and any additional metadata.
+
+        Raises:
+            NotImplementedError: Always raised to indicate this method should be overridden by subclasses.
         """
-        # Default implementation, can be overridden by subclasses
         raise NotImplementedError(
-            "This connector is specifically designed for the FlagevalAnnotator metric. Please select an appropriate connector."
+            "This connector is specifically designed for the FlagevalAnnotator metric. Please select an appropriate connector."  # noqa: E501
         )
 
     async def get_judge_response(
@@ -87,7 +93,7 @@ class FlagJudgeConnector(Connector):
 
             judge_result = await self.get_judge_response(
                 generated_prompt.prompt,
-                generated_prompt.predicted_results,
+                generated_prompt.predicted_results.response,
                 generated_prompt.target,
             )
             # Return the judge_result
