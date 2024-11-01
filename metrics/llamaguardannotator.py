@@ -22,7 +22,7 @@ class LlamaGuardAnnotator(MetricInterface):
 
     def get_metadata(self) -> dict | None:
         """
-        Retrieves and returns the metadata of the ExactStrMatch class.
+        Retrieves and returns the metadata of the LlamaGuardAnnotator class.
 
         Returns:
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
