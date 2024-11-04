@@ -95,7 +95,6 @@ class Benchmarking:
             self.prompt_selection_percentage = self.runner_args.get(
                 "prompt_selection_percentage", 100
             )
-            print(self.prompt_selection_percentage)
             self.random_seed = self.runner_args.get("random_seed", 0)
             self.system_prompt = self.runner_args.get("system_prompt", "")
 
