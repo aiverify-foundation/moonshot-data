@@ -38,8 +38,10 @@ class Benchmarking:
         prompt_index,prompt,target,predicted_results,duration,random_seed,system_prompt)
         VALUES(?,?,?,?,?,?,?,?,?,?,?,?)
     """
+
     sql_read_runner_cache_record = """
-        SELECT * from runner_cache_table WHERE connection_id=? AND recipe_id=? AND dataset_id=? AND prompt_template_id=? AND prompt=?  # noqa: E501
+        SELECT * from runner_cache_table WHERE connection_id=? AND recipe_id=? 
+        AND dataset_id=? AND prompt_template_id=? AND prompt=?
     """
     BATCH_SIZE = 10
     QUEUE_SIZE = 10
@@ -93,6 +95,7 @@ class Benchmarking:
             self.prompt_selection_percentage = self.runner_args.get(
                 "prompt_selection_percentage", 100
             )
+            print(self.prompt_selection_percentage)
             self.random_seed = self.runner_args.get("random_seed", 0)
             self.system_prompt = self.runner_args.get("system_prompt", "")
 
