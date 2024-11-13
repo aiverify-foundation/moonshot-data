@@ -40,7 +40,7 @@ class Benchmarking:
     """
 
     sql_read_runner_cache_record = """
-        SELECT * from runner_cache_table WHERE connection_id=? AND recipe_id=? 
+        SELECT * from runner_cache_table WHERE connection_id=? AND recipe_id=?
         AND dataset_id=? AND prompt_template_id=? AND prompt=?
     """
     BATCH_SIZE = 10
@@ -733,17 +733,24 @@ class Benchmarking:
         # Retrieve dataset arguments
         ds_args = Dataset.read(ds_id)
 
-        # Generate a list of prompt indices based on prompt_selection_percentage and random_seed
-        self.num_of_prompts = int(
-            (self.prompt_selection_percentage / 100) * ds_args.num_of_dataset_prompts
-        )
-        if self.num_of_prompts == ds_args.num_of_dataset_prompts:
-            prompt_indices = range(ds_args.num_of_dataset_prompts)
+        if ds_args.num_of_dataset_prompts == 0:
+            prompt_indices = []
         else:
-            random.seed(self.random_seed)
-            prompt_indices = random.sample(
-                range(ds_args.num_of_dataset_prompts), self.num_of_prompts
+            # Generate a list of prompt indices based on prompt_selection_percentage and random_seed
+            self.num_of_prompts = max(
+                1,
+                int(
+                    (self.prompt_selection_percentage / 100)
+                    * ds_args.num_of_dataset_prompts
+                ),
             )
+            if self.num_of_prompts == ds_args.num_of_dataset_prompts:
+                prompt_indices = range(ds_args.num_of_dataset_prompts)
+            else:
+                random.seed(self.random_seed)
+                prompt_indices = random.sample(
+                    range(ds_args.num_of_dataset_prompts), self.num_of_prompts
+                )
         logger.debug(
             f"[Benchmarking] Dataset {ds_id}, using {len(prompt_indices)} of {ds_args.num_of_dataset_prompts} prompts."
         )
