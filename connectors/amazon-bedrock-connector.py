@@ -1,5 +1,4 @@
 import asyncio
-import logging
 
 import boto3
 from botocore.config import Config
@@ -8,9 +7,10 @@ from moonshot.src.connectors.connector_response import ConnectorResponse
 from moonshot.src.connectors_endpoints.connector_endpoint_arguments import (
     ConnectorEndpointArguments,
 )
+from moonshot.src.utils.log import configure_logger
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+# Create a logger for this module
+logger = configure_logger(__name__)
 
 
 class AmazonBedrockConnector(Connector):
