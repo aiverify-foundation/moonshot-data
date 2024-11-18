@@ -1,10 +1,11 @@
 {
     "name": "Legal Summarisation",
     "description": "This cookbook runs general capabilitiy benchmark on legal summarisation model.",
-    "tags": [],
-    "categories": [
-        "Capability"
+    "tags": [
+        "Summarisation",
+        "Legal"
     ],
+    "categories": ["Capability"],
     "recipes": [
         "analogical-similarity",
         "auto-categorisation",
