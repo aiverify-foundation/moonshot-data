@@ -59,6 +59,8 @@ class SpellingScore(MetricInterface):
             dict: The spellingscore of the results.
 
         """
+        predicted_values = [result.response for result in predicted_results]
+
         results = {}
         total_number_of_words = 0
         total_number_of_misspelled = 0
@@ -68,7 +70,7 @@ class SpellingScore(MetricInterface):
         )
 
         index = 0
-        for result in predicted_results:
+        for result in predicted_values:
             this_result = {}
 
             corrected = fix_spelling(result, max_length=4096)[0]["generated_text"]
