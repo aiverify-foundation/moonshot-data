@@ -1,0 +1,18 @@
+include:
+  - local: ms-gitlab-ci.yml
+  
+stages:
+  - run-moonshot
+
+run-job:
+  stage: run-moonshot
+  image: python:3.11
+  script:
+    - !reference [.setup_ms_script, script]
+    - !reference [.run_ms_script, script]
+    - !reference [.display_ms_script, script]
+    - !reference [.commit_ms_script, script]
+  artifacts:
+    paths:
+      - moonshot.log
+      - moonshot-data/generated-outputs/results/
