@@ -83,5 +83,10 @@
                 "azure-langchain-openai-embedding-ada-2"
             ]
         }
+    },
+    "jp-aisi-safe-unsafe-annotator":{
+        "endpoints": [
+            "my-openai-gpt4o"
+        ]
     }
 }
