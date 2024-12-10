@@ -6,11 +6,11 @@
         "Trust & Safety"
     ],
     "datasets": [
-        "jp-aisi-ch"
+        "my-jp-aisi-ch"
     ],
     "prompt_templates": [],
     "metrics": [
-        "jp-aisi-safe-unsafe-annotator"
+        "my-jp-aisi-safe-unsafe-annotator"
     ],
     "grading_scale": {
         "A": [
