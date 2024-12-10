@@ -1,0 +1,19 @@
+{
+  "name": "Amazon Bedrock - Llama 3.1 405B Instruct",
+  "connector_type": "amazon-bedrock-connector",
+  "uri": "DEFAULT",
+  "token": "Use environment variables!",
+  "max_calls_per_second": 10,
+  "max_concurrency": 10,
+  "params": {
+    "timeout": 300,
+    "allow_retries": true,
+    "num_of_retries": 3,
+    "temperature": 0.0,
+    "model": "meta.llama3-1-405b-instruct-v1:0",
+    "max_gen_len": 2048,
+    "session":{
+      "region_name":"us-west-2"
+    }
+  }
+}
