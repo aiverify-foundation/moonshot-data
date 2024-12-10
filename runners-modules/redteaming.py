@@ -417,3 +417,4 @@ class RedTeamingPromptArguments(BaseModel):
             "duration": str(self.connector_prompt.duration),
             "start_time": self.start_time,
         }
+RedTeamingPromptArguments.model_rebuild()
