@@ -1,4 +1,3 @@
-import logging
 from typing import Any
 
 from moonshot.src.connectors.connector import Connector, perform_retry
@@ -7,9 +6,6 @@ from moonshot.src.connectors_endpoints.connector_endpoint_arguments import (
     ConnectorEndpointArguments,
 )
 from openai import AsyncOpenAI
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 
 class OpenAIConnector(Connector):
@@ -22,9 +18,6 @@ class OpenAIConnector(Connector):
             api_key=self.token,
             base_url=self.endpoint if self.endpoint and self.endpoint != "" else None,
         )
-
-        # Set the model to use and remove it from optional_params if it exists
-        self.model = self.optional_params.get("model", "")
 
     @Connector.rate_limited
     @perform_retry

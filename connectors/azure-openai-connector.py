@@ -1,4 +1,3 @@
-import logging
 from typing import Any
 
 from moonshot.src.connectors.connector import Connector, perform_retry
@@ -7,9 +6,6 @@ from moonshot.src.connectors_endpoints.connector_endpoint_arguments import (
     ConnectorEndpointArguments,
 )
 from openai import AsyncAzureOpenAI, BadRequestError
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
 
 
 class AzureOpenAIConnector(Connector):
@@ -28,9 +24,6 @@ class AzureOpenAIConnector(Connector):
             # https://learn.microsoft.com/azure/cognitive-services/openai/how-to/create-resource?pivots=web-portal#create-a-resource
             azure_endpoint=self.endpoint,
         )
-
-        # Set the model to use and remove it from optional_params if it exists
-        self.model = self.optional_params.get("model", "")
 
     @Connector.rate_limited
     @perform_retry

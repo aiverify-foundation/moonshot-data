@@ -1,5 +1,3 @@
-import logging
-
 import anthropic
 from anthropic import AI_PROMPT, HUMAN_PROMPT
 from anthropic.types import Completion
@@ -9,9 +7,6 @@ from moonshot.src.connectors_endpoints.connector_endpoint_arguments import (
     ConnectorEndpointArguments,
 )
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
-
 
 class Claude2Connector(Connector):
     def __init__(self, ep_arguments: ConnectorEndpointArguments):
@@ -20,9 +15,6 @@ class Claude2Connector(Connector):
 
         # Set Claude2 Key
         self._client = anthropic.AsyncAnthropic(api_key=self.token)
-
-        # Set the model to use and remove it from optional_params if it exists
-        self.model = self.optional_params.get("model", "")
 
     @Connector.rate_limited
     @perform_retry
