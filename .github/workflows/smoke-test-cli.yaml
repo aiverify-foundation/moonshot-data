@@ -45,8 +45,8 @@ jobs:
       if: github.event_name == 'pull_request_review'
       uses: actions/checkout@v4
       with:
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-          ref: ${{ github.event.pull_request.head.ref }}
+          repository: aiverify-foundation/moonshot
+          ref: ${{ vars.MOONSHOT_BRANCH }}
 
     - name: Checkout Moonshot (Workflow Dispatch)
       if: github.event_name == 'workflow_dispatch'
@@ -67,13 +67,14 @@ jobs:
         pip install -r requirements.txt
         touch .env
         echo "${{ secrets.ENVIRONMENT_VARS }}" >> .env
+        pwd
 
     - name: Checkout Moonshot Data (Pull Request Review)
       if: github.event_name == 'pull_request_review'
       uses: actions/checkout@v4
       with: 
-         repository: aiverify-foundation/moonshot-data
-         ref: ${{ vars.MOONSHOT_DATA_BRANCH }}
+         repository: ${{ github.event.pull_request.head.repo.full_name }}
+         ref: ${{ github.event.pull_request.head.ref }}
          path: moonshot-data
 
     - name: Checkout Moonshot Data (Workflow Dispatch)
@@ -89,6 +90,7 @@ jobs:
         source venv/bin/activate
         cd moonshot-data
         pip install -r requirements.txt
+        pwd
 
     - name: Checkout Moonshot UI (Pull Request Review)
       if: github.event_name == 'pull_request_review'
@@ -112,6 +114,7 @@ jobs:
         npm ci
         npm run build
         cd ../
+        pwd
 
     - name: Checkout Smoke Test 
       uses: actions/checkout@v4
@@ -133,4 +136,5 @@ jobs:
          cd tests
          pip install python-dotenv
          pip install pytest
+         pwd
          pytest test_cli.py

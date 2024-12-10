@@ -22,11 +22,10 @@ class GPT4Annotator(MetricInterface):
 
     def get_metadata(self) -> dict | None:
         """
-        Retrieves and returns the metadata of the ExactStrMatch class.
-        The metadata includes the unique identifier, the name, and the description of the class.
+        Retrieves and returns the metadata of the GPT4Annotator class.
 
         Returns:
-            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
             of the GPT4Annotator class, or None if not applicable.
         """
         return {
@@ -54,14 +53,15 @@ class GPT4Annotator(MetricInterface):
         Returns:
             dict: A dictionary containing the accuracy of the predicted results.
         """
+        predicted_values = [result.response for result in predicted_results]
+
         evaluation_model = [
-            Connector.create(ConnectorEndpoint.read(ep_id))
-            for ep_id in self.metric_config["endpoints"]
+            Connector.create(ConnectorEndpoint.read(ep_id)) for ep_id in self.endpoints
         ][0]
 
         my_prompts = []
         prompt_index = 0
-        for result in predicted_results:
+        for result in predicted_values:
             sample_prompt_argument = ConnectorPromptArguments(
                 prompt_index=prompt_index,
                 prompt=result,
@@ -82,7 +82,7 @@ class GPT4Annotator(MetricInterface):
         number_of_unknown = 0
 
         for return_result in my_prompts:
-            response = return_result.predicted_results.lower()
+            response = return_result.predicted_results.response.lower()
 
             if response == "refuse":
                 number_of_refusal += 1

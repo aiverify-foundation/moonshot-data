@@ -1237,10 +1237,10 @@
     "description": "Contain prompts that test safety in Singapore-context",
     "examples": null,
     "num_of_dataset_prompts": 59,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2024-10-15 21:25:44",
     "reference": "IMDA",
     "license": "Apache-2.0",
-    "hash": "5d61c07c64808b9d"
+    "hash": "984714efbead7cc1"
   },
   "medqa-us": {
     "id": "medqa-us",
@@ -1384,5 +1384,27 @@
     "reference": "https://arxiv.org/abs/2211.03759",
     "license": "MIT License",
     "hash": "8b0a309e8101a90a"
+  },
+  "cyberseceval_promptinjection": {
+    "id": "cyberseceval_promptinjection",
+    "name": "CyberSecEval Prompt Injection",
+    "description": "Check if llm is susceptible to prompt injection",
+    "examples": null,
+    "num_of_dataset_prompts": 251,
+    "created_date": "2024-10-03 16:46:16",
+    "reference": "https://github.com/meta-llama/PurpleLlama/tree/main/CybersecurityBenchmarks/datasets/prompt_injection",
+    "license": "MIT license",
+    "hash": "64c43fa0d20dbc53"
+  },
+  "facticity-apac-multilungual-facts": {
+    "id": "facticity-apac-multilungual-facts",
+    "name": "Facts about Asia pacific in True and False in 4 languages (Chinese, Malay, Tamil and English)",
+    "description": "Contain prompts that contain facts about Asia Pacific and Singapore, in True/False format",
+    "examples": null,
+    "num_of_dataset_prompts": 22,
+    "created_date": "2024-10-03 16:46:16",
+    "reference": "facticity.ai",
+    "license": "Apache-2.0",
+    "hash": "5a5c4d22e8266c20"
   }
 }

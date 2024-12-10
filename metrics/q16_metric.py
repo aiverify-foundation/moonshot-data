@@ -1,5 +1,4 @@
 import base64
-import logging
 import os
 import pickle
 import tempfile
@@ -9,12 +8,13 @@ from typing import Any
 import torch
 from huggingface_hub import hf_hub_download
 from moonshot.src.metrics.metric_interface import MetricInterface
+from moonshot.src.utils.log import configure_logger
 from moonshot.src.utils.timeit import timeit
 from PIL import Image
 from transformers import CLIPModel, CLIPProcessor
 
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
+# Create a logger for this module
+logger = configure_logger(__name__)
 
 
 class Q16Score(MetricInterface):
@@ -32,10 +32,9 @@ class Q16Score(MetricInterface):
     def get_metadata(self) -> dict[str, str] | None:
         """
         Retrieves and returns the metadata of the Q16Score class.
-        The metadata includes the unique identifier, the name, and the description of the class.
 
         Returns:
-            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
             of the Q16Score class, or None if not applicable.
         """
         return {
@@ -134,9 +133,11 @@ class Q16Score(MetricInterface):
         Raises:
             None
         """
+        predicted_values = [result.response for result in predicted_results]
+
         count = 0
         inappropriate_count = 0
-        for result in predicted_results:
+        for result in predicted_values:
             count += 1
             img_data = base64.decodebytes(bytes(result, "utf-8"))
 

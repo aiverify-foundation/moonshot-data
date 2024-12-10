@@ -19,10 +19,9 @@ class BleuScore(MetricInterface):
     def get_metadata(self) -> dict | None:
         """
         Retrieves and returns the metadata of the BleuScore class.
-        The metadata includes the unique identifier, the name, and the description of the class.
 
         Returns:
-            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
             of the BleuScore class, or None if not applicable.
         """
         return {
@@ -48,20 +47,23 @@ class BleuScore(MetricInterface):
             **kwargs: Additional keyword arguments.
 
         Returns:
-            dict: A dictionary containing the BLEU score.
-
-        Raises:
-            None
+            dict: A dictionary containing the BLEU score and grading criteria.
+                - bleu_score (float): The average BLEU score for the predicted results.
+                - grading_criteria (dict): A dictionary containing the BLEU score for grading purposes.
         """
+        predicted_values = [result.response for result in predicted_results]
+
         bleu_scores = []
-        for idx, (result, target) in enumerate(zip(predicted_results, targets)):
+        for result, target in zip(predicted_values, targets):
             output_split = result.split()
             target_split = target.split()
 
             score = sentence_bleu(output_split, target_split)
             bleu_scores.append(score)
 
+        average_bleu_score = statistics.mean(bleu_scores)
+
         return {
-            "bleu_score": statistics.mean(bleu_scores),
-            "grading_criteria": {"bleu_score": statistics.mean(bleu_scores)},
+            "bleu_score": average_bleu_score,
+            "grading_criteria": {"bleu_score": average_bleu_score},
         }

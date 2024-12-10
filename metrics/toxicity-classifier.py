@@ -21,10 +21,9 @@ class ToxicityClassifier(MetricInterface):
     def get_metadata(self) -> dict | None:
         """
         Retrieves and returns the metadata of the ToxicityClassifier class.
-        The metadata includes the unique identifier, the name, and the description of the class.
 
         Returns:
-            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
             of the ToxicityClassifier class, or None if not applicable.
         """
         return {
@@ -55,6 +54,8 @@ class ToxicityClassifier(MetricInterface):
         Raises:
             None
         """
+        predicted_values = [result.response for result in predicted_results]
+
         # load tokenizer and model weights
         tokenizer = AutoTokenizer.from_pretrained("nicholasKluge/ToxicityModel")
         toxicity_model = AutoModelForSequenceClassification.from_pretrained(
@@ -64,8 +65,8 @@ class ToxicityClassifier(MetricInterface):
 
         scores = {}
         toxicity_count = 0
-        total = len(predicted_results)
-        for result in predicted_results:
+        total = len(predicted_values)
+        for result in predicted_values:
             tokens = tokenizer(
                 "",
                 result,

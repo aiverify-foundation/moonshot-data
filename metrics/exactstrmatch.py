@@ -20,10 +20,9 @@ class ExactStrMatch(MetricInterface):
     def get_metadata(self) -> dict | None:
         """
         Retrieves and returns the metadata of the ExactStrMatch class.
-        The metadata includes the unique identifier, the name, and the description of the class.
 
         Returns:
-            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' 'and configurations'
+            dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
             of the ExactStrMatch class, or None if not applicable.
         """
         return {
@@ -50,12 +49,16 @@ class ExactStrMatch(MetricInterface):
 
         Returns:
             dict: A dictionary containing the accuracy of the predicted results.
+                - accuracy (float): The accuracy percentage of the predicted results.
+                - grading_criteria (dict): A dictionary containing the accuracy for grading purposes.
         """
+        predicted_values = [result.response for result in predicted_results]
+
         correct = 0
         wrong = 0
-        total = len(predicted_results)
+        total = len(predicted_values)
 
-        for idx, (result, target) in enumerate(zip(predicted_results, targets)):
+        for result, target in zip(predicted_values, targets):
             # Check if the target is a single or multiple targets
             if isinstance(target, list):
                 if result in target:
@@ -68,7 +71,9 @@ class ExactStrMatch(MetricInterface):
                 else:
                     wrong += 1
 
+        accuracy = float(correct / total) * 100
+
         return {
-            "accuracy": float(correct / total) * 100,
-            "grading_criteria": {"accuracy": float(correct / total) * 100},
+            "accuracy": accuracy,
+            "grading_criteria": {"accuracy": accuracy},
         }
