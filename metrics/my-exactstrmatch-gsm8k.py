@@ -62,6 +62,8 @@ class MyExactStrMatch(MetricInterface):
         for idx, (result, target) in enumerate(zip(predicted_results, targets)):
             # Check if the target is a single or multiple targets
             result = self.extract(result.response)
+            if not isinstance(target, str):
+                target = str(target)
             _, matched = inspect_match_str(
                 result,
                 target,
