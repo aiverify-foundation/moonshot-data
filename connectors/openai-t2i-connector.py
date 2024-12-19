@@ -1,15 +1,14 @@
-import logging
-
 from moonshot.src.connectors.connector import Connector, perform_retry
 from moonshot.src.connectors.connector_response import ConnectorResponse
 from moonshot.src.connectors_endpoints.connector_endpoint_arguments import (
     ConnectorEndpointArguments,
 )
+from moonshot.src.utils.log import configure_logger
 from openai import AsyncOpenAI, BadRequestError
 from openai.types import ImagesResponse
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+# Create a logger for this module
+logger = configure_logger(__name__)
 
 
 class OpenAIT2IConnector(Connector):
@@ -66,15 +65,15 @@ class OpenAIT2IConnector(Connector):
         )
         try:
             response = await self._client.images.generate(**new_params)
-            logging.debug(f"[OpenAIT2IConnector] {'*'*5} No Blackout {'*'*5}")
+            logger.debug(f"[OpenAIT2IConnector] {'*'*5} No Blackout {'*'*5}")
             return ConnectorResponse(
                 response=await self._process_response(response, prompt)
             )
         except BadRequestError:
-            logging.warning(f"[OpenAIT2IConnector] {'*'*5} Blackout {'*'*5}")
+            logger.warning(f"[OpenAIT2IConnector] {'*'*5} Blackout {'*'*5}")
             return ConnectorResponse(response=blackout)
         except Exception as e:
-            logging.error(f"[OpenAIT2IConnector] Failed to get response: {e}")
+            logger.error(f"[OpenAIT2IConnector] Failed to get response: {e}")
             raise
 
     async def _process_response(self, response: ImagesResponse, prompt: str) -> str:
@@ -103,5 +102,5 @@ class OpenAIT2IConnector(Connector):
             return encoded_strings[0] if len(encoded_strings) == 1 else encoded_strings
 
         except Exception as e:
-            logging.error(f"Error processing response: {e}")
+            logger.error(f"Error processing response: {e}")
             raise
