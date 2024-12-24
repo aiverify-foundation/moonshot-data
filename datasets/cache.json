@@ -1406,5 +1406,38 @@
     "reference": "facticity.ai",
     "license": "Apache-2.0",
     "hash": "5a5c4d22e8266c20"
+  },
+  "my-gsm8k": {
+    "id": "my-gsm8k",
+    "name": "GSM8K",
+    "description": "This dataset consists of high quality grade school math problems created by human. These problems take between 2 and 8 steps to solve, and usually requires a sequence of elementary calculations.",
+    "examples": null,
+    "num_of_dataset_prompts": 1319,
+    "created_date": "2024-12-16 18:11:49",
+    "reference": "https://github.com/openai/grade-school-math",
+    "license": "MIT License",
+    "hash": "ef507dbe3c323afc"
+  },
+  "jp-aisi-en": {
+    "id": "jp-aisi-en",
+    "name": "Japan AISI English Dataset",
+    "description": "",
+    "examples": null,
+    "num_of_dataset_prompts": 56,
+    "created_date": "2024-12-16 20:08:43",
+    "reference": "",
+    "license": "",
+    "hash": "159bba6186fcdfbc"
+  },
+  "jp-aisi-ch": {
+    "id": "jp-aisi-ch",
+    "name": "Japan AISI Chinese Dataset",
+    "description": "",
+    "examples": null,
+    "num_of_dataset_prompts": 56,
+    "created_date": "2024-12-16 20:08:43",
+    "reference": "",
+    "license": "",
+    "hash": "0e2fb03914159719"
   }
 }
