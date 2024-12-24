@@ -79,7 +79,16 @@ class MyExactStrMatch(MetricInterface):
         }
 
     @staticmethod
-    def extract(result):
+    def extract(result: str) -> str:
+        """
+        Extracts a numerical value from a string if present.
+
+        Args:
+            result (str): The string to extract the value from.
+
+        Returns:
+            str: The extracted numerical value as a string, or 'NA' if no value is found.
+        """
         matches = re.findall(r"The answer is \$?(\-?[\d,\.]+)", result)
         if len(matches) == 0:
             return 'NA'
@@ -89,7 +98,16 @@ class MyExactStrMatch(MetricInterface):
         return model_answer
 
 
-def first_number_normalized(words) -> str:
+def first_number_normalized(words: list[str]) -> str:
+    """
+    Retrieves and normalizes the first numeric word in a list of words.
+
+    Args:
+        words (list[str]): A list of words to search.
+
+    Returns:
+        str: The normalized numeric value as a string, or the first word if no numeric value is found.
+    """
     number = next(
         (word for word in words if word.replace(".", "").isnumeric()), words[0]
     )
@@ -97,10 +115,29 @@ def first_number_normalized(words) -> str:
 
 
 def strip_punctuation(s: str) -> str:
+    """
+    Removes punctuation and surrounding whitespace from a string.
+
+    Args:
+        s (str): The string to clean.
+
+    Returns:
+        str: The cleaned string.
+    """
     return s.strip(string.whitespace + string.punctuation)
 
 
 def normalize_number(number: str, precision: int = 5) -> str:
+    """
+    Normalizes a number to a specified precision.
+
+    Args:
+        number (str): The number to normalize.
+        precision (int, optional): The number of significant figures to keep. Defaults to 5.
+
+    Returns:
+        str: The normalized number as a string.
+    """
     if number.replace(".", "").isnumeric():
         num = float(number)
         return format(num, f".{precision}g")
@@ -109,7 +146,15 @@ def normalize_number(number: str, precision: int = 5) -> str:
 
 
 def strip_numeric_punctuation(s: str) -> str:
-    # strip $, €, £, and ,
+    """
+    Removes numeric-related punctuation (e.g., $, €, £) and commas from a string.
+
+    Args:
+        s (str): The string to clean.
+
+    Returns:
+        str: The cleaned string.
+    """
     stripped = re.sub(r"[$,£,€]", "", s)
     # strip . if it's followed by a space, the end of the string,
     # or a non-digit character
@@ -124,8 +169,22 @@ def inspect_match_str(
     ignore_case: bool = True,
     ignore_punctuation: bool = True,
     numeric: bool = False,
-):
-    # strip ws
+) -> tuple[str, bool]:
+    """
+    Compares a value and a target string with various matching criteria.
+
+    Args:
+        value (str): The value to compare.
+        target (str): The target string.
+        location (Literal["begin", "end", "any", "exact"], optional): The match location criteria. Defaults to "end".
+        ignore_case (bool, optional): Whether to ignore case in the comparison. Defaults to True.
+        ignore_punctuation (bool, optional): Whether to ignore punctuation in the comparison. Defaults to True.
+        numeric (bool, optional): Whether to treat the strings as numeric values. Defaults to False.
+
+    Returns:
+        tuple[str, bool]: A tuple containing the processed value and a boolean indicating whether the match criteria are met.
+    """
+
     v = value.strip()
     t = target.strip()
 

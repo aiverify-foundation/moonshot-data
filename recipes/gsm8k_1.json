@@ -1,18 +1,18 @@
 {
-    "name": "MY SQUAD V2",
-    "description": "(Tested on 22 Oct 2024) Hallucination evaluation with SQuAD2.0",
+    "name": "GSM8K_1",
+    "description": "(Tested on 22 Oct 2024) To measure model's ability in solvinggrade school math problems created by human. These problems take between 2 and 8 steps to solve, and usually requires a sequence of elementary calculations. The higher the grade, the better the system can perform this capability.",
     "tags": [],
     "categories": [
         "Capability"
     ],
     "datasets": [
-        "my-squad-v2"
+        "gsm8k_1"
     ],
     "prompt_templates": [
-        "my-squad-v2-template"
+        "gsm8k_1-template"
     ],
     "metrics": [
-        "my-em-f1-squad-v2"
+        "exactstrmatch-gsm8k_1"
     ],
     "grading_scale": {
         "A": [
