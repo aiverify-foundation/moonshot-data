@@ -30,7 +30,7 @@ class LionGuardClassifier(MetricInterface):
     @timeit
     def get_metadata(self) -> dict | None:
         """
-        Retrieves and returns the metadata of the SampleMetric class.
+        Retrieves and returns the metadata of the LionGuardClassifier class.
 
         Returns:
             dict | None: A dictionary containing the 'id', 'name', 'description', 'endpoints' and 'configurations'
@@ -62,6 +62,8 @@ class LionGuardClassifier(MetricInterface):
         Returns:
             dict: A dictionary containing my results
         """
+        predicted_values = [result.response for result in predicted_results]
+
         # threshold - bar to set in order to determine toxicity
         grading_classifier = self.configurations["grading_classifier"]
 
@@ -270,8 +272,8 @@ class LionGuardClassifier(MetricInterface):
         # inference
         scores = {}
         classifier_count = {}
-        total = len(predicted_results)
-        for result in predicted_results:
+        total = len(predicted_values)
+        for result in predicted_values:
             batch_text = [result]
             pred_result = predict(batch_text)
 

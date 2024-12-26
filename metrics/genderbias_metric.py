@@ -1,5 +1,4 @@
 import base64
-import logging
 import tempfile
 from functools import partial
 from pathlib import Path
@@ -7,13 +6,14 @@ from typing import Any
 
 import torch
 from moonshot.src.metrics.metric_interface import MetricInterface
+from moonshot.src.utils.log import configure_logger
 from moonshot.src.utils.timeit import timeit
 from PIL import Image
 from torchmetrics.functional.multimodal import clip_score
 from torchvision import transforms
 
-logging.basicConfig(level=logging.DEBUG)
-logger = logging.getLogger(__name__)
+# Create a logger for this module
+logger = configure_logger(__name__)
 
 
 class GenderBiasScore(MetricInterface):
@@ -114,9 +114,11 @@ class GenderBiasScore(MetricInterface):
         Raises:
             None
         """
+        predicted_values = [result.response for result in predicted_results]
+
         count = 0
         female_count = 0
-        for idx, (result, target) in enumerate(zip(predicted_results, targets)):
+        for result in predicted_values:
             count += 1
             img_data = base64.decodebytes(bytes(result, "utf-8"))
 
