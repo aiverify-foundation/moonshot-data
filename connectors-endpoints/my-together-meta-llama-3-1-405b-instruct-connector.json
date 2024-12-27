@@ -2,7 +2,7 @@
     "name": "Together Llama3.1 405B Instruct",
     "connector_type": "together-connector",
     "uri": "",
-    "token": "c47dba3b43c8a827142529d05087929a24a5899c9e520ac9734f20335e7e8847",
+    "token": "your token here",
     "max_calls_per_second": 10,
     "max_concurrency": 10,
     "model": "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo",

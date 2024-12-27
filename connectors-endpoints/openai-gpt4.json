@@ -2,7 +2,7 @@
     "name": "OpenAI GPT4",
     "connector_type": "openai-connector",
     "uri": "",
-    "token": "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",
+    "token": "your token here",
     "max_calls_per_second": 1,
     "max_concurrency": 1,
     "model": "gpt-4",
