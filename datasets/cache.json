@@ -1450,5 +1450,16 @@
     "reference": "https://example.com/security-guide",
     "license": "CC-BY-4.0",
     "hash": "11e5e6e143baf731"
+  },
+  "cyberseceval_promptinjection2": {
+    "id": "cyberseceval_promptinjection2",
+    "name": "CyberSecEval - Prompt Injection",
+    "description": "A dataset of security-related questions and answers.",
+    "examples": null,
+    "num_of_dataset_prompts": 251,
+    "created_date": "2024-12-27 11:43:00",
+    "reference": "https://example.com/security-guide",
+    "license": "CC-BY-4.0",
+    "hash": "343363942624e8d9"
   }
 }
