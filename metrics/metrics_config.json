@@ -88,10 +88,5 @@
         "endpoints": [
             "my-openai-gpt4o"
         ]
-    },
-    "mlcipv":{
-        "endpoints":[
-            "my-openai-gpt4o"
-        ]
     }
 }
