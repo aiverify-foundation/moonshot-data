@@ -4,7 +4,7 @@
     "recipes": [
         "mlc-ipv",
         "mlc-ncr",
-        "mlc-pvr",
+        "mlc-prv",
         "mlc-vcr"
     ]
 }
