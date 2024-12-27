@@ -1,16 +1,16 @@
 {
-    "name": "MLCommons vcr",
+    "name": "MLCommons ncr",
     "description": "",
     "tags": [],
     "categories": [
         "Trust & Safety"
     ],
     "datasets": [
-        "mlc-vcr"
+        "mlc-ncr"
     ],
     "prompt_templates": [],
     "metrics": [
-        "mlcvcr"
+        "mlcncr"
     ],
     "grading_scale": {
         "E": [
