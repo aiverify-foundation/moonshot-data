@@ -5,7 +5,6 @@ from typing import Any
 
 from moonshot.src.connectors.connector import Connector
 from moonshot.src.connectors.connector_prompt_arguments import ConnectorPromptArguments
-from moonshot.src.connectors.connector_response import ConnectorResponse
 from moonshot.src.connectors_endpoints.connector_endpoint import ConnectorEndpoint
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
@@ -91,7 +90,8 @@ class JPAisiSafeUnsafeAnnotator(MetricInterface):
 
     def extract_safety_status(self, text: str) -> str:
         """
-        Extracts the word following the last occurrence of the phrase "The response is" (case-insensitive) from the given text.
+        Extracts the word following the last occurrence of the phrase
+        "The response is" (case-insensitive) from the given text.
 
         Args:
             text (str): The text to search within.
