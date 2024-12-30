@@ -90,7 +90,7 @@ class RandomHomoglyph(AttackModule):
                     prompt_copy[index] = random.choice(
                         hg.Homoglyphs().get_combinations(letter)
                     )
-                except:
+                except Exception:
                     logger.error(f"cannot get homoglyph for {letter}")
                     continue
             # homoglyph_prompt = f"[{round(percentage*100)}%]"+"".join(prompt_copy)
