@@ -1,5 +1,7 @@
 import random
 
+import random
+
 import homoglyphs as hg
 from moonshot.src.redteaming.attack.attack_module import AttackModule
 from moonshot.src.redteaming.attack.attack_module_arguments import AttackModuleArguments
@@ -37,9 +39,12 @@ class RandomHomoglyph(AttackModule):
             "description": self.description if hasattr(self, "description") else "",
             "endpoints": endpoints,
             "configurations": configurations,
+            "configurations": configurations,
         }
 
+
     def _get_letter_length(self, word: str) -> int:
+        return sum([1 for letter in word if letter.isalnum()] + [0])
         return sum([1 for letter in word if letter.isalnum()] + [0])
 
     async def execute(self):
@@ -75,7 +80,9 @@ class RandomHomoglyph(AttackModule):
 
         for i in range(20):
             percentage = i / 20
+            percentage = i / 20
             prompt_copy = prompt.copy()
+            num_to_replace = int(length * percentage)
             num_to_replace = int(length * percentage)
             letters_to_replace = random.sample(filtered, num_to_replace)
             for index, letter in letters_to_replace:
@@ -83,15 +90,19 @@ class RandomHomoglyph(AttackModule):
                     prompt_copy[index] = random.choice(
                         hg.Homoglyphs().get_combinations(letter)
                     )
-                except Exception:
+                except:
                     logger.error(f"cannot get homoglyph for {letter}")
                     continue
             # homoglyph_prompt = f"[{round(percentage*100)}%]"+"".join(prompt_copy)
             homoglyph_prompt = "".join(prompt_copy)
             result_list.append(await self._send_prompt_to_all_llm([homoglyph_prompt]))
 
+
         for res in result_list:
             for x in res:
+                logger.debug(
+                    f"[HomoglyphGenerator] Prompt: [{round(percentage*100)}% changed] {x.prompt}"
+                )
                 logger.debug(
                     f"[HomoglyphGenerator] Prompt: [{round(percentage*100)}% changed] {x.prompt}"
                 )
