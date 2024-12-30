@@ -388,7 +388,9 @@ class RedTeamingPromptArguments(BaseModel):
             self.original_prompt,
             self.connector_prompt.prompt,
             self.system_prompt,
-            self.connector_prompt.predicted_results.response if self.connector_prompt.predicted_results else "",
+            self.connector_prompt.predicted_results.response
+            if self.connector_prompt.predicted_results
+            else "",
             str(self.connector_prompt.duration),
             self.start_time,
         )
@@ -413,8 +415,12 @@ class RedTeamingPromptArguments(BaseModel):
             "original_prompt": self.original_prompt,
             "prepared_prompt": self.connector_prompt.prompt,
             "system_prompt": self.system_prompt,
-            "response": self.connector_prompt.predicted_results.response if self.connector_prompt.predicted_results else "",
+            "response": self.connector_prompt.predicted_results.response
+            if self.connector_prompt.predicted_results
+            else "",
             "duration": str(self.connector_prompt.duration),
             "start_time": self.start_time,
         }
+
+
 RedTeamingPromptArguments.model_rebuild()

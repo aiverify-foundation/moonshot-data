@@ -1,5 +1,6 @@
-import homoglyphs as hg
 import random
+
+import homoglyphs as hg
 from moonshot.src.redteaming.attack.attack_module import AttackModule
 from moonshot.src.redteaming.attack.attack_module_arguments import AttackModuleArguments
 from moonshot.src.utils.log import configure_logger
@@ -34,11 +35,11 @@ class RandomHomoglyph(AttackModule):
             "name": self.name,
             "description": self.description if hasattr(self, "description") else "",
             "endpoints": endpoints,
-            "configurations": configurations,   
+            "configurations": configurations,
         }
-    
+
     def _get_letter_length(self, word: str) -> int:
-        return sum([1 for letter in word if letter.isalnum()]+[0])
+        return sum([1 for letter in word if letter.isalnum()] + [0])
 
     async def execute(self):
         """
@@ -72,23 +73,27 @@ class RandomHomoglyph(AttackModule):
         filtered = [item for item in enum_prompt if item[1].isalpha()]
 
         for i in range(20):
-            percentage = i/20
+            percentage = i / 20
             prompt_copy = prompt.copy()
-            num_to_replace = int(length*percentage)
+            num_to_replace = int(length * percentage)
             letters_to_replace = random.sample(filtered, num_to_replace)
             for index, letter in letters_to_replace:
                 try:
-                    prompt_copy[index] = random.choice(hg.Homoglyphs().get_combinations(letter))
+                    prompt_copy[index] = random.choice(
+                        hg.Homoglyphs().get_combinations(letter)
+                    )
                 except:
                     logger.error(f"cannot get homoglyph for {letter}")
                     continue
             # homoglyph_prompt = f"[{round(percentage*100)}%]"+"".join(prompt_copy)
             homoglyph_prompt = "".join(prompt_copy)
             result_list.append(await self._send_prompt_to_all_llm([homoglyph_prompt]))
-        
+
         for res in result_list:
             for x in res:
-                logger.debug(f"[HomoglyphGenerator] Prompt: [{round(percentage*100)}% changed] {x.prompt}")
+                logger.debug(
+                    f"[HomoglyphGenerator] Prompt: [{round(percentage*100)}% changed] {x.prompt}"
+                )
                 logger.debug(
                     f"[HomoglyphGenerator] Predicted Results: {x.predicted_results}\n"
                 )
