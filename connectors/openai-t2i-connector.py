@@ -1,3 +1,5 @@
+import os
+
 from moonshot.src.connectors.connector import Connector, perform_retry
 from moonshot.src.connectors.connector_response import ConnectorResponse
 from moonshot.src.connectors_endpoints.connector_endpoint_arguments import (
@@ -16,9 +18,11 @@ class OpenAIT2IConnector(Connector):
         # Initialize super class
         super().__init__(ep_arguments)
 
-        # Set OpenAI Key
+        # Initialize the AsyncOpenAI client with the API key and base URL. The API key is selected from the token
+        # attribute if available; otherwise, it defaults to the OPENAI_API_KEY environment variable.
+        api_key = self.token or os.getenv("OPENAI_API_KEY") or ""
         self._client = AsyncOpenAI(
-            api_key=self.token,
+            api_key=api_key,
             base_url=self.endpoint if self.endpoint and self.endpoint != "" else None,
         )
 

@@ -1,4 +1,5 @@
 import logging
+import os
 from typing import Any
 
 from langchain_openai.chat_models import AzureChatOpenAI
@@ -17,16 +18,29 @@ class AzureLangchainOpenAIChatOpenAIConnector(Connector):
         # Initialize super class
         super().__init__(ep_arguments)
 
-        # Azure OpenAI has additional parameters
-        self.api_version = self.optional_params.get("api_version", "2024-02-01")
+        # Initialize Azure OpenAI client with additional parameters
+        # Select API key from token attribute or environment variable 'AZURE_OPENAI_API_KEY'
+        api_key = self.token or os.getenv("AZURE_OPENAI_API_KEY") or ""
+
+        # Select API version from optional parameters or environment variable 'AZURE_OPENAI_VERSION'
+        # Default to '2024-02-01' if neither is provided
+        api_version = (
+            self.optional_params.get("api_version", "")
+            or os.getenv("AZURE_OPENAI_VERSION")
+            or "2024-02-01"
+        )
+
+        # Select API endpoint from endpoint attribute or environment variable 'AZURE_OPENAI_ENDPOINT'
+        # Use an empty string if neither is provided
+        api_endpoint = self.endpoint or os.getenv("AZURE_OPENAI_ENDPOINT") or ""
 
         # Set OpenAI Key
         self._client = AzureChatOpenAI(
-            azure_endpoint=self.endpoint,
+            azure_endpoint=api_endpoint,
             azure_deployment=self.model,
             model=self.model,
-            api_key=self.token,
-            api_version=self.api_version,
+            api_key=api_key,
+            api_version=api_version,
             validate_base_url=False,
         )
 
