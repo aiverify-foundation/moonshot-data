@@ -1,6 +1,6 @@
 {
     "name": "Japan AISI Dataset English",
-    "description": "",
+    "description": "This dataset includes a subset of the safety-focused testing dataset 'AnswerCarefully'. The subset focuses on Information Hazards",
     "tags": [],
     "categories": [
         "Trust & Safety"
