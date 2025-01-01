@@ -1,6 +1,12 @@
 {
     "name": "Tamil Language",
     "description": "This is a cookbook that consists of datasets related to the Tamil Language.",
+    "tags": [
+        "Tamil comprehension",
+        "Tamil generation",
+        "Tamil literature"
+    ],
+    "categories": ["Capability"],
     "recipes": [
         "tamil-kural-classification",
         "tamil-tamilnews-classification",
