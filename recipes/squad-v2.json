@@ -1,6 +1,6 @@
 {
-    "name": "SQUAD V2",
-    "description": "(Tested on 22 Oct 2024) Hallucination evaluation with SQuAD2.0",
+    "name": "SQUAD-V2",
+    "description": "Hallucination evaluation with SQuAD2.0",
     "tags": [],
     "categories": [
         "Capability"
