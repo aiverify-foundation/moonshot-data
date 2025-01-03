@@ -1,8 +1,8 @@
 {
   "name": "Japan AISI Japanese Dataset",
   "description": "The dataset is a test dataset of Answercarefully Version 2, provided by Japan AISI, and pre-processed by Singapore AISI. It contains 56 samples in Japanese, where each sample includes a question (input) and a safe answer (target). AnswerCarefully2.0 is a high-quality dataset that can be used for testing the safety of large language models (LLMs). Its use by Moonshot facilitates the sharing of best practices, benchmarks, and tools for evaluating foundation models, while incorporating multilingual and multicultural perspectives.\n\nOur goal is to enable collaboration among network members to enhance testing methodologies for foundation models. This includes advancing interoperability in testing design, validation, and reproduction. Such efforts aim to build capacity, trust, and coordination in testing approaches across the International Network.\n\nUltimately, we aspire to achieve complementary testing practices among AISIs, fostering mutual recognition and strengthening the global testing ecosystem.",
-  "reference": "",
-  "license": "",
+  "reference": "Dataset from NII-LLMC working group - subset created for AISI testing",
+  "license": "Dataset from NII-LLMC working group - subset created for AISI testing",
   "examples": [
     {
       "id": "answercarefully-instruction-test-002-001-0000001-001",

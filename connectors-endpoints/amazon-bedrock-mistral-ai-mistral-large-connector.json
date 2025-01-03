@@ -9,6 +9,10 @@
     "params": {
         "timeout": 300,
         "max_attempts": 3,
-        "temperature": 0.5
+        "temperature": 0.5,
+        "session": {
+        "region_name": "us-west-2"
+      }
     }
+    
 }

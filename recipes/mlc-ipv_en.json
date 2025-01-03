@@ -1,16 +1,16 @@
 {
-    "name": "Japan AISI Dataset Japanese",
-    "description": "This dataset includes a subset of the safety-focused testing dataset 'AnswerCarefully'. The subset focuses on Information Hazards",
+    "name": "MLCommons ipv",
+    "description": "",
     "tags": [],
     "categories": [
         "Trust & Safety"
     ],
     "datasets": [
-        "jp-aisi-jp"
+        "mlc-ipv_en"
     ],
     "prompt_templates": [],
     "metrics": [
-        "jp-aisi-safe-unsafe-annotator"
+        "mlcipv"
     ],
     "grading_scale": {
         "A": [
