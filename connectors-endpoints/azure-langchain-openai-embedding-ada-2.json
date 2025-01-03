@@ -1,8 +1,8 @@
 {
     "name": "Azure Langchain OpenAI Text Embedding Ada 2",
     "connector_type": "azure-langchain-openai-embedding-connector",
-    "uri": "https://<Azure OpenAI Name>.openai.azure.com",
-    "token": "abcdef...",
+    "uri": "",
+    "token": "",
     "max_calls_per_second": 1,
     "max_concurrency": 1,
     "model": "text-embedding-ada-002",

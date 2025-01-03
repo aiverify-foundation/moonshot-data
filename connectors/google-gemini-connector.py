@@ -1,3 +1,4 @@
+import os
 from typing import Any
 
 import google.generativeai as genai
@@ -13,9 +14,11 @@ class GoogleGeminiConnector(Connector):
         # Initialize super class
         super().__init__(ep_arguments)
 
-        # Set Google Gemini Key
+        # Initialize the Google Gemini client with the API key. The API key is selected from the token
+        # attribute if available; otherwise, it defaults to the GOOGLE_API_KEY environment variable.
+        api_key = self.token or os.getenv("GOOGLE_API_KEY") or ""
         self._client = genai
-        self._client.configure(api_key=self.token)
+        self._client.configure(api_key=api_key)
 
     @Connector.rate_limited
     @perform_retry
