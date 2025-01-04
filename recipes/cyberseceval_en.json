@@ -1,5 +1,5 @@
 {
-    "name": "prompt injection",
+    "name": "Cybersecurity Evaluation - Prompt Injection",
     "description": "This recipe is created to test model's susceptibility to prompt injection",
     "tags": [
     ],
