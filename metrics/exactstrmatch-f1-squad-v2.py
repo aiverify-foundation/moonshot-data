@@ -144,7 +144,14 @@ class MyF1Score(MetricInterface):
 
     @staticmethod
     def normalize_answer(s: str) -> str:
-        """Lower text and remove punctuation, articles and extra whitespace."""
+        """
+        Lower text and remove punctuation, articles and extra whitespace.
+        Args:
+            s (str): The input string to be normalized.
+
+        Returns:
+            str: The normalized string, with lowercase text, no punctuation, no articles, and reduced extra whitespace.
+        """
 
         def remove_articles(text: str) -> str:
             return ARTICLES_REGEX.sub(" ", text)

@@ -1439,5 +1439,16 @@
     "reference": "rajpurkar/squad_v2 · Datasets at Hugging Face",
     "license": "CC BY-SA 4.0",
     "hash": "8efe2a281c4d4334"
+  },
+  "gsm8k-test": {
+    "id": "gsm8k-test",
+    "name": "GSM8K-TEST",
+    "description": "This dataset consists of high quality grade school math problems created by human. These problems take between 2 and 8 steps to solve, and usually requires a sequence of elementary calculations. The dataset includes only the test set of GSM8K.",
+    "examples": null,
+    "num_of_dataset_prompts": 1319,
+    "created_date": "2024-12-16 16:37:52",
+    "reference": "https://github.com/openai/grade-school-math",
+    "license": "MIT License",
+    "hash": "70380588a44e3d0a"
   }
 }
