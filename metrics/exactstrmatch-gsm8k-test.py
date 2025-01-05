@@ -1,8 +1,7 @@
 import re
-from pathlib import Path
-from typing import Any, Callable, Literal
-import json
 import string
+from pathlib import Path
+from typing import Any, Literal
 
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
@@ -55,7 +54,6 @@ class MyExactStrMatch(MetricInterface):
         """
 
         correct = 0
-        wrong = 0
         total = len(predicted_results)
         results = []
 
@@ -64,11 +62,7 @@ class MyExactStrMatch(MetricInterface):
             result = self.extract(result.response)
             if not isinstance(target, str):
                 target = str(target)
-            _, matched = inspect_match_str(
-                result,
-                target,
-                numeric=True
-            )
+            _, matched = inspect_match_str(result, target, numeric=True)
             correct += int(matched)
             results.append(int(matched))
 
@@ -91,9 +85,9 @@ class MyExactStrMatch(MetricInterface):
         """
         matches = re.findall(r"The answer is \$?(\-?[\d,\.]+)", result)
         if len(matches) == 0:
-            return 'NA'
-        model_answer = matches[-1].replace(',', '')
-        if model_answer[-1] == '.':
+            return "NA"
+        model_answer = matches[-1].replace(",", "")
+        if model_answer[-1] == ".":
             model_answer = model_answer[:-1]
         return model_answer
 
@@ -182,7 +176,8 @@ def inspect_match_str(
         numeric (bool, optional): Whether to treat the strings as numeric values. Defaults to False.
 
     Returns:
-        tuple[str, bool]: A tuple containing the processed value and a boolean indicating whether the match criteria are met.
+        tuple[str, bool]: A tuple containing the processed value and a boolean indicating whether the match criteria
+        are met.
     """
 
     v = value.strip()

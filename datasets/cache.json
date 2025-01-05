@@ -1407,38 +1407,16 @@
     "license": "Apache-2.0",
     "hash": "5a5c4d22e8266c20"
   },
-  "my-gsm8k": {
-    "id": "my-gsm8k",
-    "name": "GSM8K",
-    "description": "This dataset consists of high quality grade school math problems created by human. These problems take between 2 and 8 steps to solve, and usually requires a sequence of elementary calculations.",
-    "examples": null,
-    "num_of_dataset_prompts": 1319,
-    "created_date": "2024-12-16 16:37:52",
-    "reference": "https://github.com/openai/grade-school-math",
-    "license": "MIT License",
-    "hash": "ef507dbe3c323afc"
-  },
-  "gsm8k_1": {
-    "id": "gsm8k_1",
-    "name": "GSM8K_1",
-    "description": "This dataset consists of high quality grade school math problems created by human. These problems take between 2 and 8 steps to solve, and usually requires a sequence of elementary calculations.",
-    "examples": null,
-    "num_of_dataset_prompts": 1319,
-    "created_date": "2024-12-16 16:37:52",
-    "reference": "https://github.com/openai/grade-school-math",
-    "license": "MIT License",
-    "hash": "ac4caa3ad4104e4f"
-  },
   "squad-v2": {
     "id": "squad-v2",
     "name": "squad-v2",
     "description": "Stanford Question Answering Dataset (SQuAD) is a reading comprehension dataset, consisting of questions posed by crowdworkers on a set of Wikipedia articles, where the answer to every question is a segment of text, or span, from the corresponding reading passage, or the question might be unanswerable.",
     "examples": null,
     "num_of_dataset_prompts": 11873,
-    "created_date": "2024-12-16 16:37:52",
+    "created_date": "2025-01-06 01:02:59",
     "reference": "rajpurkar/squad_v2 · Datasets at Hugging Face",
     "license": "CC BY-SA 4.0",
-    "hash": "8efe2a281c4d4334"
+    "hash": "0ce71fdd1eb01e07"
   },
   "gsm8k-test": {
     "id": "gsm8k-test",
@@ -1446,9 +1424,9 @@
     "description": "This dataset consists of high quality grade school math problems created by human. These problems take between 2 and 8 steps to solve, and usually requires a sequence of elementary calculations. The dataset includes only the test set of GSM8K.",
     "examples": null,
     "num_of_dataset_prompts": 1319,
-    "created_date": "2024-12-16 16:37:52",
+    "created_date": "2025-01-06 01:02:59",
     "reference": "https://github.com/openai/grade-school-math",
     "license": "MIT License",
-    "hash": "70380588a44e3d0a"
+    "hash": "e52644f58e4cee5f"
   }
 }

@@ -1,14 +1,16 @@
-import re
 import ast
-import string
 import collections
+import re
+import string
 from pathlib import Path
-from typing import Any, List, Union, Dict
+from typing import Any, List
 
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
 
 ARTICLES_REGEX = re.compile(r"\b(a|an|the)\b", re.UNICODE)
+
+
 class MyF1Score(MetricInterface):
     def __init__(self):
         self.id = Path(__file__).stem
@@ -67,14 +69,14 @@ class MyF1Score(MetricInterface):
 
             # Process result
             result = result.response.strip()
-            if result == 'unanswerable':
-                result = ''
+            if result == "unanswerable":
+                result = ""
 
             # Process target
-            target = [t for t in target['text'] if self.normalize_answer(t)]
+            target = [t for t in target["text"] if self.normalize_answer(t)]
             if not target:
                 # For unanswerable questions, only correct answer is empty string
-                target = ['']
+                target = [""]
             em = max(self.compute_exact(tg, result) for tg in target)
             em_scores += em
             em_results.append(em)
@@ -167,5 +169,3 @@ class MyF1Score(MetricInterface):
             return text.lower()
 
         return white_space_fix(remove_articles(remove_punc(lower(s))))
-
-
