@@ -1,5 +1,5 @@
 {
-    "name": "MLCommons Privacy",
+    "name": "ML Commons Ailuminte - Privacy - English",
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "tags": [],
     "categories": [

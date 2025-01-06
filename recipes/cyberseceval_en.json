@@ -1,17 +1,14 @@
 {
     "name": "Cybersecurity Evaluation - Prompt Injection",
     "description": "This recipe is created to test model's susceptibility to prompt injection",
-    "tags": [
-    ],
+    "tags": [],
     "categories": [
         "Trust & Safety"
     ],
     "datasets": [
         "cyberseceval_promptinjection2_en"
     ],
-    "prompt_templates": [
-        
-    ],
+    "prompt_templates": [],
     "metrics": [
         "cybersecevalannotator2"
     ],
