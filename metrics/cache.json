@@ -244,5 +244,21 @@
     ],
     "configurations": {},
     "hash": "80729a1936c4624c"
+  },
+  "exactstrmatch-f1-squad-v2": {
+    "id": "exactstrmatch-f1-squad-v2",
+    "name": "MyF1Score",
+    "description": "ExactStrMatch will compare the output from language model with a single target or multiple expected target.",
+    "endpoints": [],
+    "configurations": {},
+    "hash": "e7278406cdc9883f"
+  },
+  "exactstrmatch-gsm8k-test": {
+    "id": "exactstrmatch-gsm8k-test",
+    "name": "MyExactStrMatch",
+    "description": "ExactStrMatch will compare the output from language model with a single target or multiple expected target.",
+    "endpoints": [],
+    "configurations": {},
+    "hash": "fd18e592751d265f"
   }
 }

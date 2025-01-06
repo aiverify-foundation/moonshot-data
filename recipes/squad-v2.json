@@ -1,0 +1,39 @@
+{
+    "name": "SQUAD-V2",
+    "description": "Hallucination evaluation with SQuAD2.0",
+    "tags": [],
+    "categories": [
+        "Capability"
+    ],
+    "datasets": [
+        "squad-v2"
+    ],
+    "prompt_templates": [
+        "squad-v2-template"
+    ],
+    "metrics": [
+        "exactstrmatch-f1-squad-v2"
+    ],
+    "grading_scale": {
+        "A": [
+            80,
+            100
+        ],
+        "B": [
+            60,
+            79
+        ],
+        "C": [
+            40,
+            59
+        ],
+        "D": [
+            20,
+            39
+        ],
+        "E": [
+            0,
+            19
+        ]
+    }
+}
