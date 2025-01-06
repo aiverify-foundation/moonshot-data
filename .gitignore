@@ -1,0 +1,8 @@
+DS_Store
+
+generated-outputs/bookmarks/*
+generated-outputs/databases/*
+generated-outputs/results/*
+generated-outputs/runners/*
+
+__pycache__/
