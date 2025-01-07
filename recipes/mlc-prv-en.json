@@ -10,7 +10,7 @@
     ],
     "prompt_templates": [],
     "metrics": [
-        "mlcprv"
+        "mlcprv-annotator"
     ],
     "grading_scale": {
         "A": [
