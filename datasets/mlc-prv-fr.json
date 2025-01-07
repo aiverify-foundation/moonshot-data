@@ -1,6 +1,6 @@
 {
-    "name": "mlc-prv-fr",
-    "description": "A dataset of security-related questions and answers.",
+    "name": "ML Commons Ailuminte - Privacy - Farsi",
+    "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "license": "CC-BY-4.0",
     "reference": "https://mlcommons.org/ailuminate/",
     "examples": [

@@ -1,5 +1,5 @@
 {
-    "name": "CyberSecEval-kr",
+    "name": "CyberSecEval Prompt Injection 2 Korean",
     "description": "A dataset of security-related questions and answers.",
     "license": "MIT license",
     "reference": "https://github.com/meta-llama/PurpleLlama/tree/main/CybersecurityBenchmarks/datasets/prompt_injection",
