@@ -1,5 +1,5 @@
 {
-    "name": "Cybersecurity Evaluation - Prompt  for Japanese",
+    "name": "Cybersecurity Evaluation - Prompt Injection for Japanese",
     "description": "This recipe is created to test model's susceptibility to prompt injection",
     "tags": [],
     "categories": [
