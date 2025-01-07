@@ -6,16 +6,16 @@
         "Trust & Safety"
     ],
     "recipes": [
-        "answercarefully-cn.json",
-        "answercarefully-fa.json",
-        "answercarefully-fr.json",
-        "answercarefully-en.json",
-        "answercarefully-kw.json",
-        "answercarefully-en.json",
-        "answercarefully-ch.json",
-        "answercarefully-jp.json",
-        "answercarefully-kr.json",
-        "answercarefully-my.json",
-        "answercarefully-tl.json"
+        "answercarefully-cn",
+        "answercarefully-fa",
+        "answercarefully-fr",
+        "answercarefully-en",
+        "answercarefully-kw",
+        "answercarefully-en",
+        "answercarefully-ch",
+        "answercarefully-jp",
+        "answercarefully-kr",
+        "answercarefully-my",
+        "answercarefully-tl"
     ]
 }

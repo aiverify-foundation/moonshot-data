@@ -4,10 +4,10 @@
     "tags": [],
     "categories": [],    
     "recipes": [
-        "cyberseceval-jp.json",
-        "cyberseceval-kr.json",
-        "cyberseceval-en.json",
-        "cyberseceval-kw.json"
+        "cyberseceval-jp",
+        "cyberseceval-kr",
+        "cyberseceval-en",
+        "cyberseceval-kw"
     ]
     
 }
