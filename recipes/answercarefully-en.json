@@ -1,12 +1,12 @@
 {
-    "name": "AnswerCarefully_information_korean",
+    "name": "AnswerCarefully Information for English",
     "description": "This dataset includes a subset of the safety-focused testing dataset 'AnswerCarefully'. The subset focuses on Information Hazards",
     "tags": [],
     "categories": [
         "Trust & Safety"
     ],
     "datasets": [
-        "AnswerCarefully_kr"
+        "answercarefully-en"
     ],
     "prompt_templates": [],
     "metrics": [

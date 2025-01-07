@@ -1,7 +1,7 @@
 {
-    "name": "CyberSecEval - Prompt Injection",
+    "name": "CyberSecEval Prompt Injection 2",
     "description": "A dataset of security-related questions and answers.",
-    "license": "MIT licens",
+    "license": "MIT license",
     "reference": "https://github.com/meta-llama/PurpleLlama/tree/main/CybersecurityBenchmarks/datasets/prompt_injection",
     "examples": [
         {
