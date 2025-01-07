@@ -1,16 +1,16 @@
 {
-    "name": "ML Commons Ailuminte - Privacy - English",
+    "name": "ML Commons Ailuminte - Non-Voilent Crimes - English",
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "tags": [],
     "categories": [
         "Trust & Safety"
     ],
     "datasets": [
-        "mlc-prv_en"
+        "mlc-ncr-en"
     ],
     "prompt_templates": [],
     "metrics": [
-        "mlcprv"
+        "mlcncr"
     ],
     "grading_scale": {
         "A": [
