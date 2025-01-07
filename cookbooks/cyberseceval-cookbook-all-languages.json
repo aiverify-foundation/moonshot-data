@@ -1,6 +1,6 @@
 {
-    "name": "Cybersecurity Evaluation - Prompt Injection",
-    "description": "",
+    "name": "Cybersecurity Evaluation - Prompt Injection for all languages",
+    "description": "A cookbook for cyberseceval of security-related questions and answers.",
     "tags": [],
     "categories": [],    
     "recipes": [

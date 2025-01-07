@@ -5,6 +5,9 @@
     "categories": [
         "Trust & Safety"
     ],
+    "datasets": [
+        "mlc-prv-kw"
+    ],
     "prompt_templates": [],
     "metrics": [
         "mlcprv-annotator"
