@@ -2,7 +2,9 @@
     "name": "Cybersecurity Evaluation - Prompt Injection for all languages",
     "description": "A cookbook for cyberseceval of security-related questions and answers.",
     "tags": [],
-    "categories": [],    
+    "categories": [
+        "Trust & Safety"
+    ],   
     "recipes": [
         "cyberseceval-jp",
         "cyberseceval-kr",
