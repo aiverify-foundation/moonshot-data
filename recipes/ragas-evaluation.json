@@ -1,0 +1,20 @@
+{
+  "name": "Ragas RAG Evaluation Recipe",
+  "description": "This recipe assesses how well Retrieval-Augmented Generation systems perform relative to a custom test dataset using LLM-based metrics from Ragas",
+  "tags": ["rag"],
+  "categories": [
+      "Capability, Trust & Safety"
+  ],
+  "datasets": [
+      "rag-sample-dataset"
+  ],
+  "prompt_templates": [],
+  "metrics": [
+      "answercorrectness",
+      "answerrelevance",
+      "contextprecision",
+      "contextrecall",
+      "faithfulness"
+  ],
+  "grading_scale": {}
+}
