@@ -1,14 +1,16 @@
 {
-    "name": "Cybersecurity Evaluation - Prompt Injection for English",
+    "name": "Cybersecurity Evaluation - Prompt Injection for Kswahili",
     "description": "This recipe is created to test model's susceptibility to prompt injection",
     "tags": [],
     "categories": [
         "Trust & Safety"
     ],
     "datasets": [
-        "cyberseceval-promptinjection2-en"
+        "cyberseceval-promptinjection2-kw"
     ],
-    "prompt_templates": [],
+    "prompt_templates": [
+        
+    ],
     "metrics": [
         "cybersecevalannotator2"
     ],

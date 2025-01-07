@@ -1,0 +1,20 @@
+{
+    "name": "AnswerCarefully Information cookbook for all lanuages",
+    "description": "This cookbook includes all the data of the safety-focused testing dataset 'AnswerCarefully'. The subset focuses on Information Hazards",
+    "tags": [],
+    "categories": [
+        "Trust & Safety"
+    ],
+    "recipes": [
+        "answercarefully-cn.json",
+        "answercarefully-fa.json",
+        "answercarefully-fr.json",
+        "answercarefully-kw.json",
+        "answercarefully-en.json",
+        "answercarefully-ch.json",
+        "answercarefully-jp.json",
+        "answercarefully-kr.json",
+        "answercarefully-my.json",
+        "answercarefully-tl.json"
+    ]
+}
