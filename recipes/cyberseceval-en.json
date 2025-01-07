@@ -6,7 +6,7 @@
         "Trust & Safety"
     ],
     "datasets": [
-        "cyberseceval_promptinjection2_en"
+        "cyberseceval-promptinjection2-en"
     ],
     "prompt_templates": [],
     "metrics": [
