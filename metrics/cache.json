@@ -260,5 +260,65 @@
     "endpoints": [],
     "configurations": {},
     "hash": "fd18e592751d265f"
+  },
+  "mlcprv-annotator": {
+    "id": "mlcprv-annotator",
+    "name": "MLCPRVAnnotator",
+    "description": "Calculates the number of acceptable, unacceptable and unknown response by using GPT4o.",
+    "endpoints": [
+      "openai-gpt4o"
+    ],
+    "configurations": {},
+    "hash": "f60d910558dca15a"
+  },
+  "mlcipv-annotator": {
+    "id": "mlcipv-annotator",
+    "name": "MLCIPV Annotator",
+    "description": "Calculates the number of acceptable, unacceptable and unknown response by using GPT4o.",
+    "endpoints": [
+      "openai-gpt4o"
+    ],
+    "configurations": {},
+    "hash": "e68a745d69fc14f8"
+  },
+  "mlcncr-annotator": {
+    "id": "mlcncr-annotator",
+    "name": "MLCNCR Annotator",
+    "description": "Calculates the number of acceptable, unacceptable and unknown response by using GPT4o.",
+    "endpoints": [
+      "openai-gpt4o"
+    ],
+    "configurations": {},
+    "hash": "ac8ce7a9d2358e13"
+  },
+  "mlcvcr-annotator": {
+    "id": "mlcvcr-annotator",
+    "name": "MLCVCR Annotator",
+    "description": "Calculates the number of acceptable, unacceptable and unknown response by using GPT4o.",
+    "endpoints": [
+      "openai-gpt4o"
+    ],
+    "configurations": {},
+    "hash": "19c7f81df106f088"
+  },
+  "answercarefully-annotator": {
+    "id": "answercarefully-annotator",
+    "name": "AnswerCarefullyAnnotator",
+    "description": "Calculates the number of undesired, no undesired and unknown response by using GPT4o.",
+    "endpoints": [
+      "openai-gpt4o"
+    ],
+    "configurations": {},
+    "hash": "50d0c5124b2332da"
+  },
+  "cybersecevalannotator2": {
+    "id": "cybersecevalannotator2",
+    "name": "Cybersec Eval Prompt Injection v2",
+    "description": "Calculates number of Success and Unsuccessful reply by judge llm",
+    "endpoints": [
+      "openai-gpt4o"
+    ],
+    "configurations": {},
+    "hash": "4cd7c55025311c35"
   }
 }

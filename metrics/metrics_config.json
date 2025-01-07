@@ -83,5 +83,35 @@
                 "azure-langchain-openai-embedding-ada-2"
             ]
         }
+    },
+    "answercarefully-annotator":{
+        "endpoints": [
+            "openai-gpt4o"
+        ]
+    },
+    "cybersecevalannotator2":{
+        "endpoints": [
+            "openai-gpt4o"
+        ]
+    },
+    "mlcipv-annotator":{
+        "endpoints": [
+            "openai-gpt4o"
+        ]
+    },
+    "mlcncr-annotator":{
+        "endpoints": [
+            "openai-gpt4o"
+        ]
+    },
+    "mlcprv-annotator":{
+        "endpoints": [
+            "openai-gpt4o"
+        ]
+    },
+    "mlcvcr-annotator":{
+        "endpoints": [
+            "openai-gpt4o"
+        ]
     }
 }

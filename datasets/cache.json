@@ -533,10 +533,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 7400,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-01-07 10:25:19",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "license": "",
-    "hash": "5fac978b50690b3e"
+    "hash": "1debbbe8b43da7bb"
   },
   "mlc-cbr-typical-user": {
     "id": "mlc-cbr-typical-user",
@@ -1428,5 +1428,104 @@
     "reference": "https://github.com/openai/grade-school-math",
     "license": "MIT License",
     "hash": "e52644f58e4cee5f"
+  },
+  "answercarefully-kr": {
+    "id": "answercarefully-kr",
+    "name": "Answercarefully Information Korean",
+    "description": "A dataset of security-related questions and answers.",
+    "examples": null,
+    "num_of_dataset_prompts": 56,
+    "created_date": "2025-01-07 10:28:00",
+    "reference": "Dataset from NII-LLMC working group - subset created for AISI testing",
+    "license": "Dataset from NII-LLMC working group - subset created for AISI testing",
+    "hash": "6b035d502977c581"
+  },
+  "cyberseceval-promptinjection2-en": {
+    "id": "cyberseceval-promptinjection2-en",
+    "name": "CyberSecEval Prompt Injection 2",
+    "description": "A dataset of security-related questions and answers.",
+    "examples": null,
+    "num_of_dataset_prompts": 251,
+    "created_date": "2025-01-07 10:36:44",
+    "reference": "https://github.com/meta-llama/PurpleLlama/tree/main/CybersecurityBenchmarks/datasets/prompt_injection",
+    "license": "MIT license",
+    "hash": "631757e7188023ca"
+  },
+  "mlc-ipv-en": {
+    "id": "mlc-ipv-en",
+    "name": "ML Commons Intellectual Property Rights",
+    "description": "Test whether responses violate the intellectual property rights of any party.",
+    "examples": null,
+    "num_of_dataset_prompts": 100,
+    "created_date": "2025-01-07 10:36:24",
+    "reference": "https://mlcommons.org/ailuminate/",
+    "license": "CC-BY-4.0",
+    "hash": "92f75d8ef589ac82"
+  },
+  "answercarefully-ch": {
+    "id": "answercarefully-ch",
+    "name": "Answercarefully Information Chinese",
+    "description": "A dataset of security-related questions and answers.",
+    "examples": null,
+    "num_of_dataset_prompts": 56,
+    "created_date": "2025-01-07 10:26:47",
+    "reference": "Dataset from NII-LLMC working group - subset created for AISI testing",
+    "license": "Dataset from NII-LLMC working group - subset created for AISI testing",
+    "hash": "e252ee595a66daa7"
+  },
+  "answercarefully-en": {
+    "id": "answercarefully-en",
+    "name": "Answercarefully Information English",
+    "description": "A dataset of security-related questions and answers.",
+    "examples": null,
+    "num_of_dataset_prompts": 48,
+    "created_date": "2025-01-07 10:27:18",
+    "reference": "Dataset from NII-LLMC working group - subset created for AISI testing",
+    "license": "Dataset from NII-LLMC working group - subset created for AISI testing",
+    "hash": "4eba4b01576a3133"
+  },
+  "answercarefully-jp": {
+    "id": "answercarefully-jp",
+    "name": "Answercarefully Information Japanese",
+    "description": "A dataset of security-related questions and answers.",
+    "examples": null,
+    "num_of_dataset_prompts": 56,
+    "created_date": "2025-01-07 10:27:43",
+    "reference": "Dataset from NII-LLMC working group - subset created for AISI testing",
+    "license": "Dataset from NII-LLMC working group - subset created for AISI testing",
+    "hash": "b634d3df8f624da8"
+  },
+  "mlc-ncr-en": {
+    "id": "mlc-ncr-en",
+    "name": "ML Commons Non - Voilent Crimes",
+    "description": "Test whether responses enable, encourage, or endorse the commission of non-violent crimes.",
+    "examples": null,
+    "num_of_dataset_prompts": 100,
+    "created_date": "2025-01-07 10:36:29",
+    "reference": "https://mlcommons.org/ailuminate/",
+    "license": "CC-BY-4.0",
+    "hash": "113b783f50b5ad02"
+  },
+  "mlc-prv-en": {
+    "id": "mlc-prv-en",
+    "name": "ML Commons Privacy",
+    "description": "Test whether responses contain sensitive, nonpublic personal information that could undermine someone’s physical, digital, or financial security.",
+    "examples": null,
+    "num_of_dataset_prompts": 100,
+    "created_date": "2025-01-07 10:37:16",
+    "reference": "https://mlcommons.org/ailuminate/",
+    "license": "CC-BY-4.0",
+    "hash": "a9197e94d56ec7e5"
+  },
+  "mlc-vcr-en": {
+    "id": "mlc-vcr-en",
+    "name": "ML Commons Violent Crimes",
+    "description": "Test whether responses enable, encourage, or endorse the commission of violent crimes.",
+    "examples": null,
+    "num_of_dataset_prompts": 100,
+    "created_date": "2025-01-07 10:37:47",
+    "reference": "https://mlcommons.org/ailuminate/",
+    "license": "CC-BY-4.0",
+    "hash": "37edf652f7b9b306"
   }
 }
