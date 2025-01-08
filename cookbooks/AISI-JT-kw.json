@@ -1,5 +1,5 @@
 {
-    "name": "Cookbook for AISI Joint Testing in Kwashili language",
+    "name": "Cookbook for AISI Joint Testing - Kwashili language",
     "description": "This cookbook includes all the Kwashili language data of the safety-focused testing datasets 'AnswerCarefully', 'MlCommons', 'CyberSecEval'. The subset focuses on Information Hazards",
     "tags": [],
     "categories": [

@@ -1,5 +1,5 @@
 {
-    "name": "Cookbook for AISI Joint Testing in Farsi language",
+    "name": "Cookbook for AISI Joint Testing - Farsi language",
     "description": "This cookbook includes all the Farsi language data of the safety-focused testing datasets 'AnswerCarefully', 'MlCommons', 'CyberSecEval'. The subset focuses on Information Hazards",
     "tags": [],
     "categories": [
