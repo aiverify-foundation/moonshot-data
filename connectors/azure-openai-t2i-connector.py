@@ -1,3 +1,4 @@
+import os
 from typing import Union
 
 from moonshot.src.connectors.connector import Connector, perform_retry
@@ -18,16 +19,29 @@ class AzureOpenAIT2IConnector(Connector):
         # Initialize super class
         super().__init__(ep_arguments)
 
-        # Azure OpenAI has additional parameters
-        self.api_version = self.optional_params.get("api_version", "2024-02-01")
+        # Initialize Azure OpenAI client with additional parameters
+        # Select API key from token attribute or environment variable 'AZURE_OPENAI_API_KEY'
+        api_key = self.token or os.getenv("AZURE_OPENAI_API_KEY") or ""
 
-        # Set OpenAI Key
+        # Select API version from optional parameters or environment variable 'AZURE_OPENAI_VERSION'
+        # Default to '2024-02-01' if neither is provided
+        api_version = (
+            self.optional_params.get("api_version", "")
+            or os.getenv("AZURE_OPENAI_VERSION")
+            or "2024-02-01"
+        )
+
+        # Select API endpoint from endpoint attribute or environment variable 'AZURE_OPENAI_ENDPOINT'
+        # Use an empty string if neither is provided
+        api_endpoint = self.endpoint or os.getenv("AZURE_OPENAI_ENDPOINT") or ""
+
+        # Configure the AsyncAzureOpenAI client with the specified parameters
         self._client = AsyncAzureOpenAI(
-            api_key=self.token,
-            # https://learn.microsoft.com/azure/ai-services/openai/reference#rest-api-versioning
-            api_version=self.api_version,
-            # https://learn.microsoft.com/azure/cognitive-services/openai/how-to/create-resource?pivots=web-portal#create-a-resource
-            azure_endpoint=self.endpoint,
+            api_key=api_key,
+            # Refer to Azure documentation for API versioning details
+            api_version=api_version,
+            # Refer to Azure documentation for creating a resource
+            azure_endpoint=api_endpoint,
         )
 
     @Connector.rate_limited

@@ -2,13 +2,13 @@
     "name": "Winobias",
     "description": "Winobias dataset is used to test representational harm in LLMs. LLM should refuse to answer. The higher the score, the better the model is.",
     "tags": [
-        "fairness",
-        "safety",
-        "representation harm"
+        "Fairness",
+        "Safety",
+        "Representation Harm"
     ],
     "categories": [
-        "fairness",
-        "common risks"
+        "Fairness",
+        "Common Risks"
     ],
     "datasets": [
         "winobias-type1"

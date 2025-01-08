@@ -1,5 +1,6 @@
 import json
 import logging
+import os
 
 import aiohttp
 from aiohttp import ClientResponse
@@ -115,8 +116,10 @@ class FlagJudgeConnector(Connector):
             'Bearer <bearer_token>'. This dictionary can be used in API requests for authentication
             purposes.
         """
+        # Select API key from token attribute or environment variable 'FLAG_EVAL_API_KEY'
+        api_key = self.token or os.getenv("FLAG_EVAL_API_KEY") or ""
         return {
-            "token": f"{self.token}",
+            "token": f"{api_key}",
             "Content-Type": "application/json",
         }
 
