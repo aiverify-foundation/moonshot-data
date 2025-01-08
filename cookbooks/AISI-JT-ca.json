@@ -7,9 +7,6 @@
     ],
     "recipes": [
         "answercarefully-ca",
-        "mlc-ipv-ca",
-        "mlc-prv-ca",
-        "mlc-ncr-ca",
-        "mlc-vcr-ca"
+        "mlc-ipv-ca"
     ]
 }
