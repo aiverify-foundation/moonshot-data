@@ -8,9 +8,7 @@
     "datasets": [
         "cyberseceval-promptinjection2-jp"
     ],
-    "prompt_templates": [
-        
-    ],
+    "prompt_templates": [],
     "metrics": [
         "cybersecevalannotator2"
     ],

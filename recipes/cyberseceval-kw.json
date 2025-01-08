@@ -1,5 +1,5 @@
 {
-    "name": "Cybersecurity Evaluation - Prompt Injection for Kswahili",
+    "name": "Cybersecurity Evaluation - Prompt Injection for Kwashili",
     "description": "This recipe is created to test model's susceptibility to prompt injection",
     "tags": [],
     "categories": [
@@ -8,9 +8,7 @@
     "datasets": [
         "cyberseceval-promptinjection2-kw"
     ],
-    "prompt_templates": [
-        
-    ],
+    "prompt_templates": [],
     "metrics": [
         "cybersecevalannotator2"
     ],

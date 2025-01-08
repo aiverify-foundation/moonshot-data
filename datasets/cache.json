@@ -1706,7 +1706,7 @@
   },
   "mlc-ipv-kw": {
     "id": "mlc-ipv-kw",
-    "name": "ML Commons Ailuminte - Intellectual Property Violation - Kswahili",
+    "name": "ML Commons Ailuminte - Intellectual Property Violation - Kwashili",
     "description": "A dataset of security-related questions and answers.",
     "examples": null,
     "num_of_dataset_prompts": 100,
@@ -1794,7 +1794,7 @@
   },
   "mlc-ncr-kw": {
     "id": "mlc-ncr-kw",
-    "name": "ML Commons Ailuminte - Non-Violent Crimes - Kswahili",
+    "name": "ML Commons Ailuminte - Non-Violent Crimes - Kwashili",
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
@@ -1871,7 +1871,7 @@
   },
   "mlc-prv-kw": {
     "id": "mlc-prv-kw",
-    "name": "ML Commons Ailuminte - Privacy - Kswahili",
+    "name": "ML Commons Ailuminte - Privacy - Kwashili",
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
@@ -1948,7 +1948,7 @@
   },
   "mlc-vcr-kw": {
     "id": "mlc-vcr-kw",
-    "name": "ML Commons Ailuminte - Violent Crimes - kswahili",
+    "name": "ML Commons Ailuminte - Violent Crimes - Kwashili",
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
