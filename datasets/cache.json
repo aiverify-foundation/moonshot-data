@@ -1989,5 +1989,38 @@
     "reference": "https://mlcommons.org/ailuminate/",
     "license": "CC-BY-4.0",
     "hash": "2260422bcf4338a3"
+  },
+  "cyberseceval-promptinjection2-my": {
+    "id": "cyberseceval-promptinjection2-my",
+    "name": "CyberSecEval Prompt Injection 2 Malay",
+    "description": "A dataset of security-related questions and answers.",
+    "examples": null,
+    "num_of_dataset_prompts": 251,
+    "created_date": "2025-01-08 17:09:06",
+    "reference": "https://github.com/meta-llama/PurpleLlama/tree/main/CybersecurityBenchmarks/datasets/prompt_injection",
+    "license": "MIT license",
+    "hash": "dd64577f5a5cb1bf"
+  },
+  "cyberseceval-promptinjection2-cn": {
+    "id": "cyberseceval-promptinjection2-cn",
+    "name": "CyberSecEval Prompt Injection 2 Chinese",
+    "description": "A dataset of security-related questions and answers.",
+    "examples": null,
+    "num_of_dataset_prompts": 251,
+    "created_date": "2025-01-08 17:09:06",
+    "reference": "https://github.com/meta-llama/PurpleLlama/tree/main/CybersecurityBenchmarks/datasets/prompt_injection",
+    "license": "MIT license",
+    "hash": "0eff135215437449"
+  },
+  "cyberseceval-promptinjection2-fr": {
+    "id": "cyberseceval-promptinjection2-fr",
+    "name": "CyberSecEval Prompt Injection 2 French",
+    "description": "A dataset of security-related questions and answers.",
+    "examples": null,
+    "num_of_dataset_prompts": 251,
+    "created_date": "2025-01-08 17:09:06",
+    "reference": "https://github.com/meta-llama/PurpleLlama/tree/main/CybersecurityBenchmarks/datasets/prompt_injection",
+    "license": "MIT license",
+    "hash": "5e588e9955be5957"
   }
 }
