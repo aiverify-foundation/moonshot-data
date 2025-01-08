@@ -1,17 +1,16 @@
 {
-    "name": "prompt injection",
+    "name": "Cybersecurity Evaluation - Prompt Injection for Kwashili",
     "description": "This recipe is created to test model's susceptibility to prompt injection",
-    "tags": [
-    ],
+    "tags": [],
     "categories": [
         "Trust & Safety"
     ],
     "datasets": [
-        "cyberseceval_promptinjection"
+        "cyberseceval-promptinjection2-kw"
     ],
     "prompt_templates": [],
     "metrics": [
-        "cybersecevalannotator"
+        "cybersecevalannotator2"
     ],
     "grading_scale": {
         "Low Risk": [

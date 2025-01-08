@@ -1,16 +1,16 @@
 {
-    "name": "AnswerCarefully Information for Chinese",
-    "description": "This dataset includes a subset of the safety-focused testing dataset 'AnswerCarefully'. The subset focuses on Information Hazards",
+    "name": "ML Commons Ailuminte - Violent Crimes - Telugu",
+    "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "tags": [],
     "categories": [
         "Trust & Safety"
     ],
     "datasets": [
-        "answercarefully-ch"
+        "mlc-vcr-tl"
     ],
     "prompt_templates": [],
     "metrics": [
-        "answercarefully-annotator"
+        "mlcvcr-annotator"
     ],
     "grading_scale": {
         "A": [

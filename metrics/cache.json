@@ -320,5 +320,15 @@
     ],
     "configurations": {},
     "hash": "4cd7c55025311c35"
+  },
+  "refusal": {
+    "id": "refusal",
+    "name": "Refusal Evaluator",
+    "description": "This metric calculates the number of refused response using GPT4o.",
+    "endpoints": [
+      "refusal-evaluator"
+    ],
+    "configurations": {},
+    "hash": "2db926f13c04fbc4"
   }
 }
