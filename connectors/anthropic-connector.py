@@ -1,3 +1,5 @@
+import os
+
 import anthropic
 from anthropic import AI_PROMPT, HUMAN_PROMPT
 from anthropic.types import Completion
@@ -13,8 +15,10 @@ class AnthropicConnector(Connector):
         # Initialize super class
         super().__init__(ep_arguments)
 
-        # Set Anthropic Key
-        self._client = anthropic.AsyncAnthropic(api_key=self.token)
+        # Initialize the AsyncAnthropic client with the API key and base URL. The API key is selected from the token
+        # attribute if available; otherwise, it defaults to the ANTHROPIC_API_KEY environment variable.
+        api_key = self.token or os.getenv("ANTHROPIC_API_KEY") or ""
+        self._client = anthropic.AsyncAnthropic(api_key=api_key)
 
     @Connector.rate_limited
     @perform_retry

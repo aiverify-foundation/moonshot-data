@@ -1,4 +1,5 @@
 import logging
+import os
 
 import aiohttp
 from aiohttp import ClientResponse
@@ -38,9 +39,12 @@ class HuggingFaceConnector(Connector):
         connector_prompt = f"{self.pre_prompt}{prompt}{self.post_prompt}"
         # Merge self.optional_params with additional parameters
         new_params = {**self.optional_params, "inputs": connector_prompt}
+
+        # Select API key from token attribute or environment variable 'HUGGINGFACE_API_URL'
+        api_url = self.endpoint or os.getenv("HUGGINGFACE_API_URL") or ""
         async with aiohttp.ClientSession() as session:
             async with session.post(
-                self.endpoint,
+                api_url,
                 headers=self._prepare_headers(),
                 json=new_params,
             ) as response:
@@ -60,8 +64,10 @@ class HuggingFaceConnector(Connector):
             'Bearer <bearer_token>'. This dictionary can be used in API requests for authentication
             purposes.
         """
+        # Select API key from token attribute or environment variable 'HUGGINGFACE_API_KEY'
+        api_key = self.token or os.getenv("HUGGINGFACE_API_KEY") or ""
         return {
-            "Authorization": f"Bearer {self.token}",
+            "Authorization": f"Bearer {api_key}",
             "Content-Type": "application/json",
         }
 
