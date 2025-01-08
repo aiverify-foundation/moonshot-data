@@ -1,0 +1,15 @@
+{
+    "name": "Cookbook for AISI Joint Testing in Cantonese language",
+    "description": "This cookbook includes all the Cantonese language data of the safety-focused testing datasets - 'AnswerCarefully', 'MlCommons', 'CyberSecEval'. The subset focuses on Information Hazards",
+    "tags": [],
+    "categories": [
+        "Trust & Safety"
+    ],
+    "recipes": [
+        "answercarefully-ca",
+        "mlc-ipv-ca",
+        "mlc-prv-ca",
+        "mlc-ncr-ca",
+        "mlc-vcr-ca"
+    ]
+}

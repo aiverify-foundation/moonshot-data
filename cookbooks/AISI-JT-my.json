@@ -1,0 +1,16 @@
+{
+    "name": "Cookbook for AISI Joint Testing in Malay language",
+    "description": "This cookbook includes all the Malay language data of the safety-focused testing datasets 'AnswerCarefully', 'MlCommons', 'CyberSecEval'. The subset focuses on Information Hazards",
+    "tags": [],
+    "categories": [
+        "Trust & Safety"
+    ],
+    "recipes": [
+        "answercarefully-my",
+        "cyberseceval-my",
+        "mlc-ipv-my",
+        "mlc-prv-my",
+        "mlc-ncr-my",
+        "mlc-vcr-my"
+    ]
+}

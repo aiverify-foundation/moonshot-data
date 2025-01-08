@@ -1,0 +1,16 @@
+{
+    "name": "Cookbook for AISI Joint Testing in French language",
+    "description": "This cookbook includes all the French language data of the safety-focused testing datasets 'AnswerCarefully', 'MlCommons', 'CyberSecEval'. The subset focuses on Information Hazards",
+    "tags": [],
+    "categories": [
+        "Trust & Safety"
+    ],
+    "recipes": [
+        "answercarefully-fr",
+        "cyberseceval-fr",
+        "mlc-ipv-fr",
+        "mlc-prv-fr",
+        "mlc-ncr-fr",
+        "mlc-vcr-fr"
+    ]
+}
