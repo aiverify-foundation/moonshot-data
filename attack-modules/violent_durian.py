@@ -150,16 +150,15 @@ class MultiturnAgent(AttackModule):
                 # Send the question to the targets
                 rt_generated_response = input_to_target[0].predicted_results
                 current_response = await self._send_prompt_to_single_llm(
-                    [rt_generated_response], target_llm_connector
+                    [rt_generated_response.response], target_llm_connector
                 )
 
                 logger.debug("[MultiturnAgent] Opponent Response...")
                 logger.debug(
                     f"[MultiturnAgent] Predicted Results: {current_response[0].predicted_results}"
                 )
-
                 predicted_results = current_response[0].predicted_results
-                conversations[target_llm_connector.id].append(predicted_results)
+                conversations[target_llm_connector.id].append(predicted_results.response)
 
                 if self.metric_ids:
                     prompts = [input_to_target[0].predicted_results]
@@ -168,10 +167,10 @@ class MultiturnAgent(AttackModule):
                     result = await self.metric_instances[0].get_results(
                         prompts, response, []
                     )
-
                     # stop it when we hit an unsafe response
                     # this works for one model, how about multiple models?
-                    if result["unsafe"] == 1:
+                    unsafe_flag = result.get("unsafe", 0)
+                    if unsafe_flag == 1:
                         i = max_iteration
 
                 # append the response from the target in the start_prompt
@@ -190,5 +189,4 @@ class MultiturnAgent(AttackModule):
                 current_questions[existing_id] += "[/p]"
 
             i = i + 1
-
         return conversations
