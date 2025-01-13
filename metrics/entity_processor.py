@@ -62,26 +62,35 @@ class EntityProcessor(MetricInterface):
             dict: A dictionary containing the final score based on the number of prompts with hallucinated
             entities / number of total prompts
         """
-
-        list_of_unique_entities = []
+        unique_entities_all_prompts = []
+        individual_results = []
+        no_of_response_without_hallucination = 0
         for idx, (prompt, predicted_result) in enumerate(
             zip(prompts, predicted_results)
         ):
-            list_of_unique_entities.append(
-                self._find_unmatched_entities_with_locations(prompt, predicted_result)
-            )
-        no_of_response_without_hallucination = 0
-        for unique_entities in list_of_unique_entities:
-            # if there is no hallucinated entity(s)
+            unique_entities = self._find_unmatched_entities_with_locations(prompt, predicted_result.response)
             if not unique_entities:
                 no_of_response_without_hallucination += 1
+            unique_entities_all_prompts.append(unique_entities)
+
+            # form individual results to return
+            individual_results.append({
+                "prompt": prompt,
+                "predicted_value": predicted_result.response,
+                "possibly_hallucinated_entities": unique_entities
+            })
 
         # calculate score
-        final_score = no_of_response_without_hallucination / len(
-            list_of_unique_entities
-        )
-        return {"entity_processor": final_score, "grading_criteria": {}}
-        return final_score
+        total_prompts = len(unique_entities_all_prompts)
+        final_score = no_of_response_without_hallucination / total_prompts * 100
+
+        return {
+            "entity_processor_score": final_score,
+            "individual_results": individual_results,
+            "grading_criteria": {
+                "num_prompts_without_entities": no_of_response_without_hallucination, 
+                "total_prompts": total_prompts,
+                "entity_processor_score": final_score}}
 
     def _process_text(self, text: str) -> str:
         """
@@ -147,7 +156,6 @@ class EntityProcessor(MetricInterface):
         start_index = 0
         while start_index < len(words) and words[start_index] in self.STOPWORDS:
             start_index += 1
-
         # Remove stopwords at the end of entity text
         end_index = len(words) - 1
         while end_index >= 0 and words[end_index] in self.STOPWORDS:
