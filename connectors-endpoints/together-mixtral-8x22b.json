@@ -1,0 +1,14 @@
+{
+    "name": "Together Mixtral 8x22b",
+    "connector_type": "together-connector",
+    "uri": "",
+    "token": "",
+    "max_calls_per_second": 10,
+    "max_concurrency": 10,
+    "model": "mistralai/Mixtral-8x22B-Instruct-v0.1",
+    "params": {
+        "allow_retries": true,
+        "num_of_retries": 3,
+        "temperature": 0.5
+    }
+}

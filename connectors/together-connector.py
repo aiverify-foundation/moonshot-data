@@ -1,3 +1,4 @@
+import os
 from typing import Any
 
 from moonshot.src.connectors.connector import Connector, perform_retry
@@ -13,8 +14,10 @@ class TogetherConnector(Connector):
         # Initialize super class
         super().__init__(ep_arguments)
 
-        # Set Together Key
-        self._client = AsyncTogether(api_key=self.token)
+        # Initialize the AsyncTogether client with the API key. The API key is selected from the token
+        # attribute if available; otherwise, it defaults to the TOGETHER_API_KEY environment variable.
+        api_key = self.token or os.getenv("TOGETHER_API_KEY") or ""
+        self._client = AsyncTogether(api_key=api_key)
 
     @Connector.rate_limited
     @perform_retry
