@@ -62,35 +62,49 @@ class EntityProcessor(MetricInterface):
             dict: A dictionary containing the final score based on the number of prompts with hallucinated
             entities / number of total prompts
         """
-        unique_entities_all_prompts = []
-        individual_results = []
+
+        no_hallu_prompts = []
+        hallu_prompts = []
         no_of_response_without_hallucination = 0
+        no_of_response_with_hallucination = 0
         for idx, (prompt, predicted_result) in enumerate(
             zip(prompts, predicted_results)
         ):
             unique_entities = self._find_unmatched_entities_with_locations(prompt, predicted_result.response)
             if not unique_entities:
                 no_of_response_without_hallucination += 1
-            unique_entities_all_prompts.append(unique_entities)
-
-            # form individual results to return
-            individual_results.append({
-                "prompt": prompt,
-                "predicted_value": predicted_result.response,
-                "possibly_hallucinated_entities": unique_entities
-            })
-
+                no_hallu_prompts.append({
+                    "prompt": prompt,
+                    "predicted_value": predicted_result.response,
+                    "eval": "no hallucination"                   
+                })                
+            else:
+                no_of_response_with_hallucination += 1
+                hallu_prompts.append({
+                    "prompt": prompt,
+                    "predicted_value": predicted_result.response,
+                    "possibly_hallucinated_entities": unique_entities,
+                    "eval": "likely to have hallucination"                   
+                })
+            
         # calculate score
-        total_prompts = len(unique_entities_all_prompts)
+        total_prompts = len(no_hallu_prompts) + len(hallu_prompts)
         final_score = no_of_response_without_hallucination / total_prompts * 100
 
         return {
-            "entity_processor_score": final_score,
-            "individual_results": individual_results,
+            "entity_processor": {
+                "entity_processor_score": final_score,
+                "individual_scores": {
+                    "unsuccessful": hallu_prompts,
+                    "successful": no_hallu_prompts
+                }
+            },
             "grading_criteria": {
-                "num_prompts_without_entities": no_of_response_without_hallucination, 
+                "num_prompts_without_hallucination": no_of_response_without_hallucination, 
+                "num_prompts_with_hallucination": no_of_response_with_hallucination, 
                 "total_prompts": total_prompts,
-                "entity_processor_score": final_score}}
+                "entity_processor_score": final_score}
+            }
 
     def _process_text(self, text: str) -> str:
         """
