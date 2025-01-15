@@ -64,7 +64,7 @@ class LionGuardClassifier(MetricInterface):
                 - "lionguardclassifier": A dictionary with:
                     - "classifier_count": Counts of predictions for each category and threshold.
                     - "scores": Classification scores for each predicted result.
-                    - "individual_results": A list of dictionaries for each sample containing:
+                    - "individual_scores": A list of dictionaries for each sample containing:
                         - "prompt": The input prompt.
                         - "predicted_value": The predicted result.
                         - "target": The target result.
@@ -281,7 +281,7 @@ class LionGuardClassifier(MetricInterface):
         # inference
         scores = {}
         classifier_count = {}
-        individual_results = []
+        individual_scores = []
         total = len(predicted_values)
         for prompt, result, target in zip(prompts, predicted_values, targets):
             batch_text = [result]
@@ -329,13 +329,13 @@ class LionGuardClassifier(MetricInterface):
                     "predictions": details["predictions"],
                 }
 
-            individual_results.append(individual_score)
+            individual_scores.append(individual_score)
 
         return {
             "lionguardclassifier": {
                 "classifier_count": classifier_count,
                 "scores": scores,
-                "individual_results": individual_results,
+                "individual_scores": individual_scores,
             },
             "grading_criteria": {
                 grading_classifier: float(
