@@ -45,21 +45,21 @@ class Faithfulness(MetricInterface):
         self, prompts: Any, predicted_results: Any, targets: Any, *args, **kwargs
     ) -> dict:
         """
-        Asynchronously retrieves the results of the faithfulness evaluation.
+        Asynchronously evaluates the faithfulness of generated answers.
 
-        This method evaluates the factual consistency of the generated answers against the given context
-        using the Ragas framework. It leverages both an evaluation model and an embeddings model
-        to compute the faithfulness score.
+        This method assesses the factual consistency of generated answers against the provided context
+        using the Ragas framework. It utilizes both an evaluation model and an embeddings model
+        to calculate the faithfulness score.
 
         Args:
-            prompts (Any): The input prompts/questions.
-            predicted_results (Any): The generated answers to be evaluated.
+            prompts (Any): The input prompts or questions.
+            predicted_results (Any): The generated answers to be evaluated, each containing a response and context.
             targets (Any): The ground truth answers for comparison.
             *args: Additional positional arguments.
-            **kwargs: Additional keyword arguments, including 'contexts' which is required.
+            **kwargs: Additional keyword arguments.
 
         Returns:
-            dict: A dictionary containing the faithfulness scores and grading criteria.
+            dict: A dictionary containing the faithfulness scores and individual evaluation details.
         """
         predicted_values = [result.response for result in predicted_results]
         predicted_contexts = [result.context for result in predicted_results]
@@ -86,7 +86,29 @@ class Faithfulness(MetricInterface):
             embeddings=embeddings_model.get_client(),  # type: ignore ; ducktyping
         )
         df = score.to_pandas()
+        faithfulness_list = df["faithfulness"].tolist()
+
+        individual_scores = [
+            {
+                "prompt": prompt,
+                "predicted_value": result,
+                "predicted_context": context,
+                "target": target,
+                "score": ans_score,
+            }
+            for prompt, result, context, target, ans_score in zip(
+                prompts,
+                predicted_values,
+                predicted_contexts,
+                targets,
+                faithfulness_list,
+            )
+        ]
+
         return {
-            "faithfulness": df["faithfulness"].tolist(),
+            "faithfulness": {
+                "score": faithfulness_list,
+                "individual_scores": individual_scores,
+            },
             "grading_criteria": {},
         }

@@ -52,19 +52,43 @@ class BertScore(MetricInterface):
             **kwargs: Additional keyword arguments.
 
         Returns:
-            dict: A dictionary containing the BERTScore precision, recall, and F1 score.
-                - bertscore (dict): A dictionary containing:
-                    - precision (float): The precision score.
-                    - recall (float): The recall score.
-                    - f1 (float): The F1 score.
+            dict: A dictionary containing the BERTScore precision, recall, F1 score, and individual scores.
+                - precision (float): The average precision score across all samples.
+                - recall (float): The average recall score across all samples.
+                - f1 (float): The average F1 score across all samples.
+                - individual_scores (list): A list of dictionaries for each sample containing:
+                    - prompt (Any): The input prompt.
+                    - predicted_value (Any): The predicted result.
+                    - target (Any): The target result.
+                    - eval (dict): A dictionary containing:
+                        - precision (float): The precision score for the sample.
+                        - recall (float): The recall score for the sample.
+                        - f1 (float): The F1 score for the sample.
                 - grading_criteria (dict): An empty dictionary for grading criteria.
         """
         predicted_values = [result.response for result in predicted_results]
 
-        # use default roberto model
+        # use default roberta model
         score = bert_score.score(
             predicted_values, targets, lang="en", rescale_with_baseline=True
         )
+
+        # Calculate individual scores and map them to their corresponding predicted and target values
+        individual_scores = [
+            {
+                "prompt": prompt,
+                "predicted_value": predicted,
+                "target": target,
+                "score": {
+                    "precision": s[0].cpu().item(),
+                    "recall": s[1].cpu().item(),
+                    "f1": s[2].cpu().item(),
+                },
+            }
+            for prompt, predicted, target, s in zip(
+                prompts, predicted_values, targets, zip(*score)
+            )
+        ]
 
         avg_scores = [s.mean(dim=0) for s in score]
         precision_value = avg_scores[0].cpu().item()
@@ -76,6 +100,7 @@ class BertScore(MetricInterface):
                 "precision": precision_value,
                 "recall": recall_value,
                 "f1": f1_value,
+                "individual_scores": individual_scores,
             },
             "grading_criteria": {},
         }

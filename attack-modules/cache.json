@@ -61,7 +61,7 @@
     "configurations": {
       "max_iteration": 10
     },
-    "hash": "e6049ef261c7736b"
+    "hash": "d9d61483f6c9ecd9"
   },
   "textfooler_attack": {
     "id": "textfooler_attack",
@@ -107,7 +107,7 @@
     "configurations": {
       "max_iteration": 10
     },
-    "hash": "9a57fff578723078"
+    "hash": "b35aa04f6b2c434e"
   },
   "sample_attack_module": {
     "id": "sample_attack_module",
