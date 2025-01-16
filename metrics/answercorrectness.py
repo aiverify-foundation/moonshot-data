@@ -50,18 +50,19 @@ class AnswerCorrectness(MetricInterface):
         Asynchronously retrieves the results of the answer correctness evaluation.
 
         This method evaluates the accuracy of generated answers compared to the ground truth
-        using the Ragas framework. It leverages both an evaluation model and an embeddings model
+        using the Ragas framework. It utilizes both an evaluation model and an embeddings model
         to compute the answer correctness score.
 
         Args:
-            prompts (Any): The input prompts/questions.
+            prompts (Any): The input prompts or questions.
             predicted_results (Any): The generated answers to be evaluated.
             targets (Any): The ground truth answers for comparison.
             *args: Additional positional arguments.
             **kwargs: Additional keyword arguments.
 
         Returns:
-            dict: A dictionary containing the answer correctness scores and grading criteria.
+            dict: A dictionary containing the answer correctness scores and individual scores
+            for each prompt, predicted result, and target.
         """
         predicted_values = [result.response for result in predicted_results]
 
@@ -87,7 +88,24 @@ class AnswerCorrectness(MetricInterface):
             embeddings=embeddings_model.get_client(),  # type: ignore ; ducktyping
         )
         df = score.to_pandas()
+        answer_correctness_list = df["answer_correctness"].tolist()
+
+        individual_scores = [
+            {
+                "prompt": prompt,
+                "predicted_value": result,
+                "target": target,
+                "score": ans_score,
+            }
+            for prompt, result, target, ans_score in zip(
+                prompts, predicted_values, targets, answer_correctness_list
+            )
+        ]
+
         return {
-            "answer_correctness": df["answer_correctness"].tolist(),
+            "answercorrectness": {
+                "score": answer_correctness_list,
+                "individual_scores": individual_scores,
+            },
             "grading_criteria": {},
         }

@@ -47,21 +47,23 @@ class ContextPrecision(MetricInterface):
         self, prompts: Any, predicted_results: Any, targets: Any, *args, **kwargs
     ) -> dict:
         """
-        Asynchronously retrieves the results of the context precision evaluation.
+        Asynchronously evaluates the context precision of generated answers.
 
-        This method evaluates the precision of the retrieved context with the ground truth
-        using the Ragas framework. It leverages both an evaluation model and an embeddings model
-        to compute the context precision score.
+        This method assesses the precision of retrieved contexts against the ground truth
+        using the Ragas framework. It utilizes both an evaluation model and an embeddings model
+        to calculate the context precision score.
 
         Args:
-            prompts (Any): The input prompts/questions.
-            predicted_results (Any): The generated answers to be evaluated.
+            prompts (Any): The input prompts or questions.
+            predicted_results (Any): The generated answers to be evaluated, each containing a response
+                                     and context attribute.
             targets (Any): The ground truth answers for comparison.
             *args: Additional positional arguments.
-            **kwargs: Additional keyword arguments, including 'contexts' which is required.
+            **kwargs: Additional keyword arguments.
 
         Returns:
-            dict: A dictionary containing the context precision scores and grading criteria.
+            dict: A dictionary containing the context precision scores and individual evaluation details
+                  for each prompt, predicted result, and target.
         """
         predicted_values = [result.response for result in predicted_results]
         predicted_contexts = [result.context for result in predicted_results]
@@ -89,7 +91,29 @@ class ContextPrecision(MetricInterface):
             embeddings=embeddings_model.get_client(),  # type: ignore ; ducktyping
         )
         df = score.to_pandas()
+        context_precision_list = df["context_precision"].tolist()
+
+        individual_scores = [
+            {
+                "prompt": prompt,
+                "predicted_value": result,
+                "predicted_context": context,
+                "target": target,
+                "score": ans_score,
+            }
+            for prompt, result, context, target, ans_score in zip(
+                prompts,
+                predicted_values,
+                predicted_contexts,
+                targets,
+                context_precision_list,
+            )
+        ]
+
         return {
-            "context_precision": df["context_precision"].tolist(),
+            "contextprecision": {
+                "score": context_precision_list,
+                "individual_scores": individual_scores,
+            },
             "grading_criteria": {},
         }

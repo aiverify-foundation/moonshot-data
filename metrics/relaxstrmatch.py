@@ -44,30 +44,41 @@ class RelaxStrMatch(MetricInterface):
         self, prompts: Any, predicted_results: Any, targets: Any, *args, **kwargs
     ) -> dict:
         """
-        Calculates the accuracy of the predicted results by comparing them to the target results.
+        Computes the accuracy of predicted results by comparing them to the target results after removing symbols
+        and spaces.
 
         Args:
-            prompts (Any): The prompts used for prediction.
-            predicted_results (Any): The predicted results.
-            targets (Any): The target results.
+            prompts (Any): The prompts used for generating predictions.
+            predicted_results (Any): The predicted results, each containing a response attribute.
+            targets (Any): The expected target results for comparison.
             *args: Additional positional arguments.
             **kwargs: Additional keyword arguments.
 
         Returns:
-            dict: A dictionary containing the accuracy of the predicted results.
+            dict: A dictionary containing:
+                - "relaxstrmatch": A dictionary with:
+                    - "accuracy": The percentage of correct predictions.
+                    - "individual_scores": A dictionary with lists of prompts categorized as "unsuccessful" (wrong)
+                                           and "successful" (correct).
+                - "grading_criteria": A dictionary with the accuracy percentage.
         """
         predicted_values = [result.response for result in predicted_results]
 
         correct = 0
+        wrong = 0
         total = len(predicted_values)
 
-        for result, target in zip(predicted_values, targets):
-            # remove symbols and space
+        correct_prompts = []
+        wrong_prompts = []
+
+        for prompt, result, target in zip(prompts, predicted_values, targets):
+            # Remove symbols and spaces
             result = re.sub(r"[^\w]", "", str(result).rstrip()).replace(" ", "")
             result = result.lower()
 
-            # To support benchmarks with multiple possible answers
-            if type(target) is list:
+            # Support for benchmarks with multiple possible answers
+            if isinstance(target, list):
+                matched = False
                 for each_item in target:
                     each_item = re.sub(r"[^\w]", "", str(each_item).rstrip()).replace(
                         " ", ""
@@ -76,15 +87,61 @@ class RelaxStrMatch(MetricInterface):
 
                     if result == each_item:
                         correct += 1
+                        correct_prompts.append(
+                            {
+                                "prompt": prompt,
+                                "predicted_value": result,
+                                "target": target,
+                                "eval": "correct",
+                            }
+                        )
+                        matched = True
                         break
+
+                if not matched:
+                    wrong += 1
+                    wrong_prompts.append(
+                        {
+                            "prompt": prompt,
+                            "predicted_value": result,
+                            "target": target,
+                            "eval": "wrong",
+                        }
+                    )
             else:
                 target = re.sub(r"[^\w\s]", "", str(target).rstrip()).replace(" ", "")
                 target = target.lower()
 
                 if result == target:
                     correct += 1
+                    correct_prompts.append(
+                        {
+                            "prompt": prompt,
+                            "predicted_value": result,
+                            "target": target,
+                            "eval": "correct",
+                        }
+                    )
+                else:
+                    wrong += 1
+                    wrong_prompts.append(
+                        {
+                            "prompt": prompt,
+                            "predicted_value": result,
+                            "target": target,
+                            "eval": "wrong",
+                        }
+                    )
+
+        accuracy = float(correct / total) * 100
 
         return {
-            "relax_str_match": float(correct / total) * 100,
-            "grading_criteria": {"relax_str_match": float(correct / total) * 100},
+            "relaxstrmatch": {
+                "accuracy": accuracy,
+                "individual_scores": {
+                    "unsuccessful": wrong_prompts,
+                    "successful": correct_prompts,
+                },
+            },
+            "grading_criteria": {"accuracy": accuracy},
         }

@@ -11,10 +11,10 @@ from moonshot.src.utils.timeit import timeit
 ARTICLES_REGEX = re.compile(r"\b(a|an|the)\b", re.UNICODE)
 
 
-class MyF1Score(MetricInterface):
+class ExactStrMatchF1SquadV2(MetricInterface):
     def __init__(self):
         self.id = Path(__file__).stem
-        self.name = "MyF1Score"
+        self.name = "ExactStrMatchF1SquadV2"
         self.description = (
             "ExactStrMatch will compare the output from language model with a single target"
             " or multiple expected target."
@@ -57,12 +57,11 @@ class MyF1Score(MetricInterface):
             dict: A dictionary containing the accuracy of the predicted results.
         """
         em_scores = 0
-        em_results = []
         f1_scores = 0
-        f1_results = []
         total = len(predicted_results)
+        individual_scores = []
 
-        for idx, (result, target) in enumerate(zip(predicted_results, targets)):
+        for prompt, result, target in zip(prompts, predicted_results, targets):
             # Check if the target is a single or multiple targets
             if isinstance(target, str):
                 target = ast.literal_eval(target)
@@ -79,16 +78,26 @@ class MyF1Score(MetricInterface):
                 target = [""]
             em = max(self.compute_exact(tg, result) for tg in target)
             em_scores += em
-            em_results.append(em)
+
             f1 = max(self.compute_f1(tg, result) for tg in target)
             f1_scores += f1
-            f1_results.append(f1)
+
+            individual_scores.append(
+                {
+                    "prompt": prompt,
+                    "predicted_value": result,
+                    "target": target,
+                    "exact_match": em,
+                    "f1_score": f1,
+                }
+            )
 
         return {
-            "em": float(em_scores / total) * 100,
-            "f1": float(f1_scores / total) * 100,
-            "em_results": em_results,
-            "f1_results": f1_results,
+            "exactstrmatch_f1_squad_v2": {
+                "em": float(em_scores / total) * 100,
+                "f1": float(f1_scores / total) * 100,
+                "individual_scores": individual_scores,
+            },
             "grading_criteria": {"f1": float(f1_scores / total) * 100},
         }
 

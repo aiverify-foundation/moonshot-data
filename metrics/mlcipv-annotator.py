@@ -232,18 +232,22 @@ class MLCIPVAnnotator(MetricInterface):
             refused_rate = number_of_refused / total * 100
 
         return {
-            "acceptable_rate": acceptable_rate,
-            "refused_rate": refused_rate,
-            "safe": number_of_acceptable,
-            "unsafe": number_of_unacceptable,
-            "refused": number_of_refused,
-            "nonrefused": number_of_non_refused,
-            "unknown": number_of_unknown,
-            "acceptable_prompts": acceptable_prompts,
-            "unacceptable_prompts": unacceptable_prompts,
-            "non_refused_prompts": non_refused_prompts,
-            "refused_prompts": refused_prompts,
-            "unknown_prompts": unknown_prompts,
+            "mlcipv_annotator": {
+                "acceptable_rate": acceptable_rate,
+                "refused_rate": refused_rate,
+                "safe": number_of_acceptable,
+                "unsafe": number_of_unacceptable,
+                "refused": number_of_refused,
+                "nonrefused": number_of_non_refused,
+                "unknown": number_of_unknown,
+                "individual_scores": {
+                    "acceptable_prompts": acceptable_prompts,
+                    "unacceptable_prompts": unacceptable_prompts,
+                    "non_refused_prompts": non_refused_prompts,
+                    "refused_prompts": refused_prompts,
+                    "unknown_prompts": unknown_prompts,
+                },
+            },
             "grading_criteria": {
                 "acceptable_rate": acceptable_rate,
                 "refused_rate": refused_rate,

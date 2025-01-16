@@ -7,10 +7,10 @@ from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
 
 
-class MyExactStrMatch(MetricInterface):
+class ExactStrMatchGSM8k(MetricInterface):
     def __init__(self):
         self.id = Path(__file__).stem
-        self.name = "MyExactStrMatch"
+        self.name = "ExactStrMatchGSM8k"
         self.description = (
             "ExactStrMatch will compare the output from language model with a single target"
             " or multiple expected target."
@@ -40,36 +40,65 @@ class MyExactStrMatch(MetricInterface):
         self, prompts: Any, predicted_results: Any, targets: Any, *args, **kwargs
     ) -> dict:
         """
-        Calculates the accuracy of the predicted results by comparing them to the target results.
+        Asynchronously calculates the accuracy of the predicted results by comparing them to the target results.
+
+        This method evaluates each predicted result against the corresponding target(s) to determine if it is correct.
+        It supports both single and multiple target values for comparison.
 
         Args:
             prompts (Any): The prompts used for prediction.
-            predicted_results (Any): The predicted results.
-            targets (Any): The target results.
+            predicted_results (Any): The predicted results, each containing a response attribute.
+            targets (Any): The target results, which can be a single value or a list of values.
             *args: Additional positional arguments.
             **kwargs: Additional keyword arguments.
 
         Returns:
             dict: A dictionary containing the accuracy of the predicted results.
+                - exactstrmatchgsm8k (dict): Contains the accuracy and individual results.
+                    - accuracy (float): The accuracy percentage of the predicted results.
+                    - results (list): A list of binary values indicating correct (1) or incorrect (0) matches.
+                    - individual_scores (list): A list of dictionaries with detailed comparison results.
+                        - prompt (Any): The input prompt.
+                        - predicted_value (str): The extracted predicted value.
+                        - target (str): The target value.
+                        - matched (bool): Whether the predicted value matches the target.
+                - grading_criteria (dict): Contains the accuracy for grading purposes.
         """
-
         correct = 0
         total = len(predicted_results)
         results = []
+        individual_scores = []
 
-        for idx, (result, target) in enumerate(zip(predicted_results, targets)):
-            # Check if the target is a single or multiple targets
-            result = self.extract(result.response)
+        for prompt, result, target in zip(prompts, predicted_results, targets):
+            # Extract the predicted result
+            extracted_result = self.extract(result.response)
+
             if not isinstance(target, str):
                 target = str(target)
-            _, matched = inspect_match_str(result, target, numeric=True)
+
+            _, matched = inspect_match_str(extracted_result, target, numeric=True)
+
             correct += int(matched)
             results.append(int(matched))
 
+            individual_scores.append(
+                {
+                    "prompt": prompt,
+                    "predicted_value": extracted_result,
+                    "target": target,
+                    "matched": bool(matched),
+                }
+            )
+
+        accuracy = float(correct / total) * 100
+
         return {
-            "accuracy": float(correct / total) * 100,
-            "results": results,
-            "grading_criteria": {"accuracy": float(correct / total) * 100},
+            "exactstrmatch_gsm8k": {
+                "accuracy": accuracy,
+                "results": results,
+                "individual_scores": individual_scores,
+            },
+            "grading_criteria": {"accuracy": accuracy},
         }
 
     @staticmethod
