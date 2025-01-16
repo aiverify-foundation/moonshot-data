@@ -46,21 +46,23 @@ class ContextRecall(MetricInterface):
         self, prompts: Any, predicted_results: Any, targets: Any, *args, **kwargs
     ) -> dict:
         """
-        Asynchronously retrieves the results of the context recall evaluation.
+        Asynchronously evaluates the context recall of generated answers.
 
-        This method evaluates the alignment of the retrieved context with the ground truth
+        This method assesses the alignment of retrieved contexts with the ground truth
         using the Ragas framework. It leverages both an evaluation model and an embeddings model
-        to compute the context recall score.
+        to calculate the context recall score.
 
         Args:
-            prompts (Any): The input prompts/questions.
-            predicted_results (Any): The generated answers to be evaluated.
+            prompts (Any): The input prompts or questions.
+            predicted_results (Any): The generated answers to be evaluated, each containing a response
+                                     and context attribute.
             targets (Any): The ground truth answers for comparison.
             *args: Additional positional arguments.
-            **kwargs: Additional keyword arguments, including 'contexts' which is required.
+            **kwargs: Additional keyword arguments.
 
         Returns:
-            dict: A dictionary containing the context recall scores and grading criteria.
+            dict: A dictionary containing the context recall scores and individual evaluation details
+                  for each prompt, predicted result, and target.
         """
         predicted_values = [result.response for result in predicted_results]
         predicted_contexts = [result.context for result in predicted_results]
@@ -88,7 +90,29 @@ class ContextRecall(MetricInterface):
             embeddings=embeddings_model.get_client(),  # type: ignore ; ducktyping
         )
         df = score.to_pandas()
+        context_recall_list = df["context_recall"].tolist()
+
+        individual_scores = [
+            {
+                "prompt": prompt,
+                "predicted_value": result,
+                "predicted_context": context,
+                "target": target,
+                "score": ans_score,
+            }
+            for prompt, result, context, target, ans_score in zip(
+                prompts,
+                predicted_values,
+                predicted_contexts,
+                targets,
+                context_recall_list,
+            )
+        ]
+
         return {
-            "context_recall": df["context_recall"].tolist(),
+            "contextrecall": {
+                "score": context_recall_list,
+                "individual_scores": individual_scores,
+            },
             "grading_criteria": {},
         }
