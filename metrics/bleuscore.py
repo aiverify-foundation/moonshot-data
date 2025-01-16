@@ -37,33 +37,52 @@ class BleuScore(MetricInterface):
         self, prompts: Any, predicted_results: Any, targets: Any, *args, **kwargs
     ) -> dict:
         """
-        Calculate the BLEU score for a list of predicted results and their corresponding target results.
+        Asynchronously calculates the BLEU score for a list of predicted results and their corresponding target results.
 
         Args:
-            prompts (Any): The prompts used to generate the predicted results.
-            predicted_results (Any): The list of predicted results.
-            targets (Any): The list of target results.
+            prompts (Any): The input prompts used to generate the predicted results.
+            predicted_results (Any): The list of predicted results, each containing a response attribute.
+            targets (Any): The list of target results for comparison.
             *args: Additional positional arguments.
             **kwargs: Additional keyword arguments.
 
         Returns:
-            dict: A dictionary containing the BLEU score and grading criteria.
-                - bleu_score (float): The average BLEU score for the predicted results.
+            dict: A dictionary containing the BLEU score, individual scores, and grading criteria.
+                - bleu_score (float): The average BLEU score across all predicted results.
+                - individual_scores (list): A list of dictionaries for each sample containing:
+                    - prompt (Any): The input prompt.
+                    - predicted_value (Any): The predicted result.
+                    - target (Any): The target result.
+                    - eval (float): The BLEU score for the sample.
                 - grading_criteria (dict): A dictionary containing the BLEU score for grading purposes.
         """
         predicted_values = [result.response for result in predicted_results]
 
+        individual_scores = []
         bleu_scores = []
-        for result, target in zip(predicted_values, targets):
+        for prompt, result, target in zip(prompts, predicted_values, targets):
             output_split = result.split()
             target_split = target.split()
 
             score = sentence_bleu(output_split, target_split)
             bleu_scores.append(score)
 
+            # Calculate individual scores and map them to their corresponding predicted and target values
+            individual_scores.append(
+                {
+                    "prompt": prompt,
+                    "predicted_value": result,
+                    "target": target,
+                    "score": score,
+                }
+            )
+
         average_bleu_score = statistics.mean(bleu_scores)
 
         return {
-            "bleu_score": average_bleu_score,
-            "grading_criteria": {"bleu_score": average_bleu_score},
+            "bleuscore": {
+                "score": average_bleu_score,
+                "individual_scores": individual_scores,
+            },
+            "grading_criteria": {"bleuscore": average_bleu_score},
         }

@@ -40,7 +40,10 @@ class FlagJudgeAnnotator(MetricInterface):
         self, prompts: Any, predicted_results: Any, targets: Any, *args, **kwargs
     ) -> dict:
         """
-        Calculates the number of refused response using GPT4.
+        Asynchronously calculates the number of correct responses using the FlagJudge model.
+
+        This method evaluates the predicted results against the target results to determine the correctness
+        of each response, categorizing them as correct or wrong.
 
         Args:
             prompts (Any): The prompts used for prediction.
@@ -50,7 +53,8 @@ class FlagJudgeAnnotator(MetricInterface):
             **kwargs: Additional keyword arguments.
 
         Returns:
-            dict: A dictionary containing the accuracy of the predicted results.
+            dict: A dictionary containing the correct rate, number of correct and wrong responses,
+                  total number of responses, and individual scores for each prompt.
         """
         evaluation_model = [
             Connector.create(ConnectorEndpoint.read(ep_id)) for ep_id in self.endpoints
@@ -72,24 +76,53 @@ class FlagJudgeAnnotator(MetricInterface):
             my_new_prompt = copy.deepcopy(sample_prompt_argument)
 
             judge_result = await evaluation_model.get_prediction(my_new_prompt)
-            judge_results.append(judge_result)
+            judge_results.append({"prompt": my_new_prompt, "result": judge_result})
 
         number_of_correct = 0
         number_of_wrong = 0
 
-        for response in judge_results:
+        correct_prompts = []
+        wrong_prompts = []
+
+        for temp in judge_results:
+            prompt_info = temp.get("prompt")
+            response = temp.get("result")
             if response == "10":
                 number_of_correct += 1
+                correct_prompts.append(
+                    {
+                        "prompt": prompt_info.prompt,
+                        "predicted_value": prompt_info.predicted_results.response,
+                        "target": prompt_info.target,
+                        "eval_predicted_value": response,
+                        "eval": "correct",
+                    }
+                )
             else:
                 number_of_wrong += 1
+                wrong_prompts.append(
+                    {
+                        "prompt": prompt_info.prompt,
+                        "predicted_value": prompt_info.predicted_results.response,
+                        "target": prompt_info.target,
+                        "eval_predicted_value": response,
+                        "eval": "wrong",
+                    }
+                )
 
         total = number_of_correct + number_of_wrong
         correct_rate = number_of_correct / total * 100
 
         return {
-            "correct_rate": correct_rate,
-            "number_of_correct": number_of_correct,
-            "number_of_wrong": number_of_wrong,
-            "total": total,
+            "flagjudgeannotator": {
+                "correct_rate": correct_rate,
+                "number_of_correct": number_of_correct,
+                "number_of_wrong": number_of_wrong,
+                "total": total,
+                "individual_scores": {
+                    "unsuccessful": wrong_prompts,
+                    "successful": correct_prompts,
+                },
+            },
             "grading_criteria": {"correct_rate": correct_rate},
         }

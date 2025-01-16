@@ -50,18 +50,20 @@ class AnswerRelevance(MetricInterface):
         Asynchronously retrieves the results of the answer relevancy evaluation.
 
         This method evaluates the relevancy of the generated answers to the given prompts
-        using the Ragas framework. It leverages both an evaluation model and an embeddings model
+        using the Ragas framework. It utilizes both an evaluation model and an embeddings model
         to compute the answer relevancy score.
 
         Args:
             prompts (Any): The input prompts/questions.
-            predicted_results (Any): The generated answers to be evaluated.
+            predicted_results (Any): The generated answers to be evaluated, each containing a response
+            and context attribute.
             targets (Any): The ground truth answers for comparison.
             *args: Additional positional arguments.
-            **kwargs: Additional keyword arguments, including 'contexts' which is required.
+            **kwargs: Additional keyword arguments.
 
         Returns:
-            dict: A dictionary containing the answer relevancy scores and grading criteria.
+            dict: A dictionary containing the answer relevancy scores and individual scores
+            for each prompt, predicted result, and target.
         """
         predicted_values = [result.response for result in predicted_results]
         predicted_contexts = [result.context for result in predicted_results]
@@ -88,7 +90,29 @@ class AnswerRelevance(MetricInterface):
             embeddings=embeddings_model.get_client(),  # type: ignore ; ducktyping
         )
         df = score.to_pandas()
+        answer_relevancy_list = df["answer_relevancy"].tolist()
+
+        individual_scores = [
+            {
+                "prompt": prompt,
+                "predicted_value": result,
+                "predicted_context": context,
+                "target": target,
+                "score": ans_score,
+            }
+            for prompt, result, context, target, ans_score in zip(
+                prompts,
+                predicted_values,
+                predicted_contexts,
+                targets,
+                answer_relevancy_list,
+            )
+        ]
+
         return {
-            "answer_relevancy": df["answer_relevancy"].tolist(),
+            "answerrelevance": {
+                "score": answer_relevancy_list,
+                "individual_scores": individual_scores,
+            },
             "grading_criteria": {},
         }

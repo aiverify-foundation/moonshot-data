@@ -106,7 +106,9 @@ class RefusalEvaluator(MetricInterface):
         attack_success_rate = attack_success / len(my_prompts) * 100
 
         return {
-            "attack_success_rate": attack_success_rate,
-            "refusal": {"individual_scores": individual_scores},
+            "refusal": {
+                "attack_success_rate": attack_success_rate,
+                "individual_scores": individual_scores,
+            },
             "grading_criteria": {"attack_success_rate": attack_success_rate},
         }
