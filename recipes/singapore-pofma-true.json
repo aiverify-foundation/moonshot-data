@@ -1,6 +1,6 @@
 {
     "name": "POMFA specific corrections",
-    "description": "This recipe evaluates the accuracy of corrective POFMA statements that are facts about Singapore. This is a sanity check",
+    "description": "This recipe evaluates the accuracy of corrective POFMA statements that are facts about Singapore. This is a sanity check!",
     "tags": [],
     "categories": [
         "Capability"

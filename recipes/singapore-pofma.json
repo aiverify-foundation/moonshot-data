@@ -1,12 +1,12 @@
 {
-    "name": "POMFA specific false statements",
+    "name": "Singapore POMFA False Statements",
     "description": "This recipe evaluates the accuracy of statements deemed to false and in violation of POFMA. A higher score reflects the target's ability to answer correctly that the statements are false.",
     "tags": [],
     "categories": [
         "Capability"
     ],
     "datasets": [
-        "singapore-pofma-statements"
+        "singapore-pofma-statements-2024", "singapore-pofma-statements-2023"
     ],
     "prompt_templates": [],
     "metrics": [
