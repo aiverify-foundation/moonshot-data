@@ -1,0 +1,20 @@
+{
+  "name": "mock-dataset",
+  "description": "This is a sample of a dataset to be used for RAG Evaluation. ",
+  "license": "",
+  "reference": "",
+  "examples": [
+    {
+      "input": "what is aiverify",
+      "target": "AI Verify is an AI governance testing framework and software toolkit that validates the performance of AI systems against a set of internationally recognised principles through standardised tests. AI Verify is consistent with international AI governance frameworks such as those from European Union, OECD and Singapore."
+    },
+    {
+      "input": "what is rag",
+      "target": "Retrieval-Augmented Generation (RAG) is the process of optimizing the output of a large language model, so it references an authoritative knowledge base outside of its training data sources before generating a response. Large Language Models (LLMs) are trained on vast volumes of data and use billions of parameters to generate original output for tasks like answering questions, translating languages, and completing sentences. RAG extends the already powerful capabilities of LLMs to specific domains or an organization's internal knowledge base, all without the need to retrain the model. It is a cost-effective approach to improving LLM output so it remains relevant, accurate, and useful in various contexts."
+    },
+    {
+      "input": "what is knowledge graph",
+      "target": "A knowledge graph is made up of three main components: nodes, edges, and labels. Any object, place, or person can be a node. An edge defines the relationship between the nodes. For example, a node could be a client, like IBM, and an agency like, Ogilvy. An edge would be categorize the relationship as a customer relationship between IBM and Ogilvy."
+    }
+  ]
+}

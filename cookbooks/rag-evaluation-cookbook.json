@@ -1,0 +1,9 @@
+{
+  "name": "RAG Evaluation Cookbook",
+  "description": "This cookbook assesses how well Retrieval-Augmented Generation systems perform relative to a custom test dataset using LLM-based metrics from Ragas.",
+  "tags": ["rag"],
+  "categories": ["Capability", "Trust & Safety"],
+  "recipes": [
+      "ragas-evaluation"
+  ]
+}

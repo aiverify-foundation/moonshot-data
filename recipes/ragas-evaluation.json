@@ -1,0 +1,22 @@
+{
+    "name": "Ragas RAG Evaluation Recipe",
+    "description": "",
+    "tags": [
+        "rag"
+    ],
+    "categories": [
+        "Capability, Trust & Safety"
+    ],
+    "datasets": [
+        "rag-sample-dataset"
+    ],
+    "prompt_templates": [],
+    "metrics": [
+        "answercorrectness",
+        "answerrelevance",
+        "contextprecision",
+        "contextrecall",
+        "faithfulness"
+    ],
+    "grading_scale": {}
+}
