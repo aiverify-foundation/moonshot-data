@@ -127,10 +127,10 @@ Please fork the repo and create a pull request. You can also open an issue with 
 | [amazon-bedrock-connector](connectors/amazon-bedrock-connector.py) | For models consumed through [AWS' Bedrock service](https://aws.amazon.com/bedrock/) |
 | [azure-openai-connector](connectors/azure-openai-connector.py) | For models consumed through [Azure OpenAI Service](https://azure.microsoft.com/en-us/products/ai-services/openai-service) |
 | [claude2-connector](connectors/aude2-connector.py) | For Anthropic's [Claude 2 API](https://www.anthropic.com/api) |
+| [h2ogpte-connector](connectors/h2ogpte-connector.py) | For the [h2oGPTe API](https://h2oai.github.io/h2ogpte/python_api.html) |
 | [huggingface-connector](connectors/huggingface-connector.py) | For [Hugging Face Inference Endpoints](https://huggingface.co/docs/inference-endpoints/index) |  
 | [openai-connector](connectors/openai-connector.py) | For the [OpenAI API](https://openai.com/api/) |  
-| [together-connector](connectors/together-connector.py) | For [TogetherAI Severless API](https://www.together.ai/products#inference) | 
-| [h2ogpte-connector](connectors/h2ogpte-connector.py) | For the [h2oGPTe API](https://h2oai.github.io/h2ogpte/python_api.html) | 
+| [together-connector](connectors/together-connector.py) | For [TogetherAI Severless API](https://www.together.ai/products#inference) |  
 
 </br>
 
