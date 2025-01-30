@@ -129,7 +129,8 @@ Please fork the repo and create a pull request. You can also open an issue with 
 | [claude2-connector](connectors/aude2-connector.py) | For Anthropic's [Claude 2 API](https://www.anthropic.com/api) |
 | [huggingface-connector](connectors/huggingface-connector.py) | For [Hugging Face Inference Endpoints](https://huggingface.co/docs/inference-endpoints/index) |  
 | [openai-connector](connectors/openai-connector.py) | For the [OpenAI API](https://openai.com/api/) |  
-| [together-connector](connectors/together-connector.py) | For [TogetherAI Severless API](https://www.together.ai/products#inference) |  
+| [together-connector](connectors/together-connector.py) | For [TogetherAI Severless API](https://www.together.ai/products#inference) | 
+| [h2ogpte-connector](connectors/h2ogpte-connector.py) | For the [h2oGPTe API](https://h2oai.github.io/h2ogpte/python_api.html) | 
 
 </br>
 
