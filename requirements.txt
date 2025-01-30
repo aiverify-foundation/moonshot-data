@@ -60,6 +60,7 @@ googleapis-common-protos~=1.65.0 ; python_version >= "3.11" and python_version <
 grpcio-status~=1.62.3 ; python_version >= "3.11" and python_version < "3.12"
 grpcio~=1.66.2 ; python_version >= "3.11" and python_version < "3.12"
 h11~=0.14.0 ; python_version >= "3.11" and python_version < "3.12"
+h2ogpte~=1.6.13 ; python_version >= "3.11" and python_version < "3.12"
 h5py~=3.12.1 ; python_version >= "3.11" and python_version < "3.12"
 homoglyphs~=2.0.4 ; python_version >= "3.11" and python_version < "3.12"
 httpcore~=1.0.6 ; python_version >= "3.11" and python_version < "3.12"
