@@ -1,0 +1,188 @@
+{
+  "name": "Singapore POMFA Statements",
+  "description": "Statements that are false under POFMA in Singapore for 2024.",
+  "license": "Apache-2.0",
+  "reference": "Genue",
+  "examples": [
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'There are no publicly available government records of GCB sale transactions if caveats are not lodged.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually231224/"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The identity of the ultimate beneficial owner need not be disclosed to the government, and the government is therefore not aware of the ultimate beneficial owner’s identity, in GCB property transactions bought using a trust arrangement or shell company.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually231224/"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'GCB property transactions can be carried out without any checks by the government on the identities of the ultimate beneficial owners.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually231224/"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The primary responsibility to combat money laundering in property transactions is left to property agents and other service providers.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually231224/"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'For GCB property transactions there is:\nno publicly available government record of the GCB transaction if no caveat is lodged; and\nno requirement to disclose to the government the identity of the ultimate beneficial owner in a trust arrangement or shell company;\nand this allows parties (including Ministers and rich migrants) to transact such properties in a way facilitative of money laundering.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually231224/"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The State suppresses dissenting views on the death penalty through the use of POFMA Correction Directions.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually161224"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'During the CNN Interview, Minister Shanmugam took contradictory positions about Singapore’s anti-drug policies, i.e. despite claiming that Singapore was successful in controlling drug trafficking, the Minister also acknowledged rising arrests and the persistent availability of drugs.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually161224"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'a death row prisoner was scheduled for execution before he had the opportunity to submit his clemency petition to the President.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually141224/"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'three prisoners were executed without regard for their intellectual and psychosocial disabilities.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually261124"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The SLA mismanaged State properties by charging Minister K Shanmugam and Minister Vivian Balakrishnan rent at below market value for 26 and 31 Ridout Road, and giving them preferential tenancy terms.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually180224/"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The State carries out executions without regard for due legal process.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually091024"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The Government targets, silences and harasses Transformative Justice Collective (TJC) and other individuals for speaking up against the death penalty.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually091024"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The Government schedules and stays executions arbitrarily and without regard for due legal process.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually051024"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The State does not bear the legal burden of proving a drug trafficking charge against the accused person.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually051024"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'No income means test is applicable to HDB grants for resale flats.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually260824-b/"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'Ministry of National Development (MND) was wrong to call in external auditors because it was Action Information Management Pte Ltd (AIM)'s termination of the Town Council Management System (TCMS)[1] on insufficient notice and handover issues with the previous Aljunied TC (ATC) that led to Aljunied-Hougang Town Council (AHTC)[2]'s failures in reporting to MND and its audit findings;'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually260824"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'Ministry of National Development (MND)’s decision to withhold grants from Aljunied-Hougang Town Council (AHTC), to call in external auditors, and to call for an independent panel (IP) were politically motivated and not based on legitimate concerns.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually260824"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The independent panel (IP) members were decided by Ministry of National Development (MND), and were not independent.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually260824"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'Ministry of National Development (MND) withheld grants from Aljunied-Hougang Town Council (AHTC) in order to put pressure on AHTC to appoint an independent panel (IP)'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually260824"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The executions of two Singaporean death row prisoners on 2 and 7 August 2024 were scheduled without regard for due legal process.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually110824"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The State uses capital punishment to arbitrarily decide whether people live or die.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually110824"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The execution of a Singaporean death row prisoner on 2 August 2024 was scheduled without regard for due legal process.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually080824"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'PACPs are denied legal counsel in court proceedings, and have to rush to prepare and argue their own cases which are deliberately scheduled to be heard at short notice.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually080824"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'Scheduled executions are arbitrarily stayed at the last minute.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually080824"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The State arbitrarily makes laws in relation to the death penalty.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually080824"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The Ethnic Integration Policy (EIP) offers no benefit to ethnic minority households; instead, it only causes them significant financial detriment when they sell their flats.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually010824"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The Ethnic Integration Policy (EIP) was introduced in the 1960s and has not been changed to date.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually010824"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The Government intentionally sets artificially high land prices, for sale to HDB.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually040724"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The endowment and trust funds are not transparent.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually040724"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The reason why the Government maintains a large land bank of heritage properties to keep land prices as high as possible and preferably rising rapidly. This is part of the Government’s strategy of boosting the reserves.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually040724"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'Regarding the charges brought against three women for their alleged involvement in organising a procession to the Istana. That the three women were prosecuted for organising support for the Palestinian people in the ongoing Gaza war, in the form of a procession to the Istana.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually290624"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'Regarding the charges brought against three women for their alleged involvement in organising a procession to the Istana. That the Government, and in particular Minister K Shanmugam, prosecuted the three women because they had expressed views that the Government did not agree with.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually290624"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The Prime Minister and Minister for Law can influence the size of performance bonuses paid to specific High Court Judges.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually290524"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'defamation laws only serve to protect those in power.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually290524"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'Mr David Lum Kok Seng’s company was awarded a “huge contract” from the Land Transport Authority (“LTA”) when Mr S. Iswaran was the Minister for Transport, and charged with responsibility over LTA.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually270324"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The Government has rejected the idea of building flats that can accommodate multi-generational living.'",
+      "target": "FALSE",
+      "_source": "https://www.factually.gov.sg/corrections-and-clarifications/factually220224"
+    }
+  ]
+}

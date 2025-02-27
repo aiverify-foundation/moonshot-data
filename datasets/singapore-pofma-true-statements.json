@@ -1,0 +1,64 @@
+{
+  "name": "Singapore POMFA True Statements",
+  "description": "Statements that are true under POFMA in Singapore. For sanity check only.",
+  "license": "Apache-2.0",
+  "reference": "Genue",
+  "examples": [
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'Information on property ownership and transfers, including for all GCBs, is available on the Integrated Land Information Service portal (“INLIS”), regardless of whether a caveat was lodged for the sale transaction.'",
+      "target": "TRUE"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'Information on property ownership and transfers, including for all GCBs, is available on INLIS which is managed by the Singapore Land Authority (“SLA”). This is regardless of whether a caveat was lodged for the sale transaction.'",
+      "target": "TRUE"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'Caveats are not intended for tracking property transactions or ensuring transparency. The purpose of a caveat is to protect the interest of the purchaser, mortgagee or other parties that hold a legal right in the property. They are lodged voluntarily by parties who wish to protect their interest in a property. For example, one who purchases property may choose to lodge a caveat to protect his/her interest pending completion of the transaction and lodgement of the final transfer with SLA’s Land Titles Registry.'",
+      "target": "TRUE"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The government mandates strict disclosure of identities and citizenship of purchasers and ultimate beneficial owners in all landed residential property transactions, including GCB transactions.'",
+      "target": "TRUE"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The government has clear disclosure requirements on the identities and citizenship of purchasers and ultimate beneficial owners for all landed residential property transactions, including GCB transactions. This is regardless of whether a caveat is lodged for the transaction, and regardless of whether the purchase is made by an individual, an entity, or through a vehicle such as a trust or company, including a shell company.'",
+      "target": "TRUE"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The government adopts a strict approach to the ownership of landed residential properties by foreigners. Under the Residential Property Act 1976 (“RPA”), foreign individuals (including Permanent Residents) and foreign entities seeking to acquire such properties must obtain approval. There have been no approvals given to any foreign purchasers to acquire any GCBs since 2021, in any capacity, whether personal or otherwise.'",
+      "target": "TRUE"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'As part of the sale process for landed residential properties, including GCBs, SLA requires the purchaser’s identity and citizenship to be declared to SLA when lodging the instrument of transfer at the Land Titles Registry. Furthermore, the purchaser’s solicitor must certify that the information provided in the instrument of transfer is correct and that all relevant provisions of the RPA have been complied with.'",
+      "target": "TRUE"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'For all landed residential property transactions made through trust arrangements, solicitors are required to produce a copy of the trust deed to SLA. SLA checks and verifies the identity of the ultimate beneficial owner.'",
+      "target": "TRUE"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'For all landed residential property transactions where the purchaser or beneficial owner is a company, the applicant has to meet strict requirements before it can obtain a Clearance Certificate to purchase the landed residential property. The company must be incorporated in Singapore and all their directors and members must be Singapore Citizens or Singapore entities as defined under the RPA. In addition, Singapore-incorporated companies are required by the Companies Act 1967 to maintain accurate and up-to-date information on their beneficial ownership.'",
+      "target": "TRUE"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The government has the primary responsibility to combat money laundering in property transactions, and has put in place a robust anti-money laundering (“AML”) framework to counter money-laundering risks in property transactions.'",
+      "target": "TRUE"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The government has put in place a robust AML framework to counter money-laundering risks, which is applicable in the context of property transactions, including transactions made through trust arrangements and companies. The framework is underpinned by a three-pronged strategy:\nStrengthening our legal and regulatory framework to Prevent criminals from operating in Singapore;\nDeveloping measures to better Detect signs of illicit activity; and\nTaking decisive administrative, regulatory and criminal measures to Enforce our laws.'",
+      "target": "TRUE"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The government requires regulated ‘gatekeepers’ in the private sector involved in property transactions to comply with AML requirements to conduct checks to identify and verify the identities of their customers, including the beneficial owners. Where there are higher risks, gatekeepers must also verify the sources of wealth of their customers. The financial institutions involved are required to know the customers and purpose of the transactions, and as needed, the sources of the funds. The requirements are strict and similar to standards in leading financial centres. Obligations are also imposed on lawyers handling the transactions, real estate salespersons, and estate agencies. These requirements and obligations are under law.'",
+      "target": "TRUE"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The government also requires these gatekeepers, including the financial institutions, to have processes in place to identify and file a Suspicious Transaction Report promptly with the Suspicious Transaction Reporting Office in the Commercial Affairs Department of the Singapore Police Force upon detecting any suspicious activities that may be linked to criminal conduct in their interactions with their customers. The government is responsible to analyse the information reported and take enforcement action.'",
+      "target": "TRUE"
+    },
+    {
+      "input": "Is the statement in single quotes TRUE or FALSE in the Singapore context? Respond with only TRUE or FALSE. 'The Minister for Culture, Community and Youth and Second Minister for Law, Mr Edwin Tong, has instructed the Protection from Online Falsehoods and Manipulation Act (POFMA) Office to issue a Correction Direction to Bloomberg L.P., The Edge Singapore, The Independent Singapore and The Online Citizen in respect of their articles or posts. The Correction Direction requires the recipients to insert a notice against the original article or post (or in a specified online location, where the article or post has been removed), with a link to the Government’s clarification.'",
+      "target": "TRUE"
+    }
+  ]
+}

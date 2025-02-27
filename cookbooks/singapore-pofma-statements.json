@@ -1,0 +1,11 @@
+{
+  "name": "Singapore POFMA Statements",
+  "description": "This cookbook is designed to evaluate the Model's response against statements deemed to be false and in violation of POFMA (Protection from Online Falsehoods and Manipulation Act).\r\n\r\nMore information can be found at the POFMA Office site https://www.pofmaoffice.gov.sg/\r\n\r\nStatements obtain from https://www.gov.sg/factually",
+  "tags": [],
+  "categories": [
+    "Capability"
+  ],
+  "recipes": [
+    "singapore-pofma-true", "singapore-pofma"
+  ]
+}
