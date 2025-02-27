@@ -1,0 +1,17 @@
+{
+    "name": "h2ogpte-danube3",
+    "connector_type": "h2ogpte-connector",
+    "uri": "your h2ogpte url",
+    "token": "your h2ogpte api key",
+    "max_calls_per_second": 1,
+    "max_concurrency": 1,
+    "model": "h2oai/h2o-danube3-4b-chat",
+    "params": {
+      "timeout": 200,
+      "max_attempts": 3,
+      "temperature": 0.5,
+      "pre_prompt": "",
+      "post_prompt": "",
+      "system_prompt": ""
+    }
+  }
