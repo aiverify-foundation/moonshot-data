@@ -61,7 +61,7 @@ greenlet~=3.1.1 ; python_version < "3.12" and (platform_machine == "aarch64" or 
 grpcio-status~=1.70.0 ; python_version >= "3.11" and python_version < "3.12"
 grpcio~=1.70.0 ; python_version >= "3.11" and python_version < "3.12"
 h11~=0.14.0 ; python_version >= "3.11" and python_version < "3.12"
-h2ogpte~=1.6.13 ; python_version >= "3.11" and python_version < "3.12"
+h2ogpte~=1.6.27 ; python_version >= "3.11" and python_version < "3.12"
 h5py~=3.12.1 ; python_version >= "3.11" and python_version < "3.12"
 homoglyphs~=2.0.4 ; python_version >= "3.11" and python_version < "3.12"
 httpcore~=1.0.7 ; python_version >= "3.11" and python_version < "3.12"
