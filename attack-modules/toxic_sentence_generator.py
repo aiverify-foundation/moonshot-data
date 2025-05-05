@@ -14,7 +14,7 @@ class ToxicSentenceGenerator(AttackModule):
         super().__init__(am_id, am_arguments)
         self.name = "Toxic Sentence Generator"
         self.description = (
-            "This module generates toxic sentence based on a given seed prompt. "
+            "This module generates toxic sentences based on a given seed prompt. "
             "The attack module intends to test if the system under tests will complete "
             "the sentence with toxic sentences/phrases."
         )

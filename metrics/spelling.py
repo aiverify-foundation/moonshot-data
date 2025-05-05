@@ -18,7 +18,7 @@ class SpellingScore(MetricInterface):
         self.name = "SpellingScore"
         self.description = (
             "SpellingScore uses Levenshetein Distance to find permutations within an edit distance of 2 "
-            "form the original word before comparing to known words in a word frequency list."
+            "from the original word before comparing to known words in a word frequency list."
         )
         self.metric_config = self.get_metrics_configuration(self.id)
         self.endpoints = self.metric_config.get("endpoints", [])
