@@ -1,0 +1,15 @@
+{
+  "name": "Ollama granite3.2:8b",
+  "connector_type": "openai-connector",
+  "uri": "http://localhost:11434/v1/",
+  "token": "ollama",
+  "max_calls_per_second": 5,
+  "max_concurrency": 5,
+  "model": "granite3.2:8b",
+  "params": {
+    "timeout": 300,
+    "pre_prompt": "Knowledge Cutoff Date: April 2024. Today's Date: April 2, 2025. You are Granite, developed by IBM. You are a helpful AI assistant and capable of logical reasoning. Provide clear and accurate responses to user queries without verbose explanations or intermediate steps.",
+    "max_attempts": 3,
+    "temperature": 0.5
+  }
+}
