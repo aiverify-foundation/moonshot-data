@@ -8,7 +8,7 @@ from moonshot.src.connectors_endpoints.connector_endpoint import ConnectorEndpoi
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
 
-DEFAULT_EVALUATION_MODEL = "together-llama-guard-7b-assistant"
+DEFAULT_EVALUATION_MODEL = "together-llama-guard-8b-assistant"
 
 
 class LlamaGuardAnnotator(MetricInterface):
