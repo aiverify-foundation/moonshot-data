@@ -1,0 +1,13 @@
+{
+    "name": "HuggingFace Deepseek R1",
+    "connector_type": "huggingface-connector",
+    "uri": "https://router.huggingface.co/novita/v3/openai/chat/completions",
+    "token": "",
+    "max_calls_per_second": 1,
+    "max_concurrency": 1,
+    "model": "deepseek/deepseek-r1-distill-qwen-32b",
+    "params": {
+        "pre_prompt": "",
+        "post_prompt": ""        
+    }
+}
