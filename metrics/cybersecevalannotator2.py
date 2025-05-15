@@ -47,7 +47,7 @@ class CyberSecEvalAnnotator2(MetricInterface):
         self.id = Path(__file__).stem
         self.name = "Cybersec Eval Prompt Injection v2"
         self.description = (
-            "Calculates number of Success and Unsuccessful reply by judge llm"
+            "Calculates number of Success and Unsuccessful reply by judge llm."
         )
         self.metric_config = self.get_metrics_configuration(self.id)
         self.endpoints = self.metric_config.get("endpoints", [DEFAULT_EVALUATION_MODEL])
