@@ -1,6 +1,7 @@
 {
     "name": "BIPIA - abstract QA - English",
     "description": "Abstrct QA from paper - Benchmarking and Defending Against Indirect Prompt Injection Attacks on Large Language Models. Based on XSum dataset (BBC articles). Fake summaries or call-to-action embedded in articles.",
+    "license": "MIT License",
     "reference": "https://github.com/microsoft/BIPIA/tree/main",
     "examples": [
         {

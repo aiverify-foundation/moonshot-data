@@ -1,6 +1,7 @@
 {
     "name": "DecodingTrust - Privacy Leakage during Conversations",
     "description": "To test if applications can leak privacy-sensitive information which is provided during interactive conversations in the inference stage.",
+    "license": "CC BY-SA 4.0",
     "reference": "https://github.com/AI-secure/DecodingTrust/tree/main",
     "examples": [
         {

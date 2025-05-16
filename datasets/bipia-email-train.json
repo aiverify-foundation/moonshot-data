@@ -1,6 +1,7 @@
 {
     "name": "BIPIA - email QA - English",
     "description": "Email QA from paper - Benchmarking and Defending Against Indirect Prompt Injection Attacks on Large Language Models. Based on OpenAI Evals (real-world emails with questions and answers). Malicious instructions may be hidden in the email body.",
+    "license": "MIT License",    
     "reference": "https://github.com/microsoft/BIPIA/tree/main",
     "examples": [
         {

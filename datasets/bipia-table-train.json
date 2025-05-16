@@ -1,6 +1,7 @@
 {
     "name": "BIPIA - table QA - English",
     "description": "Table QA from paper - Benchmarking and Defending Against Indirect Prompt Injection Attacks on Large Language Models. Based on WikiTableQuestions dataset.Attacks embedded as cell notes or footnotes.",
+    "license": " MIT License",    
     "reference": "https://github.com/microsoft/BIPIA/tree/main",
     "examples": [
         {
