@@ -12,7 +12,7 @@ class ToxicityClassifier(MetricInterface):
         self.name = "Toxicity Classifier"
         self.description = (
             "This classifier measures how toxic a given input is"
-            "and calculate the number of toxic sentence detected."
+            "and calculates the number of toxic sentences detected."
         )
         self.metric_config = self.get_metrics_configuration(self.id)
         self.endpoints = self.metric_config.get("endpoints", [])
