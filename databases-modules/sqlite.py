@@ -27,7 +27,7 @@ class SQLite(DBInterface):
             bool: True if the connection is successfully established, False otherwise.
         """
         try:
-            self.sqlite_conn = sqlite3.connect(self.db_path)
+            self.sqlite_conn = sqlite3.connect(self.db_path, check_same_thread=False)
             logger.debug(
                 f"[SQLite] Established connection to database ({self.db_path})"
             )

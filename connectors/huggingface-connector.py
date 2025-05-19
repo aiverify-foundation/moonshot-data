@@ -38,15 +38,24 @@ class HuggingFaceConnector(Connector):
         """
         connector_prompt = f"{self.pre_prompt}{prompt}{self.post_prompt}"
         # Merge self.optional_params with additional parameters
-        new_params = {**self.optional_params, "inputs": connector_prompt}
+        new_params = {**self.optional_params}
 
         # Select API key from token attribute or environment variable 'HUGGINGFACE_API_URL'
         api_url = self.endpoint or os.getenv("HUGGINGFACE_API_URL") or ""
+
+        # Format into the HF's expected format
+        hf_message_format = {
+            "messages": [{"role": "user", "content": connector_prompt}],
+            "model": self.model,
+        }
+
+        hf_request = new_params | hf_message_format
+
         async with aiohttp.ClientSession() as session:
             async with session.post(
                 api_url,
                 headers=self._prepare_headers(),
-                json=new_params,
+                json=hf_request,
             ) as response:
                 return ConnectorResponse(
                     response=await self._process_response(response)
@@ -86,7 +95,7 @@ class HuggingFaceConnector(Connector):
         """
         try:
             json_response = await response.json()
-            return json_response[0]["generated_text"]
+            return json_response["choices"][0]["message"]["content"]
         except Exception as exception:
             logger.error(
                 f"[HuggingFaceConnector] An exception has occurred: {str(exception)}, {await response.json()}"
