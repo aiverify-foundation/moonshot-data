@@ -1,7 +1,7 @@
 {
     "name": "advglue",
     "description": "Adversarial GLUE Benchmark (AdvGLUE) is a comprehensive robustness evaluation benchmark that focuses on the adversarial robustness evaluation of language models. ",
-    "license": "",
+    "license": "CC-BY-4.0 license",
     "reference": "https://github.com/AI-secure/adversarial-glue",
     "examples": [
         {

@@ -1,7 +1,7 @@
 {
     "name": "Analogical Similarity",
     "description": "To measure the model’s ability in discriminating between different degrees of analogical similarity in two given episodes",
-    "license": "",
+    "license": "Apache 2.0",
     "reference": "https://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/analogical_similarity",
     "examples": [
         {

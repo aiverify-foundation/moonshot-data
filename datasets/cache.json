@@ -5,10 +5,10 @@
     "description": "Zero-shot reading comprehension on paragraphs and questions from squadshifts",
     "examples": null,
     "num_of_dataset_prompts": 48201,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:10:28",
     "reference": "https://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/squad_shifts",
-    "license": "",
-    "hash": "37b3413b520f1426"
+    "license": "Apache 2.0",
+    "hash": "5dfcdfeb4fd1ddaa"
   },
   "bbq-lite-religion-ambiguous": {
     "id": "bbq-lite-religion-ambiguous",
@@ -27,10 +27,10 @@
     "description": "Adversarial GLUE Benchmark (AdvGLUE) is a comprehensive robustness evaluation benchmark that focuses on the adversarial robustness evaluation of language models. ",
     "examples": null,
     "num_of_dataset_prompts": 721,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:05:40",
     "reference": "https://github.com/AI-secure/adversarial-glue",
-    "license": "",
-    "hash": "93cd563eac992f8a"
+    "license": "CC-BY-4.0 license",
+    "hash": "e7f97daedfd0252c"
   },
   "singapore-food-tnf": {
     "id": "singapore-food-tnf",
@@ -49,10 +49,10 @@
     "description": "MedMCQ is a large-scale, multiple-choice question answering dataset designed to address realworld medical entrance exam questions. It contains more than 194k high-quality AIIMS & NEET PG entrnace exam MCQs covering 2.4k healthcare topics and 21 medical subjects.",
     "examples": null,
     "num_of_dataset_prompts": 182822,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 14:27:17",
     "reference": "https://github.com/MedMCQA/MedMCQA",
     "license": "MIT License",
-    "hash": "53b7f1fd01b3c166"
+    "hash": "64a0f8f36933b582"
   },
   "tamil-kural-classification": {
     "id": "tamil-kural-classification",
@@ -93,10 +93,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 586,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:06:46",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "1589b595c2a82395"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "00c14e175a680598"
   },
   "bbq-lite-gender-disamb": {
     "id": "bbq-lite-gender-disamb",
@@ -192,10 +192,10 @@
     "description": "Responses that enable, encourage, or endorse acts of intentional self-harm.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2024-05-27 16:48:35",
-    "reference": "",
-    "license": "",
-    "hash": "56d2106c6ac2289d"
+    "created_date": "2025-05-19 18:43:32",
+    "reference": "https://github.com/mlcommons/ailuminate",
+    "license": "CC-BY-4.0 license",
+    "hash": "cf5c2ef4aeea5c40"
   },
   "sg-legal-glossary": {
     "id": "sg-legal-glossary",
@@ -214,10 +214,10 @@
     "description": "Responses that demean or dehumanize people on the basis of their sensitive, personal characteristics.",
     "examples": null,
     "num_of_dataset_prompts": 26530,
-    "created_date": "2024-05-27 16:48:35",
-    "reference": "",
+    "created_date": "2025-05-19 18:40:44",
+    "reference": "https://github.com/mlcommons/ailuminate",
     "license": "",
-    "hash": "eb1ddc5b2b3de47c"
+    "hash": "2ccfe2ec5af493c9"
   },
   "bbq-lite-age-ambiguous": {
     "id": "bbq-lite-age-ambiguous",
@@ -236,10 +236,10 @@
     "description": "This recipe measures if the model is able to distinguish and understand cause and effect. The higher the grade, the better the system can perform this capability.",
     "examples": null,
     "num_of_dataset_prompts": 102,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:06:13",
     "reference": "https://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/cause_and_effect",
-    "license": "",
-    "hash": "9f64cbe05b98e6a3"
+    "license": "Apache 2.0",
+    "hash": "d94e1c745917be2c"
   },
   "bbq-lite-race-x-gender-ambiguous": {
     "id": "bbq-lite-race-x-gender-ambiguous",
@@ -258,10 +258,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 1534,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:07:12",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "b03744e84f4edfd6"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "a6aa84d4fa221098"
   },
   "truthfulqa-mcq": {
     "id": "truthfulqa-mcq",
@@ -291,10 +291,10 @@
     "description": "PubMedQA is a large-scale, multiple-choice question answering dataset designed to address realworld medical entrance exam questions. It contains more than 194k high-quality AIIMS & NEET PG entrnace exam MCQs covering 2.4k healthcare topics and 21 medical subjects.",
     "examples": null,
     "num_of_dataset_prompts": 1000,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 14:30:43",
     "reference": "https://github.com/MedMCQA/MedMCQA",
     "license": "MIT License",
-    "hash": "1f6c0e8047dfaa2e"
+    "hash": "11ef2f2817132c95"
   },
   "singapore-facts-tnf": {
     "id": "singapore-facts-tnf",
@@ -313,10 +313,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 8700,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:07:15",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "e0c450ffb19bd216"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "8bfaa27ccf6382e2"
   },
   "real-toxicity-prompts": {
     "id": "real-toxicity-prompts",
@@ -335,10 +335,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 13528,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:07:47",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "68cacc35e85d2aaa"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "4a982c1a5d1fcbe4"
   },
   "gre-reading-comprehension": {
     "id": "gre-reading-comprehension",
@@ -346,10 +346,10 @@
     "description": "To measure the model/'s ability to summarize text, infer and deduce knowledge from context, and match the context.",
     "examples": null,
     "num_of_dataset_prompts": 32,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:09:34",
     "reference": "https://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/gre_reading_comprehension",
-    "license": "",
-    "hash": "831291c1345a105e"
+    "license": "Apache 2.0",
+    "hash": "570b43e579ded05e"
   },
   "mmlu-collegemedicine": {
     "id": "mmlu-collegemedicine",
@@ -357,10 +357,10 @@
     "description": "MMLU measure knowledge acquired during pretraining by evaluating models exclusively in zero-shot and few-shot settings. This particular dataset contains questions on MMLU College Medicine",
     "examples": null,
     "num_of_dataset_prompts": 173,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 14:30:11",
     "reference": "https://github.com/hendrycks/test",
     "license": "MIT License",
-    "hash": "30d1ad68cdb94209"
+    "hash": "236c9bf16ddb2351"
   },
   "bbq-lite-race-x-ses-disamb": {
     "id": "bbq-lite-race-x-ses-disamb",
@@ -379,10 +379,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 1392,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:06:56",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "487a9084704e4cb6"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "a558488c7964395e"
   },
   "singapore-political-history": {
     "id": "singapore-political-history",
@@ -412,10 +412,10 @@
     "description": "Responses that enable, encourage, or endorse the commission of violent crimes.",
     "examples": null,
     "num_of_dataset_prompts": 4390,
-    "created_date": "2024-05-27 16:48:35",
-    "reference": "",
-    "license": "",
-    "hash": "48ad7d0acb441a19"
+    "created_date": "2025-05-19 18:44:30",
+    "reference": "https://github.com/mlcommons/ailuminate",
+    "license": "CC-BY-4.0 license",
+    "hash": "a7b6e8b5e7fe96e6"
   },
   "cbbq-lite-SES-disamb": {
     "id": "cbbq-lite-SES-disamb",
@@ -423,10 +423,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 3960,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:08:09",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "b237a262cc9a45ae"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "ff216840e0a7626e"
   },
   "mmlu-clinicalknowledge": {
     "id": "mmlu-clinicalknowledge",
@@ -434,10 +434,10 @@
     "description": "MMLU measure knowledge acquired during pretraining by evaluating models exclusively in zero-shot and few-shot settings. This particular dataset contains questions on MMLU Clinical Knowledge",
     "examples": null,
     "num_of_dataset_prompts": 265,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 14:30:00",
     "reference": "https://github.com/hendrycks/test",
     "license": "MIT License",
-    "hash": "eefc8a5f1324e9e7"
+    "hash": "1f7a9e21f4b0689d"
   },
   "cbbq-lite-religion-disamb": {
     "id": "cbbq-lite-religion-disamb",
@@ -445,10 +445,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 13528,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:08:01",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "6923a5911f8ed0d9"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "6c7b712114eac898"
   },
   "coqa-conversational-qna": {
     "id": "coqa-conversational-qna",
@@ -456,10 +456,10 @@
     "description": "To measure the ability of machines to understand a text passage and answer a series of interconnected questions",
     "examples": null,
     "num_of_dataset_prompts": 10930,
-    "created_date": "2025-01-15 09:08:40",
+    "created_date": "2025-05-19 18:09:02",
     "reference": "https://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/coqa_conversational_question_answering",
-    "license": "",
-    "hash": "5b0887b58a283645"
+    "license": "Apache 2.0",
+    "hash": "c7fd823aeffae179"
   },
   "singapore-public-housing": {
     "id": "singapore-public-housing",
@@ -500,10 +500,10 @@
     "description": "Responses that enable, encourage, or endorse the creation of weapons of mass destruction.",
     "examples": null,
     "num_of_dataset_prompts": 1570,
-    "created_date": "2024-05-27 16:48:35",
-    "reference": "",
-    "license": "",
-    "hash": "03105a3ceda2ab88"
+    "created_date": "2025-05-19 18:39:55",
+    "reference": "https://github.com/mlcommons/ailuminate",
+    "license": "CC-BY-4.0 license",
+    "hash": "cff87c5b227429b8"
   },
   "bbq-lite-gender-ambiguous": {
     "id": "bbq-lite-gender-ambiguous",
@@ -533,10 +533,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 7400,
-    "created_date": "2025-01-07 10:25:19",
+    "created_date": "2025-05-19 18:06:24",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "1debbbe8b43da7bb"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "4f4656aa00393667"
   },
   "mlc-cbr-typical-user": {
     "id": "mlc-cbr-typical-user",
@@ -544,10 +544,10 @@
     "description": "Responses that enable, encourage, or endorse the creation of weapons of mass destruction.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2024-05-27 16:48:35",
-    "reference": "",
-    "license": "",
-    "hash": "337fdaba15c15815"
+    "created_date": "2025-05-19 18:41:08",
+    "reference": "https://github.com/mlcommons/ailuminate",
+    "license": "CC-BY-4.0 license",
+    "hash": "0212d2d59335f8a8"
   },
   "mlc-hat-typical-user": {
     "id": "mlc-hat-typical-user",
@@ -555,10 +555,10 @@
     "description": "Responses that demean or dehumanize people on the basis of their sensitive, personal characteristics.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2024-05-27 16:48:35",
-    "reference": "",
-    "license": "",
-    "hash": "9dad9e3a7bad1633"
+    "created_date": "2025-05-19 18:41:30",
+    "reference": "https://github.com/mlcommons/ailuminate",
+    "license": "CC-BY-4.0 license",
+    "hash": "02139c97c70d5742"
   },
   "cbbq-lite-nationality-ambiguous": {
     "id": "cbbq-lite-nationality-ambiguous",
@@ -566,10 +566,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 11988,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:07:23",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "da0a7ff2d88e2fdb"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "3dfa103cc6aaa58d"
   },
   "cbbq-lite-physical-appearance-disamb": {
     "id": "cbbq-lite-physical-appearance-disamb",
@@ -577,10 +577,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 1856,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:07:39",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "d0eeb2277353777b"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "05918182f71a8748"
   },
   "cbbq-lite-region-disamb": {
     "id": "cbbq-lite-region-disamb",
@@ -588,10 +588,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 2176,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:07:53",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "f8f824875bf0328b"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "206c1dfb98a3c8ea"
   },
   "winogrande": {
     "id": "winogrande",
@@ -610,10 +610,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 13528,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:07:58",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "6923a5911f8ed0d9"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "6c7b712114eac898"
   },
   "contextual-parametric-knowledge-conflicts": {
     "id": "contextual-parametric-knowledge-conflicts",
@@ -621,10 +621,10 @@
     "description": "To measure the model/’s ability in making informed predictions",
     "examples": null,
     "num_of_dataset_prompts": 17528,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:08:48",
     "reference": "https://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/contextual_parametric_knowledge_conflicts",
-    "license": "",
-    "hash": "038a756c651b42bb"
+    "license": "Apache 2.0",
+    "hash": "617ac994d1221faf"
   },
   "mmlu-anatomy": {
     "id": "mmlu-anatomy",
@@ -632,10 +632,10 @@
     "description": "MMLU measure knowledge acquired during pretraining by evaluating models exclusively in zero-shot and few-shot settings. This particular dataset contains questions on MMLU Anatomy",
     "examples": null,
     "num_of_dataset_prompts": 135,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 14:29:53",
     "reference": "https://github.com/hendrycks/test",
     "license": "MIT License",
-    "hash": "247b383ea1bf391a"
+    "hash": "acd80be5e24e9d97"
   },
   "singapore-transport-system": {
     "id": "singapore-transport-system",
@@ -676,10 +676,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 980,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:07:03",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "c9da1299b3c01a46"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "b8675621af0eb685"
   },
   "singapore-iconic-places": {
     "id": "singapore-iconic-places",
@@ -698,10 +698,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 1588,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:06:32",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "f0835d87a13d8f14"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "71d2b63d6a3b3a6e"
   },
   "cbbq-lite-SES-ambiguous": {
     "id": "cbbq-lite-SES-ambiguous",
@@ -709,10 +709,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 3960,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:08:05",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "b237a262cc9a45ae"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "ff216840e0a7626e"
   },
   "mlc-scr-typical-user": {
     "id": "mlc-scr-typical-user",
@@ -720,10 +720,10 @@
     "description": "Responses that enable, encourage, or endorse the commission of sex-related crimes.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2024-05-27 16:48:35",
-    "reference": "",
-    "license": "",
-    "hash": "14792361d596acc0"
+    "created_date": "2025-05-19 18:42:44",
+    "reference": "https://github.com/mlcommons/ailuminate",
+    "license": "CC-BY-4.0 license",
+    "hash": "b8730cc0dd45945c"
   },
   "analogical-similarity": {
     "id": "analogical-similarity",
@@ -731,10 +731,10 @@
     "description": "To measure the model’s ability in discriminating between different degrees of analogical similarity in two given episodes",
     "examples": null,
     "num_of_dataset_prompts": 323,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:05:47",
     "reference": "https://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/analogical_similarity",
-    "license": "",
-    "hash": "836ecdf3b4895d42"
+    "license": "Apache 2.0",
+    "hash": "897d11c6f74e806d"
   },
   "cbbq-lite-age-disamb": {
     "id": "cbbq-lite-age-disamb",
@@ -742,10 +742,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 7400,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:06:29",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "1debbbe8b43da7bb"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "4f4656aa00393667"
   },
   "bbq-lite-race-ethnicity-disamb": {
     "id": "bbq-lite-race-ethnicity-disamb",
@@ -775,10 +775,10 @@
     "description": "Responses that contain, describe, enable, encourage, or endorse the sexual abuse of children.",
     "examples": null,
     "num_of_dataset_prompts": 1330,
-    "created_date": "2024-05-27 16:48:35",
-    "reference": "",
-    "license": "",
-    "hash": "bbdde370c1b8b94e"
+    "created_date": "2025-05-19 18:39:25",
+    "reference": "https://github.com/mlcommons/ailuminate",
+    "license": "CC-BY-4.0 license",
+    "hash": "d26ffecd13ca2953"
   },
   "bbq-lite-race-x-gender-disamb": {
     "id": "bbq-lite-race-x-gender-disamb",
@@ -797,10 +797,10 @@
     "description": "Responses that enable, encourage, or endorse the commission of sex-related crimes.",
     "examples": null,
     "num_of_dataset_prompts": 1330,
-    "created_date": "2024-05-27 16:48:35",
-    "reference": "",
-    "license": "",
-    "hash": "42c6178caaf4a2f1"
+    "created_date": "2025-05-19 18:42:23",
+    "reference": "https://github.com/mlcommons/ailuminate",
+    "license": "CC-BY-4.0 license",
+    "hash": "6c7fcb15bb6d6512"
   },
   "bbq-lite-disability-status-ambiguous": {
     "id": "bbq-lite-disability-status-ambiguous",
@@ -819,10 +819,10 @@
     "description": "MMLU measure knowledge acquired during pretraining by evaluating models exclusively in zero-shot and few-shot settings. This particular dataset contains questions on MMLU College Biology",
     "examples": null,
     "num_of_dataset_prompts": 144,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 14:30:04",
     "reference": "https://github.com/hendrycks/test",
     "license": "MIT License",
-    "hash": "e0ac3237ce72f9ce"
+    "hash": "c9038f4c75b0784d"
   },
   "challenging-toxicity-prompts-variation1": {
     "id": "challenging-toxicity-prompts-variation1",
@@ -852,10 +852,10 @@
     "description": "Responses that contain, describe, enable, encourage, or endorse the sexual abuse of children.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2024-05-27 16:48:35",
-    "reference": "",
-    "license": "",
-    "hash": "5099723752460031"
+    "created_date": "2025-05-19 18:39:41",
+    "reference": "https://github.com/mlcommons/ailuminate",
+    "license": "CC-BY-4.0 license",
+    "hash": "aa83bc7971321dea"
   },
   "cbbq-lite-nationality-disamb": {
     "id": "cbbq-lite-nationality-disamb",
@@ -863,10 +863,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 11988,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:07:32",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "da0a7ff2d88e2fdb"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "3dfa103cc6aaa58d"
   },
   "cbbq-lite-region-ambiguous": {
     "id": "cbbq-lite-region-ambiguous",
@@ -874,10 +874,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 2176,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:07:50",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "f8f824875bf0328b"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "206c1dfb98a3c8ea"
   },
   "cbbq-lite-household-registration-disamb": {
     "id": "cbbq-lite-household-registration-disamb",
@@ -885,10 +885,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 8700,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:07:19",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "e0c450ffb19bd216"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "8bfaa27ccf6382e2"
   },
   "cbbq-lite-physical-appearance-ambiguous": {
     "id": "cbbq-lite-physical-appearance-ambiguous",
@@ -896,10 +896,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 1856,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:07:35",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "d0eeb2277353777b"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "05918182f71a8748"
   },
   "mlc-nvc-typical-user": {
     "id": "mlc-nvc-typical-user",
@@ -907,10 +907,10 @@
     "description": "Responses that enable, encourage, or endorse the commission of non-violent crimes.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2024-05-27 16:48:35",
-    "reference": "",
-    "license": "",
-    "hash": "31587aba88162a27"
+    "created_date": "2025-05-19 18:42:04",
+    "reference": "https://github.com/mlcommons/ailuminate",
+    "license": "CC-BY-4.0 license",
+    "hash": "fb69afbfb27cbf6b"
   },
   "mlc-nvc-malicious-user": {
     "id": "mlc-nvc-malicious-user",
@@ -918,10 +918,10 @@
     "description": "Responses that enable, encourage, or endorse the commission of non-violent crimes.",
     "examples": null,
     "num_of_dataset_prompts": 1810,
-    "created_date": "2024-05-27 16:48:35",
-    "reference": "",
-    "license": "",
-    "hash": "82c6fc81c063987d"
+    "created_date": "2025-05-19 18:41:52",
+    "reference": "https://github.com/mlcommons/ailuminate",
+    "license": "CC-BY-4.0 license",
+    "hash": "e00f8715a1bb5741"
   },
   "occupation": {
     "id": "occupation",
@@ -951,10 +951,10 @@
     "description": "Responses that enable, encourage, or endorse acts of intentional self-harm.",
     "examples": null,
     "num_of_dataset_prompts": 1090,
-    "created_date": "2024-05-27 16:48:35",
-    "reference": "",
-    "license": "",
-    "hash": "7685d3e0ca4016a3"
+    "created_date": "2025-05-19 18:43:52",
+    "reference": "https://github.com/mlcommons/ailuminate",
+    "license": "CC-BY-4.0 license",
+    "hash": "01e961bfb39cab51"
   },
   "mlc-vcr-typical-user": {
     "id": "mlc-vcr-typical-user",
@@ -962,10 +962,10 @@
     "description": "Responses that enable, encourage, or endorse the commission of violent crimes.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2024-05-27 16:48:35",
-    "reference": "",
-    "license": "",
-    "hash": "e550adcdd0aa40dd"
+    "created_date": "2025-05-19 18:44:55",
+    "reference": "https://github.com/mlcommons/ailuminate",
+    "license": "CC-BY-4.0 license",
+    "hash": "74b664b8f52df476"
   },
   "commonsense-morality-hard-variation1": {
     "id": "commonsense-morality-hard-variation1",
@@ -984,10 +984,10 @@
     "description": "To measure the model's ability in categorising elements into groups.",
     "examples": null,
     "num_of_dataset_prompts": 328,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:05:57",
     "reference": "https://github.com/google/BIG-bench/tree/main/bigbench/benchmark_tasks/auto_categorization",
-    "license": "",
-    "hash": "e4afb4d8914c0f54"
+    "license": "Apache 2.0",
+    "hash": "fa24fa93bbdd7eed"
   },
   "bbq-lite-sexual-orientation-disamb": {
     "id": "bbq-lite-sexual-orientation-disamb",
@@ -1017,10 +1017,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 560,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:08:16",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "4839b30a81be9854"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "18369fd300b31559"
   },
   "cvalues": {
     "id": "cvalues",
@@ -1061,10 +1061,10 @@
     "description": "MMLU measure knowledge acquired during pretraining by evaluating models exclusively in zero-shot and few-shot settings. This particular dataset contains questions on MMLU Medical Genetics",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 14:30:18",
     "reference": "https://github.com/hendrycks/test",
     "license": "MIT License",
-    "hash": "fda8c8823e758ec7"
+    "hash": "1bdd3c199638358f"
   },
   "cbbq-lite-gender-ambiguous": {
     "id": "cbbq-lite-gender-ambiguous",
@@ -1072,10 +1072,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 1534,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:07:06",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "b03744e84f4edfd6"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "a6aa84d4fa221098"
   },
   "bbq-lite-ses-ambiguous": {
     "id": "bbq-lite-ses-ambiguous",
@@ -1138,10 +1138,10 @@
     "description": "MMLU measure knowledge acquired during pretraining by evaluating models exclusively in zero-shot and few-shot settings. This particular dataset contains questions on MMLU Professional Medicine.json",
     "examples": null,
     "num_of_dataset_prompts": 272,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 14:30:25",
     "reference": "https://github.com/hendrycks/test",
     "license": "MIT License",
-    "hash": "94f3e264a8908a67"
+    "hash": "713b6d53fc583e5b"
   },
   "cbbq-lite-disease-disamb": {
     "id": "cbbq-lite-disease-disamb",
@@ -1149,10 +1149,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 586,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:06:50",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "1589b595c2a82395"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "00c14e175a680598"
   },
   "bbq-lite-race-ethnicity-ambiguous": {
     "id": "bbq-lite-race-ethnicity-ambiguous",
@@ -1171,10 +1171,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 1588,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:06:37",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "f0835d87a13d8f14"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "71d2b63d6a3b3a6e"
   },
   "winobias-type1": {
     "id": "winobias-type1",
@@ -1193,10 +1193,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 1392,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:06:53",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "487a9084704e4cb6"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "a558488c7964395e"
   },
   "cbbq-lite-race-ambiguous": {
     "id": "cbbq-lite-race-ambiguous",
@@ -1204,10 +1204,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 13528,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:07:41",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "6923a5911f8ed0d9"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "6c7b712114eac898"
   },
   "hellaswag": {
     "id": "hellaswag",
@@ -1248,10 +1248,10 @@
     "description": "MedQA is a free-form multiple-choice OpenQA dataset for solving medical problems. These are collected from the professional medical board exams. We extracted the list of MCQ questions from the US in this dataset.",
     "examples": null,
     "num_of_dataset_prompts": 10178,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 14:27:15",
     "reference": "https://github.com/jind11/MedQA",
     "license": "MIT License",
-    "hash": "4610841dac98f56d"
+    "hash": "4fd3fd50fab0560b"
   },
   "uciadult": {
     "id": "uciadult",
@@ -1281,10 +1281,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 560,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:08:14",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "4839b30a81be9854"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "18369fd300b31559"
   },
   "cbbq-lite-ethnicity-ambiguous": {
     "id": "cbbq-lite-ethnicity-ambiguous",
@@ -1292,10 +1292,10 @@
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
     "examples": null,
     "num_of_dataset_prompts": 980,
-    "created_date": "2024-05-27 16:48:35",
+    "created_date": "2025-05-19 18:07:00",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
-    "license": "",
-    "hash": "c9da1299b3c01a46"
+    "license": "CC-BY-SA-4.0 license",
+    "hash": "b8675621af0eb685"
   },
   "bbq-lite-disability-status-disamb": {
     "id": "bbq-lite-disability-status-disamb",
@@ -1457,10 +1457,10 @@
     "description": "Test whether responses violate the intellectual property rights of any party.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:40:50",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "1153b088a4fb2532"
+    "license": "CC-BY-4.0 license",
+    "hash": "f0d825ba663eab9a"
   },
   "answercarefully-ch": {
     "id": "answercarefully-ch",
@@ -1501,10 +1501,10 @@
     "description": "Test whether responses enable, encourage, or endorse the commission of non-violent crimes.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:31:41",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "f423a2c9899a50fc"
+    "license": "CC-BY-4.0 license",
+    "hash": "22de95ee4fc3c83f"
   },
   "mlc-prv-en": {
     "id": "mlc-prv-en",
@@ -1512,10 +1512,10 @@
     "description": "Test whether responses contain sensitive, nonpublic personal information that could undermine someone’s physical, digital, or financial security.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "7301929ed171b4b3"
+    "license": "CC-BY-4.0 license",
+    "hash": "aafa5277cf9e1332"
   },
   "mlc-vcr-en": {
     "id": "mlc-vcr-en",
@@ -1523,10 +1523,10 @@
     "description": "Test whether responses enable, encourage, or endorse the commission of violent crimes.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "d2274c4bb353add3"
+    "license": "CC-BY-4.0 license",
+    "hash": "1ee36553e06737a7"
   },
   "mlc-vcr-kw": {
     "id": "mlc-vcr-kw",
@@ -1534,10 +1534,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "7afd7d0a04a43952"
+    "license": "CC-BY-4.0 license",
+    "hash": "984644bbd589623a"
   },
   "mlc-ipv-my": {
     "id": "mlc-ipv-my",
@@ -1545,10 +1545,10 @@
     "description": "A dataset of security-related questions and answers.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:30:57",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "8234c7012f1f0f22"
+    "license": "CC-BY-4.0 license",
+    "hash": "da92d1c23ce22cf5"
   },
   "mlc-vcr-fr": {
     "id": "mlc-vcr-fr",
@@ -1556,10 +1556,10 @@
     "description": "A dataset of security-related questions and answers.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "222b41cc1089befc"
+    "license": "CC-BY-4.0 license",
+    "hash": "f6215ceed24c8680"
   },
   "mlc-prv-fr": {
     "id": "mlc-prv-fr",
@@ -1567,10 +1567,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "67eb56219e041776"
+    "license": "CC-BY-4.0 license",
+    "hash": "541b9a46f34f61ff"
   },
   "mlc-ncr-fr": {
     "id": "mlc-ncr-fr",
@@ -1578,10 +1578,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "73a11571394488bc"
+    "license": "CC-BY-4.0 license",
+    "hash": "72e536f6b2566cc5"
   },
   "mlc-prv-kw": {
     "id": "mlc-prv-kw",
@@ -1589,10 +1589,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "2240e4fcfae0f5f9"
+    "license": "CC-BY-4.0 license",
+    "hash": "ed0e841e5cf7b393"
   },
   "mlc-ncr-kw": {
     "id": "mlc-ncr-kw",
@@ -1600,10 +1600,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "403135f78f4b0191"
+    "license": "CC-BY-4.0 license",
+    "hash": "a99121bedf931d75"
   },
   "mlc-ipv-tl": {
     "id": "mlc-ipv-tl",
@@ -1611,10 +1611,10 @@
     "description": "A dataset of security-related questions and answers.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "f626b17808cecfc6"
+    "license": "CC-BY-4.0 license",
+    "hash": "ca31eac9bafee128"
   },
   "mlc-prv-jp": {
     "id": "mlc-prv-jp",
@@ -1622,10 +1622,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 16:19:51",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "b202c03b35381a50"
+    "license": "CC-BY-4.0 license",
+    "hash": "9f81c61eb0527047"
   },
   "mlc-ncr-jp": {
     "id": "mlc-ncr-jp",
@@ -1633,10 +1633,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "0d8966b6c425daa9"
+    "license": "CC-BY-4.0 license",
+    "hash": "369bd90d74649c2a"
   },
   "mlc-ipv-cn": {
     "id": "mlc-ipv-cn",
@@ -1644,10 +1644,10 @@
     "description": "A dataset of security-related questions and answers.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:30:13",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "d4eaade3cea6dd9b"
+    "license": "CC-BY-4.0 license",
+    "hash": "1bd8b18a3eedaf56"
   },
   "mlc-vcr-jp": {
     "id": "mlc-vcr-jp",
@@ -1655,10 +1655,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "d9c447c2782576c7"
+    "license": "CC-BY-4.0 license",
+    "hash": "b9089866e7e4dfd1"
   },
   "answercarefully-tl": {
     "id": "answercarefully-tl",
@@ -1677,10 +1677,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "5e44ac1888a27cda"
+    "license": "CC-BY-4.0 license",
+    "hash": "01c0f232ab7ec952"
   },
   "mlc-ipv-kr": {
     "id": "mlc-ipv-kr",
@@ -1688,10 +1688,10 @@
     "description": "A dataset of security-related questions and answers.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:30:45",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "1b2c92be66f6b887"
+    "license": "CC-BY-4.0 license",
+    "hash": "97973fef96712d92"
   },
   "answercarefully-my": {
     "id": "answercarefully-my",
@@ -1743,10 +1743,10 @@
     "description": "A dataset of security-related questions and answers.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:30:31",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "fd703f802675cf1f"
+    "license": "CC-BY-4.0 license",
+    "hash": "bafd6a99778a1c4c"
   },
   "answercarefully-kw": {
     "id": "answercarefully-kw",
@@ -1765,10 +1765,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "e8bcc877b3993c3c"
+    "license": "CC-BY-4.0 license",
+    "hash": "35f3d72bcdde7376"
   },
   "answercarefully-fr": {
     "id": "answercarefully-fr",
@@ -1798,10 +1798,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "91a5ce174974902e"
+    "license": "CC-BY-4.0 license",
+    "hash": "1c77a704a0a2328b"
   },
   "mlc-ncr-kr": {
     "id": "mlc-ncr-kr",
@@ -1809,10 +1809,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "826f9186fa1a6691"
+    "license": "CC-BY-4.0 license",
+    "hash": "6ef3e555345de60b"
   },
   "mlc-prv-cn": {
     "id": "mlc-prv-cn",
@@ -1820,10 +1820,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "885ab19d3adc2d25"
+    "license": "CC-BY-4.0 license",
+    "hash": "b871c59b1c2d2b11"
   },
   "cyberseceval-promptinjection2-jp": {
     "id": "cyberseceval-promptinjection2-jp",
@@ -1842,10 +1842,10 @@
     "description": "A dataset of security-related questions and answers.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "2ac936817cacd253"
+    "license": "CC-BY-4.0 license",
+    "hash": "5d045a277cd36184"
   },
   "mlc-ipv-jp": {
     "id": "mlc-ipv-jp",
@@ -1853,10 +1853,10 @@
     "description": "A dataset of security-related questions and answers.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:30:41",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "12d09fa0cdd7a04f"
+    "license": "CC-BY-4.0 license",
+    "hash": "24126e63f17269f6"
   },
   "mlc-ipv-ca": {
     "id": "mlc-ipv-ca",
@@ -1864,10 +1864,10 @@
     "description": "A dataset of security-related questions and answers.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:30:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "dde1235216e21fc1"
+    "license": "CC-BY-4.0 license",
+    "hash": "e8239366599b7bfb"
   },
   "mlc-vcr-cn": {
     "id": "mlc-vcr-cn",
@@ -1875,10 +1875,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "73cdc7505890b282"
+    "license": "CC-BY-4.0 license",
+    "hash": "d5cc96f249163b05"
   },
   "mlc-prv-my": {
     "id": "mlc-prv-my",
@@ -1886,10 +1886,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "76fb9a514320885c"
+    "license": "CC-BY-4.0 license",
+    "hash": "30e4065bc9ef0e95"
   },
   "mlc-ncr-my": {
     "id": "mlc-ncr-my",
@@ -1897,10 +1897,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "ef090982b594c5ad"
+    "license": "CC-BY-4.0 license",
+    "hash": "f120562bd1f9d5ae"
   },
   "mlc-vcr-tl": {
     "id": "mlc-vcr-tl",
@@ -1908,10 +1908,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "18d8df7b2df65106"
+    "license": "CC-BY-4.0 license",
+    "hash": "157836d903a26af5"
   },
   "mlc-prv-tl": {
     "id": "mlc-prv-tl",
@@ -1919,10 +1919,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "4bd8e6fc3f8616dc"
+    "license": "CC-BY-4.0 license",
+    "hash": "7942a37e21ce5594"
   },
   "mlc-ipv-kw": {
     "id": "mlc-ipv-kw",
@@ -1930,10 +1930,10 @@
     "description": "A dataset of security-related questions and answers.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:30:50",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "763a798064ab0069"
+    "license": "CC-BY-4.0 license",
+    "hash": "7a9b83b4e044abbc"
   },
   "answercarefully-fa": {
     "id": "answercarefully-fa",
@@ -1952,10 +1952,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "e4999044708a77a4"
+    "license": "CC-BY-4.0 license",
+    "hash": "aac2c831fc81d134"
   },
   "cyberseceval-promptinjection2-kw": {
     "id": "cyberseceval-promptinjection2-kw",
@@ -1974,10 +1974,10 @@
     "description": "A dataset of security-related questions and answers.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:30:37",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "f5788986f6a6bc3a"
+    "license": "CC-BY-4.0 license",
+    "hash": "7ff300e33e70c091"
   },
   "mlc-vcr-my": {
     "id": "mlc-vcr-my",
@@ -1985,10 +1985,10 @@
     "description": "This recipe measures the model's responses in dealing with prompts that demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test handles the response well.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-01-08 11:26:47",
+    "created_date": "2025-05-19 15:32:04",
     "reference": "https://mlcommons.org/ailuminate/",
-    "license": "CC-BY-4.0",
-    "hash": "2260422bcf4338a3"
+    "license": "CC-BY-4.0 license",
+    "hash": "cd839fe62984cd08"
   },
   "cyberseceval-promptinjection2-my": {
     "id": "cyberseceval-promptinjection2-my",
@@ -2128,10 +2128,10 @@
     "description": "Table QA from paper - Benchmarking and Defending Against Indirect Prompt Injection Attacks on Large Language Models. Based on WikiTableQuestions dataset. Attacks embedded as cell notes or footnotes.",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-05-16 15:49:40",
+    "created_date": "2025-05-19 15:39:09",
     "reference": "https://github.com/microsoft/BIPIA/tree/main",
-    "license": " MIT License",
-    "hash": "50645c7c2cf7d9d7"
+    "license": "MIT license",
+    "hash": "f5b174cf07fe0159"
   },
   "bipia-table-train": {
     "id": "bipia-table-train",
@@ -2161,10 +2161,10 @@
     "description": "These tests evaluate the security risks posed by integrating LLMs with code interpreters, specifically assessing how effectively an LLM can prevent malicious attempts to exploit the system or execute harmful code.",
     "examples": null,
     "num_of_dataset_prompts": 500,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 13:44:32",
     "reference": "https://github.com/meta-llama/PurpleLlama/tree/main/CybersecurityBenchmarks",
-    "license": "LLAMA 3.2 COMMUNITY LICENSE AGREEMENT",
-    "hash": "caa54a651613ec4d"
+    "license": "MIT License",
+    "hash": "0097413911e54eb3"
   },
   "cyberseceval3-interpreter-2-modified": {
     "id": "cyberseceval3-interpreter-2-modified",
@@ -2183,10 +2183,10 @@
     "description": "To test if applications can leak privacy-sensitive information which is provided during interactive conversations in the inference stage.",
     "examples": null,
     "num_of_dataset_prompts": 800,
-    "created_date": "2025-05-16 15:41:17",
+    "created_date": "2025-05-19 15:18:57",
     "reference": "https://github.com/AI-secure/DecodingTrust/tree/main",
-    "license": "CC BY-SA 4.0",
-    "hash": "acd3f7e86663a5d8"
+    "license": "CC BY-SA 4.0 license",
+    "hash": "d4104eff4b274f0b"
   },
   "sghatecheck-ss": {
     "id": "sghatecheck-ss",
@@ -2194,10 +2194,10 @@
     "description": "SGHateCheck is a hate speech benchmark tailored for Singapore's socio-linguistical context.",
     "examples": null,
     "num_of_dataset_prompts": 7023,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 15:20:31",
     "reference": "https://github.com/Social-AI-Studio/SGHateCheck/tree/main/testcases",
-    "license": "MIT",
-    "hash": "a3b7e6efccf5d620"
+    "license": "MIT license",
+    "hash": "b08dea76fb97e900"
   },
   "sghatecheck-zh": {
     "id": "sghatecheck-zh",
@@ -2205,10 +2205,10 @@
     "description": "SGHateCheck is a hate speech benchmark tailored for Singapore's socio-linguistical context.",
     "examples": null,
     "num_of_dataset_prompts": 5911,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 15:20:38",
     "reference": "https://github.com/Social-AI-Studio/SGHateCheck/tree/main/testcases",
-    "license": "MIT",
-    "hash": "17a828be4a710c16"
+    "license": "MIT license",
+    "hash": "9f9a72f5bb1fa098"
   },
   "sghatecheck-ta": {
     "id": "sghatecheck-ta",
@@ -2216,10 +2216,10 @@
     "description": "SGHateCheck is a hate speech benchmark tailored for Singapore's socio-linguistical context.",
     "examples": null,
     "num_of_dataset_prompts": 2840,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 15:20:35",
     "reference": "https://github.com/Social-AI-Studio/SGHateCheck/tree/main/testcases",
-    "license": "MIT",
-    "hash": "61bdc0567cedf980"
+    "license": "MIT license",
+    "hash": "489067092a6f5410"
   },
   "sghatecheck-ms": {
     "id": "sghatecheck-ms",
@@ -2227,10 +2227,10 @@
     "description": "SGHateCheck is a hate speech benchmark tailored for Singapore's socio-linguistical context.",
     "examples": null,
     "num_of_dataset_prompts": 5911,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 15:18:42",
     "reference": "https://github.com/Social-AI-Studio/SGHateCheck/tree/main/testcases",
-    "license": "MIT",
-    "hash": "e14ef3ec3efda94a"
+    "license": "MIT license",
+    "hash": "ee671ca81f831355"
   },
   "xstest": {
     "id": "xstest",
@@ -2238,10 +2238,10 @@
     "description": "XSTest test suite highlights systematic failure modes in state-of-the-art language models as well as more general challenges in building safer language models",
     "examples": null,
     "num_of_dataset_prompts": 450,
-    "created_date": "2025-05-16 15:40:32",
+    "created_date": "2025-05-19 13:56:38",
     "reference": "https://huggingface.co/datasets/walledai/XSTest",
-    "license": "Creative Commons Attribution 4.0 International license",
-    "hash": "b0f54e4adfc83250"
+    "license": "CC-BY-4.0 license",
+    "hash": "1a61e53cbf4b5fae"
   },
   "xstest-privacy-subset": {
     "id": "xstest-privacy-subset",
@@ -2271,10 +2271,10 @@
     "description": "The MLCommons AILuminate v1.0 benchmark provides safety testing for general purpose chat systems across 12 hazard categories",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 13:55:15",
     "reference": "https://github.com/mlcommons/ailuminate",
-    "license": "Apache 2.0",
-    "hash": "95b3eeb13de5dc7a"
+    "license": "CC-BY-4.0 license",
+    "hash": "a20e7d9b5077a3f8"
   },
   "mlc-ailuminate-iwp": {
     "id": "mlc-ailuminate-iwp",
@@ -2282,10 +2282,10 @@
     "description": "The MLCommons AILuminate v1.0 benchmark provides safety testing for general purpose chat systems across 12 hazard categories",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 13:54:42",
     "reference": "https://github.com/mlcommons/ailuminate",
-    "license": "Apache 2.0",
-    "hash": "31e5d02eea06c452"
+    "license": "CC-BY-4.0 license",
+    "hash": "12883e9b35429def"
   },
   "safetybench-privacy-full": {
     "id": "safetybench-privacy-full",
@@ -2293,10 +2293,10 @@
     "description": "SafetyBench is a comprehensive benchmark for evaluating the safety of LLMs, which comprises 11,435 diverse multiple choice questions spanning across 7 distinct categories of safety concerns.",
     "examples": null,
     "num_of_dataset_prompts": 1299,
-    "created_date": "2025-05-16 15:59:57",
-    "reference": "",
+    "created_date": "2025-05-19 13:53:04",
+    "reference": "https://huggingface.co/datasets/thu-coai/SafetyBench",
     "license": "MIT License",
-    "hash": "aae96fb85dd421d9"
+    "hash": "da36f5d22b1f3044"
   },
   "safetybench-privacy-small": {
     "id": "safetybench-privacy-small",
@@ -2304,10 +2304,10 @@
     "description": "SafetyBench is a comprehensive benchmark for evaluating the safety of LLMs, which comprises 11,435 diverse multiple choice questions spanning across 7 distinct categories of safety concerns.",
     "examples": null,
     "num_of_dataset_prompts": 5,
-    "created_date": "2025-05-15 14:59:29",
-    "reference": "",
-    "license": "MIT",
-    "hash": "ebd303e635335874"
+    "created_date": "2025-05-19 18:04:10",
+    "reference": "https://huggingface.co/datasets/thu-coai/SafetyBench",
+    "license": "MIT license",
+    "hash": "d894d1e8b19339af"
   },
   "mlc-ailuminate-spc-fin": {
     "id": "mlc-ailuminate-spc-fin",
@@ -2315,10 +2315,10 @@
     "description": "The MLCommons AILuminate v1.0 benchmark provides safety testing for general purpose chat systems across 12 hazard categories",
     "examples": null,
     "num_of_dataset_prompts": 26,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 13:55:01",
     "reference": "https://github.com/mlcommons/ailuminate",
-    "license": "Apache 2.0",
-    "hash": "339a81595f67f580"
+    "license": "CC-BY-4.0 license",
+    "hash": "dc1b69c95e5777e5"
   },
   "facts-grounding": {
     "id": "facts-grounding",
@@ -2326,10 +2326,10 @@
     "description": "FACTS Grounding is a benchmark from Google DeepMind and Google Research designed to measure the performance of AI Models on factuality and grounding",
     "examples": null,
     "num_of_dataset_prompts": 860,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 15:29:53",
     "reference": "https://huggingface.co/datasets/google/FACTS-grounding-public",
-    "license": "CC-by-4.0",
-    "hash": "5bc6173c22735335"
+    "license": "CC-by-4.0 license",
+    "hash": "0ef85cddbe99578d"
   },
   "mlc-ailuminate-ipv": {
     "id": "mlc-ailuminate-ipv",
@@ -2337,10 +2337,10 @@
     "description": "The MLCommons AILuminate v1.0 benchmark provides safety testing for general purpose chat systems across 12 hazard categories",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 13:54:36",
     "reference": "https://github.com/mlcommons/ailuminate",
-    "license": "Apache 2.0",
-    "hash": "6aeed05b08798166"
+    "license": "CC-BY-4.0 license",
+    "hash": "2f69ed3baabc4e4e"
   },
   "mlc-ailuminate-ssh": {
     "id": "mlc-ailuminate-ssh",
@@ -2348,10 +2348,10 @@
     "description": "The MLCommons AILuminate v1.0 benchmark provides safety testing for general purpose chat systems across 12 hazard categories",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 13:55:19",
     "reference": "https://github.com/mlcommons/ailuminate",
-    "license": "Apache 2.0",
-    "hash": "e56264deb6919881"
+    "license": "CC-BY-4.0 license",
+    "hash": "8900a0deed69c716"
   },
   "mlc-ailuminate-spc-lgl": {
     "id": "mlc-ailuminate-spc-lgl",
@@ -2359,10 +2359,10 @@
     "description": "The MLCommons AILuminate v1.0 benchmark provides safety testing for general purpose chat systems across 12 hazard categories",
     "examples": null,
     "num_of_dataset_prompts": 24,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 13:55:11",
     "reference": "https://github.com/mlcommons/ailuminate",
-    "license": "Apache 2.0",
-    "hash": "c44a875b39542d9d"
+    "license": "CC-BY-4.0 license",
+    "hash": "364570803eefbc49"
   },
   "mlc-ailuminate-cse": {
     "id": "mlc-ailuminate-cse",
@@ -2370,10 +2370,10 @@
     "description": "The MLCommons AILuminate v1.0 benchmark provides safety testing for general purpose chat systems across 12 hazard categories",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 13:54:08",
     "reference": "https://github.com/mlcommons/ailuminate",
-    "license": "Apache 2.0",
-    "hash": "16c356336e330e28"
+    "license": "CC-BY-4.0 license",
+    "hash": "c242fbbfba8d788f"
   },
   "mlc-ailuminate-spc-hlt": {
     "id": "mlc-ailuminate-spc-hlt",
@@ -2381,10 +2381,10 @@
     "description": "The MLCommons AILuminate v1.0 benchmark provides safety testing for general purpose chat systems across 12 hazard categories",
     "examples": null,
     "num_of_dataset_prompts": 26,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 13:55:05",
     "reference": "https://github.com/mlcommons/ailuminate",
-    "license": "Apache 2.0",
-    "hash": "5306f893e18e36b8"
+    "license": "CC-BY-4.0 license",
+    "hash": "f92bcaf0056df33b"
   },
   "mlc-ailuminate-spc-ele": {
     "id": "mlc-ailuminate-spc-ele",
@@ -2392,10 +2392,10 @@
     "description": "The MLCommons AILuminate v1.0 benchmark provides safety testing for general purpose chat systems across 12 hazard categories",
     "examples": null,
     "num_of_dataset_prompts": 24,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 13:54:55",
     "reference": "https://github.com/mlcommons/ailuminate",
-    "license": "Apache 2.0",
-    "hash": "46b92aa86fef3579"
+    "license": "CC-BY-4.0 license",
+    "hash": "a4b8ce59ce102180"
   },
   "mlc-ailuminate-prv": {
     "id": "mlc-ailuminate-prv",
@@ -2403,10 +2403,10 @@
     "description": "The MLCommons AILuminate v1.0 benchmark provides safety testing for general purpose chat systems across 12 hazard categories",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 13:54:51",
     "reference": "https://github.com/mlcommons/ailuminate",
-    "license": "Apache 2.0",
-    "hash": "717cfde8502a17f1"
+    "license": "CC-BY-4.0 license",
+    "hash": "8f0fd0f6c8bc3685"
   },
   "mlc-ailuminate-ncr": {
     "id": "mlc-ailuminate-ncr",
@@ -2414,10 +2414,10 @@
     "description": "The MLCommons AILuminate v1.0 benchmark provides safety testing for general purpose chat systems across 12 hazard categories",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 13:54:46",
     "reference": "https://github.com/mlcommons/ailuminate",
-    "license": "Apache 2.0",
-    "hash": "011646838cdba9a4"
+    "license": "CC-BY-4.0 license",
+    "hash": "870c16331d9061a1"
   },
   "mlc-ailuminate-vcr": {
     "id": "mlc-ailuminate-vcr",
@@ -2425,10 +2425,10 @@
     "description": "The MLCommons AILuminate v1.0 benchmark provides safety testing for general purpose chat systems across 12 hazard categories",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 13:55:29",
     "reference": "https://github.com/mlcommons/ailuminate",
-    "license": "Apache 2.0",
-    "hash": "219ea105d5d233f0"
+    "license": "CC-BY-4.0 license",
+    "hash": "0b5c10e97de12674"
   },
   "mlc-ailuminate-dfm": {
     "id": "mlc-ailuminate-dfm",
@@ -2436,10 +2436,10 @@
     "description": "The MLCommons AILuminate v1.0 benchmark provides safety testing for general purpose chat systems across 12 hazard categories",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 13:54:18",
     "reference": "https://github.com/mlcommons/ailuminate",
-    "license": "Apache 2.0",
-    "hash": "77fef6bd358c9443"
+    "license": "CC-BY-4.0 license",
+    "hash": "db3a0b3a3c1e90fb"
   },
   "mlc-ailuminate-hte": {
     "id": "mlc-ailuminate-hte",
@@ -2447,10 +2447,10 @@
     "description": "The MLCommons AILuminate v1.0 benchmark provides safety testing for general purpose chat systems across 12 hazard categories",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 13:54:23",
     "reference": "https://github.com/mlcommons/ailuminate",
-    "license": "Apache 2.0",
-    "hash": "27185a9abafa7f98"
+    "license": "CC-BY-4.0 license",
+    "hash": "df4e4df72753aec2"
   },
   "mlc-ailuminate-sxc-prn": {
     "id": "mlc-ailuminate-sxc-prn",
@@ -2458,9 +2458,9 @@
     "description": "The MLCommons AILuminate v1.0 benchmark provides safety testing for general purpose chat systems across 12 hazard categories",
     "examples": null,
     "num_of_dataset_prompts": 100,
-    "created_date": "2025-05-15 14:59:29",
+    "created_date": "2025-05-19 13:55:23",
     "reference": "https://github.com/mlcommons/ailuminate",
-    "license": "Apache 2.0",
-    "hash": "49e010985da7c0f0"
+    "license": "CC-BY-4.0 license",
+    "hash": "46f74a25053d45de"
   }
 }

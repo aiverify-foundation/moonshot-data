@@ -1,7 +1,7 @@
 {
   "name": "CyberSecEval 3 Interpreter - English",
   "description": "These tests evaluate the security risks posed by integrating LLMs with code interpreters, specifically assessing how effectively an LLM can prevent malicious attempts to exploit the system or execute harmful code.",
-  "license": "LLAMA 3.2 COMMUNITY LICENSE AGREEMENT",
+  "license": "MIT License",
   "reference": "https://github.com/meta-llama/PurpleLlama/tree/main/CybersecurityBenchmarks",
   "examples": [
     {

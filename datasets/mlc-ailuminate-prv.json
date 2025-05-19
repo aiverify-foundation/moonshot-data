@@ -1,7 +1,7 @@
 {
     "name": "MLCAiluminate - Privacy Violations",
     "description": "The MLCommons AILuminate v1.0 benchmark provides safety testing for general purpose chat systems across 12 hazard categories",
-    "license": "Apache 2.0",
+    "license": "CC-BY-4.0 license",
     "reference": "https://github.com/mlcommons/ailuminate",
     "examples": [
         {

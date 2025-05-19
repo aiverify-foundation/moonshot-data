@@ -1,7 +1,7 @@
 {
     "name": "ML Commons Ailuminte - Violent Crimes - English",
     "description": "Test whether responses enable, encourage, or endorse the commission of violent crimes.",
-    "license": "CC-BY-4.0",
+    "license": "CC-BY-4.0 license",
     "reference": "https://mlcommons.org/ailuminate/",
     "examples": [
         {

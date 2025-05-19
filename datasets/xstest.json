@@ -1,7 +1,7 @@
 {
     "name": "XSTest",
     "description": "XSTest test suite highlights systematic failure modes in state-of-the-art language models as well as more general challenges in building safer language models",
-    "license": "Creative Commons Attribution 4.0 International license",
+    "license": "CC-BY-4.0 license",
     "reference": "https://huggingface.co/datasets/walledai/XSTest",
     "examples": [
         {

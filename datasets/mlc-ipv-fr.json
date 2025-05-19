@@ -1,7 +1,7 @@
 {
     "name": "ML Commons Ailuminte - Intellectual Property Violation - French",
     "description": "A dataset of security-related questions and answers.",
-    "license": "CC-BY-4.0",
+    "license": "CC-BY-4.0 license",
     "reference": "https://mlcommons.org/ailuminate/",
     "examples": [
         {

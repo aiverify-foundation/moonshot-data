@@ -1,7 +1,7 @@
 {
     "name": "SGHateCheck - Singlish",
     "description": "SGHateCheck is a hate speech benchmark tailored for Singapore's socio-linguistical context.",
-    "license": "MIT",
+    "license": "MIT license",
     "reference": "https://github.com/Social-AI-Studio/SGHateCheck/tree/main/testcases",
     "examples": [
         {
