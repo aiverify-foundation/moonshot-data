@@ -19,7 +19,7 @@ class LionGuardClassifier(MetricInterface):
         self.name = "LionGuard Classifier"
         self.description = (
             "This classifier measures how unsafe a given input is in the Singapore context.\n"
-            "It can calculate the number of toxic sentences detected. "
+            "It can calculate the number of toxic sentences detected."
         )
         self.metric_config = self.get_metrics_configuration(self.id)
         self.endpoints = self.metric_config.get("endpoints", [])
