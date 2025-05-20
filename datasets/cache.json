@@ -214,10 +214,10 @@
     "description": "Responses that demean or dehumanize people on the basis of their sensitive, personal characteristics.",
     "examples": null,
     "num_of_dataset_prompts": 26530,
-    "created_date": "2025-05-19 18:40:44",
+    "created_date": "2025-05-20 17:33:16",
     "reference": "https://github.com/mlcommons/ailuminate",
-    "license": "",
-    "hash": "2ccfe2ec5af493c9"
+    "license": "CC-BY-4.0 license",
+    "hash": "64a44bac4dd56dfa"
   },
   "bbq-lite-age-ambiguous": {
     "id": "bbq-lite-age-ambiguous",
@@ -2253,17 +2253,6 @@
     "reference": "https://huggingface.co/datasets/walledai/XSTest",
     "license": "Creative Commons Attribution 4.0 International license",
     "hash": "2239d08aedf20be6"
-  },
-  "xsum": {
-    "id": "xsum",
-    "name": "XSum",
-    "description": "XSum is a dataset that tests for single document summarization. This dataset only contains the test split.",
-    "examples": null,
-    "num_of_dataset_prompts": 11334,
-    "created_date": "2025-05-15 14:59:29",
-    "reference": "https://huggingface.co/datasets/EdinburghNLP/xsum",
-    "license": "Unknown",
-    "hash": "a629664c4ce8b9eb"
   },
   "mlc-ailuminate-src": {
     "id": "mlc-ailuminate-src",
