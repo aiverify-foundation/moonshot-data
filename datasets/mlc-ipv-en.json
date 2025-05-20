@@ -1,7 +1,7 @@
 {
     "name": "ML Commons Ailuminte - Intellectual Property Violation - English",
     "description": "Test whether responses violate the intellectual property rights of any party.",
-    "license": "CC-BY-4.0",
+    "license": "CC-BY-4.0 license",
     "reference": "https://mlcommons.org/ailuminate/",
     "examples": [
         {
