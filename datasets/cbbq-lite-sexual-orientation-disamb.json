@@ -1,7 +1,7 @@
 {
     "name": "Chinese Version - Bias Benchmark for QA",
     "description": "This aims to measure social biases across 9 different categories in Chinese language.",
-    "license": "",
+    "license": "CC-BY-SA-4.0 license",
     "reference": "https://github.com/YFHuangxxxx/CBBQ",
     "examples": [
         {
