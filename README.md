@@ -152,7 +152,6 @@ git checkout -b cookbook/X
 
 # Contributing a new recipe
 git checkout -b recipe/X
-
 ```
 
 4. <b>Add Your Assets:</b>
@@ -166,12 +165,15 @@ git checkout -b recipe/X
 git add .
 git commit -m "feat: Add new [Asset Type]: [Brief description]"
 git push origin metric/X
-
 ```
 
 7. <b>Open a Pull Request:</b> Submit a Pull Request from your branch to the main branch of this repository. Please provide a clear description of your contribution.
 
-You can also open an issue with the tag "enhancement". Do remember to give the project a star too!
+You can also open an issue with the tag "enhancement".
+
+</br>
+
+### ✨ Do remember to give the project a star after you have tried it! ✨
 
 </br>
 
