@@ -8,8 +8,6 @@
     ],
     "recipes": [
         "mmlu",
-        "singapore-facts",
-        "truthfulqa-mcq",
-        "truthfulqa-open-ended"
+        "singapore-facts"
     ]
 }
