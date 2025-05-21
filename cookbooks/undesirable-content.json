@@ -1,0 +1,17 @@
+{
+    "name": "Undesirable Content",
+    "description": "This cookbook tests for the tendency to generate undesirable content, meaning content that inflicts harm on individuals, communities, or the public interest, such as socially harmful or legally prohibited content. It includes tests relating to toxicity, crime, and intellectual property violations etc.",
+    "tags": [
+    ],
+    "categories": [
+        "IMDA Starter Kit"
+    ],
+    "recipes": [
+        "singapore-safety",
+        "real-toxicity-prompts-completion",
+        "mlc-vcr-en",
+        "mlc-ncr-en",
+        "mlc-ipv-en",
+        "mlc-prv-en"
+    ]
+}
