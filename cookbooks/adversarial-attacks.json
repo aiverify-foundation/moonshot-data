@@ -1,0 +1,12 @@
+{
+    "name": "Adversarial Prompts",
+    "description": "This cookbook tests for susceptibility to producing unsafe outputs (which may include incorrect content, undesirable content and/or sensitive information) when presented with intentional adversarial prompts. It covers a range of adversarial prompts techniques across different risk categories.",
+    "tags": [
+    ],
+    "categories": [
+        "IMDA Starter Kit"
+    ],
+    "recipes": [
+        "cyberseceval-en"
+    ]
+}
