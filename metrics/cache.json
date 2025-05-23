@@ -10,10 +10,10 @@
   "spelling": {
     "id": "spelling",
     "name": "SpellingScore",
-    "description": "SpellingScore uses Levenshetein Distance to find permutations within an edit distance of 2 form the original word before comparing to known words in a word frequency list.",
+    "description": "SpellingScore uses Levenshetein Distance to find permutations within an edit distance of 2 from the original word before comparing to known words in a word frequency list.",
     "endpoints": [],
     "configurations": {},
-    "hash": "e5b60b9d8596d210"
+    "hash": "4f4313acddd26c33"
   },
   "gpt4annotator": {
     "id": "gpt4annotator",
@@ -44,10 +44,10 @@
   "toxicity-classifier": {
     "id": "toxicity-classifier",
     "name": "Toxicity Classifier",
-    "description": "This classifier measures how toxic a given input isand calculate the number of toxic sentence detected.",
+    "description": "This classifier measures how toxic a given input isand calculates the number of toxic sentences detected.",
     "endpoints": [],
     "configurations": {},
-    "hash": "ac6a020720a93abd"
+    "hash": "fd47ca8feaa7b999"
   },
   "rougescorer": {
     "id": "rougescorer",
@@ -102,10 +102,10 @@
     "name": "LlamaGuard Annotator",
     "description": "Calculates the number of safe, unsafe and unknown response by using LlamaGuard.",
     "endpoints": [
-      "together-llama-guard-7b-assistant"
+      "together-llama-guard-8b-assistant"
     ],
     "configurations": {},
-    "hash": "3b922fba27cd82f2"
+    "hash": "1386de9a69c5215a"
   },
   "samplemetric": {
     "id": "samplemetric",
@@ -124,12 +124,12 @@
   "lionguardclassifier": {
     "id": "lionguardclassifier",
     "name": "LionGuard Classifier",
-    "description": "This classifier measures how unsafe a given input is in the Singapore context.\nIt can calculate the number of toxic sentences detected. ",
+    "description": "This classifier measures how unsafe a given input is in the Singapore context.\nIt can calculate the number of toxic sentences detected.",
     "endpoints": [],
     "configurations": {
       "grading_classifier": "toxic"
     },
-    "hash": "7b419db253f0dcc8"
+    "hash": "9714736b7a052b9e"
   },
   "flagjudgeannotator": {
     "id": "flagjudgeannotator",
@@ -314,12 +314,12 @@
   "cybersecevalannotator2": {
     "id": "cybersecevalannotator2",
     "name": "Cybersec Eval Prompt Injection v2",
-    "description": "Calculates number of Success and Unsuccessful reply by judge llm",
+    "description": "Calculates number of Success and Unsuccessful reply by judge llm.",
     "endpoints": [
       "openai-gpt4o"
     ],
     "configurations": {},
-    "hash": "95edf7567d0fe742"
+    "hash": "515d2863a9382c70"
   },
   "refusal": {
     "id": "refusal",
