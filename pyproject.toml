@@ -1,6 +1,6 @@
 [project]
 name = "moonshot-data"
-version = "0.6.3"
+version = "0.7.0"
 authors = [
     { name="The Moonshot Team", email="our.moonshot.team@gmail.com" }
 ]
@@ -17,7 +17,7 @@ classifiers = [
 
 [tool.poetry]
 name = "moonshot-data"
-version = "0.6.3"
+version = "0.7.0"
 description = "A collection of data(e.g. llm connectors, benchmark tests) that can be used with the Moonshot toolkit."
 authors = ["The Moonshot Team <our.moonshot.team@gmail.com>"]
 readme = "README.md"
