@@ -1,22 +1,23 @@
 #!/bin/bash
 
-pip uninstall pytest pytest-mock pytest-html pytest-json pytest-cov coverage httpx anybadge -y
-pip uninstall flake8 flake8-html -y
+pip uninstall pytest pytest-mock pytest-html pytest-json pytest-cov coverage httpx anybadge -y > /dev/null
+pip uninstall flake8 flake8-html -y > /dev/null
 
 # license check
 pip install pip-licenses
 pip-licenses --format markdown --output-file licenses-found.md
-pip uninstall pip-licenses prettytable wcwidth -y
+pip uninstall pip-licenses prettytable wcwidth -y > /dev/null
 
 # dependency check
 pip install pip-audit
-pip uninstall setuptools -y
+pip uninstall setuptools -y > /dev/null
 set +e
 pip-audit --format markdown --desc on -o pip-audit-report.md &> pip-audit-count.txt
 exit_code=$?
 
 if [ -f pip-audit-report.md ]; then
-  echo "============ Vulnerabilities Found ============"
+  echo " "
+  echo "============ Vulnerabilities Found ==================================="
   cat pip-audit-report.md
 fi
 
@@ -26,7 +27,8 @@ if [ -f licenses-found.md ]; then
 
   # Array to store packages with weak copyleft licenses
   declare -a weakCopyleftFound=()
-  echo "============ Weak Copyleft Licenses Found ============================"
+  echo " "
+  echo "============ Weak Copyleft Licenses Found ============================="
   head -n 2 licenses-found.md
   while IFS= read -r line; do
     package_name=$(echo "$line" | awk -F '|' '{print $2}' | xargs)
