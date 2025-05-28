@@ -61,17 +61,21 @@ jobs:
         # your codebase is analyzed, see https://docs.github.com/en/code-security/code-scanning/creating-an-advanced-setup-for-code-scanning/codeql-code-scanning-for-compiled-languages
     steps:
 
-    - name: Set branch variable (pull_request)
-      if: github.event_name == 'pull_request'
+    - name: Set branch variable
       run: |
-        echo "BRANCH=${{ github.event.pull_request.head.ref }}" >> "$GITHUB_ENV"
-        echo "PR_NUM=#${{ github.event.pull_request.number }}" >> "$GITHUB_ENV"
-
-    - name: Set branch variable (workflow_dispatch)
-      if: github.event_name == 'workflow_dispatch'
-      run: |
-        echo "BRANCH=${{ inputs.branch_to_test }}" >> "$GITHUB_ENV"
-        echo "PR_NUM=#0" >> "$GITHUB_ENV"
+        if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+          echo "BRANCH=${{ github.event.pull_request.head.ref }}" >> "$GITHUB_ENV"
+          echo "PR_NUM=#${{ github.event.pull_request.number }}" >> "$GITHUB_ENV"
+        elif [[ "${{ github.event_name }}" == "workflow_dispatch" ]]; then
+          echo "BRANCH=${{ inputs.branch_to_test }}" >> "$GITHUB_ENV"
+          echo "PR_NUM=#0" >> "$GITHUB_ENV"
+        elif [[ "${{ github.event_name }}" == "push" ]]; then
+          echo "BRANCH=${{ github.ref_name }}" >> "$GITHUB_ENV"
+          echo "PR_NUM=" >> "$GITHUB_ENV"
+        else
+          echo "BRANCH=${{ github.ref_name }}" >> "$GITHUB_ENV"
+          echo "PR_NUM=" >> "$GITHUB_ENV"
+        fi
 
     - name: Checkout Code
       uses: actions/checkout@v4
