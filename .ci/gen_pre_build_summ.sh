@@ -69,6 +69,7 @@ read_license() {
   declare -A weakCopyleftFound
 
   if [ -f licenses-found.md ]; then
+    cat license-found.md
     while IFS= read -r line; do
       # Skip empty lines
       [ -z "$line" ] && continue
