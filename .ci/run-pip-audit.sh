@@ -14,17 +14,50 @@ pip uninstall setuptools -y
 set +e
 pip-audit --format markdown --desc on -o pip-audit-report.md &> pip-audit-count.txt
 exit_code=$?
-pip install mdtree
-mdtree pip-audit-report.md > pip-audit-report.html
-mdtree licenses-found.md > license-report.html
 
-# Create badges
-pip install anybadge
-python3 .ci/createBadges.py dependency
-python3 .ci/createBadges.py license
+if [ -f pip-audit-report.md ]; then
+  echo "============ Vulnerabilities Found ============"
+  cat pip-audit-report.md
+fi
+
+if [ -f licenses-found.md ]; then
+  strongCopyleftLic=("GPL" "AGPL" "EUPL" "OSL")
+  weakCopyleftLic=("LGPL" "MPL" "CCDL" "EPL" "CC-BY-SA" "CPL")
+
+  echo "============ Strong Copyleft Licenses Found ============"
+  head -n 2 licenses-found.md
+  while IFS= read -r line; do
+    # Skip text-unidecode with Artistic Licenses
+    if [[ $line == *"text-unidecode"* && $line == *"Artistic License"* ]]; then
+      continue
+    fi
+    for lic in "${strongCopyleftLic[@]}"; do
+      if [[ $line == *"$lic"* ]]; then
+        echo "$line"
+        break
+      fi
+    done
+  done < licenses-found.md
+
+  echo "============ Weak Copyleft Licenses Found ============"
+  head -n 2 licenses-found.md
+  while IFS= read -r line; do
+    # Special case for text-unidecode
+    if [[ $line == *"text-unidecode"* && $line == *"Artistic License"* ]]; then
+      echo "$line (Reclassified as weak copyleft)"
+      continue
+    fi
+    for lic in "${weakCopyleftLic[@]}"; do
+      if [[ $line == *"$lic"* ]]; then
+        echo "$line"
+        break
+      fi
+    done
+  done < licenses-found.md
+fi
 
 set -e
 if [ $exit_code -ne 0 ]; then
-  echo "pip-audit failed, exiting..."
+#  echo "pip-audit failed, exiting..."
   exit $exit_code
 fi
