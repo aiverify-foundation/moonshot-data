@@ -69,13 +69,16 @@ read_license() {
   declare -A weakCopyleftFound
 
   if [ -f licenses-found.md ]; then
-    cat license-found.md
     while IFS= read -r line; do
       # Skip empty lines
       [ -z "$line" ] && continue
 
       # Extract package name (assuming package name is the first part of the line)
       packageName=$(echo "$line" | awk '{print $1}')
+      echo "$packageName"
+
+      # Skip if packageName is blank
+      [ -z "$packageName" ] && continue
 
       # Special exception for text-unidecode with Artistic License
       if [[ $line == *"text-unidecode"* && $line == *"Artistic License"* ]]; then
