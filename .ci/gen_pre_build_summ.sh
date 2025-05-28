@@ -74,11 +74,11 @@ read_license() {
       [ -z "$line" ] && continue
 
       # Extract package name (assuming package name is the first part of the line)
-      packageName=$(echo "$line" | awk '{print $1}')
+      packageName=$(echo "$line" | awk '{print $2}')
       echo "$packageName"
 
-      # Skip if packageName is blank
-      [ -z "$packageName" ] && continue
+      # Skip if packageName is blank or just equals |
+      [ -z "$packageName" ] || [ "$packageName" = "|" ] && continue
 
       # Special exception for text-unidecode with Artistic License
       if [[ $line == *"text-unidecode"* && $line == *"Artistic License"* ]]; then
