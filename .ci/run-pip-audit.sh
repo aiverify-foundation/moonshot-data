@@ -30,9 +30,10 @@ if [ -f licenses-found.md ]; then
   head -n 2 licenses-found.md
   while IFS= read -r line; do
     package_name=$(echo "$line" | awk -F '|' '{print $2}' | xargs)
-    if [ $package_name == "|" ]; then
-      continue
-    fi
+    
+    # Skip if packageName is blank or just equals |
+    [ -z "$package_name" ] || [ "$package_name" = "|" ] && continue
+
     # Special case for text-unidecode
     if [[ $line == *"text-unidecode"* && $line == *"Artistic License"* ]]; then
       echo "$line (Reclassified as weak copyleft)"
@@ -57,9 +58,10 @@ if [ -f licenses-found.md ]; then
   while IFS= read -r line; do
     # Extract package name to check if it's already in weak copyleft list
     package_name=$(echo "$line" | awk -F '|' '{print $2}' | xargs)
-    if [ $package_name == "|" ]; then
-      continue
-    fi
+    
+    # Skip if packageName is blank or just equals |
+    [ -z "$package_name" ] || [ "$package_name" = "|" ] && continue
+
     # Skip text-unidecode with Artistic Licenses
     if [[ $line == *"text-unidecode"* && $line == *"Artistic License"* ]]; then
       continue
