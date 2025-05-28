@@ -4,12 +4,12 @@ pip uninstall pytest pytest-mock pytest-html pytest-json pytest-cov coverage htt
 pip uninstall flake8 flake8-html -y > /dev/null
 
 # license check
-pip install pip-licenses
+pip install pip-licenses > /dev/null
 pip-licenses --format markdown --output-file licenses-found.md
 pip uninstall pip-licenses prettytable wcwidth -y > /dev/null
 
 # dependency check
-pip install pip-audit
+pip install pip-audit > /dev/null
 pip uninstall setuptools -y > /dev/null
 set +e
 pip-audit --format markdown --desc on -o pip-audit-report.md &> pip-audit-count.txt
