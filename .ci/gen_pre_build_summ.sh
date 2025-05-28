@@ -62,23 +62,74 @@ read_dependency() {
 
 # Function to read license data
 read_license() {
-  content=$(<licenses-found.md)
-  copyleftLic=("GPL" "LGPL" "MPL" "AGPL" "EUPL" "CCDL" "EPL" "CC-BY-SA" "OSL" "CPL")
-  numCopyleftLic=0
-  for lic in "${copyleftLic[@]}"; do
-    if [[ $content == *"$lic"* ]]; then
-      ((numCopyleftLic++))
-    fi
-  done
-  message="Copyleft licenses found: $numCopyleftLic"
+  strongCopyleftLic=("GPL" "AGPL" "EUPL" "OSL" "CPL")
+  weakCopyleftLic=("LGPL" "MPL" "CCDL" "EPL" "CC-BY-SA")
+  numStrongCopyleftLic=0
+  numWeakCopyleftLic=0
+
+  if [ -f licenses-found.md ]; then
+    while IFS= read -r line; do
+      # Special exception for text-unidecode with Artistic License
+      if [[ $line == *"text-unidecode"* && $line == *"Artistic License"* ]]; then
+        ((numWeakCopyleftLic++))
+        continue
+      fi
+      # Check for strong copyleft licenses
+      foundStrongLic=false
+      for lic in "${strongCopyleftLic[@]}"; do
+        if [[ $line == *"$lic"* ]]; then
+          ((numStrongCopyleftLic++))
+          foundStrongLic=true
+          break
+        fi
+      done
+
+      # Skip to next line if we found a strong license
+      if $foundStrongLic; then
+        continue
+      fi
+
+      # Check for weak copyleft licenses
+      for lic in "${weakCopyleftLic[@]}"; do
+        if [[ $line == *"$lic"* ]]; then
+          ((numWeakCopyleftLic++))
+          break
+        fi
+      done
+    done < licenses-found.md
+  fi
+
+  message="Strong copyleft licenses found: $numStrongCopyleftLic, Weak copyleft licenses found: $numWeakCopyleftLic"
   export LICENSE_SUMMARY="$message"
   echo "$message"
-  if [ "$numCopyleftLic" -ne 0 ]; then
+
+  # Return 1 if strong copyleft licenses are found, otherwise return 0
+  if [ "$numStrongCopyleftLic" -ne 0 ]; then
     return 1
   else
     return 0
   fi
 }
+
+# # Function to read license data
+# read_license() {
+#   content=$(<licenses-found.md)
+#   copyleftLic=("GPL" "LGPL" "MPL" "AGPL" "EUPL" "CCDL" "EPL" "CC-BY-SA" "OSL" "CPL")
+#   numCopyleftLic=0
+#   for lic in "${copyleftLic[@]}"; do
+#     if [[ $content == *"$lic"* ]]; then
+#       ((numCopyleftLic++))
+#     fi
+#   done
+#   message="Copyleft licenses found: $numCopyleftLic"
+#   export LICENSE_SUMMARY="$message"
+#   echo "$message"
+#   if [ "$numCopyleftLic" -ne 0 ]; then
+#     return 1
+#   else
+#     return 0
+#   fi
+# }
 
 # Main function to determine which summary to generate
 gen_summary() {
