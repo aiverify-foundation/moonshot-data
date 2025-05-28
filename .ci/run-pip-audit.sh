@@ -26,14 +26,17 @@ if [ -f licenses-found.md ]; then
 
   # Array to store packages with weak copyleft licenses
   declare -a weakCopyleftFound=()
-  echo "============ Weak Copyleft Licenses Found ============"
+  echo "============ Weak Copyleft Licenses Found ============================"
   head -n 2 licenses-found.md
   while IFS= read -r line; do
+    package_name=$(echo "$line" | awk -F '|' '{print $2}' | xargs)
+    if [ $package_name == "|" ]; then
+      continue
+    fi
     # Special case for text-unidecode
     if [[ $line == *"text-unidecode"* && $line == *"Artistic License"* ]]; then
       echo "$line (Reclassified as weak copyleft)"
-      # Extract package name to exclude later
-      package_name=$(echo "$line" | awk -F '|' '{print $2}' | xargs)
+
       weakCopyleftFound+=("$package_name")
       continue
     fi
@@ -49,16 +52,18 @@ if [ -f licenses-found.md ]; then
     done
   done < licenses-found.md
 
-  echo "============ Strong Copyleft Licenses Found ============"
+  echo "============ Strong Copyleft Licenses Found ============================"
   head -n 2 licenses-found.md
   while IFS= read -r line; do
+    # Extract package name to check if it's already in weak copyleft list
+    package_name=$(echo "$line" | awk -F '|' '{print $2}' | xargs)
+    if [ $package_name == "|" ]; then
+      continue
+    fi
     # Skip text-unidecode with Artistic Licenses
     if [[ $line == *"text-unidecode"* && $line == *"Artistic License"* ]]; then
       continue
     fi
-
-    # Extract package name to check if it's already in weak copyleft list
-    package_name=$(echo "$line" | awk -F '|' '{print $2}' | xargs)
 
     # Skip if package was already found in weak copyleft
     if [[ " ${weakCopyleftFound[*]} " == *" $package_name "* ]]; then
