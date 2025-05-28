@@ -75,7 +75,6 @@ read_license() {
 
       # Extract package name (assuming package name is the first part of the line)
       packageName=$(echo "$line" | awk '{print $2}')
-      echo "$packageName"
 
       # Skip if packageName is blank or just equals |
       [ -z "$packageName" ] || [ "$packageName" = "|" ] && continue
