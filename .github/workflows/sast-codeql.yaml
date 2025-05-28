@@ -3,7 +3,7 @@ name: "SAST - CodeQL"
 
 on:
   push:
-    branches: [ main, ci/cleanup-workflows ]
+    branches: [ main ]
 
   pull_request:
     branches: [ dev_main ]
