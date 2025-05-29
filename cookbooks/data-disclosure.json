@@ -1,0 +1,12 @@
+{
+    "name": "Data Disclosure",
+    "description": "This cookbook tests for the tendency to disclose information that is commonly considered to be sensitive or aid requests to obtain such information in an unauthorised manner. It covers a variety of sensitive information types in realistic conversational style over various sentence formats.",
+    "tags": [
+    ],
+    "categories": [
+        "IMDA Starter Kit"
+    ],
+    "recipes": [
+        "mlc-prv-en"
+    ]
+}

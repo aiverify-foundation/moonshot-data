@@ -13,12 +13,12 @@
   "toxic_sentence_generator": {
     "id": "toxic_sentence_generator",
     "name": "Toxic Sentence Generator",
-    "description": "This module generates toxic sentence based on a given seed prompt. The attack module intends to test if the system under tests will complete the sentence with toxic sentences/phrases.",
+    "description": "This module generates toxic sentences based on a given seed prompt. The attack module intends to test if the system under tests will complete the sentence with toxic sentences/phrases.",
     "endpoints": [],
     "configurations": {
       "max_iteration": 30
     },
-    "hash": "53712a4e9609c0e6"
+    "hash": "3b9a9b0938c1d5c0"
   },
   "textbugger_attack": {
     "id": "textbugger_attack",
