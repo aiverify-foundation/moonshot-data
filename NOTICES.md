@@ -5,246 +5,263 @@ Copyright 2025
 Phase: DEVELOPMENT
 Distribution: OPENSOURCE
 
+Notices Report Content
+ * License Data
+ * License Text
+
 Components: 
 
-absl-py 2.1.0 : Apache License 2.0
-accelerate 0.34.2 : Apache License 2.0
-aiohappyeyeballs 2.4.4 : Python Software Foundation License 2.0
-aiohttp 3.10.11 : Apache License 2.0
-aiometer 0.5.0 : MIT License
-aiosignal 1.3.2 : Apache License 2.0
-annotated-types 0.7.0 : MIT License
-anthropic 0.34.2 : MIT License
-anyio 4.6.2.post1 : MIT License
-anytree 2.12.1 : Apache License 2.0
-appdirs 1.4.4 : MIT License
-astunparse 1.6.3 : BSD 3-clause "New" or "Revised" License
-BeautifulSoup4 4.12.3 : MIT License
-bert-score 0.3.13 : MIT License
-bioc 2.1 : MIT License
-blis 0.7.11 : BSD 3-clause "New" or "Revised" License
-boto3 1.35.99 : Apache License 2.0
-botocore 1.35.99 : Apache License 2.0
-cachetools 5.5.1 : 
-catalogue 2.0.10 : MIT License
-Click - Python Command Line Utility 8.1.8 : BSD 3-clause "New" or "Revised" License
-cloudpathlib 0.19.0 : MIT License
-coloredlogs 15.0.1 : MIT License
-confection 0.1.5 : MIT License
-conllu 4.5.3 : MIT License
-contourpy 1.3.1 : BSD 3-clause "New" or "Revised" License
-Cycler 0.12.1 : BSD 3-clause "New" or "Revised" License
-cymem 2.0.11 : MIT License
-dataclasses-json 0.6.7 : MIT License
-datasets 2.21.0 : Apache License 2.0
-Deprecated 1.2.15 : MIT License
-distro 1.9.0 : Apache License 2.0
-docopt 0.6.2 : MIT License
-edit-distance 0.8.1 : MIT License
-eval-type-backport 0.2.0 : MIT License
-eval-type-backport 0.2.2 : MIT License
-filesystem_spec 2024.6.1 : BSD 3-clause "New" or "Revised" License
-flair 0.14.0 : MIT License
-FlatBuffers 24.3.25 : Apache License 2.0
-fonttools/fonttools 4.54.1 : MIT License
-frozenlist 1.4.1 : Apache License 2.0
+absl-py 2.2.2: https://github.com/abseil/abseil-py : Apache License 2.0
+accelerate 1.6.0: https://github.com/huggingface/accelerate : Apache License 2.0
+aiohappyeyeballs 2.6.1: https://github.com/aio-libs/aiohappyeyeballs : Python Software Foundation License 2.0
+aiohttp 3.11.18: http://aiohttp.readthedocs.io : Apache License 2.0
+aiohttp-retry 2.9.1: https://github.com/inyutin/aiohttp_retry : MIT License
+aiometer 0.5.0: http://github.com/florimondmanca/aiometer : MIT License
+aiosignal 1.3.2: https://aiosignal.readthedocs.io/ : Apache License 2.0
+annotated-types 0.7.0: https://github.com/annotated-types/annotated-types : MIT License
+anthropic 0.45.2: https://github.com/anthropics/anthropic-sdk-python : MIT License
+anyio 4.9.0: https://pypi.org/project/anyio/ : MIT License
+anytree 2.13.0: http://anytree.readthedocs.io : 
+appdirs 1.4.4: http://pypi.python.org/pypi/appdirs : MIT License
+astunparse 1.6.3: https://github.com/simonpercivall/astunparse : BSD 3-clause "New" or "Revised" License
+BeautifulSoup4 4.13.4: https://github.com/il-vladislav/BeautifulSoup4 : MIT License
+bert-score 0.3.13: https://github.com/Tiiiger/bert_score : MIT License
+bioc 2.1: https://github.com/yfpeng/pengyifan-pybioc : MIT License
+blis 1.2.1: https://github.com/spacy-io/cython-blis : BSD 3-clause "New" or "Revised" License
+boto3 1.38.21: http://aws.amazon.com/sdk-for-python/ : Apache License 2.0
+botocore 1.38.28: https://github.com/boto/botocore : Apache License 2.0
+bs4 0.0.2: http://pypi.python.org : MIT License
+cachetools 5.5.2: https://pypi.python.org/pypi/cachetools : MIT License
+catalogue 2.0.10: http://pypi.python.org/pypi/catalogue : MIT License
+Click - Python Command Line Utility 8.1.8: http://click.pocoo.org/ : BSD 3-clause "New" or "Revised" License
+cloudpathlib 0.21.1: https://github.com/drivendataorg/cloudpathlib : MIT License
+coloredlogs 15.0.1: https://pypi.python.org/pypi/coloredlogs : MIT License
+confection 0.1.5: https://github.com/explosion/confection : MIT License
+conllu 4.5.3: https://github.com/EmilStenstrom/conllu/ : MIT License
+contourpy 1.3.2: https://github.com/contourpy/contourpy : BSD 3-clause "New" or "Revised" License
+Cycler 0.12.1: https://github.com/matplotlib/Cycler : BSD 3-clause "New" or "Revised" License
+cymem 2.0.11: http://github.com/syllog1sm/cymem : MIT License
+dataclasses-json 0.6.7: https://github.com/lidatong/dataclasses-json : MIT License
+datasets 2.21.0: https://pypi.org/project/datasets/ : Apache License 2.0
+Deprecated 1.2.18: https://github.com/tantale/deprecated : MIT License
+distro 1.9.0: https://github.com/MartijnBraam/distro : Apache License 2.0
+docopt 0.6.2: http://docopt.org : MIT License
+edit-distance 0.8.1: http://bsp.lighthouseapp.com/projects/14822-hs-edit-distance : MIT License
+eval-type-backport 0.2.0: https://github.com/alexmojaki/eval_type_backport : MIT License
+eval-type-backport 0.2.2: https://github.com/alexmojaki/eval_type_backport : MIT License
+filesystem_spec 2024.6.1: https://github.com/fsspec/filesystem_spec : BSD 3-clause "New" or "Revised" License
+filetype 1.2.0: https://github.com/h2non/filetype.py : MIT License
+flair 0.15.1: https://github.com/zalandoresearch/flair : MIT License
+FlatBuffers 25.2.10: http://google.github.io/flatbuffers/ : Apache License 2.0
+fonttools/fonttools 4.57.0: https://groups.google.com/d/forum/fonttools : MIT License
+frozenlist 1.6.0: https://github.com/aio-libs/frozenlist : Apache License 2.0
 gast 0.6.0 : BSD 3-clause "New" or "Revised" License
-gdown 5.2.0 : MIT License
-google-api-core 2.20.0 : Apache License 2.0
-google-api-python-client 2.147.0 : Apache License 2.0
-google-auth-httplib2 0.2.0 : Apache License 2.0
-google-pasta 0.2.0 : Apache License 2.0
-google-research/google-research 0.1.2 : Apache License 2.0
-google/generative-ai-python v0.8.4 : 
-googleapis-common-protos 1.65.0 : Apache License 2.0
-googleapis/google-cloud-python 0.6.15 : Apache License 2.0
-greenlet 3.1.1 : MIT License
-grpc 1.66.2 : Apache License 2.0
-grpcio-status 1.62.3 : Apache License 2.0
-h11 0.14.0 : MIT License
-h5py 3.12.1 : BSD 3-clause "New" or "Revised" License
-homoglyphs 2.0.4 : MIT License
-httpcore 1.0.7 : BSD 3-clause "New" or "Revised" License
-httplib2 0.22.0 : MIT License
-httpx 0.27.2 : BSD 3-clause "New" or "Revised" License
-huggingface-hub 0.25.2 : Apache License 2.0
-humanfriendly 10.0 : MIT License
-idna 3.10 : BSD 3-clause "New" or "Revised" License
-intervaltree 3.1.0 : Apache License 2.0
-jieba 0.42.1 : MIT License
-jinjapython 3.1.5 : BSD 3-clause "New" or "Revised" License
-jiter 0.5.0 : MIT License
-jmespath.py 1.0.1 : MIT License
-joblib 1.4.2 : BSD 3-clause "New" or "Revised" License
-jsonlines 4.0.0 : BSD 3-clause "New" or "Revised" License
-keras-team/keras 3.5.0 : Apache License 2.0
-langchain 0.2.17 : MIT License
-langchain 0.2.19 : MIT License
-langchain 0.2.43 : MIT License
-langchain-openai 0.1.25 : MIT License
-langchain-text-splitters 0.2.4 : MIT License
-langcodes 3.4.1 : MIT License
-langdetect 1.0.9 : MIT License
-langsmith 0.1.147 : MIT License
-language-data 1.2.0 : MIT License
-language-tool-python 2.8.2 : 
-lemminflect 0.2.3 : MIT License
-libclang 18.1.1 : Apache License 2.0
-lightning-utilities 0.11.9 : Apache License 2.0
-lru-dict 1.3.0 : MIT License
-lxml 5.3.0 : BSD 3-clause "New" or "Revised" License
-marisa-trie 1.2.1 : MIT License
-markdown-it-py 3.0.0 : MIT License
-MarkupSafe 2.1.5 : BSD 3-clause "New" or "Revised" License
-matplotlib 3.9.4 : MATPLOTLIB License 1.3.0 or Later
-mdurl 0.1.2 : MIT License
-ml-dtypes 0.4.1 : (Apache License 2.0 AND Mozilla Public License 2.0)
-more-itertools 10.5.0 : MIT License
-mpld3 0.5.10 : BSD 3-clause "New" or "Revised" License
-mpmath 1.3.0 : BSD 3-clause "New" or "Revised" License
-multi_process 0.70.16 : BSD 3-clause "New" or "Revised" License
-multidict 6.1.0 : Apache License 2.0
-murmurhash 1.0.12 : MIT License
-mypy-extensions 1.0.0 : MIT License
-namex 0.0.8 : Apache License 2.0
-nest-asyncio 1.6.0 : BSD 3-clause "New" or "Revised" License
-NetworkX 3.4.2 : BSD 3-clause "New" or "Revised" License
-nltk 3.9.1 : Apache License 2.0
-nudenet 3.4.2 : MIT License
-num2words 0.5.14 : GNU Lesser General Public License v3.0 or later
-NumPy 1.26.4 : BSD 3-clause "New" or "Revised" License
-nvidia-cublas-cu12 12.1.3.1 : Basic Proprietary Commercial License
-nvidia-cuda-cupti-cu12 12.1.105 : Basic Proprietary Commercial License
-nvidia-cuda-nvrtc-cu12 12.1.105 : Basic Proprietary Commercial License
-nvidia-cuda-runtime-cu12 12.1.105 : Basic Proprietary Commercial License
-nvidia-cudnn-cu12 9.1.0.70 : 
-nvidia-cufft-cu12 11.0.2.54 : Basic Proprietary Commercial License
-nvidia-curand-cu12 10.3.2.106 : Basic Proprietary Commercial License
-nvidia-cusolver-cu12 11.4.5.107 : Basic Proprietary Commercial License
-nvidia-cusparse-cu12 12.1.0.106 : Basic Proprietary Commercial License
-nvidia-nccl-cu12 2.20.5 : Basic Proprietary Commercial License
-nvidia-nvjitlink-cu12 12.6.85 : Basic Proprietary Commercial License
-nvidia-nvtx-cu12 12.1.105 : Basic Proprietary Commercial License
-onnxruntime 1.19.2 : MIT License
-openai 1.51.2 : Apache License 2.0
-opencv-python 4.10.0.84 : Apache License 2.0
-OpenHowNet 2.0 : MIT License
-opt-einsum 3.4.0 : MIT License
-optree 0.12.1 : Apache License 2.0
-orjson 3.10.15 : 
-Packaging 24.2 : (BSD 2-clause "Simplified" License OR Apache License 2.0)
-pandas-python 2.2.3 : BSD 3-clause "New" or "Revised" License
-pillow 10.4.0 : Historic Permission Notice and Disclaimer
-pinyin 0.4.0 : BSD 3-clause "New" or "Revised" License
-pip 24.3.1 : MIT License
-pptree 3.1 : MIT License
-preshed 3.0.9 : MIT License
-proto-plus 1.24.0 : Apache License 2.0
-psf-requests 2.32.3 : Apache License 2.0
-psutil 6.0.0 : BSD 3-clause "New" or "Revised" License
-py-filelock 3.16.1 : The Unlicense
-py-kiwisolver 1.4.8 : BSD 3-clause "New" or "Revised" License
-py-readability-metrics 1.4.5 : MIT License
-py3-google-auth 2.35.0 : Apache License 2.0
-pyarrow 17.0.0 : Apache License 2.0
-pyasn1 0.6.1 : BSD 2-clause "Simplified" License
-pyasn1-modules 0.4.1 : BSD 3-clause "New" or "Revised" License
-pybind11 2.13.6 : BSD 3-clause "New" or "Revised" License
-pydantic 2.8.2 : MIT License
-pydantic-core 2.20.1 : MIT License
-Pygments - Python syntax highlighter 2.18.0 : BSD 2-clause "Simplified" License
-pylcs 0.1.1 : Apache License 2.0
-Pyparsing 3.1.4 : MIT License
-pypi/setuptools 75.1.0 : MIT License
-pysbd 0.3.4 : MIT License
-PySocks 1.7.1 : BSD 3-clause "New" or "Revised" License
-Python six 1.16.0 : MIT License
-Python tzdata 2024.2 : Apache License 2.0
-python-attrs 24.2.0 : MIT License
-python-certifi 2024.8.30 : Mozilla Public License 2.0
-python-dateutil 2.9.0.post0 : (Apache License 2.0 OR BSD 3-clause "New" or "Revised" License)
-python-dill 0.3.8 : BSD 3-clause "New" or "Revised" License
-python-ftfy 6.2.3 : MIT License
-python-json-patch 1.33 : BSD 3-clause "New" or "Revised" License
-python-json-pointer 3.0.0 : BSD 3-clause "New" or "Revised" License
-Python-Markdown 3.7 : BSD 3-clause "New" or "Revised" License
-python-marshmallow 3.22.0 : MIT License
-python-protobuf 4.25.5 : BSD 3-clause "New" or "Revised" License
-Python-RSA 4.9 : Apache License 2.0
-python-semver 3.0.2 : BSD 3-clause "New" or "Revised" License
-python-typing-extensions 4.12.2 : Python Software Foundation License 2.3
-python-wheel 0.44.0 : MIT License
-python3-charset-normalizer 3.3.2 : MIT License
-python310-eval-type-backport 0.2.0 : MIT License
-pytorch 2.4.1 : BSD 3-clause "New" or "Revised" License
-pytorch_revgrad 0.2.0 : MIT License
-PyTZ - Python Time Zone Library 2024.2 : MIT License
-PyYAML 6.0.2 : MIT License
-ragas 0.1.22 : 
-regex 2024.9.11 : Apache License 2.0
-requests-toolbelt 1.0.0 : Apache License 2.0
-rich 13.9.4 : MIT License
-rouge 1.0.1 : 
-s3transfer 0.10.4 : Apache License 2.0
-safetensors 0.4.5 : Apache License 2.0
-scikit-learn 1.5.2 : BSD 3-clause "New" or "Revised" License
-SciPy 1.14.1 : BSD 3-clause "New" or "Revised" License
-segtok 1.5.11 : MIT License
-sentence-transformers 3.1.1 : Apache License 2.0
-sentencepiece 0.2.0 : Apache License 2.0
-shellingham 1.5.4 : ISC License
-smart-open 7.0.5 : MIT License
-sniffio 1.3.1 : Apache License 2.0
-sortedcontainers 2.4.0 : Apache License 2.0
-soupsieve 2.6 : MIT License
-spacy 3.7.5 : MIT License
-spacy-legacy 3.0.12 : MIT License
-spacy-loggers 1.0.5 : MIT License
-SQLAlchemy 2.0.37 : MIT License
-sqlitedict 2.1.0 : Apache License 2.0
-srsly 2.4.8 : MIT License
-SymPy 1.13.3 : BSD 3-clause "New" or "Revised" License
-tabulate 0.9.0 : MIT License
-tbb 2021.12.0 : Basic Proprietary Commercial License
-tenacity 8.5.0 : Apache License 2.0
-tensorboard 2.17.1 : Apache License 2.0
-TensorFlow 2.17.1 : Apache License 2.0
-tensorflow-hub 0.16.1 : Apache License 2.0
-tensorflow/io 0.37.1 : Apache License 2.0
-tensorflow/tensorboard 0.7.2 : Apache License 2.0
-termcolor-pypi 2.4.0 : MIT License
-terminaltables 3.1.10 : MIT License
-textattack 0.3.10 : MIT License
-tf-keras 2.17.0 : Apache License 2.0
-thinc 8.2.5 : MIT License
-threadpoolctl 3.5.0 : BSD 3-clause "New" or "Revised" License
-tiktoken 0.7.0 : MIT License
-together 1.3.11 : Apache License 2.0
-tokenizers 0.20.3 : Apache License 2.0
-torchmetrics 1.4.3 : Apache License 2.0
-torchvision 0.19.1 : BSD 3-clause "New" or "Revised" License
-tqdm 4.66.6 : (MIT License AND Mozilla Public License 2.0)
-transformer-smaller-training-vocab 0.4.0 : MIT License
-transformers 4.45.2 : Apache License 2.0
-triton 3.0.0 : MIT License
-typer 0.12.5 : MIT License
-typing-inspect 0.9.0 : MIT License
-uritemplate-py 4.1.1 : (Apache License 2.0 OR BSD 3-clause "New" or "Revised" License)
-urllib3 2.2.3 : MIT License
-wasabi 1.1.3 : MIT License
-wcwidth 0.2.13 : MIT License
-weasel 0.4.1 : MIT License
-Werkzeug 3.0.6 : BSD 3-clause "New" or "Revised" License
-Wikipedia-API 0.7.3 : MIT License
-word2number 1.1 : MIT License
-wrapt 1.16.0 : BSD 3-clause "New" or "Revised" License
-xgboost 2.1.3 : Apache License 2.0
-xxhash 3.5.0 : BSD 3-clause "New" or "Revised" License
-yarl 1.13.1 : Apache License 2.0
+gdown 5.2.0: http://github.com/wkentaro/gdown : MIT License
+google-api-core 2.24.2: https://github.com/GoogleCloudPlatform/google-cloud-python : Apache License 2.0
+google-api-python-client 2.168.0: http://code.google.com/p/google-api-python-client/ : Apache License 2.0
+google-auth-httplib2 0.2.0: https://github.com/GoogleCloudPlatform/google-auth-library-python : Apache License 2.0
+google-pasta 0.2.0: https://github.com/google/pasta : Apache License 2.0
+google-research/google-research 0.1.2: https://ai.google/research : Apache License 2.0
+google/generative-ai-python 0.8.5: https://github.com/google/generative-ai-python : Apache License 2.0
+googleapis-common-protos 1.70.0: https://github.com/googleapis/python-api-common-protos : Apache License 2.0
+googleapis/google-cloud-python 0.6.15: https://googlecloudplatform.github.io/google-cloud-python/ : Apache License 2.0
+greenlet 3.2.2: http://pypi.python.org/pypi/greenlet : (Python Software Foundation License 2.0 AND MIT License)
+grpc 1.71.0: https://github.com/grpc/grpc : Apache License 2.0
+grpcio-status 1.71.0: https://grpc.io : Apache License 2.0
+h11 0.16.0: https://github.com/njsmith/h11 : MIT License
+h2o-authn 3.1.0: https://github.com/h2oai/authn-py : 
+h2ogpte 1.6.30.post1 : 
+h5py 3.13.0: http://www.h5py.org : BSD 3-clause "New" or "Revised" License
+homoglyphs 2.0.4: https://github.com/orsinium/homoglyphs : MIT License
+httpcore 1.0.9: https://github.com/encode/httpcore : BSD 3-clause "New" or "Revised" License
+httplib2 0.22.0: http://httplib2.googlecode.com : MIT License
+httpx 0.28.1: https://www.python-httpx.org/ : BSD 3-clause "New" or "Revised" License
+httpx-sse 0.4.0: https://pypi.org/project/httpx-sse/ : MIT License
+huggingface-hub 0.30.2: https://github.com/huggingface/huggingface_hub : Apache License 2.0
+humanfriendly 10.0: https://humanfriendly.readthedocs.org : MIT License
+idna 3.10: https://github.com/kjd/idna : BSD 3-clause "New" or "Revised" License
+intervaltree 3.1.0: https://pypi.python.org/pypi/intervaltree : Apache License 2.0
+jieba 0.42.1: https://github.com/fxsjy/jieba : MIT License
+jinjapython 3.1.6: https://jinja.palletsprojects.com : BSD 3-clause "New" or "Revised" License
+jiter 0.9.1: https://github.com/pydantic/jiter/ : MIT License
+jmespath.py 1.0.1: https://github.com/jmespath/jmespath.py : MIT License
+joblib 1.4.2: http://packages.python.org/joblib/ : BSD 3-clause "New" or "Revised" License
+jsonlines 4.0.0: https://github.com/wbolster/jsonlines : BSD 3-clause "New" or "Revised" License
+keras-team/keras 3.9.2: http://keras.io/ : Apache License 2.0
+langchain 0.3.24: https://github.com/langchain-ai/langchain : MIT License
+langchain 0.3.25: https://github.com/langchain-ai/langchain : MIT License
+langchain 0.3.63: https://github.com/langchain-ai/langchain : MIT License
+langchain-openai 0.3.19: https://github.com/langchain-ai/langchain : 
+langchain-text-splitters 0.3.8: https://github.com/langchain-ai/langchain : MIT License
+langcodes 3.5.0: http://github.com/LuminosoInsight/langcodes : MIT License
+langdetect 1.0.9: https://github.com/Mimino666/langdetect : MIT License
+langsmith 0.1.147: https://smith.langchain.com/ : MIT License
+language-data 1.3.0: http://github.com/LuminosoInsight/language_data : MIT License
+language-tool-python 2.9.3: https://github.com/jxmorris12/language_tool_python : GNU General Public License v3.0 or later
+lemminflect 0.2.3: https://github.com/bjascob/LemmInflect : MIT License
+libclang 18.1.1: https://github.com/sighingnow/libclang : Apache License 2.0
+lightning-utilities 0.14.3: https://github.com/Lightning-AI/lightning-sandbox : Apache License 2.0
+lru-dict 1.3.0: https://github.com/amitdev/lru-dict : MIT License
+lxml 5.4.0: http://codespeak.net/lxml/ : BSD 3-clause "New" or "Revised" License
+marisa-trie 1.2.1: http://pypi.python.org/pypi/marisa-trie/ : MIT License
+markdown-it-py 3.0.0: https://github.com/executablebooks/markdown-it-py : MIT License
+MarkupSafe 3.0.2: https://www.palletsprojects.com/p/markupsafe/ : BSD 3-clause "New" or "Revised" License
+matplotlib 3.10.3: https://matplotlib.org/ : MATPLOTLIB License 1.3.0 or Later
+mdurl 0.1.2: https://pypi.org/project/mdurl/ : MIT License
+ml-dtypes 0.5.1: https://pypi.org/project/ml-dtypes/ : Apache License 2.0
+more-itertools 10.7.0: https://github.com/erikrose/more-itertools : MIT License
+mpld3 0.5.10: http://mpld3.github.io : BSD 3-clause "New" or "Revised" License
+mpmath 1.3.0: http://code.google.com/p/mpmath/ : BSD 3-clause "New" or "Revised" License
+multi_process 0.70.16: https://github.com/jgraichen/multi_process : BSD 3-clause "New" or "Revised" License
+multidict 6.4.4: https://github.com/aio-libs/multidict/ : Apache License 2.0
+murmurhash 1.0.13 : MIT License
+mypy-extensions 1.1.0: http://www.mypy-lang.org/ : MIT License
+namex 0.0.9 : 
+nest-asyncio 1.6.0: https://github.com/erdewit/nest_asyncio : BSD 3-clause "New" or "Revised" License
+NetworkX 3.4.2: https://networkx.github.io/ : BSD 3-clause "New" or "Revised" License
+nltk 3.9.1: http://www.nltk.org/ : Apache License 2.0
+nudenet 3.4.2: https://github.com/notAI-tech/nudenet : MIT License
+num2words 0.5.14: https://github.com/savoirfairelinux/num2words : GNU Lesser General Public License v3.0 or later
+NumPy 1.26.4: https://numpy.org/ : BSD 3-clause "New" or "Revised" License
+nvidia-cublas-cu12 12.1.3.1: https://github.com/NVIDIA : Basic Proprietary Commercial License
+nvidia-cuda-cupti-cu12 12.1.105: https://github.com/NVIDIA : Basic Proprietary Commercial License
+nvidia-cuda-nvrtc-cu12 12.1.105: https://github.com/NVIDIA : Basic Proprietary Commercial License
+nvidia-cuda-runtime-cu12 12.1.105: https://github.com/NVIDIA : Basic Proprietary Commercial License
+nvidia-cudnn-cu12 9.1.0.70: https://github.com/NVIDIA : Basic Proprietary Commercial License
+nvidia-cufft-cu12 11.0.2.54: https://github.com/NVIDIA : Basic Proprietary Commercial License
+nvidia-curand-cu12 10.3.2.106: https://github.com/NVIDIA : NVIDIA License
+nvidia-cusolver-cu12 11.4.5.107: https://github.com/NVIDIA : Basic Proprietary Commercial License
+nvidia-cusparse-cu12 12.1.0.106: https://github.com/NVIDIA : Basic Proprietary Commercial License
+nvidia-nccl-cu12 2.20.5: https://github.com/NVIDIA : Basic Proprietary Commercial License
+nvidia-nvjitlink-cu12 12.8.93: https://github.com/NVIDIA : 
+nvidia-nvtx-cu12 12.1.105: https://github.com/NVIDIA : Basic Proprietary Commercial License
+onnxruntime 1.21.1: https://onnxruntime.ai : MIT License
+openai 1.76.2: https://github.com/openai/openai-python : Apache License 2.0
+opencv-python 4.11.0.86: https://pypi.org/project/opencv-python/ : Apache License 2.0
+OpenHowNet 2.0: https://github.com/thunlp/OpenHowNet-API/ : MIT License
+opt-einsum 3.4.0: https://github.com/dgasmith/opt_einsum : MIT License
+optree 0.15.0 : Apache License 2.0
+orjson 3.10.18: https://github.com/ijl/orjson : (MIT License OR Apache License 2.0)
+Packaging 24.2: https://github.com/pypa/packaging : (BSD 2-clause "Simplified" License OR Apache License 2.0)
+pandas-python 2.2.3: https://pandas.pydata.org : BSD 3-clause "New" or "Revised" License
+pillow 11.2.1 : Python Imaging Library Software License
+pinyin 0.4.0: http://lxyu.github.io/pinyin/ : BSD 3-clause "New" or "Revised" License
+pptree 3.1: https://github.com/clemtoy/pptree : MIT License
+preshed 3.0.10: http://github.com/syllog1sm/preshed : MIT License
+propcache 0.3.1: https://github.com/aio-libs/propcache : Apache License 2.0
+proto-plus 1.26.1: https://github.com/googleapis/proto-plus-python.git : Apache License 2.0
+psf-requests 2.32.3: http://docs.python-requests.org : Apache License 2.0
+psutil 7.0.0: http://code.google.com/p/psutil/ : BSD 3-clause "New" or "Revised" License
+py-filelock 3.18.0: https://github.com/benediktschmitt/py-filelock : The Unlicense
+py-kiwisolver 1.4.8: https://github.com/nucleic/kiwi : BSD 3-clause "New" or "Revised" License
+py-readability-metrics 1.4.5: https://github.com/cdimascio/py-readability-metrics : MIT License
+py3-google-auth 2.39.0 : Apache License 2.0
+pyarrow 19.0.1: https://arrow.apache.org/ : Apache License 2.0
+pyasn1 0.6.1: https://pypi.org/project/pyasn1/ : BSD 2-clause "Simplified" License
+pyasn1-modules 0.4.2: http://pypi.python.org/pypi/pyasn1-modules : BSD 3-clause "New" or "Revised" License
+pybind11 2.13.6: https://github.com/wjakob/pybind11 : BSD 3-clause "New" or "Revised" License
+pydantic 2.8.2: https://pydantic-docs.helpmanual.io/ : MIT License
+pydantic-core 2.20.1: https://github.com/samuelcolvin/pydantic-core : MIT License
+pydantic-settings 2.9.1: https://github.com/danields761/pydantic-settings : MIT License
+Pygments - Python syntax highlighter 2.19.1: http://pygments.org/ : BSD 3-clause "New" or "Revised" License
+pylcs 0.1.1: https://github.com/Meteorix/pylcs : Apache License 2.0
+Pyparsing 3.2.3: https://github.com/pyparsing/pyparsing/ : MIT License
+pypi/setuptools 79.0.1: https://pypi.org/project/setuptools/ : MIT License
+pysbd 0.3.4: http://nipunsadvilkar.github.io/ : MIT License
+PySocks 1.7.1: http://pypi.python.org/pypi/PySocks : BSD 3-clause "New" or "Revised" License
+Python six 1.17.0: http://pypi.python.org/pypi/six : MIT License
+Python tzdata 2025.2: https://github.com/python/tzdata : Apache License 2.0
+python-aiofiles 24.1.0: http://github.com/Tinche/aiofiles/ : Apache License 2.0
+python-attrs 25.3.0: https://attrs.readthedocs.org/ : MIT License
+python-certifi 2025.1.31: https://certifiio.readthedocs.io/en/latest/ : Mozilla Public License 2.0
+python-dateutil 2.9.0.post0: https://github.com/dateutil/dateutil : (Apache License 2.0 OR BSD 3-clause "New" or "Revised" License)
+python-dill 0.3.8: https://pypi.org/project/dill/ : BSD 3-clause "New" or "Revised" License
+python-dotenv 1.1.0: http://github.com/theskumar/python-dotenv : BSD 3-clause "New" or "Revised" License
+python-ftfy 6.3.1: https://github.com/LuminosoInsight/python-ftfy : Apache License 2.0
+python-json-patch 1.33: https://github.com/stefankoegl/python-json-patch/ : BSD 3-clause "New" or "Revised" License
+python-json-pointer 3.0.0: https://github.com/stefankoegl/python-json-pointer : BSD 3-clause "New" or "Revised" License
+Python-Markdown 3.8: http://www.freewisdom.org/projects/python-markdown/ : BSD 3-clause "New" or "Revised" License
+python-marshmallow 3.26.1: http://marshmallow.readthedocs.io/ : MIT License
+python-protobuf 5.29.5: https://code.google.com/p/protobuf/ : BSD 3-clause "New" or "Revised" License
+Python-RSA 4.9.1: https://stuvel.eu/rsa : Apache License 2.0
+python-typing-extensions 4.13.2 : Python Software Foundation License 2.0
+python-wheel 0.45.1: https://bitbucket.org/dholth/wheel : MIT License
+python3-charset-normalizer 3.4.2: https://github.com/ousret/charset_normalizer : MIT License
+python3-rich 13.9.4: https://github.com/willmcgugan/rich : MIT License
+python310-eval-type-backport 0.2.0: https://github.com/alexmojaki/eval_type_backport : MIT License
+pytorch 2.4.1: http://pytorch.org : BSD 3-clause "New" or "Revised" License
+pytorch_revgrad 0.2.0: https://github.com/janfreyberg/pytorch-revgrad : MIT License
+PyTZ - Python Time Zone Library 2025.2: http://pythonhosted.org/pytz/ : MIT License
+PyYAML 6.0.2: https://pyyaml.org/ : MIT License
+ragas 0.1.19 : Apache License 2.0
+regex 2024.11.6: https://github.com/cgrand/regex : Apache License 2.0
+requests-toolbelt 1.0.0: https://toolbelt.readthedocs.io : Apache License 2.0
+rouge 1.0.1: http://github.com/pltrdy/rouge : 
+s3transfer 0.12.0: https://github.com/boto/s3transfer : Apache License 2.0
+safetensors 0.5.3: https://huggingface.co/docs/safetensors : Apache License 2.0
+scikit-learn 1.6.1: https://scikit-learn.org/ : BSD 3-clause "New" or "Revised" License
+SciPy 1.15.3: http://www.scipy.org : BSD 3-clause "New" or "Revised" License
+segtok 1.5.11: https://github.com/fnl/segtok : MIT License
+sentence-transformers 3.4.1: https://github.com/UKPLab/sentence-transformers : Apache License 2.0
+sentencepiece 0.2.0: https://github.com/google/sentencepiece : Apache License 2.0
+shellingham 1.5.4: https://github.com/sarugaku/shellingham : ISC License
+smart-open 7.1.0: https://github.com/piskvorky/smart_open : MIT License
+sniffio 1.3.1: https://github.com/python-trio/sniffio : Apache License 2.0
+sortedcontainers 2.4.0: https://pypi.python.org/pypi/sortedcontainers : Apache License 2.0
+soupsieve 2.7: https://github.com/facelessuser/soupsieve : MIT License
+spacy 3.8.7: http://honnibal.github.io/spaCy/ : MIT License
+spacy-legacy 3.0.12: https://spacy.io : MIT License
+spacy-loggers 1.0.5: https://github.com/explosion/spacy-loggers : MIT License
+SQLAlchemy 2.0.41: http://www.sqlalchemy.org/ : MIT License
+sqlitedict 2.1.0: https://github.com/piskvorky/sqlitedict : Apache License 2.0
+srsly 2.5.1: https://github.com/explosion/srsly : MIT License
+SymPy 1.13.3: http://sympy.org : BSD 3-clause "New" or "Revised" License
+tabulate 0.9.0: http://code.google.com/p/tabulate/ : MIT License
+tbb 2021.12.0: https://software.intel.com/en-us/node/506039 : Basic Proprietary Commercial License
+tenacity 8.5.0: https://github.com/jd/tenacity : Apache License 2.0
+tensorboard 2.19.0: https://github.com/dmlc/tensorboard : Apache License 2.0
+TensorFlow 2.19.0: http://tensorflow.org : Apache License 2.0
+tensorflow-hub 0.16.1: https://github.com/tensorflow/hub : Apache License 2.0
+tensorflow/io 0.37.1: https://github.com/tensorflow/io : Apache License 2.0
+tensorflow/tensorboard 0.7.2: https://github.com/tensorflow/tensorboard#readme : Apache License 2.0
+termcolor-pypi 3.0.1: http://pypi.python.org/pypi/termcolor : MIT License
+terminaltables 3.1.10: https://github.com/Robpol86/terminaltables : MIT License
+textattack 0.3.10: https://github.com/QData/textattack : MIT License
+tf-keras 2.19.0: https://github.com/keras-team/tf-keras : Apache License 2.0
+thinc 8.3.4: http://github.com/syllog1sm/thinc : MIT License
+threadpoolctl 3.6.0: https://github.com/joblib/threadpoolctl : BSD 3-clause "New" or "Revised" License
+tiktoken 0.9.0: https://pypi.org/project/tiktoken/ : MIT License
+together 1.5.8: https://github.com/globus/together : Apache License 2.0
+tokenizers 0.21.1: https://github.com/huggingface/tokenizers : Apache License 2.0
+TOML 0.10.2: https://github.com/lmno/TOML : MIT License
+torchmetrics 1.7.2: https://github.com/PyTorchLightning/torchmetrics : Apache License 2.0
+torchvision 0.19.1: https://github.com/pytorch/vision : BSD 3-clause "New" or "Revised" License
+tqdm 4.67.1: https://tqdm.github.io : (MIT License AND Mozilla Public License 2.0)
+transformer-smaller-training-vocab 0.4.1: https://github.com/helpmefindaname/transformer-smaller-training-vocab : MIT License
+transformers 4.51.3: https://github.com/huggingface/transformers : Apache License 2.0
+triton 3.0.0: https://github.com/prakashpp/triton : MIT License
+typer 0.15.4: https://github.com/tiangolo/typer : MIT License
+typing-inspect 0.9.0: https://github.com/ilevkivskyi/typing_inspect : MIT License
+typing-inspection 0.4.1 : MIT License
+tzlocal 5.3.1: https://github.com/regebro/tzlocal : MIT License
+uritemplate-py 4.1.1: https://github.com/uri-templates/uritemplate-py : (Apache License 2.0 OR BSD 3-clause "New" or "Revised" License)
+urllib3 2.4.0: https://urllib3.readthedocs.io/en/stable : MIT License
+wasabi 1.1.3: https://ines.io : MIT License
+wcwidth 0.2.13: https://pypi.python.org/pypi/wcwidth : MIT License
+weasel 0.4.1: http://pypi.python.org/pypi/weasel/ : MIT License
+websockets 11.0.3: https://github.com/aaugustin/websockets : BSD 3-clause "New" or "Revised" License
+Werkzeug 3.1.3: http://werkzeug.pocoo.org/ : BSD 3-clause "New" or "Revised" License
+Wikipedia-API 0.8.1: https://github.com/martin-majlis/Wikipedia-API : MIT License
+word2number 1.1: https://github.com/akshaynagpal/w2n : MIT License
+wrapt 1.17.2: https://github.com/GrahamDumpleton/wrapt : BSD 2-clause "Simplified" License
+xgboost 2.1.4: https://github.com/dmlc/xgboost : Apache License 2.0
+xxhash 3.5.0: https://github.com/ifduyue/python-xxhash : BSD 3-clause "New" or "Revised" License
+yarl 1.20.0: https://github.com/aio-libs/yarl/ : Apache License 2.0
+
 Licenses: 
 
 Apache License 2.0
-(absl-py 2.1.0, accelerate 0.34.2, aiohttp 3.10.11, aiosignal 1.3.2, anytree 2.12.1, boto3 1.35.99, botocore 1.35.99, datasets 2.21.0, distro 1.9.0, FlatBuffers 24.3.25, frozenlist 1.4.1, google-api-core 2.20.0, google-api-python-client 2.147.0, google-auth-httplib2 0.2.0, google-pasta 0.2.0, google-research/google-research 0.1.2, googleapis-common-protos 1.65.0, googleapis/google-cloud-python 0.6.15, grpc 1.66.2, grpcio-status 1.62.3, huggingface-hub 0.25.2, intervaltree 3.1.0, keras-team/keras 3.5.0, libclang 18.1.1, lightning-utilities 0.11.9, ml-dtypes 0.4.1, multidict 6.1.0, namex 0.0.8, nltk 3.9.1, openai 1.51.2, opencv-python 4.10.0.84, optree 0.12.1, Packaging 24.2, proto-plus 1.24.0, psf-requests 2.32.3, py3-google-auth 2.35.0, pyarrow 17.0.0, pylcs 0.1.1, Python tzdata 2024.2, python-dateutil 2.9.0.post0, Python-RSA 4.9, regex 2024.9.11, requests-toolbelt 1.0.0, s3transfer 0.10.4, safetensors 0.4.5, sentence-transformers 3.1.1, sentencepiece 0.2.0, sniffio 1.3.1, sortedcontainers 2.4.0, sqlitedict 2.1.0, tenacity 8.5.0, tensorboard 2.17.1, TensorFlow 2.17.1, tensorflow-hub 0.16.1, tensorflow/io 0.37.1, tensorflow/tensorboard 0.7.2, tf-keras 2.17.0, together 1.3.11, tokenizers 0.20.3, torchmetrics 1.4.3, transformers 4.45.2, uritemplate-py 4.1.1, xgboost 2.1.3, yarl 1.13.1)
+(absl-py 2.2.2, accelerate 1.6.0, aiohttp 3.11.18, aiosignal 1.3.2, boto3 1.38.21, botocore 1.38.28, datasets 2.21.0, distro 1.9.0, FlatBuffers 25.2.10, frozenlist 1.6.0, google-api-core 2.24.2, google-api-python-client 2.168.0, google-auth-httplib2 0.2.0, google-pasta 0.2.0, google-research/google-research 0.1.2, google/generative-ai-python 0.8.5, googleapis-common-protos 1.70.0, googleapis/google-cloud-python 0.6.15, grpc 1.71.0, grpcio-status 1.71.0, huggingface-hub 0.30.2, intervaltree 3.1.0, keras-team/keras 3.9.2, libclang 18.1.1, lightning-utilities 0.14.3, ml-dtypes 0.5.1, multidict 6.4.4, nltk 3.9.1, openai 1.76.2, opencv-python 4.11.0.86, optree 0.15.0, orjson 3.10.18, Packaging 24.2, propcache 0.3.1, proto-plus 1.26.1, psf-requests 2.32.3, py3-google-auth 2.39.0, pyarrow 19.0.1, pylcs 0.1.1, Python tzdata 2025.2, python-aiofiles 24.1.0, python-dateutil 2.9.0.post0, python-ftfy 6.3.1, Python-RSA 4.9.1, ragas 0.1.19, regex 2024.11.6, requests-toolbelt 1.0.0, s3transfer 0.12.0, safetensors 0.5.3, sentence-transformers 3.4.1, sentencepiece 0.2.0, sniffio 1.3.1, sortedcontainers 2.4.0, sqlitedict 2.1.0, tenacity 8.5.0, tensorboard 2.19.0, TensorFlow 2.19.0, tensorflow-hub 0.16.1, tensorflow/io 0.37.1, tensorflow/tensorboard 0.7.2, tf-keras 2.19.0, together 1.5.8, tokenizers 0.21.1, torchmetrics 1.7.2, transformers 4.51.3, uritemplate-py 4.1.1, xgboost 2.1.4, yarl 1.20.0)
 
 Apache License
 Version 2.0, January 2004
@@ -431,7 +448,7 @@ third-party archives.
 ---
 
 BSD 2-clause "Simplified" License
-(Packaging 24.2, pyasn1 0.6.1, Pygments - Python syntax highlighter 2.18.0)
+(Packaging 24.2, pyasn1 0.6.1, wrapt 1.17.2)
 
 BSD Two Clause License
 ======================
@@ -509,7 +526,7 @@ POSSIBILITY OF SUCH DAMAGE
 ---
 
 BSD 3-clause "New" or "Revised" License
-(blis 0.7.11, Click - Python Command Line Utility 8.1.8, contourpy 1.3.1, Cycler 0.12.1, filesystem_spec 2024.6.1, gast 0.6.0, h5py 3.12.1, httpcore 1.0.7, httpx 0.27.2, idna 3.10, jinjapython 3.1.5, joblib 1.4.2, jsonlines 4.0.0, lxml 5.3.0, MarkupSafe 2.1.5, mpld3 0.5.10, mpmath 1.3.0, multi_process 0.70.16, nest-asyncio 1.6.0, NetworkX 3.4.2, NumPy 1.26.4, pandas-python 2.2.3, pinyin 0.4.0, psutil 6.0.0, py-kiwisolver 1.4.8, pyasn1-modules 0.4.1, pybind11 2.13.6, PySocks 1.7.1, python-dateutil 2.9.0.post0, python-dill 0.3.8, python-json-patch 1.33, python-json-pointer 3.0.0, Python-Markdown 3.7, python-protobuf 4.25.5, python-semver 3.0.2, pytorch 2.4.1, scikit-learn 1.5.2, SciPy 1.14.1, SymPy 1.13.3, threadpoolctl 3.5.0, torchvision 0.19.1, Werkzeug 3.0.6, wrapt 1.16.0, xxhash 3.5.0)
+(blis 1.2.1, Click - Python Command Line Utility 8.1.8, contourpy 1.3.2, Cycler 0.12.1, filesystem_spec 2024.6.1, gast 0.6.0, h5py 3.13.0, httpcore 1.0.9, httpx 0.28.1, idna 3.10, jinjapython 3.1.6, joblib 1.4.2, jsonlines 4.0.0, lxml 5.4.0, MarkupSafe 3.0.2, mpld3 0.5.10, mpmath 1.3.0, multi_process 0.70.16, nest-asyncio 1.6.0, NetworkX 3.4.2, NumPy 1.26.4, pandas-python 2.2.3, pinyin 0.4.0, psutil 7.0.0, py-kiwisolver 1.4.8, pyasn1-modules 0.4.2, pybind11 2.13.6, Pygments - Python syntax highlighter 2.19.1, PySocks 1.7.1, python-dateutil 2.9.0.post0, python-dill 0.3.8, python-dotenv 1.1.0, python-json-patch 1.33, python-json-pointer 3.0.0, Python-Markdown 3.8, python-protobuf 5.29.5, pytorch 2.4.1, scikit-learn 1.6.1, SciPy 1.15.3, SymPy 1.13.3, threadpoolctl 3.6.0, torchvision 0.19.1, websockets 11.0.3, Werkzeug 3.1.3, xxhash 3.5.0)
 
 Copyright (c) <YEAR>, <OWNER>
 All rights reserved.
@@ -543,7 +560,7 @@ IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ---
 
 Basic Proprietary Commercial License
-(nvidia-cublas-cu12 12.1.3.1, nvidia-cuda-cupti-cu12 12.1.105, nvidia-cuda-nvrtc-cu12 12.1.105, nvidia-cuda-runtime-cu12 12.1.105, nvidia-cufft-cu12 11.0.2.54, nvidia-curand-cu12 10.3.2.106, nvidia-cusolver-cu12 11.4.5.107, nvidia-cusparse-cu12 12.1.0.106, nvidia-nccl-cu12 2.20.5, nvidia-nvjitlink-cu12 12.6.85, nvidia-nvtx-cu12 12.1.105, tbb 2021.12.0)
+(nvidia-cublas-cu12 12.1.3.1, nvidia-cuda-cupti-cu12 12.1.105, nvidia-cuda-nvrtc-cu12 12.1.105, nvidia-cuda-runtime-cu12 12.1.105, nvidia-cudnn-cu12 9.1.0.70, nvidia-cufft-cu12 11.0.2.54, nvidia-cusolver-cu12 11.4.5.107, nvidia-cusparse-cu12 12.1.0.106, nvidia-nccl-cu12 2.20.5, nvidia-nvtx-cu12 12.1.105, tbb 2021.12.0)
 
 END-USER LICENSE AGREEMENT FOR ACME SOFTWARE
 ============================================
@@ -730,6 +747,638 @@ Services Agreement, ACMEs entire liability regarding Support Services shall be
 governed by the terms of that agreement. Because some states and jurisdictions do
 not allow the exclusion or limitation of liability, the above limitation may not
 apply to you.
+
+---
+
+GNU General Public License v3.0 or later
+(language-tool-python 2.9.3)
+
+GNU GENERAL PUBLIC LICENSE
+==========================
+
+Version 3,  29 June 2007
+
+Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+
+Everyone is permitted to copy and distribute verbatim copies of this license
+document, but changing it is not allowed.
+
+
+Preamble
+
+The GNU General Public License is a free, copyleft license for software and other
+kinds of works.
+
+The licenses for most software and other practical works are designed to take
+away your freedom to share and change the works. By contrast, the GNU General
+Public License is intended to guarantee your freedom to share and change all
+versions of a program--to make sure it remains free software for all its users.
+We, the Free Software Foundation, use the GNU General Public License for most of
+our software; it applies also to any other work released this way by its authors.
+You can apply it to your programs, too.
+
+When we speak of free software, we are referring to freedom, not price. Our
+General Public Licenses are designed to make sure that you have the freedom to
+distribute copies of free software (and charge for them if you wish), that you
+receive source code or can get it if you want it, that you can change the
+software or use pieces of it in new free programs, and that you know you can do
+these things.
+
+To protect your rights, we need to prevent others from denying you these rights
+or asking you to surrender the rights. Therefore, you have certain
+responsibilities if you distribute copies of the software, or if you modify it:
+responsibilities to respect the freedom of others.
+
+For example, if you distribute copies of such a program, whether gratis or for a
+fee, you must pass on to the recipients the same freedoms that you received. You
+must make sure that they, too, receive or can get the source code. And you must
+show them these terms so they know their rights.
+
+Developers that use the GNU GPL protect your rights with two steps: (1) assert
+copyright on the software, and (2) offer you this License giving you legal
+permission to copy, distribute and/or modify it.
+
+For the developers' and authors' protection, the GPL clearly explains that there
+is no warranty for this free software. For both users' and authors' sake, the GPL
+requires that modified versions be marked as changed, so that their problems will
+not be attributed erroneously to authors of previous versions.
+
+Some devices are designed to deny users access to install or run modified
+versions of the software inside them, although the manufacturer can do so. This
+is fundamentally incompatible with the aim of protecting users' freedom to change
+the software. The systematic pattern of such abuse occurs in the area of products
+for individuals to use, which is precisely where it is most unacceptable.
+Therefore, we have designed this version of the GPL to prohibit the practice for
+those products. If such problems arise substantially in other domains, we stand
+ready to extend this provision to those domains in future versions of the GPL, as
+needed to protect the freedom of users.
+
+Finally, every program is threatened constantly by software patents. States
+should not allow patents to restrict development and use of software on
+general-purpose computers, but in those that do, we wish to avoid the special
+danger that patents applied to a free program could make it effectively
+proprietary. To prevent this, the GPL assures that patents cannot be used to
+render the program non-free.
+
+The precise terms and conditions for copying, distribution and modification
+follow.
+
+
+TERMS AND CONDITIONS
+
+0. Definitions.
+
+“This License” refers to version 3 of the GNU General Public License.
+
+“Copyright” also means copyright-like laws that apply to other kinds of works,
+such as semiconductor masks.
+
+“The Program” refers to any copyrightable work licensed under this License. Each
+licensee is addressed as “you”. “Licensees” and “recipients” may be individuals
+or organizations.
+
+To “modify” a work means to copy from or adapt all or part of the work in a
+fashion requiring copyright permission, other than the making of an exact copy.
+The resulting work is called a “modified version” of the earlier work or a work
+“based on” the earlier work.
+
+A “covered work” means either the unmodified Program or a work based on the
+Program.
+
+To “propagate” a work means to do anything with it that, without permission,
+would make you directly or secondarily liable for infringement under applicable
+copyright law, except executing it on a computer or modifying a private copy.
+Propagation includes copying, distribution (with or without modification), making
+available to the public, and in some countries other activities as well.
+
+To “convey” a work means any kind of propagation that enables other parties to
+make or receive copies. Mere interaction with a user through a computer network,
+with no transfer of a copy, is not conveying.
+
+An interactive user interface displays “Appropriate Legal Notices” to the extent
+that it includes a convenient and prominently visible feature that (1) displays
+an appropriate copyright notice, and (2) tells the user that there is no warranty
+for the work (except to the extent that warranties are provided), that licensees
+may convey the work under this License, and how to view a copy of this License.
+If the interface presents a list of user commands or options, such as a menu, a
+prominent item in the list meets this criterion.
+
+1. Source Code.
+
+The “source code” for a work means the preferred form of the work for making
+modifications to it. “Object code” means any non-source form of a work.
+
+A “Standard Interface” means an interface that either is an official standard
+defined by a recognized standards body, or, in the case of interfaces specified
+for a particular programming language, one that is widely used among developers
+working in that language.
+
+The “System Libraries” of an executable work include anything, other than the
+work as a whole, that (a) is included in the normal form of packaging a Major
+Component, but which is not part of that Major Component, and (b) serves only to
+enable use of the work with that Major Component, or to implement a Standard
+Interface for which an implementation is available to the public in source code
+form. A “Major Component”, in this context, means a major essential component
+(kernel, window system, and so on) of the specific operating system (if any) on
+which the executable work runs, or a compiler used to produce the work, or an
+object code interpreter used to run it.
+
+The “Corresponding Source” for a work in object code form means all the source
+code needed to generate, install, and (for an executable work) run the object
+code and to modify the work, including scripts to control those activities.
+However, it does not include the work's System Libraries, or general-purpose
+tools or generally available free programs which are used unmodified in
+performing those activities but which are not part of the work. For example,
+Corresponding Source includes interface definition files associated with source
+files for the work, and the source code for shared libraries and dynamically
+linked subprograms that the work is specifically designed to require, such as by
+intimate data communication or control flow between those subprograms and other
+parts of the work.
+
+The Corresponding Source need not include anything that users can regenerate
+automatically from other parts of the Corresponding Source.
+
+The Corresponding Source for a work in source code form is that same work.
+
+2. Basic Permissions.
+
+All rights granted under this License are granted for the term of copyright on
+the Program, and are irrevocable provided the stated conditions are met. This
+License explicitly affirms your unlimited permission to run the unmodified
+Program. The output from running a covered work is covered by this License only
+if the output, given its content, constitutes a covered work. This License
+acknowledges your rights of fair use or other equivalent, as provided by
+copyright law.
+
+You may make, run and propagate covered works that you do not convey, without
+conditions so long as your license otherwise remains in force. You may convey
+covered works to others for the sole purpose of having them make modifications
+exclusively for you, or provide you with facilities for running those works,
+provided that you comply with the terms of this License in conveying all material
+for which you do not control copyright. Those thus making or running the covered
+works for you must do so exclusively on your behalf, under your direction and
+control, on terms that prohibit them from making any copies of your copyrighted
+material outside their relationship with you.
+
+Conveying under any other circumstances is permitted solely under the conditions
+stated below. Sublicensing is not allowed; section 10 makes it unnecessary.
+
+3. Protecting Users' Legal Rights From Anti-Circumvention Law.
+
+No covered work shall be deemed part of an effective technological measure under
+any applicable law fulfilling obligations under article 11 of the WIPO copyright
+treaty adopted on 20 December 1996, or similar laws prohibiting or restricting
+circumvention of such measures.
+
+When you convey a covered work, you waive any legal power to forbid circumvention
+of technological measures to the extent such circumvention is effected by
+exercising rights under this License with respect to the covered work, and you
+disclaim any intention to limit operation or modification of the work as a means
+of enforcing, against the work's users, your or third parties' legal rights to
+forbid circumvention of technological measures.
+
+4. Conveying Verbatim Copies.
+
+You may convey verbatim copies of the Program's source code as you receive it, in
+any medium, provided that you conspicuously and appropriately publish on each
+copy an appropriate copyright notice; keep intact all notices stating that this
+License and any non-permissive terms added in accord with section 7 apply to the
+code; keep intact all notices of the absence of any warranty; and give all
+recipients a copy of this License along with the Program.
+
+You may charge any price or no price for each copy that you convey, and you may
+offer support or warranty protection for a fee.
+
+5. Conveying Modified Source Versions.
+
+You may convey a work based on the Program, or the modifications to produce it
+from the Program, in the form of source code under the terms of section 4,
+provided that you also meet all of these conditions:
+
+  * a) The work must carry prominent notices stating that you modified it, and
+    giving a relevant date.
+
+  * b) The work must carry prominent notices stating that it is released under
+    this License and any conditions added under section 7. This requirement
+    modifies the requirement in section 4 to “keep intact all notices”.
+
+  * c) You must license the entire work, as a whole, under this License to anyone
+    who comes into possession of a copy. This License will therefore apply, along
+    with any applicable section 7 additional terms, to the whole of the work, and
+    all its parts, regardless of how they are packaged. This License gives no
+    permission to license the work in any other way, but it does not invalidate
+    such permission if you have separately received it.
+
+  * d) If the work has interactive user interfaces, each must display Appropriate
+    Legal Notices; however, if the Program has interactive interfaces that do not
+    display Appropriate Legal Notices, your work need not make them do so.
+
+A compilation of a covered work with other separate and independent works, which
+are not by their nature extensions of the covered work, and which are not
+combined with it such as to form a larger program, in or on a volume of a storage
+or distribution medium, is called an “aggregate” if the compilation and its
+resulting copyright are not used to limit the access or legal rights of the
+compilation's users beyond what the individual works permit. Inclusion of a
+covered work in an aggregate does not cause this License to apply to the other
+parts of the aggregate.
+
+6. Conveying Non-Source Forms.
+
+You may convey a covered work in object code form under the terms of sections 4
+and 5, provided that you also convey the machine-readable Corresponding Source
+under the terms of this License, in one of these ways:
+
+  * a) Convey the object code in, or embodied in, a physical product (including a
+    physical distribution medium), accompanied by the Corresponding Source fixed
+    on a durable physical medium customarily used for software interchange.
+
+  * b) Convey the object code in, or embodied in, a physical product (including a
+    physical distribution medium), accompanied by a written offer, valid for at
+    least three years and valid for as long as you offer spare parts or customer
+    support for that product model, to give anyone who possesses the object code
+    either (1) a copy of the Corresponding Source for all the software in the
+    product that is covered by this License, on a durable physical medium
+    customarily used for software interchange, for a price no more than your
+    reasonable cost of physically performing this conveying of source, or (2)
+    access to copy the Corresponding Source from a network server at no charge.
+
+  * c) Convey individual copies of the object code with a copy of the written
+    offer to provide the Corresponding Source. This alternative is allowed only
+    occasionally and noncommercially, and only if you received the object code
+    with such an offer, in accord with subsection 6b.
+
+  * d) Convey the object code by offering access from a designated place (gratis
+    or for a charge), and offer equivalent access to the Corresponding Source in
+    the same way through the same place at no further charge. You need not
+    require recipients to copy the Corresponding Source along with the object
+    code. If the place to copy the object code is a network server, the
+    Corresponding Source may be on a different server (operated by you or a third
+    party) that supports equivalent copying facilities, provided you maintain
+    clear directions next to the object code saying where to find the
+    Corresponding Source. Regardless of what server hosts the Corresponding
+    Source, you remain obligated to ensure that it is available for as long as
+    needed to satisfy these requirements.
+
+  * e) Convey the object code using peer-to-peer transmission, provided you
+    inform other peers where the object code and Corresponding Source of the work
+    are being offered to the general public at no charge under subsection 6d.
+
+A separable portion of the object code, whose source code is excluded from the
+Corresponding Source as a System Library, need not be included in conveying the
+object code work.
+
+A “User Product” is either (1) a “consumer product”, which means any tangible
+personal property which is normally used for personal, family, or household
+purposes, or (2) anything designed or sold for incorporation into a dwelling. In
+determining whether a product is a consumer product, doubtful cases shall be
+resolved in favor of coverage. For a particular product received by a particular
+user, “normally used” refers to a typical or common use of that class of product,
+regardless of the status of the particular user or of the way in which the
+particular user actually uses, or expects or is expected to use, the product. A
+product is a consumer product regardless of whether the product has substantial
+commercial, industrial or non-consumer uses, unless such uses represent the only
+significant mode of use of the product.
+
+“Installation Information” for a User Product means any methods, procedures,
+authorization keys, or other information required to install and execute modified
+versions of a covered work in that User Product from a modified version of its
+Corresponding Source. The information must suffice to ensure that the continued
+functioning of the modified object code is in no case prevented or interfered
+with solely because modification has been made.
+
+If you convey an object code work under this section in, or with, or specifically
+for use in, a User Product, and the conveying occurs as part of a transaction in
+which the right of possession and use of the User Product is transferred to the
+recipient in perpetuity or for a fixed term (regardless of how the transaction is
+characterized), the Corresponding Source conveyed under this section must be
+accompanied by the Installation Information. But this requirement does not apply
+if neither you nor any third party retains the ability to install modified object
+code on the User Product (for example, the work has been installed in ROM).
+
+The requirement to provide Installation Information does not include a
+requirement to continue to provide support service, warranty, or updates for a
+work that has been modified or installed by the recipient, or for the User
+Product in which it has been modified or installed. Access to a network may be
+denied when the modification itself materially and adversely affects the
+operation of the network or violates the rules and protocols for communication
+across the network.
+
+Corresponding Source conveyed, and Installation Information provided, in accord
+with this section must be in a format that is publicly documented (and with an
+implementation available to the public in source code form), and must require no
+special password or key for unpacking, reading or copying.
+
+7. Additional Terms.
+
+“Additional permissions” are terms that supplement the terms of this License by
+making exceptions from one or more of its conditions. Additional permissions that
+are applicable to the entire Program shall be treated as though they were
+included in this License, to the extent that they are valid under applicable law.
+If additional permissions apply only to part of the Program, that part may be
+used separately under those permissions, but the entire Program remains governed
+by this License without regard to the additional permissions.
+
+When you convey a copy of a covered work, you may at your option remove any
+additional permissions from that copy, or from any part of it. (Additional
+permissions may be written to require their own removal in certain cases when you
+modify the work.) You may place additional permissions on material, added by you
+to a covered work, for which you have or can give appropriate copyright
+permission.
+
+Notwithstanding any other provision of this License, for material you add to a
+covered work, you may (if authorized by the copyright holders of that material)
+supplement the terms of this License with terms:
+
+  * a) Disclaiming warranty or limiting liability differently from the terms of
+    sections 15 and 16 of this License; or
+
+  * b) Requiring preservation of specified reasonable legal notices or author
+    attributions in that material or in the Appropriate Legal Notices displayed
+    by works containing it; or
+
+  * c) Prohibiting misrepresentation of the origin of that material, or requiring
+    that modified versions of such material be marked in reasonable ways as
+    different from the original version; or
+
+  * d) Limiting the use for publicity purposes of names of licensors or authors
+    of the material; or
+
+  * e) Declining to grant rights under trademark law for use of some trade names,
+    trademarks, or service marks; or
+
+  * f) Requiring indemnification of licensors and authors of that material by
+    anyone who conveys the material (or modified versions of it) with contractual
+    assumptions of liability to the recipient, for any liability that these
+    contractual assumptions directly impose on those licensors and authors.
+
+All other non-permissive additional terms are considered “further restrictions”
+within the meaning of section 10. If the Program as you received it, or any part
+of it, contains a notice stating that it is governed by this License along with a
+term that is a further restriction, you may remove that term. If a license
+document contains a further restriction but permits relicensing or conveying
+under this License, you may add to a covered work material governed by the terms
+of that license document, provided that the further restriction does not survive
+such relicensing or conveying.
+
+If you add terms to a covered work in accord with this section, you must place,
+in the relevant source files, a statement of the additional terms that apply to
+those files, or a notice indicating where to find the applicable terms.
+
+Additional terms, permissive or non-permissive, may be stated in the form of a
+separately written license, or stated as exceptions; the above requirements apply
+either way.
+
+8. Termination.
+
+You may not propagate or modify a covered work except as expressly provided under
+this License. Any attempt otherwise to propagate or modify it is void, and will
+automatically terminate your rights under this License (including any patent
+licenses granted under the third paragraph of section 11).
+
+However, if you cease all violation of this License, then your license from a
+particular copyright holder is reinstated (a) provisionally, unless and until the
+copyright holder explicitly and finally terminates your license, and (b)
+permanently, if the copyright holder fails to notify you of the violation by some
+reasonable means prior to 60 days after the cessation.
+
+Moreover, your license from a particular copyright holder is reinstated
+permanently if the copyright holder notifies you of the violation by some
+reasonable means, this is the first time you have received notice of violation of
+this License (for any work) from that copyright holder, and you cure the
+violation prior to 30 days after your receipt of the notice.
+
+Termination of your rights under this section does not terminate the licenses of
+parties who have received copies or rights from you under this License. If your
+rights have been terminated and not permanently reinstated, you do not qualify to
+receive new licenses for the same material under section 10.
+
+9. Acceptance Not Required for Having Copies.
+
+You are not required to accept this License in order to receive or run a copy of
+the Program. Ancillary propagation of a covered work occurring solely as a
+consequence of using peer-to-peer transmission to receive a copy likewise does
+not require acceptance. However, nothing other than this License grants you
+permission to propagate or modify any covered work. These actions infringe
+copyright if you do not accept this License. Therefore, by modifying or
+propagating a covered work, you indicate your acceptance of this License to do
+so.
+
+10. Automatic Licensing of Downstream Recipients.
+
+Each time you convey a covered work, the recipient automatically receives a
+license from the original licensors, to run, modify and propagate that work,
+subject to this License. You are not responsible for enforcing compliance by
+third parties with this License.
+
+An “entity transaction” is a transaction transferring control of an organization,
+or substantially all assets of one, or subdividing an organization, or merging
+organizations. If propagation of a covered work results from an entity
+transaction, each party to that transaction who receives a copy of the work also
+receives whatever licenses to the work the party's predecessor in interest had or
+could give under the previous paragraph, plus a right to possession of the
+Corresponding Source of the work from the predecessor in interest, if the
+predecessor has it or can get it with reasonable efforts.
+
+You may not impose any further restrictions on the exercise of the rights granted
+or affirmed under this License. For example, you may not impose a license fee,
+royalty, or other charge for exercise of rights granted under this License, and
+you may not initiate litigation (including a cross-claim or counterclaim in a
+lawsuit) alleging that any patent claim is infringed by making, using, selling,
+offering for sale, or importing the Program or any portion of it.
+
+11. Patents.
+
+A “contributor” is a copyright holder who authorizes use under this License of
+the Program or a work on which the Program is based. The work thus licensed is
+called the contributor's “contributor version”.
+
+A contributor's “essential patent claims” are all patent claims owned or
+controlled by the contributor, whether already acquired or hereafter acquired,
+that would be infringed by some manner, permitted by this License, of making,
+using, or selling its contributor version, but do not include claims that would
+be infringed only as a consequence of further modification of the contributor
+version. For purposes of this definition, “control” includes the right to grant
+patent sublicenses in a manner consistent with the requirements of this License.
+
+Each contributor grants you a non-exclusive, worldwide, royalty-free patent
+license under the contributor's essential patent claims, to make, use, sell,
+offer for sale, import and otherwise run, modify and propagate the contents of
+its contributor version.
+
+In the following three paragraphs, a “patent license” is any express agreement or
+commitment, however denominated, not to enforce a patent (such as an express
+permission to practice a patent or covenant not to sue for patent infringement).
+To “grant” such a patent license to a party means to make such an agreement or
+commitment not to enforce a patent against the party.
+
+If you convey a covered work, knowingly relying on a patent license, and the
+Corresponding Source of the work is not available for anyone to copy, free of
+charge and under the terms of this License, through a publicly available network
+server or other readily accessible means, then you must either (1) cause the
+Corresponding Source to be so available, or (2) arrange to deprive yourself of
+the benefit of the patent license for this particular work, or (3) arrange, in a
+manner consistent with the requirements of this License, to extend the patent
+license to downstream recipients. “Knowingly relying” means you have actual
+knowledge that, but for the patent license, your conveying the covered work in a
+country, or your recipient's use of the covered work in a country, would infringe
+one or more identifiable patents in that country that you have reason to believe
+are valid.
+
+If, pursuant to or in connection with a single transaction or arrangement, you
+convey, or propagate by procuring conveyance of, a covered work, and grant a
+patent license to some of the parties receiving the covered work authorizing them
+to use, propagate, modify or convey a specific copy of the covered work, then the
+patent license you grant is automatically extended to all recipients of the
+covered work and works based on it.
+
+A patent license is “discriminatory” if it does not include within the scope of
+its coverage, prohibits the exercise of, or is conditioned on the non-exercise of
+one or more of the rights that are specifically granted under this License. You
+may not convey a covered work if you are a party to an arrangement with a third
+party that is in the business of distributing software, under which you make
+payment to the third party based on the extent of your activity of conveying the
+work, and under which the third party grants, to any of the parties who would
+receive the covered work from you, a discriminatory patent license (a) in
+connection with copies of the covered work conveyed by you (or copies made from
+those copies), or (b) primarily for and in connection with specific products or
+compilations that contain the covered work, unless you entered into that
+arrangement, or that patent license was granted, prior to 28 March 2007.
+
+Nothing in this License shall be construed as excluding or limiting any implied
+license or other defenses to infringement that may otherwise be available to you
+under applicable patent law.
+
+12. No Surrender of Others' Freedom.
+
+If conditions are imposed on you (whether by court order, agreement or otherwise)
+that contradict the conditions of this License, they do not excuse you from the
+conditions of this License. If you cannot convey a covered work so as to satisfy
+simultaneously your obligations under this License and any other pertinent
+obligations, then as a consequence you may not convey it at all. For example, if
+you agree to terms that obligate you to collect a royalty for further conveying
+from those to whom you convey the Program, the only way you could satisfy both
+those terms and this License would be to refrain entirely from conveying the
+Program.
+
+13. Use with the GNU Affero General Public License.
+
+Notwithstanding any other provision of this License, you have permission to link
+or combine any covered work with a work licensed under version 3 of the GNU
+Affero General Public License into a single combined work, and to convey the
+resulting work. The terms of this License will continue to apply to the part
+which is the covered work, but the special requirements of the GNU Affero General
+Public License, section 13, concerning interaction through a network will apply
+to the combination as such.
+
+14. Revised Versions of this License.
+
+The Free Software Foundation may publish revised and/or new versions of the GNU
+General Public License from time to time. Such new versions will be similar in
+spirit to the present version, but may differ in detail to address new problems
+or concerns.
+
+Each version is given a distinguishing version number. If the Program specifies
+that a certain numbered version of the GNU General Public License “or any later
+version” applies to it, you have the option of following the terms and conditions
+either of that numbered version or of any later version published by the Free
+Software Foundation. If the Program does not specify a version number of the GNU
+General Public License, you may choose any version ever published by the Free
+Software Foundation.
+
+If the Program specifies that a proxy can decide which future versions of the GNU
+General Public License can be used, that proxy's public statement of acceptance
+of a version permanently authorizes you to choose that version for the Program.
+
+Later license versions may give you additional or different permissions. However,
+no additional obligations are imposed on any author or copyright holder as a
+result of your choosing to follow a later version.
+
+15. Disclaimer of Warranty.
+
+THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY APPLICABLE LAW.
+EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT HOLDERS AND/OR OTHER
+PARTIES PROVIDE THE PROGRAM “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER
+EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. THE ENTIRE RISK AS TO THE
+QUALITY AND PERFORMANCE OF THE PROGRAM IS WITH YOU. SHOULD THE PROGRAM PROVE
+DEFECTIVE, YOU ASSUME THE COST OF ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+16. Limitation of Liability.
+
+IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING WILL ANY
+COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS THE PROGRAM AS
+PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY GENERAL, SPECIAL,
+INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR INABILITY TO USE
+THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED
+INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD PARTIES OR A FAILURE OF THE
+PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF SUCH HOLDER OR OTHER PARTY
+HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+17. Interpretation of Sections 15 and 16.
+
+If the disclaimer of warranty and limitation of liability provided above cannot
+be given local legal effect according to their terms, reviewing courts shall
+apply local law that most closely approximates an absolute waiver of all civil
+liability in connection with the Program, unless a warranty or assumption of
+liability accompanies a copy of the Program in return for a fee.
+
+END OF TERMS AND CONDITIONS
+
+
+How to Apply These Terms to Your New Programs
+
+If you develop a new program, and you want it to be of the greatest possible use
+to the public, the best way to achieve this is to make it free software which
+everyone can redistribute and change under these terms.
+
+To do so, attach the following notices to the program. It is safest to attach
+them to the start of each source file to most effectively state the exclusion of
+warranty; and each file should have at least the “copyright” line and a pointer
+to where the full notice is found.
+
+    <one line to give the program's name and a brief idea of what it
+does.>
+    Copyright (C) <year>  <name of author>
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Also add information on how to contact you by electronic and paper mail.
+
+If the program does terminal interaction, make it output a short notice like this
+when it starts in an interactive mode:
+
+    <program>  Copyright (C) <year>  <name of author>
+
+    This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; type `show c' for details.
+
+The hypothetical commands `show w' and `show c' should show the appropriate parts
+of the General Public License. Of course, your program's commands might be
+different; for a GUI interface, you would use an “about box”.
+
+You should also get your employer (if you work as a programmer) or school, if
+any, to sign a “copyright disclaimer” for the program, if necessary. For more
+information on this, and how to apply and follow the GNU GPL, see
+<http://www.gnu.org/licenses/>.
+
+The GNU General Public License does not permit incorporating your program into
+proprietary programs. If your program is a subroutine library, you may consider
+it more useful to permit linking proprietary applications with the library. If
+this is what you want to do, use the GNU Lesser General Public License instead of
+this License. But first, please read
+<http://www.gnu.org/philosophy/why-not-lgpl.html>.
 
 ---
 
@@ -1525,49 +2174,6 @@ this License. But first, please read
 
 ---
 
-Historic Permission Notice and Disclaimer
-(pillow 10.4.0)
-
-Historical Permission Notice and Disclaimer
-===========================================
-
-<copyright notice>
-
-Permission to use, copy, modify and distribute this software and its
-documentation for any purpose and without fee is hereby granted, provided that
-the above copyright notice appear in all copies[,] [and] that both [that] [the]
-copyright notice and this permission notice appear in supporting documentation[,
-and that the name [of] <copyright holder> [or <related entities>] not be used in
-advertising or publicity pertaining to distribution of the software without
-specific, written prior permission]. [<copyright holder> makes no representations
-about the suitability of this software for any purpose. It is provided "as is"
-without express or implied warranty.]
-
-[<copyright holder> DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,
-INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS[,][.] IN NO EVENT
-SHALL <copyright holder> BE LIABLE FOR ANY SPECIAL, INDIRECT OR CONSEQUENTIAL
-DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
-WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING
-OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.]
-
----
-
-Explanation:
-
-Angle brackets hold "fields", e.g. <copyright holder>.
-
-Square brackets hold optional text, e.g. [or <related entities>].
-
-A license can have variations in capitalization and whitespace, and still be
-considered an instance of this template.
-
-It may be possible to construct a grammatically incorrect license from this
-template, or one that lacks a disclaimer, or one that includes a
-double-disclaimer. That is acceptable, as long as it remains impossible to
-construct a non-OSD-compliant license that matches the pattern
-
----
-
 ISC License
 (shellingham 1.5.4)
 
@@ -1591,7 +2197,7 @@ THIS SOFTWARE.
 ---
 
 MATPLOTLIB License 1.3.0 or Later
-(matplotlib 3.9.4)
+(matplotlib 3.10.3)
 
 License agreement for matplotlib versions 1.3.0 and later
 =========================================================
@@ -1650,30 +2256,6 @@ License agreement for matplotlib versions 1.3.0 and later
 ---
 
 MIT License
-(Python six 1.16.0)
-
-Copyright (c) 2010-2020 Benjamin Peterson
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
-
----
-
-MIT License
 (segtok 1.5.11)
 
 Copyright 2020 Florian Leitner
@@ -1709,6 +2291,74 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
+
+---
+
+MIT License
+(TOML 0.10.2)
+
+The MIT License
+
+Copyright 2013-2019 William Pearson
+Copyright 2015-2016 Julien Enselme
+Copyright 2016 Google Inc.
+Copyright 2017 Samuel Vasko
+Copyright 2017 Nate Prewitt
+Copyright 2017 Jack Evans
+Copyright 2019 Filippo Broggini
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE
+
+---
+
+MIT License
+(jieba 0.42.1)
+
+Source: https://github.com/fxsjy/jieba
+
+Files: *
+Copyright: 2012-2017 Sun Junyi <ccnusjy@gmail.com>
+License: Expat
+
+Files: debian/*
+Copyright: 2017 Yangfl <mmyangfl@gmail.com>
+License: Expat
+
+License: Expat
+
+Permission is hereby granted, free of charge, to any person obtaining a
+ copy of this software and associated documentation files (the "Software"),
+ to deal in the Software without restriction, including without limitation
+ the rights to use, copy, modify, merge, publish, distribute, sublicense,
+ and/or sell copies of the Software, and to permit persons to whom the
+ Software is furnished to do so, subject to the following conditions:
+ .
+ The above copyright notice and this permission notice shall be included
+ in all copies or substantial portions of the Software.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+ OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
 
 ---
 
@@ -1762,32 +2412,6 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
-
----
-
-MIT License
-(jieba 0.42.1)
-
-The MIT License (MIT)
-
-Copyright (c) 2013 Sun Junyi
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
 
 ---
 
@@ -1849,7 +2473,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE
 ---
 
 MIT License
-(aiometer 0.5.0, annotated-types 0.7.0, anthropic 0.34.2, anyio 4.6.2.post1, BeautifulSoup4 4.12.3, bert-score 0.3.13, bioc 2.1, catalogue 2.0.10, cloudpathlib 0.19.0, confection 0.1.5, conllu 4.5.3, cymem 2.0.11, dataclasses-json 0.6.7, Deprecated 1.2.15, edit-distance 0.8.1, eval-type-backport 0.2.0, eval-type-backport 0.2.2, flair 0.14.0, fonttools/fonttools 4.54.1, gdown 5.2.0, greenlet 3.1.1, h11 0.14.0, homoglyphs 2.0.4, httplib2 0.22.0, jiter 0.5.0, jmespath.py 1.0.1, langchain 0.2.17, langchain 0.2.19, langchain 0.2.43, langchain-openai 0.1.25, langchain-text-splitters 0.2.4, langcodes 3.4.1, langdetect 1.0.9, langsmith 0.1.147, language-data 1.2.0, lemminflect 0.2.3, lru-dict 1.3.0, marisa-trie 1.2.1, markdown-it-py 3.0.0, mdurl 0.1.2, more-itertools 10.5.0, murmurhash 1.0.12, mypy-extensions 1.0.0, nudenet 3.4.2, onnxruntime 1.19.2, OpenHowNet 2.0, opt-einsum 3.4.0, pip 24.3.1, pptree 3.1, preshed 3.0.9, py-readability-metrics 1.4.5, pydantic 2.8.2, pydantic-core 2.20.1, Pyparsing 3.1.4, pypi/setuptools 75.1.0, pysbd 0.3.4, python-attrs 24.2.0, python-ftfy 6.2.3, python-marshmallow 3.22.0, python-wheel 0.44.0, python3-charset-normalizer 3.3.2, python310-eval-type-backport 0.2.0, pytorch_revgrad 0.2.0, PyTZ - Python Time Zone Library 2024.2, PyYAML 6.0.2, rich 13.9.4, smart-open 7.0.5, soupsieve 2.6, spacy 3.7.5, spacy-legacy 3.0.12, spacy-loggers 1.0.5, SQLAlchemy 2.0.37, srsly 2.4.8, tabulate 0.9.0, termcolor-pypi 2.4.0, textattack 0.3.10, thinc 8.2.5, tiktoken 0.7.0, tqdm 4.66.6, transformer-smaller-training-vocab 0.4.0, triton 3.0.0, typer 0.12.5, typing-inspect 0.9.0, urllib3 2.2.3, wasabi 1.1.3, wcwidth 0.2.13, weasel 0.4.1, Wikipedia-API 0.7.3)
+(aiohttp-retry 2.9.1, aiometer 0.5.0, annotated-types 0.7.0, anthropic 0.45.2, anyio 4.9.0, BeautifulSoup4 4.13.4, bert-score 0.3.13, bioc 2.1, bs4 0.0.2, cachetools 5.5.2, catalogue 2.0.10, cloudpathlib 0.21.1, confection 0.1.5, conllu 4.5.3, cymem 2.0.11, dataclasses-json 0.6.7, Deprecated 1.2.18, edit-distance 0.8.1, eval-type-backport 0.2.0, eval-type-backport 0.2.2, filetype 1.2.0, flair 0.15.1, fonttools/fonttools 4.57.0, gdown 5.2.0, greenlet 3.2.2, h11 0.16.0, homoglyphs 2.0.4, httplib2 0.22.0, httpx-sse 0.4.0, jiter 0.9.1, jmespath.py 1.0.1, langchain 0.3.24, langchain 0.3.25, langchain 0.3.63, langchain-text-splitters 0.3.8, langcodes 3.5.0, langdetect 1.0.9, langsmith 0.1.147, language-data 1.3.0, lemminflect 0.2.3, lru-dict 1.3.0, marisa-trie 1.2.1, markdown-it-py 3.0.0, mdurl 0.1.2, more-itertools 10.7.0, murmurhash 1.0.13, mypy-extensions 1.1.0, nudenet 3.4.2, onnxruntime 1.21.1, OpenHowNet 2.0, opt-einsum 3.4.0, orjson 3.10.18, pptree 3.1, preshed 3.0.10, py-readability-metrics 1.4.5, pydantic 2.8.2, pydantic-core 2.20.1, pydantic-settings 2.9.1, Pyparsing 3.2.3, pypi/setuptools 79.0.1, pysbd 0.3.4, Python six 1.17.0, python-attrs 25.3.0, python-marshmallow 3.26.1, python-wheel 0.45.1, python3-charset-normalizer 3.4.2, python3-rich 13.9.4, python310-eval-type-backport 0.2.0, pytorch_revgrad 0.2.0, PyTZ - Python Time Zone Library 2025.2, PyYAML 6.0.2, smart-open 7.1.0, soupsieve 2.7, spacy 3.8.7, spacy-legacy 3.0.12, spacy-loggers 1.0.5, SQLAlchemy 2.0.41, srsly 2.5.1, tabulate 0.9.0, termcolor-pypi 3.0.1, textattack 0.3.10, thinc 8.3.4, tiktoken 0.9.0, tqdm 4.67.1, transformer-smaller-training-vocab 0.4.1, triton 3.0.0, typer 0.15.4, typing-inspect 0.9.0, typing-inspection 0.4.1, tzlocal 5.3.1, urllib3 2.4.0, wasabi 1.1.3, wcwidth 0.2.13, weasel 0.4.1, Wikipedia-API 0.8.1)
 
 The MIT License
 ===============
@@ -1878,30 +2502,32 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 MIT License
 (docopt 0.6.2)
 
-Copyright (c) 2012 Vladimir Keleshev, <vladimir@keleshev.com>
+The MIT License (MIT)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in 
-the Software without restriction, including without limitation the rights to 
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies 
-of the Software, and to permit persons to whom the Software is furnished to do 
-so, subject to the following conditions:
+Copyright (c) 2015 Pavel Mazurin <kovpas@gmail.com>
 
-The above copyright notice and this permission notice shall be included in all 
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
 copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER 
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, 
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE
 
 ---
 
 Mozilla Public License 2.0
-(ml-dtypes 0.4.1, python-certifi 2024.8.30, tqdm 4.66.6)
+(python-certifi 2025.1.31, tqdm 4.67.1)
 
 Mozilla Public License
 Version 2.0
@@ -2314,8 +2940,79 @@ Exhibit B - "Incompatible With Secondary Licenses" Notice
 
 ---
 
+NVIDIA License
+(nvidia-curand-cu12 10.3.2.106)
+
+NVIDIA Corp
+===========
+
+Copyright (c) 1996 NVIDIA, Corp. All rights reserved.
+
+NOTICE TO USER: The source code is copyrighted under U.S. and international laws.
+NVIDIA, Corp. of Sunnyvale, California owns the copyright and as design patents
+pending on the design and interface of the NV chips. Users and possessors of this
+source code are hereby granted a nonexclusive, royalty-free copyright and design
+patent license to use this code in individual and commercial software.
+
+Any use of this source code must include, in the user documentation and internal
+comments to the code, notices to the end user as follows:
+
+Copyright (c) 1996 NVIDIA, Corp. NVIDIA design patents pending in the U.S. and
+foreign countries.
+
+NVIDIA, CORP. MAKES NO REPRESENTATION ABOUT THE SUITABILITY OF THIS SOURCE CODE
+FOR ANY PURPOSE. IT IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY OF
+ANY KIND. NVIDIA, CORP. DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOURCE CODE,
+INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE. IN NO EVENT SHALL NVIDIA, CORP. BE LIABLE FOR ANY SPECIAL, INDIRECT,
+INCIDENTAL, OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM
+LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR
+OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+PERFORMANCE OF THIS SOURCE CODE.
+
+---
+
+Python Imaging Library Software License
+(pillow 11.2.1)
+
+Python Imaging Library Software License
+=======================================
+
+The Python Imaging Library (PIL) is
+
+Copyright © 1997-2011 by Secret Labs AB
+Copyright © 1995-2011 by Fredrik Lundh
+
+Pillow is the friendly PIL fork. It is
+
+Copyright © 2010-2018 by Alex Clark and contributors
+
+Like PIL, Pillow is licensed under the open source PIL Software License:
+
+By obtaining, using, and/or copying this software and/or its associated
+documentation, you agree that you have read, understood, and will comply with the
+following terms and conditions:
+
+Permission to use, copy, modify, and distribute this software and its associated
+documentation for any purpose and without fee is hereby granted, provided that
+the above copyright notice appears in all copies, and that both that copyright
+notice and this permission notice appear in supporting documentation, and that
+the name of Secret Labs AB or the author not be used in advertising or publicity
+pertaining to distribution of the software without specific, written prior
+permission.
+
+SECRET LABS AB AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS
+SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO
+EVENT SHALL SECRET LABS AB OR THE AUTHOR BE LIABLE FOR ANY SPECIAL, INDIRECT OR
+CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA
+OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS
+ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
+SOFTWARE.
+
+---
+
 Python Software Foundation License 2.0
-(aiohappyeyeballs 2.4.4)
+(aiohappyeyeballs 2.6.1, greenlet 3.2.2, python-typing-extensions 4.13.2)
 
 This license was approved as the official PSF License Version 2 on October 22,
 2004. The only differences between this and version 1 of the PSF license consist
@@ -2372,210 +3069,8 @@ PYTHON SOFTWARE FOUNDATION LICENSE VERSION 2
 
 ---
 
-Python Software Foundation License 2.3
-(python-typing-extensions 4.12.2)
-
-Python 2.3.3 license
-====================
-
-This is the official license for the Python 2.3.3 release:
-
---------------------------------------------------------------------------------
-
-
-A. HISTORY OF THE SOFTWARE
---------------------------
-
---------------------------------------------------------------------------------
-
-
-
-Python was created in the early 1990s by Guido van Rossum at Stichting
-Mathematisch Centrum (CWI, see http://www.cwi.nl) in the Netherlands as a
-successor of a language called ABC.  Guido remains Python's principal author,
-although it includes many contributions from others.
-
-In 1995, Guido continued his work on Python at the Corporation for National
-Research Initiatives (CNRI, see http://www.cnri.reston.va.us) in Reston, Virginia
-where he released several versions of the software.
-
-In May 2000, Guido and the Python core development team moved to BeOpen.com to
-form the BeOpen PythonLabs team.  In October of the same year, the PythonLabs
-team moved to Digital Creations (now Zope Corporation, see http://www.zope.com). 
-In 2001, the Python Software Foundation (PSF, see http://www.python.org/psf/) was
-formed, a non-profit organization created specifically to own Python-related
-Intellectual Property.  Zope Corporation is a sponsoring member of the PSF.
-
-All Python releases are Open Source (see http://www.opensource.org for the Open
-Source Definition).  Historically, most, but not all, Python releases have also
-been GPL-compatible; the table below summarizes the various releases.
-
-    Release        
-
-Derived     Year       
-
-Owner       GPL-                    
-
-from                                  compatible? (1)     0.9.0 thru
-
-1.2             
-
-1991-1995   CWI         yes     1.3 thru 1.5.2  1.2        
-
-1995-1999   CNRI        yes    
-
-1.6            
-
-1.5.2       2000       
-
-CNRI        no    
-
-2.0            
-
-1.6        
-
-2000        BeOpen.com  no     1.6.1          
-
-1.6        
-
-2001       
-
-CNRI        yes (2)    
-
-2.1            
-
-2.0+1.6.1   2001       
-
-PSF         no     2.0.1          
-
-2.0+1.6.1   2001       
-
-PSF         yes     2.1.1          
-
-2.1+2.0.1   2001       
-
-PSF         yes    
-
-2.2            
-
-2.1.1       2001       
-
-PSF         yes     2.1.2          
-
-2.1.1       2002       
-
-PSF         yes     2.1.3          
-
-2.1.2       2002       
-
-PSF         yes     2.2.1          
-
-2.2        
-
-2002       
-
-PSF         yes     2.2.2          
-
-2.2.1       2002       
-
-PSF         yes    
-
-2.3            
-
-2.2.2       2002-2003  
-
-PSF         yes     2.3.1          
-
-2.3         2002-2003  
-
-PSF         yes     2.3.2          
-
-2.3.1       2002-2003  
-
-PSF         yes     2.3.3          
-
-2.3.2       2002-2003  
-
-PSF         yes
-
-Footnotes:
-
-(1) GPL-compatible doesn't mean that we're distributing Python under     the
-GPL.  All Python licenses, unlike the GPL, let you distribute     a modified
-version without making your changes open source.  The     GPL-compatible licenses
-make it possible to combine Python with     other software that is released under
-the GPL; the others don't.
-
-(2) According to Richard Stallman, 1.6.1 is not GPL-compatible,     because its
-license has a choice of law clause.  According to     CNRI, however, Stallman's
-lawyer has told CNRI's lawyer that 1.6.1     is "not incompatible" with the GPL.
-
-Thanks to the many outside volunteers who have worked under Guido's direction to
-make these releases possible.
-
---------------------------------------------------------------------------------
-
-
-B. TERMS AND CONDITIONS FOR ACCESSING OR OTHERWISE USING PYTHON
----------------------------------------------------------------
-
---------------------------------------------------------------------------------
-
-
-
---------------------------------------------------------------------------------
-
-PSF LICENSE AGREEMENT FOR PYTHON 2.3
-
---------------------------------------------------------------------------------
-
-
-
-1. This LICENSE AGREEMENT is between the Python Software Foundation ("PSF"), and
-the Individual or Organization ("Licensee") accessing and otherwise using Python
-2.3 software in source or binary form and its associated documentation.
-
-2. Subject to the terms and conditions of this License Agreement, PSF hereby
-grants Licensee a nonexclusive, royalty-free, world-wide license to reproduce,
-analyze, test, perform and/or display publicly, prepare derivative works,
-distribute, and otherwise use Python 2.3 alone or in any derivative version,
-provided, however, that PSF's License Agreement and PSF's notice of copyright,
-i.e., "Copyright (c) 2001, 2002, 2003 Python Software Foundation; All Rights
-Reserved" are retained in Python 2.3 alone or in any derivative version prepared
-by Licensee.
-
-3. In the event Licensee prepares a derivative work that is based on or
-incorporates Python 2.3 or any part thereof, and wants to make the derivative
-work available to others as provided herein, then Licensee hereby agrees to
-include in any such work a brief summary of the changes made to Python 2.3.
-
-4. PSF is making Python 2.3 available to Licensee on an "AS IS" basis.  PSF MAKES
-NO REPRESENTATIONS OR WARRANTIES, EXPRESS OR IMPLIED.  BY WAY OF EXAMPLE, BUT NOT
-LIMITATION, PSF MAKES NO AND DISCLAIMS ANY REPRESENTATION OR WARRANTY OF
-MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE OR THAT THE USE OF PYTHON
-2.3 WILL NOT INFRINGE ANY THIRD PARTY RIGHTS.
-
-5. PSF SHALL NOT BE LIABLE TO LICENSEE OR ANY OTHER USERS OF PYTHON 2.3 FOR ANY
-INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES OR LOSS AS A RESULT OF MODIFYING,
-DISTRIBUTING, OR OTHERWISE USING PYTHON 2.3, OR ANY DERIVATIVE THEREOF, EVEN IF
-ADVISED OF THE POSSIBILITY THEREOF.
-
-6. This License Agreement will automatically terminate upon a material breach of
-its terms and conditions.
-
-7. Nothing in this License Agreement shall be deemed to create any relationship
-of agency, partnership, or joint venture between PSF and Licensee.  This License
-Agreement does not grant permission to use PSF trademarks or trade name in a
-trademark sense to endorse or promote products or services of Licensee, or any
-third party.
-
-8. By copying, installing or otherwise using Python 2.3, Licensee agrees to be
-bound by the terms and conditions of this License Agreement.
-
----
-
 The Unlicense
-(py-filelock 3.16.1)
+(py-filelock 3.18.0)
 
 The Unlicense
 =============
