@@ -1,6 +1,6 @@
 {
     "name": "PubMedQA",
-    "description": "PubMedQA is a large-scale, multiple-choice question answering dataset designed to address realworld medical entrance exam questions. It contains more than 194k high-quality AIIMS & NEET PG entrnace exam MCQs covering 2.4k healthcare topics and 21 medical subjects.",
+    "description": "PubMedQA is a large-scale, multiple-choice question answering dataset designed to address realworld medical entrance exam questions. It contains more than 194k high-quality AIIMS & NEET PG entrance exam MCQs covering 2.4k healthcare topics and 21 medical subjects.",
     "reference": "https://github.com/MedMCQA/MedMCQA",
     "license": "MIT License",
     "examples": [
