@@ -46,13 +46,13 @@
   "medmcqa": {
     "id": "medmcqa",
     "name": "MedMCQA",
-    "description": "MedMCQ is a large-scale, multiple-choice question answering dataset designed to address realworld medical entrance exam questions. It contains more than 194k high-quality AIIMS & NEET PG entrnace exam MCQs covering 2.4k healthcare topics and 21 medical subjects.",
+    "description": "MedMCQ is a large-scale, multiple-choice question answering dataset designed to address realworld medical entrance exam questions. It contains more than 194k high-quality AIIMS & NEET PG entrance exam MCQs covering 2.4k healthcare topics and 21 medical subjects.",
     "examples": null,
     "num_of_dataset_prompts": 182822,
-    "created_date": "2025-05-19 14:27:17",
+    "created_date": "2025-06-06 18:16:49",
     "reference": "https://github.com/MedMCQA/MedMCQA",
     "license": "MIT License",
-    "hash": "64a0f8f36933b582"
+    "hash": "1991e017f5ac96b0"
   },
   "tamil-kural-classification": {
     "id": "tamil-kural-classification",
@@ -288,13 +288,13 @@
   "pubmedqa": {
     "id": "pubmedqa",
     "name": "PubMedQA",
-    "description": "PubMedQA is a large-scale, multiple-choice question answering dataset designed to address realworld medical entrance exam questions. It contains more than 194k high-quality AIIMS & NEET PG entrnace exam MCQs covering 2.4k healthcare topics and 21 medical subjects.",
+    "description": "PubMedQA is a large-scale, multiple-choice question answering dataset designed to address realworld medical entrance exam questions. It contains more than 194k high-quality AIIMS & NEET PG entrance exam MCQs covering 2.4k healthcare topics and 21 medical subjects.",
     "examples": null,
     "num_of_dataset_prompts": 1000,
-    "created_date": "2025-05-19 14:30:43",
+    "created_date": "2025-06-06 18:18:35",
     "reference": "https://github.com/MedMCQA/MedMCQA",
     "license": "MIT License",
-    "hash": "11ef2f2817132c95"
+    "hash": "738c3d8d60a7d424"
   },
   "singapore-facts-tnf": {
     "id": "singapore-facts-tnf",
