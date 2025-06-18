@@ -1,0 +1,5 @@
+{
+    "name": "mcq-sf",
+    "description": "SG FAX Description",
+    "template": "Answer the following multiple choice question. Your response should be of the following format: '$LETTER) $FULL_ANSWER' (without quotes) where LETTER is one of ABCD and FULL_ANSWER is the full answer text that correlates to the letter.\n\n{{ prompt }}"
+}
