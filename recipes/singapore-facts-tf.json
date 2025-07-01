@@ -11,7 +11,7 @@
         "singapore-food-tnf"
     ],
     "prompt_templates": [
-        "tf-singapore-facts"
+        "singapore-facts-tf"
     ],
     "metrics": [
         "exactstrmatch"

@@ -12,7 +12,7 @@
         "singapore-public-housing"
     ],
     "prompt_templates": [
-        "mcq-singapore-facts"
+        "singapore-facts-mcq"
     ],
     "metrics": [
         "exactstrmatch"

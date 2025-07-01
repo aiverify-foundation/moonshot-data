@@ -1,5 +1,5 @@
 {
-    "name": "tf-singapore-facts",
+    "name": "singapore-facts-tf",
     "description": "Prompts used to generate true-or-false questions in benchmark datasets related to Singapore Facts.",
     "template": "Answer the following TRUE Or FALSE. Your response should be of the following format: ANSWER where ANSWER is either 'TRUE' or 'FALSE'.\n\n{{ prompt }}"
 }
