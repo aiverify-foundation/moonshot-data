@@ -1,5 +1,5 @@
 {
     "name": "mmlu",
-    "description": "To measure the model's ability to summarize text, infer and deduce knowledge from context, and match the context.",
-    "template": "Question:\n{{ prompt }}\nSelect the most appropriate answer or options to fill in the blank (if any): "
+    "description": "Prompts used to generate multiple-choice questions in MMLU benchmark datasets.",
+    "template": "Answer the following multiple choice question. Your response should be of the following format: '$LETTER. $FULL_ANSWER' (without quotes) where LETTER is one of ABCD and FULL_ANSWER is the full answer text that correlates to the letter.\n\n{{ prompt }}"
 }

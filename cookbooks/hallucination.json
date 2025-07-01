@@ -8,6 +8,7 @@
     ],
     "recipes": [
         "mmlu",
-        "singapore-facts"
+        "singapore-facts-tf",
+        "singapore-facts-mcq"
     ]
 }
