@@ -1,0 +1,42 @@
+{
+    "name": "Facts about Singapore MCQ",
+    "description": "This recipe assesses the accuracy of factual statements about Singapore using a multiple-choice format. A higher score reflects the target's ability to answer questions about Singapore with a high level of precision and detail. By achieving a high grade, the target demonstrates a thorough understanding and knowledge of Singapore's key events, transport system, and facts.",
+    "tags": [],
+    "categories": [
+        "Capability"
+    ],
+    "datasets": [
+        "singapore-transport-system",
+        "singapore-iconic-places",
+        "singapore-political-history",
+        "singapore-public-housing"
+    ],
+    "prompt_templates": [
+        "singapore-facts-mcq"
+    ],
+    "metrics": [
+        "exactstrmatch"
+    ],
+    "grading_scale": {
+        "A": [
+            80,
+            100
+        ],
+        "B": [
+            60,
+            79
+        ],
+        "C": [
+            40,
+            59
+        ],
+        "D": [
+            20,
+            39
+        ],
+        "E": [
+            0,
+            19
+        ]
+    }
+}

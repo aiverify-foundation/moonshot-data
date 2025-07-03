@@ -46,13 +46,13 @@
   "medmcqa": {
     "id": "medmcqa",
     "name": "MedMCQA",
-    "description": "MedMCQ is a large-scale, multiple-choice question answering dataset designed to address realworld medical entrance exam questions. It contains more than 194k high-quality AIIMS & NEET PG entrnace exam MCQs covering 2.4k healthcare topics and 21 medical subjects.",
+    "description": "MedMCQ is a large-scale, multiple-choice question answering dataset designed to address realworld medical entrance exam questions. It contains more than 194k high-quality AIIMS & NEET PG entrance exam MCQs covering 2.4k healthcare topics and 21 medical subjects.",
     "examples": null,
     "num_of_dataset_prompts": 182822,
-    "created_date": "2025-05-19 14:27:17",
+    "created_date": "2025-06-06 18:16:49",
     "reference": "https://github.com/MedMCQA/MedMCQA",
     "license": "MIT License",
-    "hash": "64a0f8f36933b582"
+    "hash": "1991e017f5ac96b0"
   },
   "tamil-kural-classification": {
     "id": "tamil-kural-classification",
@@ -192,10 +192,10 @@
     "description": "Responses that enable, encourage, or endorse acts of intentional self-harm.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2025-05-19 18:43:32",
-    "reference": "https://github.com/mlcommons/ailuminate",
+    "created_date": "2025-06-03 16:07:41",
+    "reference": "https://arxiv.org/html/2404.12241v1",
     "license": "CC-BY-4.0 license",
-    "hash": "cf5c2ef4aeea5c40"
+    "hash": "bf372c2d186fd8d8"
   },
   "sg-legal-glossary": {
     "id": "sg-legal-glossary",
@@ -214,10 +214,10 @@
     "description": "Responses that demean or dehumanize people on the basis of their sensitive, personal characteristics.",
     "examples": null,
     "num_of_dataset_prompts": 26530,
-    "created_date": "2025-05-20 17:33:16",
-    "reference": "https://github.com/mlcommons/ailuminate",
+    "created_date": "2025-06-03 16:05:48",
+    "reference": "https://arxiv.org/html/2404.12241v1",
     "license": "CC-BY-4.0 license",
-    "hash": "64a44bac4dd56dfa"
+    "hash": "942ea814feb15842"
   },
   "bbq-lite-age-ambiguous": {
     "id": "bbq-lite-age-ambiguous",
@@ -288,13 +288,13 @@
   "pubmedqa": {
     "id": "pubmedqa",
     "name": "PubMedQA",
-    "description": "PubMedQA is a large-scale, multiple-choice question answering dataset designed to address realworld medical entrance exam questions. It contains more than 194k high-quality AIIMS & NEET PG entrnace exam MCQs covering 2.4k healthcare topics and 21 medical subjects.",
+    "description": "PubMedQA is a large-scale, multiple-choice question answering dataset designed to address realworld medical entrance exam questions. It contains more than 194k high-quality AIIMS & NEET PG entrance exam MCQs covering 2.4k healthcare topics and 21 medical subjects.",
     "examples": null,
     "num_of_dataset_prompts": 1000,
-    "created_date": "2025-05-19 14:30:43",
+    "created_date": "2025-06-06 18:18:35",
     "reference": "https://github.com/MedMCQA/MedMCQA",
     "license": "MIT License",
-    "hash": "11ef2f2817132c95"
+    "hash": "738c3d8d60a7d424"
   },
   "singapore-facts-tnf": {
     "id": "singapore-facts-tnf",
@@ -412,10 +412,10 @@
     "description": "Responses that enable, encourage, or endorse the commission of violent crimes.",
     "examples": null,
     "num_of_dataset_prompts": 4390,
-    "created_date": "2025-05-19 18:44:30",
-    "reference": "https://github.com/mlcommons/ailuminate",
+    "created_date": "2025-06-03 16:08:13",
+    "reference": "https://arxiv.org/html/2404.12241v1",
     "license": "CC-BY-4.0 license",
-    "hash": "a7b6e8b5e7fe96e6"
+    "hash": "a0dd07da169640d1"
   },
   "cbbq-lite-SES-disamb": {
     "id": "cbbq-lite-SES-disamb",
@@ -500,10 +500,10 @@
     "description": "Responses that enable, encourage, or endorse the creation of weapons of mass destruction.",
     "examples": null,
     "num_of_dataset_prompts": 1570,
-    "created_date": "2025-05-19 18:39:55",
-    "reference": "https://github.com/mlcommons/ailuminate",
+    "created_date": "2025-06-03 16:05:37",
+    "reference": "https://arxiv.org/html/2404.12241v1",
     "license": "CC-BY-4.0 license",
-    "hash": "cff87c5b227429b8"
+    "hash": "b22e223252d05835"
   },
   "bbq-lite-gender-ambiguous": {
     "id": "bbq-lite-gender-ambiguous",
@@ -544,10 +544,10 @@
     "description": "Responses that enable, encourage, or endorse the creation of weapons of mass destruction.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2025-05-19 18:41:08",
-    "reference": "https://github.com/mlcommons/ailuminate",
+    "created_date": "2025-06-03 16:05:42",
+    "reference": "https://arxiv.org/html/2404.12241v1",
     "license": "CC-BY-4.0 license",
-    "hash": "0212d2d59335f8a8"
+    "hash": "1387e02e8e1c379b"
   },
   "mlc-hat-typical-user": {
     "id": "mlc-hat-typical-user",
@@ -555,10 +555,10 @@
     "description": "Responses that demean or dehumanize people on the basis of their sensitive, personal characteristics.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2025-05-19 18:41:30",
-    "reference": "https://github.com/mlcommons/ailuminate",
+    "created_date": "2025-06-03 16:05:53",
+    "reference": "https://arxiv.org/html/2404.12241v1",
     "license": "CC-BY-4.0 license",
-    "hash": "02139c97c70d5742"
+    "hash": "b7d0f3437036c918"
   },
   "cbbq-lite-nationality-ambiguous": {
     "id": "cbbq-lite-nationality-ambiguous",
@@ -720,10 +720,10 @@
     "description": "Responses that enable, encourage, or endorse the commission of sex-related crimes.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2025-05-19 18:42:44",
-    "reference": "https://github.com/mlcommons/ailuminate",
+    "created_date": "2025-06-03 16:07:36",
+    "reference": "https://arxiv.org/html/2404.12241v1",
     "license": "CC-BY-4.0 license",
-    "hash": "b8730cc0dd45945c"
+    "hash": "f9ab0240848b3b63"
   },
   "analogical-similarity": {
     "id": "analogical-similarity",
@@ -775,10 +775,10 @@
     "description": "Responses that contain, describe, enable, encourage, or endorse the sexual abuse of children.",
     "examples": null,
     "num_of_dataset_prompts": 1330,
-    "created_date": "2025-05-19 18:39:25",
-    "reference": "https://github.com/mlcommons/ailuminate",
+    "created_date": "2025-06-03 16:04:57",
+    "reference": "https://arxiv.org/html/2404.12241v1",
     "license": "CC-BY-4.0 license",
-    "hash": "d26ffecd13ca2953"
+    "hash": "04241cd2207f15ef"
   },
   "bbq-lite-race-x-gender-disamb": {
     "id": "bbq-lite-race-x-gender-disamb",
@@ -797,10 +797,10 @@
     "description": "Responses that enable, encourage, or endorse the commission of sex-related crimes.",
     "examples": null,
     "num_of_dataset_prompts": 1330,
-    "created_date": "2025-05-19 18:42:23",
-    "reference": "https://github.com/mlcommons/ailuminate",
+    "created_date": "2025-06-03 16:07:31",
+    "reference": "https://arxiv.org/html/2404.12241v1",
     "license": "CC-BY-4.0 license",
-    "hash": "6c7fcb15bb6d6512"
+    "hash": "a9e75c21c7c8c8a4"
   },
   "bbq-lite-disability-status-ambiguous": {
     "id": "bbq-lite-disability-status-ambiguous",
@@ -852,10 +852,10 @@
     "description": "Responses that contain, describe, enable, encourage, or endorse the sexual abuse of children.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2025-05-19 18:39:41",
-    "reference": "https://github.com/mlcommons/ailuminate",
+    "created_date": "2025-06-03 16:05:06",
+    "reference": "https://arxiv.org/html/2404.12241v1",
     "license": "CC-BY-4.0 license",
-    "hash": "aa83bc7971321dea"
+    "hash": "14235eea94053bec"
   },
   "cbbq-lite-nationality-disamb": {
     "id": "cbbq-lite-nationality-disamb",
@@ -907,10 +907,10 @@
     "description": "Responses that enable, encourage, or endorse the commission of non-violent crimes.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2025-05-19 18:42:04",
-    "reference": "https://github.com/mlcommons/ailuminate",
+    "created_date": "2025-06-03 16:07:06",
+    "reference": "https://arxiv.org/html/2404.12241v1",
     "license": "CC-BY-4.0 license",
-    "hash": "fb69afbfb27cbf6b"
+    "hash": "48b6cbfe00c57a81"
   },
   "mlc-nvc-malicious-user": {
     "id": "mlc-nvc-malicious-user",
@@ -918,10 +918,10 @@
     "description": "Responses that enable, encourage, or endorse the commission of non-violent crimes.",
     "examples": null,
     "num_of_dataset_prompts": 1810,
-    "created_date": "2025-05-19 18:41:52",
-    "reference": "https://github.com/mlcommons/ailuminate",
+    "created_date": "2025-06-03 16:07:00",
+    "reference": "https://arxiv.org/html/2404.12241v1",
     "license": "CC-BY-4.0 license",
-    "hash": "e00f8715a1bb5741"
+    "hash": "75b394ee8211c71f"
   },
   "occupation": {
     "id": "occupation",
@@ -951,10 +951,10 @@
     "description": "Responses that enable, encourage, or endorse acts of intentional self-harm.",
     "examples": null,
     "num_of_dataset_prompts": 1090,
-    "created_date": "2025-05-19 18:43:52",
-    "reference": "https://github.com/mlcommons/ailuminate",
+    "created_date": "2025-06-03 16:08:04",
+    "reference": "https://arxiv.org/html/2404.12241v1",
     "license": "CC-BY-4.0 license",
-    "hash": "01e961bfb39cab51"
+    "hash": "6ed6ce481b77659d"
   },
   "mlc-vcr-typical-user": {
     "id": "mlc-vcr-typical-user",
@@ -962,10 +962,10 @@
     "description": "Responses that enable, encourage, or endorse the commission of violent crimes.",
     "examples": null,
     "num_of_dataset_prompts": 720,
-    "created_date": "2025-05-19 18:44:55",
-    "reference": "https://github.com/mlcommons/ailuminate",
+    "created_date": "2025-06-03 16:08:57",
+    "reference": "https://arxiv.org/html/2404.12241v1",
     "license": "CC-BY-4.0 license",
-    "hash": "74b664b8f52df476"
+    "hash": "046978a237f453b8"
   },
   "commonsense-morality-hard-variation1": {
     "id": "commonsense-morality-hard-variation1",

@@ -6,5 +6,8 @@
         "Singapore"
     ],
     "categories": ["Capability"],
-    "recipes": ["singapore-facts"]
+    "recipes": [
+        "singapore-facts-mcq", 
+        "singapore-facts-tf"
+    ]
 }

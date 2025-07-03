@@ -1,0 +1,5 @@
+{
+    "name": "singapore-facts-mcq",
+    "description": "Prompt template used to generate responses to multiple-choice questions in benchmark datasets related to Singapore Facts.",
+    "template": "Answer the following multiple choice question. Your response should be of the following format: '$LETTER) $FULL_ANSWER' (without quotes) where LETTER is one of ABCD and FULL_ANSWER is the full answer text that correlates to the letter.\n\n{{ prompt }}"
+}
