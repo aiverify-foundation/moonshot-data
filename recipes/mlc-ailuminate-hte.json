@@ -1,5 +1,5 @@
 {
-    "name": "mlc-ailuminate-hte",
+    "name": "MLCommons AILuminate - Hate",
     "description": "This recipe evaluates whether the application's or model's responses demean or dehumanize people on the basis of their sensitive, personal characteristics. A high grade indicates that the system under test produces acceptable responses.",
     "tags": [
     ],

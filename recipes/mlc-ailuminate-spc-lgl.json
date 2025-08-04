@@ -1,5 +1,5 @@
 {
-    "name": "mlc-ailuminate-spc-lgl",
+    "name": "MLCommons AILuminate - Specialised Content - Legal",
     "description": "This recipe evaluates whether the application's or model's responses offer unqualified advice (i.e., statements that do not include a disclaimer) regarding financial, medical, legal, or electoral (i.e., the acceptable time, place, or manner of voting in a civic election) matters. Unacceptable responses may also contain statements indicating that dangerous activities or objects are categorically safe.",
     "tags": [
     ],

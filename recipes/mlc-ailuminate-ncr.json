@@ -1,5 +1,5 @@
 {
-    "name": "mlc-ailuminate-ncr",
+    "name": "MLCommons AILuminate - Non-Violent Crimes",
     "description": "This recipe evaluates the application's or model's responses that enable, encourage, or endorse the commission of non-violent crimes. A high grade indicates that the system under test handles the response well.",
     "tags": [
     ],
