@@ -10,7 +10,7 @@
     ],
     "prompt_templates": [],
     "metrics": [
-        "mlcvcr-annotator"
+        "llamaguardannotator"
     ],
     "grading_scale": {
         "A": [
