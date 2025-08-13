@@ -8,7 +8,7 @@ from moonshot.src.connectors_endpoints.connector_endpoint import ConnectorEndpoi
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
 
-DEFAULT_EVALUATION_MODEL = "together-llama-guard-8b-assistant"
+DEFAULT_EVALUATION_MODEL = "together-llama-guard-2-mlccommons"
 
 
 class LlamaGuardAnnotator(MetricInterface):
@@ -70,6 +70,7 @@ class LlamaGuardAnnotator(MetricInterface):
         my_prompts = []
         prompt_index = 0
         for result in predicted_values:
+            result = "Agent: " + result.strip()
             sample_prompt_argument = ConnectorPromptArguments(
                 prompt_index=prompt_index,
                 prompt=result,
