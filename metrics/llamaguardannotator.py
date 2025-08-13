@@ -8,6 +8,8 @@ from moonshot.src.connectors_endpoints.connector_endpoint import ConnectorEndpoi
 from moonshot.src.metrics.metric_interface import MetricInterface
 from moonshot.src.utils.timeit import timeit
 
+# This metric follows the MLCCommons reference implementation with high fidelity
+# Reference : https://github.com/mlcommons/modelbench/blob/main/src/modelgauge/annotators/llama_guard_annotator.py
 DEFAULT_EVALUATION_MODEL = "together-llama-guard-2-mlccommons"
 
 
