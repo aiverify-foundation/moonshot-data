@@ -2,7 +2,7 @@
   "name": "Together Llama Guard 2 MLCommons",
   "connector_type": "together-connector",
   "uri": "",
-  "token": "tgp_v1_Hr2LpyhrXYrFam6l8gJSr00Cv2IclJp1R9GCASiwpmw",
+  "token": "",
   "max_calls_per_second": 1,
   "max_concurrency": 1,
   "model": "meta-llama/LlamaGuard-2-8b",
