@@ -102,10 +102,10 @@
     "name": "LlamaGuard Annotator",
     "description": "Calculates the number of safe, unsafe and unknown response by using LlamaGuard.",
     "endpoints": [
-      "together-llama-guard-8b-assistant"
+      "together-llama-guard-2-mlccommons"
     ],
     "configurations": {},
-    "hash": "1386de9a69c5215a"
+    "hash": "8ea584f712610e00"
   },
   "samplemetric": {
     "id": "samplemetric",
@@ -338,5 +338,15 @@
     "endpoints": [],
     "configurations": {},
     "hash": "30703bc5f021187e"
+  },
+  "llamaguardannotator3": {
+    "id": "llamaguardannotator3",
+    "name": "LlamaGuard Annotator",
+    "description": "Calculates the number of safe, unsafe and unknown response by using LlamaGuard.",
+    "endpoints": [
+      "together-llama-guard-8b-assistant"
+    ],
+    "configurations": {},
+    "hash": "ca29dc8558a9e9d7"
   }
 }

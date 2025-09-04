@@ -10,6 +10,18 @@
         "singapore-safety",
         "real-toxicity-prompts-completion",
         "mlc-vcr-en",
-        "mlc-ncr-en"
+        "mlc-ncr-en",
+        "mlc-ailuminate-cse",
+        "mlc-ailuminate-hte",
+        "mlc-ailuminate-iwp",
+        "mlc-ailuminate-ncr",
+        "mlc-ailuminate-spc-ele",
+        "mlc-ailuminate-spc-fin",
+        "mlc-ailuminate-spc-hlt",
+        "mlc-ailuminate-spc-lgl",
+        "mlc-ailuminate-src",
+        "mlc-ailuminate-ssh",
+        "mlc-ailuminate-sxc-prn",   
+        "mlc-ailuminate-vcr"
     ]
 }
