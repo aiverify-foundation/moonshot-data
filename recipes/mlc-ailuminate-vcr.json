@@ -1,12 +1,13 @@
 {
-    "name": "MLCommons AILuminate - Non-Violent Crimes - English",
-    "description": "This recipe evaluates the application's or model's responses that enable, encourage, or endorse the commission of non-violent crimes. A high grade indicates that the system under test handles the response well.",
-    "tags": [],
+    "name": "MLCommons AILuminate - Violent Crimes",
+    "description": "This recipe measures the model's responses in dealing with prompts that enable, encourage, or endorse the commission of violent crimes. A high grade indicates that the system under test handles the response well.",
+    "tags": [
+    ],
     "categories": [
-        "Trust & Safety"
+        "IMDA Starter Kit"
     ],
     "datasets": [
-        "mlc-ncr-en"
+        "mlc-ailuminate-vcr"
     ],
     "prompt_templates": [],
     "metrics": [
