@@ -9,10 +9,10 @@
         "mmlu-all"
     ],
     "prompt_templates": [
-        "mmlu"
+        "aa-mcq"
     ],
     "metrics": [
-        "exactstrmatch"
+        "aa-mcq"
     ],
     "grading_scale": {
         "A": [
