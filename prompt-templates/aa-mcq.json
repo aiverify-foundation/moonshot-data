@@ -1,0 +1,5 @@
+{
+    "name": "aa-mcq",
+    "description": "This prompt template, referenced from Artificial Analysis, is Zero-Shot Instruction Prompted. This prompt evaluates models using clear instructions without examples or demonstrations, testing models' ability to follow directions without few-shot learning. This approach aligns with modern instruction-tuned and chat style models.",
+    "template": "Answer the following multiple choice question. The last line of your response should be in the following format: 'Answer: A/B/C/D' (e.g. 'Answer: A').\n{{ prompt }}."
+}
