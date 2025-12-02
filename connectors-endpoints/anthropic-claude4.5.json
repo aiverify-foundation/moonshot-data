@@ -1,0 +1,14 @@
+{
+    "name": "Anthropic-Claude4.5",
+    "connector_type": "anthropic-connector",
+    "uri": "",
+    "token": "",
+    "max_calls_per_second": 1,
+    "max_concurrency": 1,
+    "model": "claude-sonnet-4-5-20250929",
+    "params": {
+      "timeout": 300,
+      "max_attempts": 3,
+      "temperature": 0.0
+    }
+  }
