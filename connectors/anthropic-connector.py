@@ -48,10 +48,6 @@ class AnthropicConnector(Connector):
             "messages": messages,
         }
         
-        # Add max_tokens if not already provided (required by Anthropic API)
-        if "max_tokens" not in new_params:
-            new_params["max_tokens"] = 4096  # Default value for Anthropic models
-        
         # Add system prompt if available
         if self.system_prompt:
             new_params["system"] = self.system_prompt
