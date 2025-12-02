@@ -87,4 +87,6 @@ class AnthropicConnector(Connector):
             if hasattr(block, "type") and block.type == "text" and hasattr(block, "text"):
                 text_blocks.append(block.text)
         
+        # We have decided to join text blocks with double newlines to separate paragraphs,
+        # whichever join we decide would have affected the result anyway
         return "\n\n".join(text_blocks) if text_blocks else ""
