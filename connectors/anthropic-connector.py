@@ -52,6 +52,12 @@ class AnthropicConnector(Connector):
         if self.system_prompt:
             new_params["system"] = self.system_prompt
         
+        # Validate that max_tokens is provided and is greater than 0
+        # This assertion is to make the requirements from anthropic API clear to the user
+        # The anthropic API will raise an error if max_tokens is not provided or is less than 0
+        if "max_tokens" not in new_params or new_params.get("max_tokens", 0) <= 0:
+            raise ValueError("max_tokens is required and must be greater than 0")
+        
         response: Message = await self._client.messages.create(**new_params)
         return ConnectorResponse(response=await self._process_response(response))
 
