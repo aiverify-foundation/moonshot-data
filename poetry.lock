@@ -2445,23 +2445,23 @@ xai = ["langchain-xai"]
 
 [[package]]
 name = "langchain-community"
-version = "0.3.22"
+version = "0.3.27"
 description = "Community contributed LangChain integrations."
 optional = false
-python-versions = "<4.0,>=3.9"
+python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "langchain_community-0.3.22-py3-none-any.whl", hash = "sha256:02ecdc669408d587b9dda78462dbbe8c27168edd26bb205630d0bc753e7cce6b"},
-    {file = "langchain_community-0.3.22.tar.gz", hash = "sha256:36284687a9f64bc7820c0140beb3b96393f6c74c0b7ad8ba04ac35d673fe0988"},
+    {file = "langchain_community-0.3.27-py3-none-any.whl", hash = "sha256:581f97b795f9633da738ea95da9cb78f8879b538090c9b7a68c0aed49c828f0d"},
+    {file = "langchain_community-0.3.27.tar.gz", hash = "sha256:e1037c3b9da0c6d10bf06e838b034eb741e016515c79ef8f3f16e53ead33d882"},
 ]
 
 [package.dependencies]
 aiohttp = ">=3.8.3,<4.0.0"
 dataclasses-json = ">=0.5.7,<0.7"
 httpx-sse = ">=0.4.0,<1.0.0"
-langchain = ">=0.3.24,<1.0.0"
-langchain-core = ">=0.3.55,<1.0.0"
-langsmith = ">=0.1.125,<0.4"
+langchain = ">=0.3.26,<1.0.0"
+langchain-core = ">=0.3.66,<1.0.0"
+langsmith = ">=0.1.125"
 numpy = {version = ">=1.26.2", markers = "python_version < \"3.13\""}
 pydantic-settings = ">=2.4.0,<3.0.0"
 PyYAML = ">=5.3"
@@ -7482,4 +7482,4 @@ cffi = ["cffi (>=1.11)"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.11,<3.12"
-content-hash = "f734a547d92ecb6ba961f6b0fdad7dd495fd04d5887e79487f7b0fec6ec3ca12"
+content-hash = "62e38e398e26f528aa414ad854ec567f61ac07ed22b8a2a78c1b3741842af4db"
