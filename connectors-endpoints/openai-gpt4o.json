@@ -9,6 +9,6 @@
   "params": {
     "timeout": 300,
     "max_attempts": 3,
-    "temperature": 0.0
+    "temperature": 0
   }
 }
