@@ -37,9 +37,23 @@ jobs:
   smoke-test:
 
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 60
 
     steps:
+    # [WS-299] Remove pre-installed tools to free up space for installation Moonshot-data
+    - name: Free Disk Space (Ubuntu)
+      uses: jlumbroso/free-disk-space@v1.3.1
+      with:
+        # Required for Python
+        tool-cache: false
+        
+        # Remove tools
+        android: true
+        dotnet: true
+        haskell: true
+        large-packages: true
+        docker-images: true
+        swap-storage: true
 
     - name: Checkout Moonshot (Pull Request Review)
       if: github.event_name == 'pull_request_review'
@@ -59,7 +73,7 @@ jobs:
       uses: actions/setup-python@v4
       with:
           python-version: '3.11'
-    
+
     - name: Setup Moonshot
       run: |
         python -m venv venv

@@ -40,6 +40,20 @@ jobs:
     timeout-minutes: 60
 
     steps:
+    # [WS-299] Remove pre-installed tools to free up space for installation Moonshot-data
+    - name: Free Disk Space (Ubuntu)
+      uses: jlumbroso/free-disk-space@v1.3.1
+      with:
+        # Required for Python
+        tool-cache: false
+        
+        # Remove tools
+        android: true
+        dotnet: true
+        haskell: true
+        large-packages: true
+        docker-images: true
+        swap-storage: true
 
     - name: Checkout Moonshot (Pull Request Review)
       if: github.event_name == 'pull_request_review'
@@ -83,6 +97,7 @@ jobs:
          repository: aiverify-foundation/moonshot-data
          ref: ${{ inputs.moonshot_data_branch }}
          path: moonshot-data
+
 
     - name: Setup Moonshot Data
       run: |
