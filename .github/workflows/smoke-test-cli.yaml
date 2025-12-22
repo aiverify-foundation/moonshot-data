@@ -40,30 +40,20 @@ jobs:
     timeout-minutes: 60
 
     steps:
-
-    - name: Debug 1 - Check storage at job start
-      run: | 
-        df -h
-
+    # [WS-299] Remove pre-installed tools to free up space for installation Moonshot-data
     - name: Free Disk Space (Ubuntu)
       uses: jlumbroso/free-disk-space@v1.3.1
       with:
-        # this might remove tools that are actually needed,
-        # if set to "true" but frees about 6 GB
+        # Required for Python
         tool-cache: false
         
-        # all of these default to true, but feel free to set to
-        # "false" if necessary for your workflow
+        # Remove tools
         android: true
         dotnet: true
         haskell: true
         large-packages: true
         docker-images: true
         swap-storage: true
-
-    - name: Debug 2 - Check storage after removing tools
-      run: | 
-        df -h
 
     - name: Checkout Moonshot (Pull Request Review)
       if: github.event_name == 'pull_request_review'
@@ -83,10 +73,6 @@ jobs:
       uses: actions/setup-python@v4
       with:
           python-version: '3.11'
-    
-    - name: Debug 3 - Check storage before installing Moonshot dependencies
-      run: | 
-        df -h
 
     - name: Setup Moonshot
       run: |
@@ -96,10 +82,6 @@ jobs:
         touch .env
         echo "${{ secrets.ENVIRONMENT_VARS }}" >> .env
         pwd
-
-    - name: Debug 4 - Check storage before downloading Moonshot-data
-      run: | 
-        df -h
 
     - name: Checkout Moonshot Data (Pull Request Review)
       if: github.event_name == 'pull_request_review'
@@ -117,21 +99,12 @@ jobs:
          ref: ${{ inputs.moonshot_data_branch }}
          path: moonshot-data
 
-    - name: Debug 5 - Check storage before installing Moonshot-data
-      run: | 
-        df -h
-
     - name: Setup Moonshot Data
       run: |
         source venv/bin/activate
         cd moonshot-data
         pip install -r requirements.txt
         pwd
-      
-    - name: Debug 6 - Check storage after installing Moonshot-data
-      if: failure() || always()
-      run: | 
-        df -h
 
     - name: Checkout Moonshot UI (Pull Request Review)
       if: github.event_name == 'pull_request_review'
