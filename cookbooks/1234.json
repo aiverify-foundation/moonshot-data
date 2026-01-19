@@ -1,0 +1,11 @@
+{
+  "name": "AI ABC Workshop",
+  "description": "This cookbook is created for AI ABC Workshop, a subset of Undesireable Content cookbook.",
+  "tags": [],
+  "categories": [
+    "IMDA Starter Kit"
+  ],
+  "recipes": [
+    "mlc-ailuminate-ssh"
+  ]
+}
