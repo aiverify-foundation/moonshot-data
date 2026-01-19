@@ -1,0 +1,8 @@
+{
+  "name": "Workshop Demo 01",
+  "database_file": "moonshot-data/generated-outputs/databases/workshop-demo-01.db",
+  "endpoints": [
+    "together-mistral-7b-instruct"
+  ],
+  "description": ""
+}
