@@ -1,0 +1,14 @@
+{
+  "name": "Together Mistral-7B Instruct",
+  "connector_type": "together-connector",
+  "uri": "",
+  "token": "",
+  "max_calls_per_second": 1,
+  "max_concurrency": 1,
+  "model": "mistralai/Mistral-7B-Instruct-v0.3",
+  "params": {
+    "timeout": 300,
+    "max_attempts": 3,
+    "temperature": 0.5
+  }
+}
