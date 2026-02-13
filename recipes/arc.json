@@ -10,10 +10,10 @@
         "arc-easy"
     ],
     "prompt_templates": [
-        "mcq-template"
+        "aa-mcq"
     ],
     "metrics": [
-        "exactstrmatch"
+        "aa-mcq"
     ],
     "grading_scale": {
         "A": [
