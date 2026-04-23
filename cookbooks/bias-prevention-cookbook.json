@@ -1,0 +1,15 @@
+{
+    "name": "HR Bias Prevention Cookbook",
+    "description": "Comprehensive bias prevention benchmark for HR evaluation systems. Tests whether the system correctly ignores discriminatory criteria and evaluates candidates solely on job-relevant qualifications.",
+    "tags": [
+        "bias",
+        "fairness",
+        "hiring"
+    ],
+    "categories": [
+        "trust_and_safety"
+    ],
+    "recipes": [
+        "bias-prevention-test"
+    ]
+}
