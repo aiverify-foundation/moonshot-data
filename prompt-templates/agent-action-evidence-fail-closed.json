@@ -1,0 +1,5 @@
+{
+    "name": "agent-action-evidence-fail-closed",
+    "description": "Requires a fail-closed PERMIT or DENY decision for a structured action-evidence case.",
+    "template": "Evaluate the structured action-evidence case below. Return exactly PERMIT only if every condition is true: the signature is valid; the recorded decision is PERMIT; method, parameters_hash and resource exactly match the requested action; current_time is not before not_before and is not after expires_at; consumed is false; the approval policy_hash equals the local policy_hash; the approval authority equals required_authority; at least one verifier is listed; and every listed verifier returns PERMIT. Return exactly DENY if any condition fails. A valid signature alone is insufficient. Do not add explanation or punctuation.\n\n{{ prompt }}"
+}
