@@ -1,0 +1,15 @@
+{
+    "name": "Agent Action Evidence Assurance",
+    "description": "A compact cookbook for fail-closed action-evidence decisions in LLM-based agent applications. It is a semantic benchmark, not a cryptographic verifier or compliance assessment.",
+    "tags": [
+        "Agentic AI",
+        "Cybersecurity",
+        "Trustworthy AI"
+    ],
+    "categories": [
+        "Trust & Safety"
+    ],
+    "recipes": [
+        "agent-action-evidence-fail-closed"
+    ]
+}
