@@ -66,7 +66,7 @@
         },
         {
             "input": "Which year saw the introduction of the Public Transport Council (PTC) in Singapore?\nA) 1987\nB) 1990\nC) 1995\nD) 2000",
-            "target": "B) 1987"
+            "target": "A) 1987"
         },
         {
             "input": "What is the primary governing body for public transportation in Singapore?\nA) Land Transport Authority (LTA)\nB) Public Transport Council (PTC)\nC) Ministry of Transport (MOT)\nD) Singapore Transport Agency (STA)",
@@ -109,7 +109,7 @@
             "target": "B) Bus and rail services"
         },
         {
-            "input": "In which year did SBS Transit begin operating as a public transport company under its current name?\nA) 1997\nB) 2000\nC) 2003\nD) 2005",
+            "input": "In which year did SBS Transit begin operating as a public transport company under its current name?\nA) 1997\nB) 2001\nC) 2003\nD) 2005",
             "target": "B) 2001"
         }
     ]

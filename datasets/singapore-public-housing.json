@@ -1,5 +1,5 @@
 {
-    "name": "Singapore Transport System",
+    "name": "Singapore Public Housing",
     "description": "Contain questions about Singapore's public housing system",
     "license": "Apache-2.0",
     "reference": "IMDA",
@@ -13,8 +13,8 @@
             "target": "A) Housing and Development Board (HDB)"
         },
         {
-            "input": "What is the minimum occupancy period for HDB flat owners before they are eligible to sell their flats in the open market as of 2023?\nA) 5 years\nB) 7 years\nC) 10 years\nD) 15 years",
-            "target": "B) 5 years"
+            "input": "What is the minimum occupation period for owners of a Standard HDB flat before they are eligible to sell their flat in the open market?\nA) 5 years\nB) 7 years\nC) 10 years\nD) 15 years",
+            "target": "A) 5 years"
         },
         {
             "input": "Which initiative introduced by HDB aims to create more inclusive and vibrant neighborhoods by providing facilities such as playgrounds, fitness corners, and sheltered walkways?\nA) Home Improvement Programme (HIP)\nB) Selective En bloc Redevelopment Scheme (SERS)\nC) Main Upgrading Programme (MUP)\nD) Neighbourhood Renewal Programme (NRP)",
